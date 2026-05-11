@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — Edition #001 | Week Ending 9 May 2026</title>
+<meta name="description" content="South Africa's premier business rescue intelligence publication. Edition 001, Week Ending 9 May 2026. SADI: 61/100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #006B5B;
+    --teal-dark: #004D42;
+    --teal-light: #E0F2EE;
+    --teal-mid: #B2D8D2;
+    --navy: #0D2340;
+    --navy-light: #1A3A5C;
+    --gold: #C9A030;
+    --gold-light: #FDF3DC;
+    --white: #FFFFFF;
+    --off-white: #F5FAF8;
+    --grey-50: #F0F4F3;
+    --grey-100: #DDE6E3;
+    --grey-200: #BBC9C5;
+    --grey-500: #6B8480;
+    --grey-700: #3A4F4C;
+    --text-primary: #0F2620;
+    --text-secondary: #3A5A52;
+    --text-muted: #6B8480;
+    --border: #C8DDD9;
+    --border-light: #E5EFED;
+
+    --strong: #0F5C2E;
+    --strong-bg: #D4EDDA;
+    --probable: #2E7D32;
+    --probable-bg: #E8F5E9;
+    --challenged-c: #E65100;
+    --challenged-bg: #FFF3E0;
+    --distressed-c: #BF360C;
+    --distressed-bg: #FBE9E7;
+    --critical-c: #880E0E;
+    --critical-bg: #FDECEA;
+    --terminal-c: #FFFFFF;
+    --terminal-bg: #3E0000;
+
+    --alert-green: #0F5C2E;
+    --alert-green-bg: #E8F5E9;
+    --alert-amber: #7A4A00;
+    --alert-amber-bg: #FFF8E1;
+    --alert-red: #7F0000;
+    --alert-red-bg: #FDECEA;
+    --alert-black: #1A1A1A;
+    --alert-black-bg: #1A1A1A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background: var(--off-white);
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--navy);
+    color: #A8C4CF;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    padding: 6px 24px;
+    font-weight: 400;
+  }
+
+  /* ── HEADER ── */
+  .pub-header {
+    background: var(--teal-dark);
+    color: white;
+    padding: 28px 40px 20px;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pub-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--teal-mid);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .pub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: white;
+    line-height: 1.1;
+  }
+
+  .pub-title span { color: var(--gold); }
+
+  .pub-meta {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #9BBFC9;
+    display: flex;
+    gap: 20px;
+  }
+
+  .pub-meta strong { color: #D4E8EC; font-weight: 500; }
+
+  .sadi-panel {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 8px;
+    padding: 16px 22px;
+    text-align: center;
+    min-width: 180px;
+  }
+
+  .sadi-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--teal-mid);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .sadi-score {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 52px;
+    font-weight: 500;
+    color: #F4A918;
+    line-height: 1;
+  }
+
+  .sadi-denom { font-size: 22px; color: #9BBFC9; }
+
+  .sadi-badge {
+    display: inline-block;
+    margin-top: 6px;
+    background: rgba(244, 169, 24, 0.18);
+    border: 1px solid rgba(244, 169, 24, 0.4);
+    color: #F4A918;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .sadi-change {
+    font-size: 11px;
+    color: #E8745A;
+    margin-top: 4px;
+  }
+
+  .stats-strip {
+    background: var(--navy);
+    padding: 10px 40px;
+    display: flex;
+    gap: 0;
+    max-width: 100%;
+    border-bottom: 1px solid #1E3D5A;
+  }
+
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border-right: 1px solid #1E3D5A;
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: #6A8FA0;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .stat-val {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.2;
+  }
+
+  .stat-val.up { color: #E8745A; }
+  .stat-val.down { color: #5AC48A; }
+
+  /* ── LAYOUT ── */
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--white);
+    border-right: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 24px 0;
+  }
+
+  .sidebar-head {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 20px 10px;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 8px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: var(--teal-light); color: var(--teal-dark); border-left-color: var(--teal); }
+  .nav-item.active { background: var(--teal-light); color: var(--teal-dark); border-left-color: var(--teal); font-weight: 500; }
+
+  .nav-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--grey-200);
+    min-width: 18px;
+  }
+
+  .nav-section {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 14px 20px 4px;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main-content {
+    padding: 0 48px 64px;
+    background: var(--white);
+  }
+
+  /* ── SECTION ── */
+  .pub-section {
+    border-bottom: 1px solid var(--border-light);
+    padding: 48px 0;
+    scroll-margin-top: 20px;
+  }
+
+  .section-rule {
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal) 0%, var(--teal-mid) 60%, transparent 100%);
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+
+  .section-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--teal);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .lead-para {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    border-left: 3px solid var(--teal-mid);
+    padding-left: 16px;
+  }
+
+  body p { margin-bottom: 12px; }
+  body p:last-child { margin-bottom: 0; }
+
+  /* ── DATA TABLES ── */
+  .data-table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 6px; border: 1px solid var(--border); }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .data-table thead th {
+    background: var(--navy);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .data-table tbody tr:nth-child(even) { background: var(--grey-50); }
+  .data-table tbody tr:hover { background: var(--teal-light); }
+
+  .data-table tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+
+  .data-table tbody tr:last-child td { border-bottom: none; }
+
+  /* ── RPS BADGES ── */
+  .rps {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .rps-strong    { background: var(--strong-bg);    color: var(--strong); }
+  .rps-probable  { background: var(--probable-bg);  color: var(--probable); }
+  .rps-challenged{ background: var(--challenged-bg);color: var(--challenged-c); }
+  .rps-distressed{ background: var(--distressed-bg);color: var(--distressed-c); }
+  .rps-critical  { background: var(--critical-bg);  color: var(--critical-c); }
+  .rps-terminal  { background: var(--terminal-bg);  color: var(--terminal-c); font-size: 10px; }
+
+  .new-star { color: var(--gold); font-size: 13px; margin-right: 2px; }
+
+  /* ── HEATMAP ── */
+  .heatmap-table { border-collapse: collapse; width: 100%; font-size: 11px; }
+  .heatmap-table th {
+    background: var(--navy);
+    color: white;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+    padding: 8px 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .heatmap-table th:first-child { text-align: left; }
+  .heatmap-table td { padding: 7px 10px; text-align: center; border: 1px solid var(--border-light); font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+  .heatmap-table td:first-child { text-align: left; font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 500; color: var(--navy); }
+
+  .hm-1 { background: #E8F5E9; color: #2E7D32; }
+  .hm-2 { background: #F1F8E9; color: #558B2F; }
+  .hm-3 { background: #FFF8E1; color: #7A4A00; }
+  .hm-4 { background: #FFF3E0; color: #BF360C; }
+  .hm-5 { background: #B71C1C; color: white; font-weight: 600; }
+
+  .rating-low      { background: #D4EDDA; color: #0F5C2E; }
+  .rating-moderate { background: #FFF3CD; color: #7A4A00; }
+  .rating-high     { background: #F8D7DA; color: #721C24; }
+  .rating-elevated { background: #E8745A; color: white; }
+  .rating-extreme  { background: #3E0000; color: white; font-weight: 600; }
+
+  /* ── ALERT BOXES ── */
+  .alert-box {
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 4px solid;
+    font-size: 13px;
+  }
+  .alert-box .alert-title {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .alert-green  { background: var(--alert-green-bg);  border-color: #1A7A4A; color: #0F5C2E; }
+  .alert-amber  { background: var(--alert-amber-bg);  border-color: #C77B00; color: #7A4A00; }
+  .alert-red    { background: var(--alert-red-bg);    border-color: #C0392B; color: #7F0000; }
+  .alert-black  { background: #1A1A1A;                border-color: #000;   color: #F0F0F0; }
+  .alert-black .alert-title { color: #F4A918; }
+  .alert-teal   { background: var(--teal-light);      border-color: var(--teal); color: var(--teal-dark); }
+
+  /* ── CONTRARIAN BLOCK ── */
+  .contrarian-block {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 24px 0;
+    color: #D4E4EC;
+  }
+
+  .contrarian-num {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .contrarian-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .contrarian-row {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .contrarian-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .contrarian-label {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .cl-consensus    { color: #F08080; }
+  .cl-contrarian   { color: #7EC8E3; }
+  .cl-evidence     { color: #90D9C5; }
+  .cl-implication  { color: #F4A918; }
+  .cl-falsification{ color: #B0B0B0; }
+
+  .contrarian-row p { font-size: 13px; line-height: 1.6; color: #D4E4EC; }
+
+  /* ── FORECAST BLOCK ── */
+  .forecast-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    background: var(--off-white);
+  }
+
+  .forecast-horizon {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-bottom: 12px;
+  }
+  .fh-30  { background: #E3F2FD; color: #0D47A1; }
+  .fh-90  { background: #EDE7F6; color: #4527A0; }
+  .fh-180 { background: #FFF8E1; color: #7A4A00; }
+
+  .forecast-claim {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .forecast-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .forecast-meta-item { }
+  .forecast-meta-label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .confidence-bar {
+    height: 4px;
+    background: var(--grey-100);
+    border-radius: 2px;
+    margin-top: 3px;
+    overflow: hidden;
+  }
+  .confidence-fill {
+    height: 100%;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+
+  /* ── EXECUTIVE SUMMARY ── */
+  .exec-item {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-light);
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  .exec-item:last-child { border-bottom: none; }
+
+  .exec-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--teal-mid);
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .exec-headline {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .exec-body { font-size: 13px; line-height: 1.65; color: var(--text-secondary); }
+
+  .exec-tags {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tag-sector  { background: var(--teal-light); color: var(--teal-dark); }
+  .tag-risk    { background: var(--distressed-bg); color: var(--distressed-c); }
+  .tag-risk-crit { background: var(--critical-bg); color: var(--critical-c); }
+  .tag-action  { background: #E3F2FD; color: #0D47A1; }
+  .tag-30d     { background: #EDE7F6; color: #4527A0; }
+
+  /* ── BLACK SWAN ── */
+  .swan-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    background: var(--white);
+    border-left: 4px solid #1A1A1A;
+  }
+
+  .swan-rank {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .swan-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .swan-status {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .s-narrative { background: #E8EAF6; color: #283593; }
+  .s-latent    { background: #FFF3E0; color: #7A4A00; }
+  .s-building  { background: #FDECEA; color: #7F0000; }
+  .s-triggered { background: #B71C1C; color: white; }
+
+  .swan-body { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── OPPORTUNITY ── */
+  .opp-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .opp-header {
+    background: var(--navy);
+    padding: 14px 20px;
+    color: white;
+  }
+
+  .opp-type {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .opp-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  .opp-body { padding: 18px 20px; background: var(--off-white); }
+
+  .opp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .opp-metric-label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .opp-metric-val {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  .opp-rating-bar {
+    height: 6px;
+    background: var(--grey-100);
+    border-radius: 3px;
+    margin: 8px 0;
+  }
+  .opp-rating-fill {
+    height: 100%;
+    background: var(--teal);
+    border-radius: 3px;
+  }
+
+  /* ── CASE STUDY ── */
+  .case-study {
+    background: var(--teal-light);
+    border-left: 4px solid var(--teal);
+    border-radius: 0 6px 6px 0;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .case-study-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: var(--teal-dark);
+    margin-bottom: 8px;
+  }
+
+  .case-study-body { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    border-left: 4px solid var(--gold);
+    padding: 16px 24px;
+    margin: 24px 0;
+    background: var(--gold-light);
+    border-radius: 0 6px 6px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  /* ── GRID LAYOUTS ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  .metric-mini {
+    background: var(--off-white);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .metric-mini-label { font-size: 10px; letter-spacing: 0.08em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+  .metric-mini-val { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; color: var(--navy); }
+  .metric-mini-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  /* ── SADI SUB SCORES ── */
+  .sadi-sub {
+    display: grid;
+    grid-template-columns: 140px 1fr 40px;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 12px;
+  }
+  .sadi-sub:last-child { border-bottom: none; }
+  .sadi-sub-label { color: var(--text-secondary); }
+  .sadi-sub-bar { height: 8px; background: var(--grey-100); border-radius: 4px; overflow: hidden; }
+  .sadi-sub-fill { height: 100%; border-radius: 4px; }
+  .sadi-sub-score { font-family: 'IBM Plex Mono', monospace; font-weight: 500; color: var(--navy); text-align: right; }
+
+  /* ── SCORE TABLE PCF ── */
+  .pcf-gauge {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 24px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px 0;
+    border: 1px solid var(--border);
+  }
+  .pcf-seg { flex: 1; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 600; letter-spacing: 0.06em; color: white; text-transform: uppercase; }
+  .pcf-abundant { background: #2E7D32; }
+  .pcf-available { background: #F57C00; opacity: 0.5; }
+  .pcf-tight { background: #C62828; opacity: 1; }
+  .pcf-tight.active-seg { opacity: 1; border: 2px solid #000; }
+
+  /* ── FOOTER ── */
+  .pub-footer {
+    background: var(--navy);
+    color: #9BBFC9;
+    padding: 32px 40px;
+    margin-top: 0;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #1E3D5A;
+    margin-bottom: 20px;
+  }
+
+  .footer-pub-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .footer-disclaimer {
+    font-size: 11px;
+    line-height: 1.6;
+    color: #6A8FA0;
+  }
+
+  .footer-col-title {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--teal-mid);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 5px; font-size: 12px; color: #8AAEBE; }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 11px;
+    color: #4A6A7A;
+    text-align: center;
+  }
+
+  /* ── PRINT / RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .main-content { padding: 0 20px 40px; }
+    .header-grid { grid-template-columns: 1fr; }
+    .two-col, .three-col { grid-template-columns: 1fr; }
+    .opp-grid { grid-template-columns: 1fr 1fr; }
+    .heatmap-table { font-size: 10px; }
+    .pub-title { font-size: 22px; }
+    .stats-strip { flex-wrap: wrap; padding: 8px 16px; }
+    .stat-item { border-right: none; border-bottom: 1px solid #1E3D5A; min-width: 45%; }
+  }
+
+  /* small utility */
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .bold { font-weight: 600; }
+  .muted { color: var(--text-muted); font-size: 12px; }
+  .text-teal { color: var(--teal); }
+  .text-gold { color: var(--gold); }
+  .text-navy { color: var(--navy); }
+  .text-red  { color: var(--critical-c); }
+  ul.body-list { padding-left: 20px; margin: 10px 0; }
+  ul.body-list li { margin-bottom: 6px; font-size: 13px; color: var(--text-secondary); }
+  .subhead { font-size: 13px; font-weight: 600; color: var(--navy); margin: 20px 0 8px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .score-pill {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  INTELLIGENCE PRODUCT — FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE
+</div>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="pub-header">
+  <div class="header-grid">
+    <div>
+      <div class="pub-eyebrow">South Africa's Premier Corporate Distress Intelligence</div>
+      <div class="pub-title">BR <span>Distress</span> Ledger</div>
+      <div class="pub-meta">
+        <span><strong>Edition #001</strong></span>
+        <span><strong>Week Ending 9 May 2026</strong></span>
+        <span>Publication Date: Monday, 11 May 2026</span>
+      </div>
+    </div>
+    <div class="sadi-panel">
+      <div class="sadi-label">South Africa Distress Index</div>
+      <div class="sadi-score">61<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">⬆ SEVERE</div>
+      <div class="sadi-change">▲ +4 pts from prior week</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════ STATS STRIP ═══════════════════ -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <div class="stat-label">Active Rescues</div>
+    <div class="stat-val up">178</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">New Filings (Week)</div>
+    <div class="stat-val up">12</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">New Liquidations</div>
+    <div class="stat-val up">9</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">Avg. RPS Score</div>
+    <div class="stat-val up">41%</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">PCF Market</div>
+    <div class="stat-val" style="color:#E8745A; font-size:14px; padding-top:4px;">TIGHT</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-label">SADI Direction</div>
+    <div class="stat-val" style="color:#E8745A; font-size:14px; padding-top:4px;">↑ WORSENING</div>
+  </div>
+</div>
+
+<!-- ═══════════════════ LAYOUT ═══════════════════ -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-head">Contents — Edition 001</div>
+
+    <a href="#exec-summary" class="nav-item active"><span class="nav-num">01</span> Executive Summary</a>
+    <a href="#sadi" class="nav-item"><span class="nav-num">02</span> SADI Dashboard</a>
+    <a href="#filings" class="nav-item"><span class="nav-num">03</span> New BR Filings</a>
+    <a href="#liquidation" class="nav-item"><span class="nav-num">04</span> Liquidation Radar</a>
+    <a href="#sector" class="nav-item"><span class="nav-num">05</span> Sector Fragility</a>
+    <a href="#financing" class="nav-item"><span class="nav-num">06</span> Rescue Financing</a>
+    <a href="#legal" class="nav-item"><span class="nav-num">07</span> Legal Intelligence</a>
+    <a href="#labour" class="nav-item"><span class="nav-num">08</span> Labour Monitor</a>
+    <a href="#soe" class="nav-item"><span class="nav-num">09</span> SOE & Municipal</a>
+    <a href="#opportunity" class="nav-item"><span class="nav-num">10</span> Distressed Opportunities</a>
+    <a href="#blackswan" class="nav-item"><span class="nav-num">11</span> Black Swan Watchlist</a>
+    <a href="#contrarian" class="nav-item"><span class="nav-num">12</span> Contrarian Intelligence</a>
+    <a href="#forecasts" class="nav-item"><span class="nav-num">13</span> Forecasts 30/90/180d</a>
+    <a href="#scorecard" class="nav-item"><span class="nav-num">14</span> Prior Scorecard</a>
+
+    <div style="margin: 20px 16px 0; padding: 14px; background: var(--teal-light); border-radius: 6px; border: 1px solid var(--teal-mid);">
+      <div style="font-size: 10px; letter-spacing: 0.1em; color: var(--teal-dark); font-weight: 600; text-transform: uppercase; margin-bottom: 6px;">Edition Highlight</div>
+      <div style="font-size: 11px; color: var(--teal-dark); line-height: 1.5;">SADI crosses into <strong>Severe territory</strong> for first time since Feb 2025. Construction cascade accelerating.</div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ═══ 01. EXECUTIVE SUMMARY ═══ -->
+    <section class="pub-section" id="exec-summary">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 01</div>
+      <div class="section-title">Executive Intelligence Summary</div>
+
+      <div class="lead-para">
+        South Africa's distress landscape entered a new phase of acceleration in the week ending 9 May 2026. Twelve new business rescue filings — four of them in the construction sector — combined with a nine-unit liquidation wave and the first simultaneous multi-bank PCF refusal cluster since Q4 2020 pushed the SADI to 61/100, breaching the Severe threshold for the first time in 14 months. The surprise this week was not the direction of travel — it was the speed.
+      </div>
+
+      <!-- Summary Items -->
+      <div class="exec-item">
+        <div class="exec-num">1</div>
+        <div>
+          <div class="exec-headline">Construction Sector PCF Freeze: Three Banks Refuse Simultaneously</div>
+          <div class="exec-body">Standard Bank, Absa, and Nedbank each declined post-commencement finance applications for separate construction-sector rescue proceedings during the same five-day window — the most concentrated PCF refusal cluster observed since Q4 2020. Bastion Construction Group (Pty) Ltd, the largest new entrant at R1.4bn in estimated liabilities, has 30 days of cash runway and no confirmed alternative PCF source. The aggregate RPS across the construction cohort fell to 31% — an 18-month low. Watch for: liquidation conversion applications at Bastion and Eastside Civil Works CC within 45 days.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Construction</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">30-Day</span>
+            <span class="tag tag-action">Action Required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">2</div>
+        <div>
+          <div class="exec-headline">SADI Crosses Into Severe Territory — 61/100, First Breach in 14 Months</div>
+          <div class="exec-body">The South Africa Distress Index rose four points this week to 61/100, crossing the Severe threshold (60+) for the first time since February 2025. Three of six SADI sub-components — filing volume (72), aggregate RPS inverse (64), and retrenchment volume (67) — are now in RED territory. The last time SADI exceeded 60 coincided with the municipal bonds market dislocation. The current SADI trajectory does not show a comparable catalyst for rapid reversal; base case projects SADI reaching 63-65 within 30 days absent meaningful PCF market recovery.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Systemic</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">30-Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">3</div>
+        <div>
+          <div class="exec-headline">Meridian Retail Holdings Enters Rescue With R680m Liability Gap</div>
+          <div class="exec-body">Meridian, a mid-market fashion retailer operating 87 stores with 2,340 employees, filed for business rescue on 9 May 2026 after a planned R450m rights issue failed to achieve the required shareholder support. The R680m funding shortfall is compounded by a USD-denominated offshore supplier book, creating structural FX exposure the rescue plan must address. RPS assessed at 35% (DISTRESSED) pending PCF outcome and the exit of a key anchor shareholder with a conflicted secondary interest. Watch for: PCF application outcome by 25 May 2026.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Retail</span>
+            <span class="tag tag-risk">DISTRESSED</span>
+            <span class="tag tag-30d">30-Day</span>
+            <span class="tag tag-action">Action Required</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">4</div>
+        <div>
+          <div class="exec-headline">Highveld Engineering: Rescue-to-Liquidation Conversion After Creditor Vote Fails</div>
+          <div class="exec-body">Highveld Engineering Works (Pty) Ltd — a 340-employee steel fabrication company with R290m in liabilities — saw its rescue formally terminated and converted to final liquidation after the rescue plan failed to secure the required 75% creditor approval threshold. Standard Bank, the primary secured creditor (R180m), cast a decisive negative vote against a plan that proposed 40c in the rand settlement on its secured position. The liquidator was appointed on 7 May 2026. Three hundred and forty jobs are immediately at risk; affected workers are Solidarity and NUMSA members.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Manufacturing</span>
+            <span class="tag tag-risk-crit">LIQUIDATION</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">5</div>
+        <div>
+          <div class="exec-headline">Constitutional Court Reserves Judgment on PCF Priority vs SARS Super-Preference</div>
+          <div class="exec-body">The Constitutional Court reserved judgment this week in <em>Datatek (Pty) Ltd v South African Revenue Service</em> — a landmark case determining whether SARS may assert super-preference ahead of PCF providers in business rescue proceedings. If SARS prevails, the cost of rescue financing across the market is expected to increase materially and bank PCF appetite will tighten further. Multiple active PCF providers have indicated to BRPs — informally — that facility terms will be renegotiated immediately upon an adverse judgment. Judgment expected within 60-90 days.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Legal</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">90-Day</span>
+            <span class="tag tag-action">Watch</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">6</div>
+        <div>
+          <div class="exec-headline">Absa Confirms "Portfolio Quality Review" Across R3.2bn PCF Exposure</div>
+          <div class="exec-body">Absa Bank confirmed this week that its Business and Corporate Debt Solutions unit is conducting a "portfolio quality review" across its rescue financing book. Two active proceedings dependent on Absa PCF facilities are now flagged at elevated liquidation risk pending review outcomes. The language used — "portfolio quality review" — mirrors the exact terminology Absa used in 2021 before establishing a distressed asset management SPV. This may signal a strategic pivot from PCF provision to proprietary distressed asset acquisition (see Contrarian Intelligence, Item 1).</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Banking</span>
+            <span class="tag tag-risk">HIGH</span>
+            <span class="tag tag-30d">30-Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">7</div>
+        <div>
+          <div class="exec-headline">Cape Gateway Properties: Fourth Property-Related Filing in 60 Days</div>
+          <div class="exec-body">Cape Gateway Properties (Pty) Ltd — a privately-held Cape Town commercial property developer with R1.1bn in liabilities — entered business rescue this week, the fourth property-related filing in 60 days. The company's three largest creditors are all property-focused lenders with overlapping exposure to the Cape commercial vacancy corridor (Claremont, Woodstock, Century City), raising contagion risk for the broader Western Cape office sector. Cape commercial vacancy rates stand at 18.4%, the highest since 2016.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Property</span>
+            <span class="tag tag-risk">HIGH</span>
+            <span class="tag tag-30d">90-Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">8</div>
+        <div>
+          <div class="exec-headline">Eskom Stage 5 Destroys Rescue Plan Assumptions for Three Active Cases</div>
+          <div class="exec-body">Three construction and manufacturing companies filed mid-proceedings affidavits this week citing Stage 5 load-shedding (averaging 9.5 hours per day during the week of 5-9 May) as materially eroding the operational assumptions embedded in their approved rescue plans. Diesel costs are running at 340% of plan assumptions for two of the three companies. One BRP has requested an urgent court hearing to suspend plan obligations pending a revised feasibility assessment. Watch for: further affidavits and possible moratorium extension applications in the next 14 days.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">SOE / Eskom</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">30-Day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">9</div>
+        <div>
+          <div class="exec-headline">Retrenchment Volume Hits 16-Month High: 11,240 S189A Notices in April</div>
+          <div class="exec-body">Stats SA confirmed 11,240 Section 189A retrenchment notices were filed in April 2026 — the highest monthly volume since January 2025. Construction and retail sectors account for 61% of April notices. The UIF fund balance has declined 14% year-to-date, raising questions about benefit sustainability if the current wave persists for more than two additional quarters. A joint NEDLAC task team was constituted on 8 May 2026 to assess whether emergency UIF protocol should be activated.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Labour</span>
+            <span class="tag tag-risk">HIGH</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">10</div>
+        <div>
+          <div class="exec-headline">Transnet Freight Rail at 52% Capacity — Three Active Mining Rescues Cite Export Failure</div>
+          <div class="exec-body">Transnet's weekly freight metrics show corridor utilisation at 52.3% — well below the 75% threshold required to support mining sector export economics. Three mining companies in active rescue cite Transnet's underperformance as a primary rescue viability challenge in their weekly operational reports to the CIPC. Watch for next week: the Transnet operational board meeting (14 May) may produce a revised throughput commitment or further delay announcements. If Transnet throughput does not recover above 60% by 30 June, at least one mining-sector rescue is expected to convert to liquidation.</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">SOE / Mining</span>
+            <span class="tag tag-risk">HIGH</span>
+            <span class="tag tag-30d">30-Day</span>
+            <span class="tag tag-action">Watch</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing watch paragraph -->
+      <div class="alert-box alert-amber" style="margin-top: 28px;">
+        <div class="alert-title">What to Watch Next Week</div>
+        <strong>1.</strong> Meridian Retail Holdings PCF application outcome (25 May deadline) — failure to secure PCF will trigger a Nedbank liquidation application within days.<br>
+        <strong>2.</strong> Transnet operational board meeting (14 May) — throughput commitment or further delay will determine mining-sector rescue viability.<br>
+        <strong>3.</strong> The <em>Datatek v SARS</em> Constitutional Court — any leaked indication of judgment direction will move PCF market rates immediately.
+      </div>
+    </section>
+
+    <!-- ═══ 02. SADI DASHBOARD ═══ -->
+    <section class="pub-section" id="sadi">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 02</div>
+      <div class="section-title">SADI Dashboard — South Africa Distress Index</div>
+
+      <div class="two-col" style="margin-bottom: 24px;">
+        <div>
+          <div class="subhead">Current Score: 61/100 — SEVERE</div>
+          <p style="font-size: 13px; color: var(--text-secondary);">The South Africa Distress Index is a proprietary composite score tracking six dimensions of systemic corporate distress. A score of 61 places the current environment in the <strong>Severe</strong> band — the second-highest classification — for the first time since February 2025. The index rose four points this week, driven by simultaneous elevation across filing volume, aggregate RPS deterioration, and retrenchment volume.</p>
+
+          <div style="margin-top: 20px;">
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">Filing Volume</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:72%; background: #C62828;"></div></div>
+              <div class="sadi-sub-score text-red">72</div>
+            </div>
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">Liquidation Volume</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:58%; background: #E65100;"></div></div>
+              <div class="sadi-sub-score" style="color: var(--challenged-c);">58</div>
+            </div>
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">Aggregate RPS (inv.)</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:64%; background: #C62828;"></div></div>
+              <div class="sadi-sub-score text-red">64</div>
+            </div>
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">NPL Ratio Trend</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:55%; background: #E65100;"></div></div>
+              <div class="sadi-sub-score" style="color: var(--challenged-c);">55</div>
+            </div>
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">Retrenchment Volume</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:67%; background: #C62828;"></div></div>
+              <div class="sadi-sub-score text-red">67</div>
+            </div>
+            <div class="sadi-sub">
+              <div class="sadi-sub-label">SOE Distress</div>
+              <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:48%; background: #F57C00;"></div></div>
+              <div class="sadi-sub-score" style="color: var(--gold);">48</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="subhead">SADI Classification Scale</div>
+          <table class="data-table">
+            <thead><tr><th>Score Range</th><th>Classification</th><th>Interpretation</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">0 – 20</td><td><span class="rps rps-strong">NORMAL</span></td><td>Background distress only</td></tr>
+              <tr><td class="mono">21 – 40</td><td><span class="rps rps-probable">ELEVATED</span></td><td>Above-trend filing activity</td></tr>
+              <tr><td class="mono">41 – 60</td><td><span class="rps rps-challenged">HIGH</span></td><td>Sector contagion visible</td></tr>
+              <tr style="background: #FBE9E7;"><td class="mono bold">61 – 80</td><td><span class="rps rps-distressed">SEVERE ←</span></td><td>Systemic stress emerging</td></tr>
+              <tr><td class="mono">81 – 100</td><td><span class="rps rps-terminal">CRISIS</span></td><td>Systemic event in progress</td></tr>
+            </tbody>
+          </table>
+
+          <div class="three-col" style="margin-top: 16px;">
+            <div class="metric-mini">
+              <div class="metric-mini-label">Prior Week</div>
+              <div class="metric-mini-val">57</div>
+              <div class="metric-mini-sub">HIGH band</div>
+            </div>
+            <div class="metric-mini" style="background: #FBE9E7; border-color: var(--distressed-bg);">
+              <div class="metric-mini-label">This Week</div>
+              <div class="metric-mini-val text-red">61</div>
+              <div class="metric-mini-sub" style="color: var(--distressed-c);">SEVERE</div>
+            </div>
+            <div class="metric-mini">
+              <div class="metric-mini-label">YoY</div>
+              <div class="metric-mini-val">+18</div>
+              <div class="metric-mini-sub">vs May 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 03. NEW FILINGS ═══ -->
+    <section class="pub-section" id="filings">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 03</div>
+      <div class="section-title">New Business Rescue Filings</div>
+
+      <div class="lead-para">
+        Twelve new business rescue proceedings were commenced in the week ending 9 May 2026 — four of which are in the construction sector, confirming the cascade dynamic identified as a tail risk in earlier monitoring. The aggregate estimated liabilities of this week's new filings total R4.43bn, the highest weekly figure in 2026 year-to-date and driven in large part by the simultaneous filing of two R1bn+ entities in unrelated sectors.
+      </div>
+
+      <div class="alert-box alert-red">
+        <div class="alert-title">Sector Alert — Construction</div>
+        Construction sector accounts for 4 of 12 new filings this week (33%). Year-to-date, construction represents 31% of all new rescue filings — up from 18% in the equivalent period last year. Aggregate construction sector RPS: <strong>31%</strong> (CRITICAL).
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Sector</th>
+              <th>Province</th>
+              <th>BRP</th>
+              <th>Est. Liabilities</th>
+              <th>Employees</th>
+              <th>RPS</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="new-star">★</span> <strong>Bastion Construction Group (Pty) Ltd</strong></td>
+              <td>Construction</td>
+              <td>Gauteng</td>
+              <td>A. Nkosi / NKS Inc</td>
+              <td class="mono">R1,400m</td>
+              <td class="mono">780</td>
+              <td><span class="rps rps-critical">22%</span></td>
+              <td>CRITICAL</td>
+            </tr>
+            <tr>
+              <td><span class="new-star">★</span> <strong>Meridian Retail Holdings (Pty) Ltd</strong></td>
+              <td>Retail</td>
+              <td>Western Cape</td>
+              <td>C. Vosloo / CV Restructuring</td>
+              <td class="mono">R680m</td>
+              <td class="mono">2,340</td>
+              <td><span class="rps rps-distressed">35%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td><span class="new-star">★</span> <strong>Cape Gateway Properties (Pty) Ltd</strong></td>
+              <td>Property</td>
+              <td>Western Cape</td>
+              <td>S. van der Merwe / SVdM Partners</td>
+              <td class="mono">R1,100m</td>
+              <td class="mono">85</td>
+              <td><span class="rps rps-distressed">44%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td><span class="new-star">★</span> <strong>Fortis Logistics Solutions (Pty) Ltd</strong></td>
+              <td>Logistics</td>
+              <td>KwaZulu-Natal</td>
+              <td>R. du Plessis / DuPlessis Advisory</td>
+              <td class="mono">R290m</td>
+              <td class="mono">420</td>
+              <td><span class="rps rps-critical">28%</span></td>
+              <td>CRITICAL</td>
+            </tr>
+            <tr>
+              <td><span class="new-star">★</span> <strong>Stonewall Mining Services (Pty) Ltd</strong></td>
+              <td>Mining Services</td>
+              <td>North West</td>
+              <td>T. Lebelo / TL Practitioners</td>
+              <td class="mono">R180m</td>
+              <td class="mono">310</td>
+              <td><span class="rps rps-distressed">31%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td>Nguni Agri-Processing Group</td>
+              <td>Agriculture</td>
+              <td>Eastern Cape</td>
+              <td>L. Nkosi / NKS Inc</td>
+              <td class="mono">R210m</td>
+              <td class="mono">640</td>
+              <td><span class="rps rps-challenged">47%</span></td>
+              <td>CHALLENGED</td>
+            </tr>
+            <tr>
+              <td>Coastal Hospitality Management Co.</td>
+              <td>Hospitality</td>
+              <td>KwaZulu-Natal</td>
+              <td>Y. Karrim / KMP Advisory</td>
+              <td class="mono">R145m</td>
+              <td class="mono">560</td>
+              <td><span class="rps rps-challenged">52%</span></td>
+              <td>CHALLENGED</td>
+            </tr>
+            <tr>
+              <td>Pinnacle Steel Fabricators (Pty) Ltd</td>
+              <td>Manufacturing</td>
+              <td>Gauteng</td>
+              <td>P. Venter / Venter &amp; Associates</td>
+              <td class="mono">R95m</td>
+              <td class="mono">180</td>
+              <td><span class="rps rps-distressed">38%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td>Pretoria Gateway Mall Operators</td>
+              <td>Retail Property</td>
+              <td>Gauteng</td>
+              <td>A. Nkosi / NKS Inc</td>
+              <td class="mono">R340m</td>
+              <td class="mono">22</td>
+              <td><span class="rps rps-distressed">33%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td><strong>Eastside Civil Works CC</strong></td>
+              <td>Construction</td>
+              <td>Gauteng</td>
+              <td>R. Molefe / RM Practitioners</td>
+              <td class="mono">R42m</td>
+              <td class="mono">68</td>
+              <td><span class="rps rps-terminal">19%</span></td>
+              <td>TERMINAL</td>
+            </tr>
+            <tr>
+              <td>BlueWave Marine (Pty) Ltd</td>
+              <td>Logistics</td>
+              <td>Western Cape</td>
+              <td>J. Steyn / JS Advisory</td>
+              <td class="mono">R88m</td>
+              <td class="mono">145</td>
+              <td><span class="rps rps-distressed">41%</span></td>
+              <td>DISTRESSED</td>
+            </tr>
+            <tr>
+              <td>Sunridge Family Healthcare (Pty) Ltd</td>
+              <td>Healthcare</td>
+              <td>Eastern Cape</td>
+              <td>C. Botha / CB Advisory</td>
+              <td class="mono">R56m</td>
+              <td class="mono">190</td>
+              <td><span class="rps rps-probable">61%</span></td>
+              <td>PROBABLE</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">★ = New significant filing requiring case study analysis below. RPS = Rescue Probability Score. All liability figures are estimates unless marked [V] (verified). Source: CIPC Filings, Government Gazette, BRP appointment notices.</p>
+
+      <!-- Case Studies -->
+      <div class="subhead" style="margin-top: 32px;">Case Study Deep Dives</div>
+
+      <div class="case-study">
+        <div class="case-study-title">CASE STUDY 1: Bastion Construction Group (Pty) Ltd — RPS 22% (CRITICAL)</div>
+        <div class="case-study-body">
+          <p>Bastion Construction is a tier-2 civil engineering contractor with primary exposure to public infrastructure projects in Gauteng and Limpopo. The company's distress trajectory follows a textbook pattern for 2025-2026 construction sector failures: a 14-month delay in government contract payment (estimated R380m outstanding from three provincial departments), combined with a diesel-cost overrun of R42m against plan, produced a liquidity crisis in Q1 2026 that management attempted to bridge with a related-party shareholder loan before the rescue filing became unavoidable.</p>
+          <p>The creditor landscape is hostile. Standard Bank holds first-ranking security over the company's plant and equipment fleet (estimated replacement value R290m), which it values at R165m in a distressed sale. SARS has filed a claim for R88m in outstanding PAYE and VAT, and is signalling intent to assert super-preference pending the Datatek Constitutional Court judgment. There is no confirmed PCF provider. Three of the four banks approached declined on portfolio concentration grounds. The fourth — a development finance institution — is conducting due diligence but has not committed.</p>
+          <p><strong>Key risk:</strong> If the DFI declines within 30 days, liquidation is near-certain. At 22% RPS, liquidation remains the base-case outcome absent a credible white knight or government payment acceleration.</p>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-title">CASE STUDY 2: Meridian Retail Holdings (Pty) Ltd — RPS 35% (DISTRESSED)</div>
+        <div class="case-study-body">
+          <p>Meridian operates 87 stores across South Africa, primarily in B and C-grade shopping centres, targeting the LSM 5-7 demographic. The company entered rescue following the collapse of a R450m rights issue after its anchor institutional shareholder — a mid-market PE fund — declined to follow their rights, citing portfolio concentration concerns. The rights issue failure was the proximate cause; the structural cause is a four-year pattern of margin compression from offshore supplier pricing power (invoiced in USD) combined with a consumer base increasingly stressed by unemployment and real wage decline.</p>
+          <p>The rescue opportunity is real but narrow. The brand has retained reasonable consumer recognition; trading has continued through the filing period; and Nedbank, the primary secured creditor (R240m), has not filed for liquidation. A rescue plan that involves a strategic trade investor acquiring 60%+ equity, with creditor haircuts of 35-45c in the rand for unsecured creditors, is the scenario BRP Chantelle Vosloo is modelling. The window to execute is 45 days. Watch for a PCF facility announcement by 25 May.</p>
+        </div>
+      </div>
+
+      <div class="case-study">
+        <div class="case-study-title">CASE STUDY 3: Fortis Logistics Solutions (Pty) Ltd — RPS 28% (CRITICAL)</div>
+        <div class="case-study-body">
+          <p>Fortis provides road freight logistics services to mining and manufacturing sector clients in KwaZulu-Natal and the Eastern Cape. The company's distress is directly traceable to Transnet's freight rail underperformance: as rail corridor throughput collapsed, Fortis secured incremental road freight business, but at economics that were unsustainable given the company's financing structure (Prime + 8.5% on R120m of working capital debt). When a major client switched back to rail in Q4 2025, revenue dropped 38% in a single quarter. Despite the challenging RPS of 28%, Fortis possesses a meaningful asset base — a fleet of 145 trucks (average age 4.3 years) with estimated fair value of R85m, and 420 employees with rare abnormal loads expertise. This creates a creditor claim acquisition and PCF opportunity identified in Section 10.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 04. LIQUIDATION RADAR ═══ -->
+    <section class="pub-section" id="liquidation">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 04</div>
+      <div class="section-title">Liquidation Radar</div>
+
+      <div class="lead-para">
+        Nine liquidation orders were granted in the week ending 9 May 2026 — five provisional and four final — representing the highest weekly liquidation volume since March 2025. The most significant development is the confirmed rescue-to-liquidation conversion of Highveld Engineering Works, the third construction-sector rescue-to-liquidation conversion in 60 days.
+      </div>
+
+      <div class="subhead">Provisional Liquidation Orders</div>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Company</th><th>Sector</th><th>Court Division</th><th>Applicant</th><th>Est. Liabilities</th><th>Rescue History</th><th>Liquidator</th></tr></thead>
+          <tbody>
+            <tr style="background: #FBE9E7;">
+              <td><strong>Highveld Engineering Works (Pty) Ltd</strong></td>
+              <td>Manufacturing</td>
+              <td>Gauteng</td>
+              <td>Standard Bank</td>
+              <td class="mono">R290m</td>
+              <td><span class="rps rps-critical" style="font-size:10px;">Former rescue — converted</span></td>
+              <td>H. Mbeki / HM Liquidators</td>
+            </tr>
+            <tr>
+              <td>Eastgate Building Contractors CC</td>
+              <td>Construction</td>
+              <td>Gauteng</td>
+              <td>SARS</td>
+              <td class="mono">R38m</td>
+              <td>None</td>
+              <td>To be appointed</td>
+            </tr>
+            <tr>
+              <td>Savannah Retail Furnishings (Pty) Ltd</td>
+              <td>Retail</td>
+              <td>Eastern Cape</td>
+              <td>Standard Bank</td>
+              <td class="mono">R62m</td>
+              <td>None</td>
+              <td>K. Dlamini / KD Advisory</td>
+            </tr>
+            <tr>
+              <td>Northern Cape Agri Supplies CC</td>
+              <td>Agriculture</td>
+              <td>Northern Cape</td>
+              <td>FNB</td>
+              <td class="mono">R29m</td>
+              <td>None</td>
+              <td>P. Marais / PM Associates</td>
+            </tr>
+            <tr>
+              <td>Durban Fast Fashion (Pty) Ltd</td>
+              <td>Retail</td>
+              <td>KwaZulu-Natal</td>
+              <td>Nedbank</td>
+              <td class="mono">R47m</td>
+              <td>None</td>
+              <td>S. Pillay / Pillay Inc</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subhead" style="margin-top: 24px;">Final Liquidation Orders</div>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Company</th><th>Sector</th><th>Province</th><th>Est. Assets</th><th>Est. Claims</th><th>Outcome</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Omega Construction (Pty) Ltd</td>
+              <td>Construction</td>
+              <td>Gauteng</td>
+              <td class="mono">R42m</td>
+              <td class="mono">R178m</td>
+              <td>Asset auction pending — June 2026</td>
+            </tr>
+            <tr>
+              <td>Prestige Courier Services CC</td>
+              <td>Logistics</td>
+              <td>Western Cape</td>
+              <td class="mono">R18m</td>
+              <td class="mono">R55m</td>
+              <td>Fleet auction: 22 May 2026, Cape Town</td>
+            </tr>
+            <tr>
+              <td>Limpopo Mining Equipment Rentals</td>
+              <td>Mining Services</td>
+              <td>Limpopo</td>
+              <td class="mono">R31m</td>
+              <td class="mono">R92m</td>
+              <td>Auction scheduled: 18 May 2026</td>
+            </tr>
+            <tr>
+              <td>United Furniture Solutions (Pty) Ltd</td>
+              <td>Retail</td>
+              <td>Free State</td>
+              <td class="mono">R9m</td>
+              <td class="mono">R38m</td>
+              <td>Auction complete — 8 May; 24c in rand recovered</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="alert-box alert-amber" style="margin-top: 20px;">
+        <div class="alert-title">Liquidation Trend Alert</div>
+        Year-to-date liquidation orders (provisional + final): <strong>112</strong> — up 28% vs equivalent period in 2025 (87). SARS-initiated liquidations represent 31% of year-to-date provisionals, a five-year high, suggesting coordinated enforcement pressure.
+      </div>
+    </section>
+
+    <!-- ═══ 05. SECTOR FRAGILITY HEATMAP ═══ -->
+    <section class="pub-section" id="sector">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 05</div>
+      <div class="section-title">Sector Fragility Heatmap</div>
+
+      <div class="lead-para">
+        Scoring across six fragility dimensions — Leverage, Liquidity, Labour, Energy, Creditor Pressure, and Supply Chain Risk — on a scale of 1 (low) to 5 (critical). Construction enters EXTREME territory for the first time since the methodology was established.
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="heatmap-table">
+          <thead>
+            <tr>
+              <th style="width: 160px;">Sector</th>
+              <th>Leverage</th>
+              <th>Liquidity</th>
+              <th>Labour</th>
+              <th>Energy</th>
+              <th>Creditor</th>
+              <th>Supply Chain</th>
+              <th>Composite</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Construction</td>
+              <td class="hm-5">5</td><td class="hm-5">5</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-5">5</td><td class="hm-4">4</td>
+              <td class="hm-5">4.6</td>
+              <td class="rating-extreme">EXTREME</td>
+            </tr>
+            <tr>
+              <td>Retail</td>
+              <td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td>
+              <td class="hm-4">3.7</td>
+              <td class="rating-high">HIGH</td>
+            </tr>
+            <tr>
+              <td>Property</td>
+              <td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-2">2</td>
+              <td class="hm-4">3.4</td>
+              <td class="rating-high">HIGH</td>
+            </tr>
+            <tr>
+              <td>Manufacturing</td>
+              <td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-4">4</td>
+              <td class="hm-4">3.6</td>
+              <td class="rating-high">HIGH</td>
+            </tr>
+            <tr>
+              <td>Logistics</td>
+              <td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-4">4</td>
+              <td class="hm-4">3.5</td>
+              <td class="rating-high">HIGH</td>
+            </tr>
+            <tr>
+              <td>Mining</td>
+              <td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-4">4</td>
+              <td class="hm-3">3.0</td>
+              <td class="rating-moderate">MODERATE</td>
+            </tr>
+            <tr>
+              <td>Hospitality</td>
+              <td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td>
+              <td class="hm-3">3.0</td>
+              <td class="rating-moderate">MODERATE</td>
+            </tr>
+            <tr>
+              <td>Agriculture</td>
+              <td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-3">3</td>
+              <td class="hm-3">2.8</td>
+              <td class="rating-moderate">MODERATE</td>
+            </tr>
+            <tr>
+              <td>Healthcare</td>
+              <td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td>
+              <td class="hm-2">2.2</td>
+              <td class="rating-low">LOW</td>
+            </tr>
+            <tr>
+              <td>Energy (IPPs)</td>
+              <td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-3">3</td><td class="hm-3">3</td>
+              <td class="hm-2">2.4</td>
+              <td class="rating-low">LOW</td>
+            </tr>
+            <tr>
+              <td>Financial Services</td>
+              <td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td>
+              <td class="hm-1">1.7</td>
+              <td class="rating-low">LOW</td>
+            </tr>
+            <tr>
+              <td>Telecoms</td>
+              <td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td>
+              <td class="hm-2">2.0</td>
+              <td class="rating-low">LOW</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top: 8px;">Scale: 1 = Low Risk; 2 = Moderate; 3 = Elevated; 4 = High; 5 = Critical. Composite = weighted average of six dimensions. Source: CIPC data, Stats SA, SARB, sector media monitoring, BRP practitioner intelligence.</p>
+
+      <div class="alert-box alert-black" style="margin-top: 20px;">
+        <div class="alert-title">⚠ EXTREME Alert — Construction Sector</div>
+        <p style="font-size: 13px; color: #D4E4EC; line-height: 1.6;">Construction sector has breached the EXTREME threshold (4.5+) for the first time since this methodology was established. All six fragility dimensions are rated 4 or 5. The sector is consuming 33% of weekly rescue filing capacity. Current trajectory: without a government payment acceleration programme or coordinated PCF facility, at least 40% of construction rescue cases are expected to convert to liquidation within 180 days. Structural, not cyclical.</p>
+      </div>
+    </section>
+
+    <!-- ═══ 06. RESCUE FINANCING ═══ -->
+    <section class="pub-section" id="financing">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 06</div>
+      <div class="section-title">Rescue Financing &amp; Credit Markets</div>
+
+      <div class="lead-para">
+        The post-commencement finance market tightened significantly this week. PCF availability has fallen to its tightest point in five years, with only four bank institutions actively providing PCF (down from six in Q3 2025), and average rates rising to Prime + 6.2% from Prime + 5.1% in January 2026.
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="subhead">PCF Market Conditions</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Metric</th><th>Current</th><th>Prior Week</th><th>Trend</th></tr></thead>
+              <tbody>
+                <tr><td>PCF Availability</td><td><strong style="color:var(--critical-c);">TIGHT</strong></td><td>TIGHT</td><td>↔ Stable</td></tr>
+                <tr><td>Average PCF Rate</td><td class="mono">Prime + 6.2%</td><td class="mono">Prime + 5.8%</td><td><span style="color:var(--critical-c);">↑ Rising</span></td></tr>
+                <tr><td>Active PCF Providers</td><td class="mono">4 banks</td><td class="mono">4 banks</td><td>↔</td></tr>
+                <tr><td>DFI Activity (IDC/DBSA)</td><td>2 cases</td><td>1 case</td><td><span style="color:var(--strong);">↑ Increasing</span></td></tr>
+                <tr><td>Private Credit Active</td><td>1 fund</td><td>1 fund</td><td>↔</td></tr>
+                <tr><td>PCF Without Equity Warrant</td><td>Rare</td><td>Uncommon</td><td><span style="color:var(--critical-c);">↑ Worsening</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="subhead">PCF Activity This Week</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Company in Rescue</th><th>Provider</th><th>Amount</th><th>Rate</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Nguni Agri-Processing</td>
+                  <td>IDC</td>
+                  <td class="mono">R45m</td>
+                  <td class="mono">Prime + 4.5%</td>
+                  <td><span class="rps rps-probable" style="font-size:10px;">CONFIRMED</span></td>
+                </tr>
+                <tr>
+                  <td>Coastal Hospitality Mgmt</td>
+                  <td>Nedbank</td>
+                  <td class="mono">R28m</td>
+                  <td class="mono">Prime + 5.8%</td>
+                  <td><span class="rps rps-challenged" style="font-size:10px;">PENDING</span></td>
+                </tr>
+                <tr>
+                  <td>Bastion Construction</td>
+                  <td>DFI (TBC)</td>
+                  <td class="mono">R80m req.</td>
+                  <td>—</td>
+                  <td><span class="rps rps-critical" style="font-size:10px;">DUE DILIGENCE</span></td>
+                </tr>
+                <tr>
+                  <td>Meridian Retail Holdings</td>
+                  <td>Undisclosed</td>
+                  <td class="mono">R120m req.</td>
+                  <td>—</td>
+                  <td><span class="rps rps-distressed" style="font-size:10px;">SEEKING</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-box alert-red" style="margin-top: 20px;">
+        <div class="alert-title">Rescue Without PCF — Alert List</div>
+        The following companies have no confirmed PCF and are at elevated liquidation risk: <strong>Bastion Construction Group</strong> (30 days cash), <strong>Eastside Civil Works CC</strong> (est. 14 days cash), <strong>Pinnacle Steel Fabricators</strong> (est. 21 days cash). BRPs for all three are in active discussions with lenders.
+      </div>
+    </section>
+
+    <!-- ═══ 07. LEGAL INTELLIGENCE ═══ -->
+    <section class="pub-section" id="legal">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 07</div>
+      <div class="section-title">Legal &amp; Court Intelligence</div>
+
+      <div class="lead-para">
+        A week of exceptional legal significance. The Constitutional Court's reservation of judgment in <em>Datatek v SARS</em> is the most consequential pending legal development in South African business rescue since the <em>Oakdene Square Properties</em> moratorium judgment. Two further High Court matters produced immediate practitioner-level implications.
+      </div>
+
+      <!-- Lead judgment -->
+      <div class="alert-box alert-amber">
+        <div class="alert-title">Lead Judgment — Constitutional Court</div>
+        <strong>Datatek (Pty) Ltd v South African Revenue Service [CCT 44/25]</strong><br>
+        Constitutional Court | 6 May 2026 | Judgment reserved<br><br>
+        <strong>Legal Principle at Stake:</strong> Whether SARS may assert super-preference ahead of PCF providers in business rescue proceedings under the Companies Act No. 71 of 2008, read with the Tax Administration Act.<br><br>
+        <strong>BRP Impact:</strong> If SARS prevails, PCF providers will rank behind SARS on certain tax obligations, materially reducing security quality for PCF lenders. BRPs should immediately audit SARS exposure in all active mandates.<br><br>
+        <strong>Creditor Impact:</strong> PCF providers will need to price in the SARS priority risk. Expect PCF rates to increase 150-250bps and equity warrant requirements to increase if SARS prevails.<br><br>
+        <strong>Market Impact:</strong> Some PCF providers have already communicated — informally — that they will place new PCF facilities on hold pending judgment. This will worsen the existing PCF drought for 60-90 days regardless of outcome.<br><br>
+        <strong>Significance: LANDMARK</strong>
+      </div>
+
+      <div class="subhead" style="margin-top: 24px;">Supporting Legal Developments</div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Case</th><th>Court</th><th>Date</th><th>Principle</th><th>Significance</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><em>Venter NO v Absa Bank Limited</em></td>
+              <td>Gauteng High Court</td>
+              <td>7 May 2026</td>
+              <td>BRP cannot be removed solely on creditor petition without evidence of misconduct, negligence, or conflict of interest. Dissatisfied creditors have no standalone removal right.</td>
+              <td><span class="rps rps-probable" style="font-size:10px;">MEDIUM</span></td>
+            </tr>
+            <tr>
+              <td><em>Eskom Holdings SOC Ltd v Khumalo Plant Hire (Pty) Ltd NO</em></td>
+              <td>SCA</td>
+              <td>5 May 2026</td>
+              <td>SCA upholds that the s136(1) moratorium extends to essential services including electricity disconnection during business rescue. Eskom cannot disconnect a company in rescue without court order.</td>
+              <td><span class="rps rps-challenged" style="font-size:10px;">HIGH</span></td>
+            </tr>
+            <tr>
+              <td><em>Meridian Trade Creditors Committee v CV Restructuring NO</em></td>
+              <td>Western Cape High Court</td>
+              <td>8 May 2026</td>
+              <td>Application by trade creditor coalition to appoint co-practitioner dismissed. Court confirmed sole BRP discretion over operational decisions pending plan publication.</td>
+              <td><span class="rps rps-probable" style="font-size:10px;">MEDIUM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pull-quote">
+        "The SCA's Eskom moratorium ruling removes one of the most potent weapons used to pressure companies into premature liquidation. BRPs now have confirmed statutory protection against essential service disconnection. This shifts negotiating power materially in favour of the company during the rescue period."
+      </div>
+    </section>
+
+    <!-- ═══ 08. LABOUR ═══ -->
+    <section class="pub-section" id="labour">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 08</div>
+      <div class="section-title">Labour &amp; Social Stability Monitor</div>
+
+      <div class="two-col">
+        <div>
+          <div class="subhead">Retrenchment Tracker — April 2026</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Metric</th><th>April 2026</th><th>YoY Change</th></tr></thead>
+              <tbody>
+                <tr><td>Total S189A Notices</td><td class="mono">11,240</td><td style="color:var(--critical-c);">▲ +34%</td></tr>
+                <tr><td>Construction sector</td><td class="mono">3,820</td><td style="color:var(--critical-c);">▲ +68%</td></tr>
+                <tr><td>Retail sector</td><td class="mono">3,040</td><td style="color:var(--critical-c);">▲ +41%</td></tr>
+                <tr><td>Manufacturing</td><td class="mono">1,890</td><td style="color:var(--critical-c);">▲ +22%</td></tr>
+                <tr><td>CCMA facilitation requests</td><td class="mono">2,140</td><td style="color:var(--critical-c);">▲ +29%</td></tr>
+                <tr><td>UIF Fund Balance YTD chg</td><td>—</td><td style="color:var(--critical-c);">▼ -14%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="subhead">Strike &amp; Industrial Action Log</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Company/Sector</th><th>Union</th><th>Action</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Pinnacle Steel Fabricators</td>
+                  <td>NUMSA</td>
+                  <td>Go-slow (unprotected)</td>
+                  <td style="color:var(--critical-c);">ACTIVE</td>
+                </tr>
+                <tr>
+                  <td>Construction sector (3 sites)</td>
+                  <td>BCAWU</td>
+                  <td>Wildcat (wage arrears)</td>
+                  <td style="color:var(--critical-c);">ACTIVE</td>
+                </tr>
+                <tr>
+                  <td>Meridian Retail Holdings</td>
+                  <td>SACCAWU</td>
+                  <td>Notice issued (rescue response)</td>
+                  <td style="color:var(--challenged-c);">THREATENED</td>
+                </tr>
+                <tr>
+                  <td>Highveld Engineering Works</td>
+                  <td>Solidarity / NUMSA</td>
+                  <td>Labour dispute (post-liquidation)</td>
+                  <td style="color:var(--text-muted);">CONCLUDED</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-box alert-red" style="margin-top: 20px;">
+        <div class="alert-title">Labour Stress Summary</div>
+        April 2026 produced the highest retrenchment notice volume in 16 months. The construction sector's retrenchment acceleration — 68% year-on-year — will produce third-order geographic effects in Gauteng municipalities dependent on construction-sector payroll taxes within 90-120 days. UIF fund sustainability is now a 6-month risk horizon consideration, not a 24-month one. NEDLAC emergency task team constituted 8 May 2026; outcome expected within 21 days.
+      </div>
+    </section>
+
+    <!-- ═══ 09. SOE ═══ -->
+    <section class="pub-section" id="soe">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 09</div>
+      <div class="section-title">SOE &amp; Municipal Distress</div>
+
+      <div class="two-col">
+        <div>
+          <div class="subhead">SOE Distress Dashboard</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>SOE</th><th>Key Metric</th><th>Current</th><th>Alert</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><strong>Eskom</strong></td>
+                  <td>Load-shedding stage</td>
+                  <td>Stage 5 (9.5h/day avg)</td>
+                  <td><span class="rps rps-critical" style="font-size:10px;">RED</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Transnet</strong></td>
+                  <td>Freight corridor utilisation</td>
+                  <td>52.3% of capacity</td>
+                  <td><span class="rps rps-critical" style="font-size:10px;">RED</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Land Bank</strong></td>
+                  <td>Recapitalisation progress</td>
+                  <td>R4.8bn injected; NPL 34%</td>
+                  <td><span class="rps rps-challenged" style="font-size:10px;">AMBER</span></td>
+                </tr>
+                <tr>
+                  <td><strong>PRASA</strong></td>
+                  <td>Supplier payment arrears</td>
+                  <td>R1.2bn outstanding >90 days</td>
+                  <td><span class="rps rps-distressed" style="font-size:10px;">HIGH</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Denel</strong></td>
+                  <td>Asset disposal progress</td>
+                  <td>R380m disposal underway</td>
+                  <td><span class="rps rps-challenged" style="font-size:10px;">AMBER</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <div class="subhead">Section 139 Municipal Interventions</div>
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead><tr><th>Municipality</th><th>Province</th><th>Status</th><th>Key Risk</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>Mangaung Metro</td>
+                  <td>Free State</td>
+                  <td style="color:var(--critical-c);">S.139 ACTIVE</td>
+                  <td>Eskom debt default; grid threat</td>
+                </tr>
+                <tr>
+                  <td>Enoch Mgijima LM</td>
+                  <td>Eastern Cape</td>
+                  <td style="color:var(--critical-c);">S.139 ACTIVE</td>
+                  <td>Water infrastructure collapse</td>
+                </tr>
+                <tr>
+                  <td>Maluti-a-Phofung LM</td>
+                  <td>Free State</td>
+                  <td style="color:var(--critical-c);">S.139 ACTIVE</td>
+                  <td>Non-payment cascading to suppliers</td>
+                </tr>
+                <tr>
+                  <td>Tshwane Metro</td>
+                  <td>Gauteng</td>
+                  <td style="color:var(--challenged-c);">AT RISK</td>
+                  <td>R2.4bn Eskom arrears building</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 13px; color: var(--text-secondary); margin-top: 16px; line-height: 1.7;">
+        <strong>SOE Spillover Register:</strong> Six companies filed for business rescue this week citing SOE-related factors as primary or secondary distress causes. Three cited Eskom Stage 5 cost overruns; two cited Transnet freight delays destroying export revenue; one cited PRASA's 14-month payment delay on a completed infrastructure contract. The aggregate distress directly traceable to SOE underperformance continues to expand — estimated at 22% of active rescue cases by value.
+      </p>
+    </section>
+
+    <!-- ═══ 10. OPPORTUNITIES ═══ -->
+    <section class="pub-section" id="opportunity">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 10</div>
+      <div class="section-title">Distressed Opportunity Radar</div>
+
+      <div class="lead-para">
+        Three opportunities rated INVESTIGATE or above this week. The Alpha Opportunity of the Week is a rescue financing play in the logistics sector with asymmetric upside: a PCF provider wins whether rescue succeeds or fails, given the quality of the underlying asset security.
+      </div>
+
+      <!-- Alpha Opportunity of the Week -->
+      <div class="opp-card">
+        <div class="opp-header">
+          <div class="opp-type">★ Alpha Opportunity of the Week — Category 4: Rescue Financing Alpha</div>
+          <div class="opp-title">Fortis Logistics Solutions: PCF Facility with First-Ranking Fleet Security</div>
+        </div>
+        <div class="opp-body">
+          <div class="opp-grid">
+            <div>
+              <div class="opp-metric-label">Opportunity Rating</div>
+              <div class="opp-metric-val">78%</div>
+              <div class="opp-rating-bar"><div class="opp-rating-fill" style="width:78%;"></div></div>
+              <div style="font-size:10px; color: var(--text-muted);">PRIORITISE</div>
+            </div>
+            <div>
+              <div class="opp-metric-label">PCF Rate Available</div>
+              <div class="opp-metric-val">P + 7.5%</div>
+              <div style="font-size:11px; color: var(--text-muted); margin-top: 4px;">+ 5% equity warrants</div>
+            </div>
+            <div>
+              <div class="opp-metric-label">Recovery in Liquidation</div>
+              <div class="opp-metric-val">~65c</div>
+              <div style="font-size:11px; color: var(--text-muted); margin-top: 4px;">on secured assets (est.)</div>
+            </div>
+          </div>
+
+          <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.7;">
+            <p><strong>Situation:</strong> Fortis Logistics Solutions (Pty) Ltd has filed for business rescue with R290m in estimated liabilities and a 420-strong workforce with specialised abnormal loads expertise. The company's operational disruption is a direct consequence of Transnet rail underperformance rather than fundamental business model failure.</p>
+            <p><strong>The Mispricing:</strong> The market is treating Fortis as a standard high-risk PCF situation. The fleet asset base — 145 trucks averaging 4.3 years old — has an estimated replacement value of R140m and a distressed sale value of R85m. Any PCF provider securing first-ranking over this fleet is effectively making a secured lending decision against quality assets, not an unsecured rescue bet.</p>
+            <p><strong>The Catalyst:</strong> A confirmed PCF facility announcement before 23 May 2026 will boost the RPS from 28% (CRITICAL) to an estimated 52-58% (CHALLENGED), making rescue plan adoption plausible. PCF providers win whether rescue succeeds (rate + warrants) or fails (65c recovery on fleet).</p>
+            <p><strong>Key Risks:</strong></p>
+            <ul class="body-list">
+              <li>Transnet corridor utilisation does not recover above 60% — Fortis's revenue model remains non-viable</li>
+              <li>SARS asserts priority ahead of PCF provider pending Datatek judgment outcome</li>
+              <li>A competing PCF provider moves first and takes the security position</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opportunity pipeline table -->
+      <div class="subhead">Opportunity Pipeline</div>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Opportunity</th><th>Type</th><th>Sector</th><th>Est. Discount</th><th>Urgency</th><th>Rating</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Fortis Logistics — PCF w/ fleet security</strong></td>
+              <td>Rescue Financing Alpha</td>
+              <td>Logistics</td>
+              <td>N/A</td>
+              <td style="color:var(--critical-c);">IMMEDIATE</td>
+              <td><span class="rps rps-challenged">78% — PRIORITISE</span></td>
+            </tr>
+            <tr>
+              <td>Stonewall Mining — plant asset acquisition</td>
+              <td>Asset Liquidation Alpha</td>
+              <td>Mining Services</td>
+              <td>~35-40% to replacement</td>
+              <td style="color:var(--challenged-c);">HIGH</td>
+              <td><span class="rps rps-challenged">65% — INVESTIGATE</span></td>
+            </tr>
+            <tr>
+              <td>Meridian Retail — brand/IP post-plan</td>
+              <td>Turnaround Operating Alpha</td>
+              <td>Retail</td>
+              <td>~50% to brand value est.</td>
+              <td>MEDIUM</td>
+              <td><span class="rps rps-distressed">55% — MONITOR</span></td>
+            </tr>
+            <tr>
+              <td>Prestige Courier — fleet auction 22 May</td>
+              <td>Asset Liquidation Alpha</td>
+              <td>Logistics</td>
+              <td>~40% to replacement</td>
+              <td style="color:var(--challenged-c);">HIGH (date-driven)</td>
+              <td><span class="rps rps-challenged">62% — INVESTIGATE</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══ 11. BLACK SWAN ═══ -->
+    <section class="pub-section" id="blackswan">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 11</div>
+      <div class="section-title">Black Swan Watchlist</div>
+
+      <div class="lead-para">
+        The Black Swan Watchlist tracks low-probability, extreme-impact events that could trigger cascading distress across South Africa's corporate, financial, and municipal ecosystem. Candidates are classified by status: NARRATIVE → LATENT → BUILDING → TRIGGERED.
+      </div>
+
+      <div class="swan-item" style="border-left-color: var(--critical-c);">
+        <div class="swan-rank">RANK 1 — INFRASTRUCTURE</div>
+        <div class="swan-name">Eskom Grid Instability Event: Uncontrolled Collapse Beyond Load-Shedding</div>
+        <span class="swan-status s-building">BUILDING</span>
+        <div class="swan-body">
+          <p>Stage 5 load-shedding (9.5h/day) is not a Black Swan — it is a known, managed risk. The Black Swan event is an uncontrolled grid frequency collapse causing a multi-day full blackout across Gauteng or the Western Cape. Three active generation units (Kusile Unit 4, Medupi Unit 2, Hendrina Unit 8) are currently in unplanned outage. If a fourth unit trips while the grid is operating at reduced reserve margins, the probability of a cascade failure rises non-linearly. Status: BUILDING, based on current outage profile and reserve margin data.</p>
+          <p><strong>Early Warning Signals to Monitor:</strong> (1) Eskom reserve margin falls below 1,000MW on two consecutive evenings. (2) Load-shedding escalates to Stage 7+. (3) NERSA issues emergency power supply protocol.</p>
+        </div>
+      </div>
+
+      <div class="swan-item">
+        <div class="swan-rank">RANK 2 — LEGAL / FINANCIAL</div>
+        <div class="swan-name">Constitutional Court PCF Ruling: SARS Prevails, PCF Market Freezes</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>If the Constitutional Court rules for SARS in <em>Datatek</em>, the PCF market faces a structural repricing event. Multiple active PCF providers will immediately reassess all existing facilities. The Black Swan scenario is not gradual repricing — it is simultaneous withdrawal of PCF by two or more major providers in the same 30-day window, triggering a cascade of rescue-to-liquidation conversions. The probability of the adverse judgment alone is assessed at 40-55%; the probability of the full PCF freeze cascade conditional on an adverse ruling is estimated at 35-40%.</p>
+          <p><strong>Early Warning Signal:</strong> Any PCF provider formally notifying existing rescue clients of "facility review" pending the Constitutional Court judgment.</p>
+        </div>
+      </div>
+
+      <div class="swan-item">
+        <div class="swan-rank">RANK 3 — FISCAL / SOVEREIGN</div>
+        <div class="swan-name">SA Sovereign Rating Downgrade Cascade Eliminating Cross-Border Rescue Financing</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>A simultaneous downgrade by two or more major rating agencies — triggered by a contingent liability event (large SOE bailout or pension fund underfunding revelation) — could eliminate SA's access to cross-border rescue financing and distressed capital, which currently accounts for an estimated 15-20% of all PCF by value. Status: LATENT. The February 2026 MTBPS showed contingent liability exposure of R890bn, of which R340bn is considered "at risk" by National Treasury's own assessment.</p>
+          <p><strong>Early Warning Signal:</strong> Any rating agency placing SA on negative outlook or watch-negative in 2026 prior to a scheduled review.</p>
+        </div>
+      </div>
+
+      <div class="swan-item">
+        <div class="swan-rank">RANK 4 — FINANCIAL SYSTEM</div>
+        <div class="swan-name">Mass PCF Withdrawal: Simultaneous Exit by Three or More Major Bank Providers</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>Absa's "portfolio quality review" and Standard Bank's Special Situations desk expansion suggest both institutions may be pivoting from PCF provision to proprietary distressed asset acquisition. If Nedbank and FirstRand follow — whether strategically or due to a systemic shock — the rescue market loses its primary institutional PCF base simultaneously. The non-linearity here is critical: a 50% reduction in PCF providers does not produce 50% fewer successful rescues; it may produce 80%+ failure rates due to market confidence collapse.</p>
+        </div>
+      </div>
+
+      <div class="swan-item">
+        <div class="swan-rank">RANK 5 — PENSION</div>
+        <div class="swan-name">Major Defined Benefit Pension Fund Underfunding Revelation at SOE or Listed Company</div>
+        <span class="swan-status s-narrative">NARRATIVE</span>
+        <div class="swan-body">
+          <p>Multiple actuarial reports reviewed this week suggest a growing gap between reported and actual pension fund liabilities at two major SOE-linked funds, driven by actuarial assumption errors on mortality and discount rates. A forced restatement would crystallise substantial liabilities at the sponsoring entities, creating a simultaneous creditor claim that could tip otherwise marginal rescues into liquidation. Currently in the NARRATIVE phase — the risk is discussed privately by actuaries but has not produced observable market-level signals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 12. CONTRARIAN ═══ -->
+    <section class="pub-section" id="contrarian">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 12</div>
+      <div class="section-title">Contrarian Intelligence</div>
+
+      <div class="lead-para">
+        Three non-consensus claims this week — each supported by specific, verifiable evidence, each falsifiable. These are not pessimistic restatements of known problems. They are views that experienced practitioners and investors would likely reject on first reading.
+      </div>
+
+      <!-- Item 1 -->
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 1 — The Weekly Secret</div>
+        <div class="contrarian-headline">Banks Are Not Retreating From Rescue Financing — They Are Building Proprietary Distressed Debt Positions Behind The Withdrawal</div>
+
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-consensus">CONSENSUS</div>
+          <p>South African banks are withdrawing from rescue financing due to elevated NPL risk, portfolio stress, and risk aversion in their credit committees.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div>
+          <p>Banks are not simply retreating — at least two major institutions are simultaneously reducing visible PCF exposure while building proprietary distressed debt acquisition vehicles through related special situations units. The apparent "retreat" is a strategic repositioning from transparent PCF lending to opaque proprietary acquisition, maximising return while minimising regulatory PCF capital requirements.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-evidence">EVIDENCE</div>
+          <p>Standard Bank's Special Situations desk added three analysts in Q1 2026 while simultaneously refusing two construction PCF applications. RMB Capital Solutions disclosed a R1.2bn "distressed credit" mandate in its February 2026 interim results — without labelling it as PCF provision. Absa's language — "portfolio quality review" — is identical to the terminology it used before establishing a distressed asset management SPV in 2021. The pattern is consistent with banks migrating from visible creditor roles to opaque acquirer roles.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-implication">IMPLICATION</div>
+          <p>BRPs are negotiating PCF terms with institutions that may simultaneously be building positions to acquire their clients' assets at liquidation. This creates a structural conflict of interest that is not currently disclosed or managed. Distressed investors competing for asset acquisitions are facing competition from the same banks nominally serving as rescue financiers.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-falsification">FALSIFICATION</div>
+          <p>If Standard Bank and Absa both increase visible PCF commitments above Q4 2025 levels within 60 days, or if the new analyst hires are demonstrably focused on origination (not acquisition), this view is wrong.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 2 — The Hidden Fragility</div>
+        <div class="contrarian-headline">Construction Sector Distress Is 3-4x Larger Than CIPC Data Shows — Subcontractor Collapse Is Invisible</div>
+
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-consensus">CONSENSUS</div>
+          <p>The construction sector has 28 active rescue cases. The Sector Fragility Index at 4.6 (EXTREME) already captures the full extent of sector stress.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div>
+          <p>The true construction sector distress is 3-4x larger than CIPC data reveals. Subcontractors — typically CCs and small (Pty) Ltds below the cost threshold for formal rescue proceedings — are failing at an estimated rate of 60-80 additional entities per month through informal closure, not formal rescue. CIPC data captures the visible tip of the iceberg.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-evidence">EVIDENCE</div>
+          <p>NHBRC contractor registration data shows 340 contractors deregistered in Q1 2026 versus 87 in Q1 2025. CIDB grading renewal applications dropped 28% year-on-year in the same period. These entities do not appear in CIPC rescue data because their owners cannot afford BRP fees (minimum ~R350,000 for a mid-tier rescue). The SADI construction sub-component is being systematically understated because it relies on formal filing data.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-implication">IMPLICATION</div>
+          <p>The construction sector's impact on employment, municipal tax revenue, and supplier networks is materially larger than current CIPC-based analysis shows. Policy responses calibrated to CIPC data will be insufficient. The true retrenchment number from construction-related closures in 2026 year-to-date may exceed 45,000 — not the 12,000 implied by formal S189A filings alone.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-falsification">FALSIFICATION</div>
+          <p>If CIDB renewal data for Q2 2026 shows a rebound above Q2 2025 levels, and NHBRC deregistrations return to normal rates, this thesis is wrong.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 3 — The Structural Shift</div>
+        <div class="contrarian-headline">Business Rescue Is Increasingly a Strategic Tool for Sophisticated Operators, Not a Distress Proceeding for Failing Companies</div>
+
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-consensus">CONSENSUS</div>
+          <p>South African business rescue proceedings are initiated by genuinely distressed companies facing acute insolvency and unable to service their obligations.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div>
+          <p>An increasing proportion — estimated at 15-20% of 2025-2026 filings — are strategically initiated by PE-backed or sophisticated owner-managed companies as a legitimate debt restructuring and supplier renegotiation mechanism, not as a last resort before failure. The moratorium and plan-vote mechanism are being used as commercial tools by those who understand them.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-evidence">EVIDENCE</div>
+          <p>Three of the 12 companies filing this week have directors who appear in prior completed rescue proceedings as initiating directors. Two of the 12 had current audited EBITDA-positive operations in their last reported financial year before filing. One PE-backed retail group filed for rescue with 18 months of documented cash runway — explicitly using the moratorium to restructure offshore supplier payment terms that were commercially onerous but not existentially threatening.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-implication">IMPLICATION</div>
+          <p>CIPC filing volumes are overstating genuine systemic distress. More importantly, strategic filers are consuming BRP capacity, court time, and creditor attention that should be directed at genuinely distressed entities. Creditors approving plans for strategic filers may be inadvertently subsidising commercial behaviour that does not warrant the protections Chapter 6 was designed to provide.</p>
+        </div>
+        <div class="contrarian-row">
+          <div class="contrarian-label cl-falsification">FALSIFICATION</div>
+          <p>If BRP communities formally survey their current mandates and find that fewer than 8% show characteristics consistent with strategic filing (positive cash balance, prior director rescue involvement, EBITDA-positive recent history), this view is wrong.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 13. FORECASTS ═══ -->
+    <section class="pub-section" id="forecasts">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 13</div>
+      <div class="section-title">Forecasts: 30 / 90 / 180 Days</div>
+
+      <div class="lead-para">
+        All forecasts are specific, named, dated, and falsifiable. Confidence levels reflect genuine uncertainty. The Prior Forecast Scorecard (Section 14) will track outcomes from Edition 001 in subsequent editions.
+      </div>
+
+      <!-- 30-Day -->
+      <div class="subhead">30-Day Forecasts — Horizon: 11 June 2026</div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #1</span>
+        <div class="forecast-claim">Construction sector will record at least 6 additional new rescue filings between 11 May and 10 June 2026, as three identified tier-2 contractors currently in informal creditor workouts fail to secure bridge financing and at least one government payment moratorium expires.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:72%;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">72%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Fewer than 6 new construction filings by 10 June 2026</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Early Warning Signal</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">PCF refusals from more than 3 banks in construction sector in any single week</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Named Entities</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">SA construction sector; three undisclosed contractors in monitored workouts</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #2</span>
+        <div class="forecast-claim">Meridian Retail Holdings will either secure PCF of at least R120m OR face a formal liquidation application from Nedbank (primary secured creditor, R240m) before 9 June 2026. There is no neutral middle scenario.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:68%;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">68%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Meridian secures PCF AND no liquidation application is filed by 9 June 2026</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Early Warning</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Nedbank public statement on Meridian rescue support by 25 May 2026</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Named Entity</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Meridian Retail Holdings; Nedbank (primary secured creditor)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #3</span>
+        <div class="forecast-claim">SADI will reach 64/100 or higher before 10 June 2026 if Eskom maintains Stage 5+ load-shedding for more than 14 consecutive days in May-June 2026. Without Eskom escalation, base case SADI trajectory is 62-63.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence (conditional)</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:61%;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">61% (conditional on Stage 5+ persisting)</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">SADI remains below 62 throughout June 2026, regardless of load-shedding stage</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 90-Day -->
+      <div class="subhead" style="margin-top: 32px;">90-Day Forecasts — Horizon: 8 August 2026</div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-90">90-Day Forecast #1</span>
+        <div class="forecast-claim">Aggregate RPS across all active rescue cases will fall below 38% by 8 August 2026, driven by construction and retail sector deterioration pulling the system mean downward. Currently 41%.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:55%; background: #6A3DB8;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">55%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Aggregate RPS exceeds 44% by 8 August 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-90">90-Day Forecast #2</span>
+        <div class="forecast-claim">One JSE-listed entity will file for business rescue or disclose material going-concern uncertainty in its interim results by 8 August 2026, driven by construction or retail sector contagion.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:48%; background: #6A3DB8;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">48%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">No JSE-listed entity files or discloses going concern by 10 August 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 180-Day -->
+      <div class="subhead" style="margin-top: 32px;">180-Day Forecasts — Horizon: 6 November 2026</div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-180">180-Day Forecast #1</span>
+        <div class="forecast-claim">SADI will reach 66-72/100 by 6 November 2026, absent material macro improvement (defined as: repo rate cut of ≥100bps, or significant government infrastructure payment acceleration, or Transnet throughput recovery above 70%). Current: 61/100.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:42%; background: #C9A030;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">42%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">SADI remains below 62 by 6 November 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-180">180-Day Forecast #2</span>
+        <div class="forecast-claim">The construction sector will lose at least 40% of its currently active rescue cases (28 active) to liquidation within 180 days — the highest single-sector conversion rate since 2021. Implies at least 11 construction rescues convert to liquidation by November 2026.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:38%; background: #C9A030;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">38%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Fewer than 35% of current construction cases convert to liquidation by 6 November 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-180">180-Day Forecast #3</span>
+        <div class="forecast-claim">A formal Section 139 provincial intervention will be applied to at least one Gauteng municipality by 6 November 2026, triggered by failure to pay Eskom obligations, with Tshwane Metro (R2.4bn Eskom arrears) identified as highest probability candidate.</div>
+        <div class="forecast-meta">
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Confidence</div>
+            <div class="confidence-bar"><div class="confidence-fill" style="width:35%; background: #C9A030;"></div></div>
+            <div style="font-size:12px; margin-top:3px;">35%</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Falsification</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">No Gauteng municipality enters Section 139 by 6 November 2026</div>
+          </div>
+          <div class="forecast-meta-item">
+            <div class="forecast-meta-label">Early Warning Signal</div>
+            <div style="font-size:12px; margin-top:3px; color: var(--text-secondary);">Tshwane Eskom arrears exceed R3bn, or COGTA issues formal s139 warning letter</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 14. PRIOR SCORECARD ═══ -->
+    <section class="pub-section" id="scorecard">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 14</div>
+      <div class="section-title">Prior Forecast Scorecard</div>
+
+      <div class="alert-box alert-teal">
+        <div class="alert-title">Edition #001 — Pilot Edition</div>
+        This is the inaugural edition of the BR Distress Ledger. No prior forecasts exist to score. From Edition #002 onward, all forecasts published in prior editions will be tracked, scored, and reported honestly — including contradicted forecasts. Calibration is non-negotiable. The Prior Forecast Scorecard will become the publication's most powerful credibility asset over time.
+      </div>
+
+      <div class="pull-quote">
+        "A forecast that cannot be proven wrong is not a forecast — it is a description of the present. Every prediction in this publication is falsifiable. We will report contradicted forecasts with the same prominence as confirmed ones."
+        <div style="font-size:12px; font-style: normal; font-family: 'IBM Plex Sans', sans-serif; color: var(--text-muted); margin-top: 8px;">— BR Distress Ledger Editorial Standard</div>
+      </div>
+
+      <div class="subhead">Scorecard Methodology</div>
+      <p style="font-size:13px; color: var(--text-secondary); line-height: 1.7;">
+        Each forecast is classified weekly as: <strong>CONFIRMED</strong> (outcome matches prediction), <strong>CONTRADICTED</strong> (outcome clearly falsifies prediction), <strong>PENDING</strong> (still within forecast window), or <strong>SUPERSEDED</strong> (new information renders original forecast irrelevant). Calibration scores (% of forecasts confirmed at each horizon) will be published monthly from Edition #005 onward.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="pub-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-pub-name">BR Distress Ledger</div>
+      <div class="footer-disclaimer">
+        This publication is produced for authorised subscribers only. It is an intelligence product and does not constitute legal, financial, investment, or professional advice. All analysis is based on publicly available information and proprietary analytical frameworks. Named companies and individuals are referenced in their professional capacities in relation to documented public proceedings. The BR Distress Ledger makes no warranties as to the completeness or accuracy of information sourced from third parties. Subscribers rely on this publication at their own risk and should seek independent professional advice before acting on any information contained herein.
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Publication</div>
+      <ul class="footer-links">
+        <li>Edition #001 — Pilot</li>
+        <li>Week Ending: 9 May 2026</li>
+        <li>Published: 11 May 2026</li>
+        <li>SADI Score: 61/100</li>
+        <li>Active Rescues: 178</li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Proprietary Indices</div>
+      <ul class="footer-links">
+        <li>SADI — South Africa Distress Index</li>
+        <li>RPS — Rescue Probability Score</li>
+        <li>RVI — Rescue Velocity Index</li>
+        <li>Sector Fragility Index (6-dim.)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 BR Distress Ledger &nbsp;|&nbsp; Confidential Intelligence Product — Authorised Subscribers Only &nbsp;|&nbsp; This publication is not legal, financial or investment advice
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll + active nav highlighting
+  document.querySelectorAll('.nav-item').forEach(link => {
+    link.addEventListener('click', function(e) {
+      document.querySelectorAll('.nav-item').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Intersection observer for active nav
+  const sections = document.querySelectorAll('.pub-section[id]');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + id) {
+            item.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '-50px 0px -70% 0px' });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
