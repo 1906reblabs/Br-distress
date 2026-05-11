@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — South Africa Business Rescue Intelligence Weekly</title>
+<meta name="description" content="South Africa's premier institutional intelligence publication tracking business rescue, insolvency, and corporate distress. SADI, RPS, sector fragility heatmaps, contrarian intelligence, and weekly forecasts.">
+<meta property="og:title" content="BR Distress Ledger — SA Business Rescue Intelligence">
+<meta property="og:description" content="Institutional-grade weekly intelligence on South African corporate distress, business rescue, and insolvency. SADI: 61/100.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#006B5B;
+  --teal-dark:#004D42;
+  --teal-xdark:#003028;
+  --teal-light:#E0F2EE;
+  --teal-xlight:#F2FAF8;
+  --navy:#0C2040;
+  --navy-mid:#1A3A5C;
+  --gold:#B8920A;
+  --gold-light:#FEF7E0;
+  --white:#FFFFFF;
+  --off-white:#F6FAF8;
+  --grey-100:#EEF3F1;
+  --grey-200:#D0DDD8;
+  --grey-500:#7A9088;
+  --text-primary:#0D1F1A;
+  --text-secondary:#3A5A50;
+  --text-muted:#6A8880;
+  --border:#C5D8D0;
+  --red:#991B1B;
+  --amber:#B45309;
+}
+html{scroll-behavior:smooth}
+body{font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--text-primary);background:var(--white);line-height:1.65}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--teal-xdark);color:#94C4BC;font-size:11px;letter-spacing:0.06em;text-align:center;padding:7px 20px}
+.topbar strong{color:#E0F2EE}
+
+/* ── NAV ── */
+nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;border-bottom:3px solid var(--teal)}
+.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:0.01em}
+.nav-brand-sub{font-size:10px;font-weight:300;color:#6A9890;letter-spacing:0.1em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:#94C4BC;text-decoration:none;font-size:13px;font-weight:400;transition:color 0.15s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--teal);color:#fff!important;padding:7px 18px;border-radius:4px;font-weight:500!important;font-size:13px;transition:background 0.15s!important}
+.nav-cta:hover{background:var(--teal-dark)!important}
+
+/* ── HERO ── */
+.hero{background:var(--navy);padding:72px 40px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 50%,rgba(0,107,91,0.18) 0%,transparent 60%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px}
+.hero-headline span{color:var(--teal);font-style:italic}
+.hero-body{font-size:15px;color:#94C4BC;line-height:1.8;max-width:480px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{display:inline-block;background:var(--teal);color:#fff;padding:13px 28px;border-radius:4px;font-weight:500;font-size:14px;text-decoration:none;transition:background 0.15s}
+.btn-primary:hover{background:var(--teal-dark)}
+.btn-secondary{display:inline-block;border:1px solid rgba(255,255,255,0.25);color:#E0F2EE;padding:13px 28px;border-radius:4px;font-weight:400;font-size:14px;text-decoration:none;transition:all 0.15s}
+.btn-secondary:hover{border-color:#E0F2EE;color:#fff}
+
+/* ── SADI CARD ── */
+.sadi-card{background:rgba(0,107,91,0.12);border:1px solid rgba(0,107,91,0.35);border-radius:10px;padding:28px;color:#fff}
+.sadi-card-eyebrow{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6A9890;margin-bottom:12px}
+.sadi-card-score{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.sadi-card-score-num{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:#fff;line-height:1}
+.sadi-card-score-denom{font-family:'IBM Plex Mono',monospace;font-size:20px;color:#6A9890}
+.sadi-card-badge{display:inline-block;background:#991B1B;color:#fff;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:3px;margin-bottom:16px}
+.sadi-card-delta{font-size:12px;color:#F87171;margin-bottom:20px}
+.sadi-divider{border:none;border-top:1px solid rgba(255,255,255,0.1);margin:16px 0}
+.sadi-sub-grid{display:flex;flex-direction:column;gap:6px}
+.sadi-sub-row{display:flex;justify-content:space-between;font-size:12px;color:#94C4BC}
+.sadi-sub-row strong{color:#E0F2EE;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.sadi-bar-outer{background:rgba(255,255,255,0.08);border-radius:3px;height:4px;margin-top:3px;overflow:hidden}
+.sadi-bar-inner{height:4px;border-radius:3px}
+.bar-red{background:#EF4444}
+.bar-amber{background:#F59E0B}
+.bar-teal{background:var(--teal)}
+.sadi-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.sadi-stat{text-align:center;padding:10px;background:rgba(255,255,255,0.05);border-radius:6px;border:1px solid rgba(255,255,255,0.08)}
+.sadi-stat-val{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff;display:block;line-height:1}
+.sadi-stat-label{font-size:10px;color:#6A9890;letter-spacing:0.06em;text-transform:uppercase;margin-top:2px}
+
+/* ── TICKER STRIP ── */
+.ticker-strip{background:var(--teal-dark);padding:10px 40px;overflow:hidden;white-space:nowrap;position:relative}
+.ticker-strip::before,.ticker-strip::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2}
+.ticker-strip::before{left:0;background:linear-gradient(to right,var(--teal-dark),transparent)}
+.ticker-strip::after{right:0;background:linear-gradient(to left,var(--teal-dark),transparent)}
+.ticker-inner{display:inline-flex;gap:0;animation:ticker 38s linear infinite}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-size:12px;color:#B2D8D2;border-right:1px solid rgba(255,255,255,0.12)}
+.ticker-item .ti-label{color:#6A9890;font-size:10px;text-transform:uppercase;letter-spacing:0.08em}
+.ticker-item .ti-val{font-family:'IBM Plex Mono',monospace;font-weight:500;color:#E0F2EE}
+.ticker-item .ti-delta{font-size:10px}
+.up{color:#F87171}.down{color:#86EFAC}
+
+/* ── EDITION PREVIEW ── */
+.edition-section{padding:72px 40px;background:var(--off-white)}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.section-heading{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:12px}
+.section-sub{font-size:15px;color:var(--text-secondary);max-width:560px;line-height:1.75;margin-bottom:40px}
+
+.edition-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.05)}
+.edition-card-header{background:var(--navy);padding:20px 28px;display:flex;align-items:center;justify-content:space-between}
+.edition-card-meta{font-size:11px;color:#6A9890;letter-spacing:0.06em}
+.edition-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;line-height:1.3;margin-top:4px}
+.edition-badge{background:var(--teal);color:#fff;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:3px}
+.edition-card-body{padding:24px 28px}
+.edition-card-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:24px}
+.ek-item{padding:14px;background:var(--off-white);border-radius:6px;border:1px solid var(--border)}
+.ek-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:6px}
+.ek-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1}
+.ek-sub{font-size:11px;color:var(--text-muted);margin-top:3px}
+.ek-val.red{color:var(--red)}
+.ek-val.amber{color:var(--amber)}
+.edition-stories{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.story-item{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:6px;background:var(--white)}
+.story-num{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;color:var(--text-muted);min-width:22px;padding-top:1px}
+.story-text{flex:1}
+.story-headline{font-size:13px;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:3px}
+.story-meta{font-size:11px;color:var(--text-muted)}
+.story-tag{display:inline-block;font-size:10px;padding:1px 7px;border-radius:2px;font-weight:500;margin-left:6px}
+.tag-c{background:#FEE2E2;color:#991B1B}
+.tag-h{background:#FFEDD5;color:#9A3412}
+.tag-m{background:#FEF3C7;color:#92400E}
+.tag-t{background:var(--teal-light);color:var(--teal-dark)}
+.edition-cta{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--teal-xlight);border-radius:6px;border:1px solid var(--teal-light)}
+.edition-cta p{font-size:13px;color:var(--teal-dark)}
+.btn-edition{background:var(--teal);color:#fff;padding:10px 22px;border-radius:4px;font-weight:500;font-size:13px;text-decoration:none;transition:background 0.15s;display:inline-block}
+.btn-edition:hover{background:var(--teal-dark)}
+
+/* ── WHAT'S INSIDE ── */
+.inside-section{padding:72px 40px;background:var(--white)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature-card{padding:24px;border:1px solid var(--border);border-radius:8px;transition:border-color 0.2s,box-shadow 0.2s}
+.feature-card:hover{border-color:var(--teal);box-shadow:0 4px 24px rgba(0,107,91,0.08)}
+.feature-icon{font-size:28px;margin-bottom:12px;display:block}
+.feature-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.feature-body{font-size:13px;color:var(--text-secondary);line-height:1.7}
+
+/* ── INDEXES ── */
+.indexes-section{padding:72px 40px;background:var(--navy)}
+.indexes-heading{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:8px}
+.indexes-sub{font-size:14px;color:#6A9890;max-width:540px;margin-bottom:48px;line-height:1.75}
+.indexes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.index-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:28px}
+.index-acronym{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--teal);margin-bottom:4px;letter-spacing:0.04em}
+.index-name{font-size:12px;font-weight:500;color:#94C4BC;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:14px}
+.index-body{font-size:13px;color:#6A9890;line-height:1.7}
+.index-example{margin-top:14px;padding:12px;background:rgba(0,0,0,0.2);border-radius:4px}
+.index-example-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#6A9890;margin-bottom:4px}
+.index-example-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff}
+.index-example-sub{font-size:10px;color:#6A9890;margin-top:2px}
+
+/* ── HOW IT WORKS ── */
+.how-section{padding:72px 40px;background:var(--off-white)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;position:relative}
+.how-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:1px;background:var(--border)}
+.how-step{text-align:center;padding:24px 16px}
+.how-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;margin:0 auto 16px;position:relative;background:var(--teal);color:#fff;z-index:1}
+.how-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.how-body{font-size:12.5px;color:var(--text-secondary);line-height:1.65}
+
+/* ── AUDIENCE ── */
+.audience-section{padding:72px 40px;background:var(--teal-dark);color:#fff}
+.audience-heading{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:8px}
+.audience-sub{font-size:14px;color:#94C4BC;max-width:540px;line-height:1.75;margin-bottom:48px}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.audience-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:22px}
+.audience-icon{font-size:24px;margin-bottom:10px}
+.audience-title{font-size:14px;font-weight:600;color:#E0F2EE;margin-bottom:6px}
+.audience-body{font-size:12.5px;color:#94C4BC;line-height:1.65}
+
+/* ── SUBSCRIBE ── */
+.subscribe-section{padding:80px 40px;background:var(--white)}
+.subscribe-inner{max-width:700px;margin:0 auto;text-align:center}
+.subscribe-inner .section-heading{margin-bottom:16px}
+.subscribe-inner .section-sub{margin:0 auto 40px;text-align:center}
+.tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px;text-align:left}
+.tier-card{border:1px solid var(--border);border-radius:8px;padding:22px;transition:border-color 0.2s,box-shadow 0.2s}
+.tier-card:hover{border-color:var(--teal);box-shadow:0 4px 24px rgba(0,107,91,0.1)}
+.tier-card.featured{border-color:var(--teal);border-width:2px;background:var(--teal-xlight)}
+.tier-name{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:4px}
+.tier-price{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--navy);line-height:1;margin-bottom:4px}
+.tier-price span{font-size:14px;font-weight:400;color:var(--text-muted)}
+.tier-desc{font-size:12px;color:var(--text-secondary);margin-bottom:14px;min-height:36px;line-height:1.6}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:5px;margin-bottom:18px}
+.tier-features li{font-size:12px;color:var(--text-secondary);display:flex;gap:7px;align-items:flex-start}
+.tier-features li::before{content:'✓';color:var(--teal);font-weight:600;flex-shrink:0;margin-top:1px}
+.tier-btn{display:block;text-align:center;padding:10px;border-radius:4px;font-size:13px;font-weight:500;text-decoration:none;transition:all 0.15s}
+.tier-btn-primary{background:var(--teal);color:#fff}
+.tier-btn-primary:hover{background:var(--teal-dark)}
+.tier-btn-secondary{background:var(--off-white);color:var(--navy);border:1px solid var(--border)}
+.tier-btn-secondary:hover{background:var(--grey-100)}
+.subscribe-note{font-size:12px;color:var(--text-muted);line-height:1.7}
+
+/* ── FOOTER ── */
+footer{background:var(--navy);padding:48px 40px 24px;color:#6A9890}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
+.footer-brand-sub{font-size:11px;color:#6A9890;line-height:1.6;margin-bottom:14px}
+.footer-col h4{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#94C4BC;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.footer-col ul li a{color:#6A9890;text-decoration:none;font-size:13px;transition:color 0.15s}
+.footer-col ul li a:hover{color:#E0F2EE}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#3A5A50;flex-wrap:wrap;gap:8px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .sadi-card{max-width:420px}
+  .features-grid{grid-template-columns:1fr 1fr}
+  .indexes-grid{grid-template-columns:1fr}
+  .how-grid{grid-template-columns:1fr 1fr}
+  .how-grid::before{display:none}
+  .audience-grid{grid-template-columns:1fr 1fr}
+  .tier-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .edition-card-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  .hero{padding:48px 20px 56px}
+  .hero-headline{font-size:36px}
+  .edition-section,.inside-section,.indexes-section,.how-section,.audience-section,.subscribe-section{padding:48px 20px}
+  .features-grid{grid-template-columns:1fr}
+  .audience-grid{grid-template-columns:1fr}
+  .edition-card-grid{grid-template-columns:1fr}
+  footer{padding:40px 20px 20px}
+  .footer-top{grid-template-columns:1fr}
+  .ticker-strip{padding:10px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <strong>PILOT EDITION NOW LIVE</strong> &nbsp;·&nbsp; BR Distress Ledger Edition #001 · Week Ending 9 May 2026 · SADI: 61/100 (SEVERE) &nbsp;·&nbsp;
+  <strong>PILOT EDITION NOW LIVE</strong> &nbsp;·&nbsp; BR Distress Ledger Edition #001 · Week Ending 9 May 2026 · SADI: 61/100 (SEVERE) &nbsp;·&nbsp;
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="index.html">
+    <div>
+      <div class="nav-brand-name">BR Distress Ledger</div>
+      <div class="nav-brand-sub">SA Business Rescue Intelligence</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#editions">Editions</a>
+    <a href="#indexes">Indexes</a>
+    <a href="#inside">What's Inside</a>
+    <a href="#audience">Who Reads It</a>
+    <a href="#subscribe">Subscribe</a>
+    <a href="edition-001.html" class="nav-cta">Read Edition #001 →</a>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-strip">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">61/100</span>&nbsp;<span class="ti-delta up">↑4 · SEVERE</span></span>
+    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">178</span>&nbsp;<span class="ti-delta up">↑12 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">14</span>&nbsp;<span class="ti-delta up">↑5 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">9</span>&nbsp;<span class="ti-delta up">↑3 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">41%</span>&nbsp;<span class="ti-delta up">↓3pts</span></span>
+    <span class="ticker-item"><span class="ti-label">PCF Market</span>&nbsp;<span class="ti-val">TIGHT</span>&nbsp;<span class="ti-delta up">P+6.2%</span></span>
+    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.74</span>&nbsp;<span class="ti-delta up">↓ Pipeline building</span></span>
+    <span class="ticker-item"><span class="ti-label">Construction RPS</span>&nbsp;<span class="ti-val">31%</span>&nbsp;<span class="ti-delta up">↓ 18-month low</span></span>
+    <span class="ticker-item"><span class="ti-label">Datatek v SARS</span>&nbsp;<span class="ti-val">CCT Judgment</span>&nbsp;<span class="ti-delta">Reserved · LANDMARK</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">61/100</span>&nbsp;<span class="ti-delta up">↑4 · SEVERE</span></span>
+    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">178</span>&nbsp;<span class="ti-delta up">↑12 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">14</span>&nbsp;<span class="ti-delta up">↑5 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">9</span>&nbsp;<span class="ti-delta up">↑3 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">41%</span>&nbsp;<span class="ti-delta up">↓3pts</span></span>
+    <span class="ticker-item"><span class="ti-label">PCF Market</span>&nbsp;<span class="ti-val">TIGHT</span>&nbsp;<span class="ti-delta up">P+6.2%</span></span>
+    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.74</span>&nbsp;<span class="ti-delta up">↓ Pipeline building</span></span>
+    <span class="ticker-item"><span class="ti-label">Construction RPS</span>&nbsp;<span class="ti-val">31%</span>&nbsp;<span class="ti-delta up">↓ 18-month low</span></span>
+    <span class="ticker-item"><span class="ti-label">Datatek v SARS</span>&nbsp;<span class="ti-val">CCT Judgment</span>&nbsp;<span class="ti-delta">Reserved · LANDMARK</span></span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">South Africa Business Rescue Intelligence Weekly</div>
+      <h1 class="hero-headline">The Intelligence Layer Behind<br><span>South Africa's Distress Cycle</span></h1>
+      <p class="hero-body">Institutional-grade weekly intelligence on South African business rescue, corporate insolvency, and distressed assets. Trusted by BRPs, creditors, restructuring lawyers, banks, and distressed investors who need to see what's coming before it's news.</p>
+      <div class="hero-actions">
+        <a href="edition-001.html" class="btn-primary">Read Edition #001 (Free Pilot) →</a>
+        <a href="#subscribe" class="btn-secondary">View Subscription Options</a>
+      </div>
+    </div>
+    <div class="sadi-card">
+      <div class="sadi-card-eyebrow">South Africa Distress Index · Edition #001</div>
+      <div class="sadi-card-score">
+        <span class="sadi-card-score-num">61</span>
+        <span class="sadi-card-score-denom">/100</span>
+      </div>
+      <div class="sadi-card-badge">⬆ SEVERE TERRITORY</div>
+      <div class="sadi-card-delta">↑ 4 points week-on-week · First breach of Severe threshold in 14 months</div>
+      <hr class="sadi-divider">
+      <div class="sadi-sub-grid">
+        <div class="sadi-sub-row"><span>Filing Volume</span><strong>72</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:72%"></div></div>
+        <div class="sadi-sub-row"><span>RPS Inverse</span><strong>63</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:63%"></div></div>
+        <div class="sadi-sub-row"><span>Retrenchment Volume</span><strong>67</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:67%"></div></div>
+        <div class="sadi-sub-row"><span>Liquidation Volume</span><strong>58</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-amber" style="width:58%"></div></div>
+        <div class="sadi-sub-row"><span>NPL Ratio Trend</span><strong>55</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-amber" style="width:55%"></div></div>
+        <div class="sadi-sub-row"><span>SOE Distress</span><strong>48</strong></div>
+        <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-teal" style="width:48%"></div></div>
+      </div>
+      <div class="sadi-stat-row">
+        <div class="sadi-stat"><span class="sadi-stat-val">178</span><div class="sadi-stat-label">Active Rescues</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">41%</span><div class="sadi-stat-label">Avg RPS</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">14</span><div class="sadi-stat-label">New Filings</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">0.74</span><div class="sadi-stat-label">RVI Index</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITION PREVIEW -->
+<section id="editions" class="edition-section">
+  <div class="section-inner">
+    <div class="section-label">Latest Edition</div>
+    <h2 class="section-heading">Edition #001 · Pilot · 11 May 2026</h2>
+    <p class="section-sub">South Africa's distress landscape enters a new phase. SADI crosses Severe territory for the first time in 14 months as the construction cascade accelerates and the PCF market hits a five-year low.</p>
+
+    <div class="edition-card">
+      <div class="edition-card-header">
+        <div>
+          <div class="edition-card-meta">EDITION #001 · PILOT · WEEK ENDING 9 MAY 2026</div>
+          <div class="edition-card-title">SADI Crosses Into Severe Territory as Construction Cascade Accelerates and PCF Market Reaches Five-Year Low</div>
+        </div>
+        <span class="edition-badge">LIVE NOW</span>
+      </div>
+      <div class="edition-card-body">
+        <div class="edition-card-grid">
+          <div class="ek-item">
+            <div class="ek-label">SADI Score</div>
+            <div class="ek-val red">61/100</div>
+            <div class="ek-sub">↑4 pts · SEVERE</div>
+          </div>
+          <div class="ek-item">
+            <div class="ek-label">New Rescue Filings</div>
+            <div class="ek-val amber">14</div>
+            <div class="ek-sub">R3.79bn combined liabilities · 5,060 employees</div>
+          </div>
+          <div class="ek-item">
+            <div class="ek-label">Construction RPS</div>
+            <div class="ek-val red">31%</div>
+            <div class="ek-sub">18-month low · CRITICAL cohort</div>
+          </div>
+        </div>
+
+        <div class="edition-stories">
+          <div class="story-item">
+            <div class="story-num">01</div>
+            <div class="story-text">
+              <div class="story-headline">Construction Sector Cascade: Four New Filings in Seven Days — PCF Denied All<span class="story-tag tag-c">CRITICAL</span></div>
+              <div class="story-meta">Bastion Construction Group (R1.4bn) · Fortis Logistics (R290m) · Eastside Civil Works CC · Pinnacle Steel Fabricators</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <div class="story-num">02</div>
+            <div class="story-text">
+              <div class="story-headline">Meridian Retail Holdings Enters Rescue: R680m Liability Gap, 2,340 Employees, No PCF<span class="story-tag tag-c">CRITICAL</span></div>
+              <div class="story-meta">87 stores · USD-invoiced offshore creditors · 14-day PCF window · BRP: Chantelle Vosloo</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <div class="story-num">03</div>
+            <div class="story-text">
+              <div class="story-headline">Constitutional Court Reserves Judgment: Datatek v SARS — PCF Priority in the Balance<span class="story-tag tag-h">LANDMARK</span></div>
+              <div class="story-meta">Expected 60–90 days · PCF rates may increase 200–350 bps if SARS prevails</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <div class="story-num">04</div>
+            <div class="story-text">
+              <div class="story-headline">Contrarian: Banks Are Not Retreating From Rescue — They're Building Proprietary Distressed Debt Positions<span class="story-tag tag-t">CONTRARIAN</span></div>
+              <div class="story-meta">Standard Bank Special Situations desk added 3 analysts in Q1 2026 · Absa 2021 SPV pattern repeating</div>
+            </div>
+          </div>
+          <div class="story-item">
+            <div class="story-num">05</div>
+            <div class="story-text">
+              <div class="story-headline">Alpha Opportunity: Fortis Logistics PCF Provision — Asymmetric Returns in Both Rescue &amp; Liquidation<span class="story-tag tag-t">INVEST.</span></div>
+              <div class="story-meta">R110–165m fleet security · Prime+7.5% + warrants · 78% opportunity rating · 14-day window</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="edition-cta">
+          <p><strong>Pilot edition available free.</strong> All 14 sections, full data tables, sector heatmap, Black Swan Watchlist, and 30/90/180-day forecasts.</p>
+          <a href="edition-001.html" class="btn-edition">Read Full Edition →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDEXES -->
+<section id="indexes" class="indexes-section">
+  <div class="section-inner">
+    <div class="section-label" style="color:#6A9890">Proprietary Intelligence Products</div>
+    <h2 class="indexes-heading">Three Indexes. No Comparable Data Exists.</h2>
+    <p class="indexes-sub">Built from first principles, grounded in CIPC data, banking disclosures, and forensic analysis of active proceedings. Published weekly. Calibrated over time. Never hedged.</p>
+    <div class="indexes-grid">
+      <div class="index-card">
+        <div class="index-acronym">SADI</div>
+        <div class="index-name">South Africa Distress Index</div>
+        <div class="index-body">A composite weekly score tracking six dimensions of systemic corporate distress: business rescue filing volume, liquidation volume, aggregate rescue probability inverse, banking NPL trend, retrenchment volume, and SOE distress. Scale: 0 (benign) to 100 (systemic crisis). Published every Monday. Fully methodology-disclosed to Premium subscribers.</div>
+        <div class="index-example">
+          <div class="index-example-label">Current Score</div>
+          <div class="index-example-val">61/100</div>
+          <div class="index-example-sub">SEVERE territory · ↑4 pts this week · First above-60 reading in 14 months</div>
+        </div>
+      </div>
+      <div class="index-card">
+        <div class="index-acronym">RPS</div>
+        <div class="index-name">Rescue Probability Score</div>
+        <div class="index-body">A company-level rescue success probability score for every active major business rescue proceeding in South Africa. Eight-factor weighted model: leverage profile, liquidity and cash runway, sector fragility, labour risk, creditor alignment, management quality, legal risk, and macro environment. Scored 0–100%, with categories from STRONG (80%+) to TERMINAL (&lt;10%). Updated weekly.</div>
+        <div class="index-example">
+          <div class="index-example-label">This Week's Range</div>
+          <div class="index-example-val">19% – 82%</div>
+          <div class="index-example-sub">Avg: 41% · 3 companies TERMINAL · Construction cohort avg: 31%</div>
+        </div>
+      </div>
+      <div class="index-card">
+        <div class="index-acronym">RVI</div>
+        <div class="index-name">Rescue Velocity Index</div>
+        <div class="index-body">A pipeline health metric measuring the rate at which rescue cases are resolving (through plan adoption, liquidation conversion, or successful conclusion) against the rate at which new cases are entering the system. RVI above 1.0: the system is clearing. RVI below 1.0: pipeline is building. RVI below 0.5: capacity risk. A proprietary leading indicator of systemic BRP and court capacity stress.</div>
+        <div class="index-example">
+          <div class="index-example-label">Current RVI</div>
+          <div class="index-example-val">0.74</div>
+          <div class="index-example-sub">Pipeline building · ↓ from 0.91 three months ago · Capacity watch zone</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section id="inside" class="inside-section">
+  <div class="section-inner">
+    <div class="section-label">What's Inside Every Edition</div>
+    <h2 class="section-heading">14 Sections. Zero Filler.</h2>
+    <p class="section-sub">Every section meets a minimum signal density standard: specific named entities, specific data points, specific analytical claims. No generic market commentary. No hedged non-positions.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">📋</span>
+        <div class="feature-title">Executive Intelligence Summary</div>
+        <div class="feature-body">Ten ranked intelligence items, ordered by systemic importance. Every item names an entity, cites a figure, and states a forward-looking implication. Designed for a senior professional to brief from in under 5 minutes.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📊</span>
+        <div class="feature-title">Business Rescue Filings Tracker</div>
+        <div class="feature-body">Complete table of all new CIPC filings with RPS scores, BRP appointments, liability estimates, and employee counts. Includes two to three deep-dive case studies on the most significant new entrants.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <div class="feature-title">Sector Fragility Heatmap</div>
+        <div class="feature-body">Six-dimension fragility scores across twelve sectors, from EXTREME (construction this week) to LOW. Composite scoring model tracks leverage, liquidity, labour, energy, creditor pressure, and supply chain risk.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">⚖️</span>
+        <div class="feature-title">Legal &amp; Court Intelligence</div>
+        <div class="feature-body">All significant High Court, SCA, and Constitutional Court developments, interpreted for practical impact on BRP conduct, creditor rights, and PCF market pricing. Not legal summaries — legal intelligence.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🦢</span>
+        <div class="feature-title">Black Swan Watchlist</div>
+        <div class="feature-body">Ranked tail-risk candidates applying Taleb's Black Swan framework. Each candidate includes its current status (NARRATIVE → BUILDING → TRIGGERED), observable early warning signals, and the specific mechanism that would produce non-linear cascade.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💡</span>
+        <div class="feature-title">Contrarian Intelligence</div>
+        <div class="feature-body">Three non-consensus claims per week — each supported by named, verifiable evidence and a specific falsification condition. Written in the Thiel format: Consensus → Contrarian → Evidence → Implication → Falsification.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📅</span>
+        <div class="feature-title">Forecasts: 30 / 90 / 180 Days</div>
+        <div class="feature-body">Specific, named, dated, and falsifiable predictions across three time horizons. Every forecast includes a confidence level, an early warning signal to track, and an explicit falsification condition. Prior forecasts are scored honestly every edition.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💰</span>
+        <div class="feature-title">Distressed Opportunity Radar</div>
+        <div class="feature-body">Rated opportunities for PE firms, distressed debt investors, asset acquirers, and turnaround operators. Includes a weekly Alpha Opportunity of the Week in institutional memo format — situation, mispricing, catalyst, execution path, key risks.</div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🏦</span>
+        <div class="feature-title">Rescue Financing &amp; Credit Markets</div>
+        <div class="feature-body">PCF market conditions, active provider intelligence, rate trends, DFI activity, and the "Rescue Without Financing" alert list — companies in rescue with no confirmed PCF and critical cash runways.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-inner">
+    <div class="section-label">Intelligence Architecture</div>
+    <h2 class="section-heading">Powered by a 38-Agent AI Intelligence System</h2>
+    <p class="section-sub" style="max-width:600px">A multi-agent system modelled on institutional research operations — with specialised agents for data collection, analysis, synthesis, and editorial quality control.</p>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-title">Signal Collection</div>
+        <div class="how-body">12 specialised Signal Layer agents continuously monitor CIPC filings, Government Gazette notices, court records, banking disclosures, labour data, SOE reports, and media signals.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-title">Intelligence Analysis</div>
+        <div class="how-body">12 Analysis Layer agents apply specialised frameworks: fragility analysis, network contagion mapping, rescue probability scoring, scenario simulation, and political economy assessment.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-title">Synthesis &amp; Editorial</div>
+        <div class="how-body">7 Synthesis Layer agents produce publication sections — with an Editorial Agent applying rigorous quality gates: signal density, attribution standards, legal safety review, and factual consistency checks.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">4</div>
+        <div class="how-title">Publication &amp; Archive</div>
+        <div class="how-body">6 Distribution Layer agents publish to web, email, social, PDF, and podcast formats — and the Knowledge Base Agent archives every edition, building a proprietary historical intelligence dataset.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience" class="audience-section">
+  <div class="section-inner">
+    <div class="section-label" style="color:#6A9890">Who Reads BR Distress Ledger</div>
+    <h2 class="audience-heading">Written For Professionals Who Act on Intelligence</h2>
+    <p class="audience-sub">Not a news summary. Not a legal update. An intelligence product for people whose decisions depend on knowing what's coming before their counterparts do.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon">⚖️</div>
+        <div class="audience-title">Business Rescue Practitioners</div>
+        <div class="audience-body">RPS scores for active proceedings. Legal intelligence from every court division. Labour risk registers. PCF market conditions. The BRP community's shared intelligence layer.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏦</div>
+        <div class="audience-title">Bank Credit Officers &amp; Special Situations Teams</div>
+        <div class="audience-body">PCF market rate benchmarks. Creditor power maps. NPL sector analysis. Systemic risk signals before they hit provisioning. Banking-sector exposure across the full rescue universe.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">📈</div>
+        <div class="audience-title">Distressed Investors &amp; PE Funds</div>
+        <div class="audience-body">Rated opportunity pipeline. Alpha opportunities of the week. Sector fragility positioning for entry and exit timing. Contrarian intelligence on market mislabellings.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🏛️</div>
+        <div class="audience-title">Insolvency &amp; Restructuring Lawyers</div>
+        <div class="audience-body">All significant court judgments interpreted for practice implications. Emerging legal risks. BRP removal patterns. Creditor coalition intelligence. Regulatory developments affecting proceedings.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">🔬</div>
+        <div class="audience-title">Corporate Advisors &amp; Turnaround Operators</div>
+        <div class="audience-body">Early-warning sector signals before formal filings. SADI trajectory for timing intervention decisions. SOE and municipal distress as client-risk inputs. Labour instability intelligence.</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">📡</div>
+        <div class="audience-title">Financial Journalists &amp; Analysts</div>
+        <div class="audience-body">Sector fragility heatmaps. Aggregate data on rescue system health. Contrarian perspectives with evidence. Named, attributed intelligence not available from public data sources alone.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSCRIBE -->
+<section id="subscribe" class="subscribe-section">
+  <div class="section-inner">
+    <div class="section-label">Subscription Options</div>
+    <h2 class="section-heading">Choose Your Access Level</h2>
+    <p class="section-sub">The BR Distress Ledger is published weekly every Monday. Pilot Edition #001 is available free. Future editions require a subscription.</p>
+  </div>
+  <div class="section-inner" style="max-width:900px">
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-name">Free</div>
+        <div class="tier-price">R0 <span>/ month</span></div>
+        <div class="tier-desc">Public teaser access and monthly digest for researchers and students.</div>
+        <ul class="tier-features">
+          <li>Weekly email: Executive Summary (3 items)</li>
+          <li>SADI score + direction</li>
+          <li>One free full edition per month</li>
+          <li>Public teaser page for each edition</li>
+          <li>Monthly intelligence digest</li>
+        </ul>
+        <a href="edition-001.html" class="tier-btn tier-btn-secondary">Read Pilot Edition Free</a>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-name">Standard Subscriber</div>
+        <div class="tier-price">R2,900 <span>/ month</span></div>
+        <div class="tier-desc">Full weekly edition access for restructuring professionals and credit officers.</div>
+        <ul class="tier-features">
+          <li>Full weekly edition — all 14 sections</li>
+          <li>PDF download (print-quality)</li>
+          <li>Full email briefing each Monday</li>
+          <li>Rolling 6-month archive access</li>
+          <li>All SADI, RPS, RVI scores weekly</li>
+          <li>Sector heatmap &amp; data tables</li>
+        </ul>
+        <a href="#" class="tier-btn tier-btn-primary">Subscribe — Standard</a>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">Premium / Institutional</div>
+        <div class="tier-price">R7,500 <span>/ month</span></div>
+        <div class="tier-desc">Full intelligence suite for law firms, banks, PE funds, and advisory practices.</div>
+        <ul class="tier-features">
+          <li>Everything in Standard</li>
+          <li>Mid-week intelligence alerts</li>
+          <li>Data tables in CSV/Excel</li>
+          <li>Full historical archive</li>
+          <li>Multi-seat access (up to 5 users)</li>
+          <li>Direct editorial contact</li>
+          <li>Forecast calibration reports monthly</li>
+          <li>Bespoke sector briefings on request</li>
+        </ul>
+        <a href="#" class="tier-btn tier-btn-primary">Subscribe — Premium</a>
+      </div>
+    </div>
+    <p class="subscribe-note">All prices exclude VAT. Annual subscriptions available at 10% discount. Institutional multi-seat pricing for teams above 5 users — contact editorial. Free trial period of 30 days available for Standard subscribers. All subscriptions cancel anytime.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="section-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">BR Distress Ledger</div>
+        <div class="footer-brand-sub">South Africa Business Rescue Intelligence Weekly. Institutional-grade intelligence on corporate distress, business rescue, and insolvency. Published every Monday. Est. 2026.</div>
+        <p style="font-size:12px;color:#3A5A50;line-height:1.6">This publication is a confidential intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. All rights reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Publication</h4>
+        <ul>
+          <li><a href="edition-001.html">Edition #001 (Pilot)</a></li>
+          <li><a href="#editions">Edition Archive</a></li>
+          <li><a href="#indexes">SADI · RPS · RVI Indexes</a></li>
+          <li><a href="#inside">What's Inside</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Intelligence</h4>
+        <ul>
+          <li><a href="edition-001.html#filings">Rescue Filings Tracker</a></li>
+          <li><a href="edition-001.html#heatmap">Sector Fragility Heatmap</a></li>
+          <li><a href="edition-001.html#blackswan">Black Swan Watchlist</a></li>
+          <li><a href="edition-001.html#contrarian">Contrarian Intelligence</a></li>
+          <li><a href="edition-001.html#forecasts">Forecasts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Subscribe</h4>
+        <ul>
+          <li><a href="#subscribe">Free Tier</a></li>
+          <li><a href="#subscribe">Standard — R2,900/mo</a></li>
+          <li><a href="#subscribe">Premium — R7,500/mo</a></li>
+          <li><a href="#">Institutional Enquiries</a></li>
+          <li><a href="#">Methodology Overview</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BR Distress Ledger · All rights reserved · Confidential Intelligence Product</span>
+      <span>This publication does not constitute legal, financial, or investment advice.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
