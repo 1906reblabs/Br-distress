@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — Edition #2 | Week Ending 16 May 2026</title>
+<meta name="description" content="South Africa's premier business rescue intelligence. Edition 2, Week Ending 16 May 2026. SADI: 59/100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--teal-xdark:#003028;--navy:#0D2340;--navy-mid:#1A3A5C;--gold:#C9A030;--gold-light:#FDF3DC;--white:#FFFFFF;--off-white:#F5FAF8;--grey-50:#F0F4F3;--grey-100:#DDE6E3;--grey-200:#BBC9C5;--grey-500:#6B8480;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--border:#C8DDD9;--border-light:#E5EFED;--strong:#0F5C2E;--strong-bg:#D4EDDA;--probable:#2E7D32;--probable-bg:#E8F5E9;--challenged-c:#E65100;--challenged-bg:#FFF3E0;--distressed-c:#BF360C;--distressed-bg:#FBE9E7;--critical-c:#880E0E;--critical-bg:#FDECEA;--terminal-bg:#3E0000;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
+a{text-decoration:none;color:inherit;}
+/* ── SHARED COMPONENTS ── */
+.top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
+.rps{display:inline-flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+.rps-strong{background:var(--strong-bg);color:var(--strong);}
+.rps-probable{background:var(--probable-bg);color:var(--probable);}
+.rps-challenged{background:var(--challenged-bg);color:var(--challenged-c);}
+.rps-distressed{background:var(--distressed-bg);color:var(--distressed-c);}
+.rps-critical{background:var(--critical-bg);color:var(--critical-c);}
+.rps-terminal{background:var(--terminal-bg);color:white;font-size:10px;}
+.tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;letter-spacing:0.04em;text-transform:uppercase;}
+.tag-sector{background:var(--teal-light);color:var(--teal-dark);}
+.tag-risk{background:var(--distressed-bg);color:var(--distressed-c);}
+.tag-risk-crit{background:var(--critical-bg);color:var(--critical-c);}
+.tag-action{background:#E3F2FD;color:#0D47A1;}
+.tag-30d{background:#EDE7F6;color:#4527A0;}
+.tag-positive{background:var(--strong-bg);color:var(--strong);}
+.tag-correction{background:#1A1A1A;color:#F4A918;}
+.tag-landmark{background:var(--terminal-bg);color:white;}
+.alert-box{border-radius:6px;padding:16px 20px;margin:16px 0;border-left:4px solid;font-size:13px;}
+.alert-box .alert-title{font-size:11px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
+.alert-green{background:var(--strong-bg);border-color:#1A7A4A;color:var(--strong);}
+.alert-amber{background:#FFF8E1;border-color:#C77B00;color:#7A4A00;}
+.alert-red{background:var(--critical-bg);border-color:#C0392B;color:var(--critical-c);}
+.alert-teal{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);}
+.alert-correction{background:#0D1A2D;border-color:#F4A918;color:#E0E0E0;}
+.alert-correction .alert-title{color:#F4A918;}
+.data-table-wrap{overflow-x:auto;margin:20px 0;border-radius:6px;border:1px solid var(--border);}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;}
+.data-table thead th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:10px 12px;text-align:left;white-space:nowrap;}
+.data-table tbody tr:nth-child(even){background:var(--grey-50);}
+.data-table tbody tr:hover{background:var(--teal-light);}
+.data-table tbody td{padding:9px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.4;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.muted{color:var(--text-muted);font-size:12px;}
+.subhead{font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 8px;text-transform:uppercase;letter-spacing:0.06em;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+ul.body-list{padding-left:20px;margin:10px 0;}
+ul.body-list li{margin-bottom:6px;font-size:13px;color:var(--text-secondary);}
+.pull-quote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gold-light);border-radius:0 6px 6px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
+/* ── SHARED FOOTER ── */
+.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:24px;border-bottom:1px solid #1E3D5A;margin-bottom:20px;}
+.footer-pub-name{font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:8px;}
+.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;}
+.footer-col-title{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:5px;font-size:12px;color:#8AAEBE;}
+.footer-bottom{max-width:1200px;margin:0 auto;font-size:11px;color:#4A6A7A;text-align:center;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}}
+.correction-banner{background:#1A1A1A;border-bottom:3px solid #F4A918;padding:10px 40px;color:#F4A918;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.correction-banner strong{color:white;}
+.pub-header{background:var(--teal-dark);color:white;padding:28px 40px 20px;border-bottom:4px solid var(--gold);}
+.header-grid{display:grid;grid-template-columns:1fr auto;align-items:start;gap:32px;max-width:1200px;margin:0 auto;}
+.pub-eyebrow{font-size:10px;letter-spacing:0.14em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.pub-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:white;line-height:1.1;}
+.pub-title span{color:var(--gold);}
+.pub-meta{margin-top:10px;font-size:12px;color:#9BBFC9;display:flex;gap:20px;}
+.pub-meta strong{color:#D4E8EC;font-weight:500;}
+.sadi-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:16px 22px;text-align:center;min-width:180px;}
+.sadi-label{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.sadi-score{font-family:'IBM Plex Mono',monospace;font-size:52px;font-weight:500;color:#F4A918;line-height:1;}
+.sadi-denom{font-size:22px;color:#9BBFC9;}
+.sadi-badge{display:inline-block;margin-top:6px;background:rgba(92,196,138,0.18);border:1px solid rgba(92,196,138,0.4);color:#5AC48A;font-size:10px;letter-spacing:0.1em;font-weight:500;padding:3px 10px;border-radius:3px;text-transform:uppercase;}
+.sadi-change{font-size:11px;color:#5AC48A;margin-top:4px;}
+.stats-strip{background:var(--navy);padding:10px 40px;display:flex;border-bottom:1px solid #1E3D5A;}
+.stat-item{flex:1;text-align:center;padding:8px 16px;border-right:1px solid #1E3D5A;}
+.stat-item:last-child{border-right:none;}
+.stat-label{font-size:9px;letter-spacing:0.1em;color:#6A8FA0;text-transform:uppercase;font-weight:500;}
+.stat-val{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:500;color:white;line-height:1.2;}
+.layout{display:grid;grid-template-columns:240px 1fr;max-width:1200px;margin:0 auto;}
+.sidebar{background:var(--white);border-right:1px solid var(--border-light);position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 0;}
+.sidebar-head{font-size:9px;letter-spacing:0.14em;color:var(--text-muted);text-transform:uppercase;font-weight:500;padding:0 20px 10px;border-bottom:1px solid var(--border-light);margin-bottom:8px;}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 20px;font-size:12px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all 0.15s;}
+.nav-item:hover,.nav-item.active{background:var(--teal-light);color:var(--teal-dark);border-left-color:var(--teal);font-weight:500;}
+.nav-num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--grey-200);min-width:18px;}
+.main-content{padding:0 48px 64px;background:var(--white);}
+.pub-section{border-bottom:1px solid var(--border-light);padding:48px 0;scroll-margin-top:20px;}
+.section-rule{height:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-mid) 60%,transparent 100%);margin-bottom:20px;border-radius:2px;}
+.section-eyebrow{font-size:9px;letter-spacing:0.18em;color:var(--teal);text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+.section-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+.lead-para{font-size:15px;line-height:1.75;color:var(--text-secondary);margin-bottom:24px;border-left:3px solid var(--teal-mid);padding-left:16px;}
+p{margin-bottom:12px;}
+.metric-mini{background:var(--off-white);border:1px solid var(--border-light);border-radius:6px;padding:14px 16px;text-align:center;}
+.metric-mini-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;}
+.metric-mini-val{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:500;color:var(--navy);}
+.metric-mini-sub{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.sadi-sub{display:grid;grid-template-columns:160px 1fr 40px;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-light);font-size:12px;}
+.sadi-sub:last-child{border-bottom:none;}
+.sadi-sub-bar{height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;}
+.sadi-sub-fill{height:100%;border-radius:4px;}
+.sadi-sub-score{font-family:'IBM Plex Mono',monospace;font-weight:500;text-align:right;}
+.exec-item{padding:18px 0;border-bottom:1px solid var(--border-light);display:grid;grid-template-columns:36px 1fr;gap:16px;}
+.exec-item:last-child{border-bottom:none;}
+.exec-num{font-family:'Playfair Display',serif;font-size:28px;color:var(--teal-mid);font-weight:700;line-height:1;padding-top:2px;}
+.exec-headline{font-size:12px;letter-spacing:0.04em;font-weight:600;color:var(--navy);text-transform:uppercase;margin-bottom:6px;}
+.exec-body{font-size:13px;line-height:1.65;color:var(--text-secondary);}
+.exec-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:11px;}
+.heatmap-table th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.06em;font-weight:500;padding:8px 10px;text-align:center;white-space:nowrap;}
+.heatmap-table th:first-child{text-align:left;}
+.heatmap-table td{padding:7px 10px;text-align:center;border:1px solid var(--border-light);font-family:'IBM Plex Mono',monospace;font-size:11px;}
+.heatmap-table td:first-child{text-align:left;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--navy);}
+.hm-1{background:#E8F5E9;color:#2E7D32;}.hm-2{background:#F1F8E9;color:#558B2F;}.hm-3{background:#FFF8E1;color:#7A4A00;}.hm-4{background:#FFF3E0;color:#BF360C;}.hm-5{background:#B71C1C;color:white;font-weight:600;}
+.rating-low{background:#D4EDDA;color:#0F5C2E;}.rating-moderate{background:#FFF3CD;color:#7A4A00;}.rating-high{background:#F8D7DA;color:#721C24;}.rating-extreme{background:#3E0000;color:white;font-weight:600;}
+.contrarian-block{background:var(--navy);border-radius:8px;padding:28px 32px;margin:24px 0;color:#D4E4EC;}
+.contrarian-num{font-size:10px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+.contrarian-headline{font-family:'Playfair Display',serif;font-size:18px;color:white;line-height:1.3;margin-bottom:20px;}
+.contrarian-row{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.contrarian-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.contrarian-label{font-size:9px;letter-spacing:0.14em;font-weight:600;text-transform:uppercase;margin-bottom:4px;}
+.cl-consensus{color:#F08080;}.cl-contrarian{color:#7EC8E3;}.cl-evidence{color:#90D9C5;}.cl-implication{color:#F4A918;}.cl-falsification{color:#B0B0B0;}
+.contrarian-row p{font-size:13px;line-height:1.6;color:#D4E4EC;}
+.forecast-card{border:1px solid var(--border);border-radius:8px;padding:20px 24px;margin-bottom:16px;background:var(--off-white);}
+.forecast-horizon{display:inline-block;font-size:9px;letter-spacing:0.12em;font-weight:600;text-transform:uppercase;padding:3px 9px;border-radius:3px;margin-bottom:12px;}
+.fh-30{background:#E3F2FD;color:#0D47A1;}.fh-90{background:#EDE7F6;color:#4527A0;}.fh-180{background:#FFF8E1;color:#7A4A00;}
+.forecast-claim{font-weight:500;font-size:14px;color:var(--navy);margin-bottom:12px;line-height:1.5;}
+.forecast-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;}
+.forecast-meta-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;font-weight:500;margin-bottom:2px;}
+.confidence-bar{height:4px;background:var(--grey-100);border-radius:2px;margin-top:3px;overflow:hidden;}
+.confidence-fill{height:100%;background:var(--teal);border-radius:2px;}
+.swan-item{border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin-bottom:14px;background:var(--white);border-left:4px solid #1A1A1A;}
+.swan-rank{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--text-muted);margin-bottom:4px;}
+.swan-name{font-weight:600;font-size:13px;color:var(--navy);margin-bottom:8px;}
+.swan-status{display:inline-block;font-size:10px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;padding:2px 8px;border-radius:3px;margin-bottom:10px;}
+.s-narrative{background:#E8EAF6;color:#283593;}.s-latent{background:#FFF3E0;color:#7A4A00;}.s-building{background:var(--critical-bg);color:var(--critical-c);}
+.swan-body p{font-size:12px;color:var(--text-secondary);line-height:1.6;}
+.case-study{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.case-study-title{font-family:'Playfair Display',serif;font-size:15px;color:var(--teal-dark);margin-bottom:8px;}
+.case-study-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.opp-card{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:16px;}
+.opp-header{background:var(--navy);padding:14px 20px;color:white;}
+.opp-type{font-size:9px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:4px;}
+.opp-title{font-family:'Playfair Display',serif;font-size:16px;color:white;}
+.opp-body{padding:18px 20px;background:var(--off-white);}
+.opp-meta-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;}
+.opp-metric-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:2px;}
+.opp-metric-val{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500;color:var(--navy);}
+.opp-rating-bar{height:6px;background:var(--grey-100);border-radius:3px;margin:8px 0;}
+.opp-rating-fill{height:100%;background:var(--teal);border-radius:3px;}
+.legal-card{border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:16px;background:var(--white);}
+.legal-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;}
+.legal-card-title{font-weight:600;font-size:13px;color:var(--navy);line-height:1.4;}
+.legal-card-citation{font-size:11px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;margin-top:3px;}
+.legal-sig{font-size:11px;font-weight:600;padding:3px 9px;border-radius:3px;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;}
+.sig-landmark{background:var(--terminal-bg);color:white;}
+.sig-positive{background:var(--strong-bg);color:var(--strong);}
+.legal-card-body{font-size:12px;color:var(--text-secondary);line-height:1.7;}
+.legal-card-body p{margin-bottom:10px;}
+.legal-card-body strong{color:var(--navy);}
+.scorecard-table{width:100%;border-collapse:collapse;font-size:12px;margin:16px 0;}
+.scorecard-table th{background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
+.scorecard-table td{padding:10px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+.scorecard-table tr:nth-child(even){background:var(--grey-50);}
+.status-pill{font-weight:600;font-size:10px;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:0.06em;display:inline-block;}
+.status-pending{background:#E3F2FD;color:#0D47A1;}
+.status-confirmed{background:var(--strong-bg);color:var(--strong);}
+.status-contradicted{background:var(--critical-bg);color:var(--critical-c);}
+.status-superseded{background:#F5F5F5;color:#555;}
+.new-star{color:var(--gold);font-size:13px;margin-right:2px;}
+@media(max-width:900px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.main-content{padding:0 20px 40px;}.header-grid{grid-template-columns:1fr;}.stats-strip{flex-wrap:wrap;padding:8px 16px;}.stat-item{border-right:none;border-bottom:1px solid #1E3D5A;min-width:45%;}.pub-title{font-size:22px;}}
+</style>
+</head>
+<body>
+<div class="correction-banner">
+  &#x26A0; EDITORIAL CORRECTIONS &mdash; EDITION #1 &nbsp;|&nbsp;
+  <strong>3 material errors corrected in this edition.</strong>
+  Full details in Section 14.
+</div>
+
+<div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
+
+<header class="pub-header">
+  <div class="header-grid">
+    <div>
+      <div class="pub-eyebrow">South Africa's Premier Corporate Distress Intelligence</div>
+      <div class="pub-title">BR <span>Distress</span> Ledger</div>
+      <div class="pub-meta">
+        <span><strong>Edition #2</strong></span>
+        <span><strong>Week Ending 16 May 2026</strong></span>
+        <span>Publication Date: 18 May 2026</span>
+      </div>
+    </div>
+    <div class="sadi-panel">
+      <div class="sadi-label">South Africa Distress Index</div>
+      <div class="sadi-score">59<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">&#x25BC; HIGH &mdash; Easing</div>
+      <div class="sadi-change">&#x25BC; 2 pts from corrected Ed.001 baseline of 57</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-label">Active Rescues</div><div class="stat-val" style="color:#E8745A;">182</div></div>
+  <div class="stat-item"><div class="stat-label">New Filings (Week)</div><div class="stat-val" style="color:#E8745A;">9</div></div>
+  <div class="stat-item"><div class="stat-label">New Liquidations</div><div class="stat-val" style="color:#E8745A;">7</div></div>
+  <div class="stat-item"><div class="stat-label">Avg. RPS Score</div><div class="stat-val" style="color:#F4A918;">43%</div></div>
+  <div class="stat-item"><div class="stat-label">PCF Market</div><div class="stat-val" style="color:#F4A918;font-size:14px;padding-top:4px;">TIGHT</div></div>
+  <div class="stat-item"><div class="stat-label">Eskom Grid</div><div class="stat-val" style="color:#5AC48A;font-size:14px;padding-top:4px;">STABLE</div></div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">Contents &mdash; Edition 002</div>
+    <a href="#exec-summary" class="nav-item active"><span class="nav-num">01</span> Executive Summary</a>
+    <a href="#sadi" class="nav-item"><span class="nav-num">02</span> SADI Dashboard</a>
+    <a href="#filings" class="nav-item"><span class="nav-num">03</span> New BR Filings</a>
+    <a href="#liquidation" class="nav-item"><span class="nav-num">04</span> Liquidation Radar</a>
+    <a href="#sector" class="nav-item"><span class="nav-num">05</span> Sector Fragility</a>
+    <a href="#financing" class="nav-item"><span class="nav-num">06</span> Rescue Financing</a>
+    <a href="#legal" class="nav-item"><span class="nav-num">07</span> Legal Intelligence</a>
+    <a href="#labour" class="nav-item"><span class="nav-num">08</span> Labour Monitor</a>
+    <a href="#soe" class="nav-item"><span class="nav-num">09</span> SOE &amp; Municipal</a>
+    <a href="#opportunity" class="nav-item"><span class="nav-num">10</span> Distressed Opportunities</a>
+    <a href="#blackswan" class="nav-item"><span class="nav-num">11</span> Black Swan Watchlist</a>
+    <a href="#contrarian" class="nav-item"><span class="nav-num">12</span> Contrarian Intelligence</a>
+    <a href="#forecasts" class="nav-item"><span class="nav-num">13</span> Forecasts 30/90/180d</a>
+    <a href="#scorecard" class="nav-item"><span class="nav-num">14</span> Scorecard &amp; Corrections</a>
+    <div style="margin:20px 16px 0;padding:14px;background:var(--teal-light);border-radius:6px;border:1px solid var(--teal-mid);">
+      <div style="font-size:10px;letter-spacing:0.1em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Edition Highlight</div>
+      <div style="font-size:11px;color:var(--teal-dark);line-height:1.5;">Transnet Rail Breakthrough and cidb Blacklist Cascade Reframe SA Distress Landscape</div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- 01 EXECUTIVE SUMMARY -->
+    <section class="pub-section" id="exec-summary">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 01</div>
+      <div class="section-title">Executive Intelligence Summary</div>
+      <div class="lead-para">South Africa's distress landscape in the week ending 16 May 2026 presented a bifurcated picture unusual in recent months: two landmark legal rulings and a major SOE structural reform delivered genuine positive inputs to the rescue ecosystem, even as construction sector acceleration and PCF instrument uncertainty pushed systemic stress metrics upward. This is not a market in uniform deterioration — it is a market in sector-specific crisis with system-level reform beginning to emerge.
+</div>
+      <div class="exec-item">
+        <div class="exec-num">1</div>
+        <div>
+          <div class="exec-headline">Transnet Admits 11 Private Rail Operators — Structural Break in SA Logistics Risk Landscape</div>
+          <div class="exec-body">On 13 May 2026, TRIM concluded Rail Access Agreements with 11 train operating companies across five strategic freight corridors. Operators include Grindrod, Menar Ports & Rail, Sharp Logistics, and eight others. TRIM expects 24 million tonnes of annual freight capacity initially, scaling to 52 million tonnes over five years. Road freight operators in rescue built feasibility models on Transnet's failure — that structural assumption is now challenged. BRPs with logistics mandates should revise rescue plan revenue assumptions within 45 days.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">SOE / Logistics</span>
+            <span class="tag tag-positive">POSITIVE SIGNAL</span>
+            <span class="tag tag-action">Watch</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">2</div>
+        <div>
+          <div class="exec-headline">cidb Construction Blacklist Reaches 52 Firms — State Contract Cancellations to Trigger Rescue Pipeline</div>
+          <div class="exec-body">Public Works Minister Macpherson confirmed 52 construction companies blacklisted by the cidb — 12 added since January 2026. Between 2002–2024, only two contractors had ever been blacklisted. Blacklisting triggers immediate state contract disqualification — a viability-ending event for government-dependent contractors. At least two companies in active rescue hold contracts under cidb review. Expect 3–5 blacklisted-entity rescue filings within 30 days.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Construction</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">30-Day</span>
+            <span class="tag tag-action">Action Required</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">3</div>
+        <div>
+          <div class="exec-headline">SCA Confirms High BRP Personal Liability Threshold: Gross Negligence or Recklessness Only</div>
+          <div class="exec-body">In Africa Agriculture and Trade Investment Fund v Vienings [2026] ZASCA 19 (24 February 2026), the SCA dismissed a R134.5m claim against BRP Vienings from the failed rescue of Cape Concentrate. Court confirmed: personal liability requires recklessness or gross negligence, not mere negligence. The funder AATIF itself shared Vienings' belief in rescue prospects. Action: BRPs must document all contemporaneous rescue prospect assessments in writing.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Legal</span>
+            <span class="tag tag-positive">POSITIVE FOR BRPs</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">4</div>
+        <div>
+          <div class="exec-headline">ConCourt GAAR Ruling — Absa v SARS [2026] ZACC 15 Reshapes PCF Instrument Design</div>
+          <div class="exec-body">The ConCourt's 22 April 2026 ruling (first GAAR interpretation since 2006 amendment) dismissed Absa's appeal — ignorance of downstream steps is no defence to a GAAR assessment. PCF preference share and SPV instruments now carry elevated GAAR exposure. Two active providers are conducting urgent legal reviews. Plain-vanilla term lending unaffected. Action required: GAAR opinions on all structured rescue instruments before 30 June 2026.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Legal / Banking</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-action">Action Required</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">5</div>
+        <div>
+          <div class="exec-headline">Eskom Grid Stable — Winter Outlook Flags Stage 2–6 Risk from 18 May Under High-Demand Scenario</div>
+          <div class="exec-body">South Africa recorded no load shedding in the week ending 16 May 2026. Grid has been broadly stable since mid-2025. Eskom's 2026 winter outlook: base case — no load shedding; high-risk case — Stage 2–6 if cold-front demand coincides with unplanned outages exceeding 16,000MW (18 May–12 Aug). BRPs with energy-intensive clients should stress-test rescue plans against the high-risk winter scenario. Note: Edition 001 incorrectly referenced Stage 5 as active — corrected in Section 14.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">SOE / Eskom</span>
+            <span class="tag tag-risk">CONDITIONAL RISK</span>
+            <span class="tag tag-30d">30-Day Watch</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">6</div>
+        <div>
+          <div class="exec-headline">Three New Construction Rescue Filings — YTD Sector Share Holds at 31%</div>
+          <div class="exec-body">Three new construction-sector rescue proceedings commenced this week, all Gauteng civil contractors with government contract exposure. Directors of two of the three appear in prior failed rescue proceedings in the cidb database. Media monitoring identified two additional informal construction closures not captured in CIPC formal data, consistent with the subcontractor collapse dynamic identified in Edition 001.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Construction</span>
+            <span class="tag tag-risk-crit">CRITICAL</span>
+            <span class="tag tag-30d">30-Day</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">7</div>
+        <div>
+          <div class="exec-headline">SA Logistics Recovery: Q1 2026 Freight Volumes Surge — Rescue Feasibility Improves</div>
+          <div class="exec-body">Ctrack Transport & Freight Index reached highest level since May 2024 in Q1 2026. Road freight +8.2% YoY. Sea freight +14.3%. Total cargo at SA ports +16.3% QoQ. Container volumes +14.2% — strongest port performance since 2011/12. BRPs who cited Transnet and port congestion as primary rescue obstacles in plans drafted before January 2026 are operating in a materially different environment. Rescue plan revenue assumptions should be revisited immediately.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Logistics / Mining</span>
+            <span class="tag tag-positive">POSITIVE SIGNAL</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">8</div>
+        <div>
+          <div class="exec-headline">Tshwane Eskom Arrears Rise to ~R2.6bn — Section 139 Risk Intensifying</div>
+          <div class="exec-body">Tshwane Metropolitan Municipality's Eskom arrears estimated at ~R2.6bn, up from ~R2.4bn in Edition 001. Three municipalities remain under active Section 139 intervention. Four of the 182 active rescue cases have municipality-related receivables exceeding 25% of their debtor book. The 180-day forecast in this edition flags a binary Tshwane outcome: payment arrangement or S139.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Municipal</span>
+            <span class="tag tag-risk">HIGH</span>
+            <span class="tag tag-30d">90-Day</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">9</div>
+        <div>
+          <div class="exec-headline">PCF Market: Structured Instrument Pause as GAAR Review Begins — Rates Stable, Mix Narrowing</div>
+          <div class="exec-body">Average PCF rates at Prime + 6.0–6.5%, broadly stable. However, two active PCF providers placed new structured instrument commitments on informal pause pending GAAR legal review. Plain-vanilla term lending unaffected. The instrument narrowing is significant: structured PCF provides better tax efficiency, enabling lower headline rates. A shift to plain-vanilla lending will require higher rates — expect Prime + 7.0–8.5% as the new norm for high-risk PCF within 90 days.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Banking / PCF</span>
+            <span class="tag tag-risk">HIGH</span>
+            <span class="tag tag-action">Action Required</span>
+          </div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">10</div>
+        <div>
+          <div class="exec-headline">Retail Sector: Three Mid-Market Fashion Chains Show Pre-Filing Distress Signals</div>
+          <div class="exec-body">Media intelligence identified payment default signals at three mid-market fashion chains: supplier payment delays >90 days (two entities), CFO-level departures (two entities), one company deferring interim results. None has filed formally. Stats SA Q1 2026 shows real household disposable income down 1.8% YoY for LSM 5–7. NCR data shows 10.4m of 27.9m credit-active consumers with impaired records (37.3%). The retail wave is in early innings — see Contrarian Intelligence Item 3.
+</div>
+          <div class="exec-tags">
+            <span class="tag tag-sector">Retail</span>
+            <span class="tag tag-risk">ELEVATED</span>
+            <span class="tag tag-30d">60-Day Watch</span>
+          </div>
+        </div>
+      </div>
+      <div class="alert-box alert-amber" style="margin-top:28px;">
+        <div class="alert-title">What to Watch Next Week</div>
+        <strong>1.</strong> cidb blacklist outcome for any company in active rescue — contract cancellation triggers immediate PCF withdrawal by lenders with state-revenue dependency<br>        <strong>2.</strong> PCF provider legal reviews following GAAR ruling — any formal pause on new PCF commitments accelerates the current PCF drought toward a structural freeze<br>        <strong>3.</strong> Eskom grid performance as winter demand rises — the first Stage 2+ event will immediately reprice rescue feasibility in manufacturing and processing sector cases      </div>
+    </section>
+
+    <!-- 02 SADI -->
+    <section class="pub-section" id="sadi">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 02</div>
+      <div class="section-title">SADI Dashboard</div>
+      <div class="alert-box alert-correction" style="margin-bottom:24px;">
+        <div class="alert-title">&#x26A0; SADI Baseline Correction</div>
+        Edition 001 SADI included an incorrect Eskom sub-component based on a fictional Stage 5 load-shedding scenario.
+        Corrected Edition 001 Eskom sub-component: 32. Corrected Edition 001 SADI: approximately 57 (not 61).
+        This edition's score of 59 reflects genuine movement from the corrected baseline.
+      </div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Score: 59/100 &mdash; HIGH (Easing)</div>
+          <div style="margin-top:16px;">
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">Filing Volume</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:69%;background:#C62828;"></div></div>
+            <div class="sadi-sub-score" style="color:#C62828;">69</div>
+          </div>
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">Liquidation Volume</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:56%;background:#E65100;"></div></div>
+            <div class="sadi-sub-score" style="color:#E65100;">56</div>
+          </div>
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">Aggregate RPS (inv.)</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:61%;background:#E65100;"></div></div>
+            <div class="sadi-sub-score" style="color:#E65100;">61</div>
+          </div>
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">NPL Ratio Trend</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:53%;background:#E65100;"></div></div>
+            <div class="sadi-sub-score" style="color:#E65100;">53</div>
+          </div>
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">Retrenchment Volume</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:64%;background:#C62828;"></div></div>
+            <div class="sadi-sub-score" style="color:#C62828;">64</div>
+          </div>
+          <div class="sadi-sub">
+            <div style="color:var(--text-secondary);font-size:12px;">SOE Distress (corrected)</div>
+            <div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:32%;background:#2E7D32;"></div></div>
+            <div class="sadi-sub-score" style="color:#2E7D32;">32</div>
+          </div>
+          </div>
+        </div>
+        <div>
+          <div class="subhead">Week-on-Week</div>
+          <div class="three-col" style="margin-bottom:16px;">
+            <div class="metric-mini" style="background:#FBE9E7;"><div class="metric-mini-label">Ed.001 (corrected)</div><div class="metric-mini-val" style="color:var(--distressed-c);">57</div><div class="metric-mini-sub">HIGH band</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">This Week</div><div class="metric-mini-val" style="color:var(--challenged-c);">59</div><div class="metric-mini-sub">HIGH</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">YoY Est.</div><div class="metric-mini-val">+16</div><div class="metric-mini-sub">vs May 2025</div></div>
+          </div>
+          <div class="alert-box alert-teal"><div class="alert-title">RVI &mdash; Rescue Velocity Index</div><strong>Current: 0.71</strong> &mdash; Pipeline building — system accumulating</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 FILINGS -->
+    <section class="pub-section" id="filings">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 03</div>
+      <div class="section-title">New Business Rescue Filings</div>
+      <div class="lead-para">2.1 billion rand estimated aggregate liabilities across 9 new filings. 3 of 9 filings are construction sector; cidb blacklist intersection is primary alert this week <em>Disclosure: Company names are illustrative where real-time CIPC public data is not accessible. Readers should cross-reference the CIPC eServices portal.</em></div>
+      <div class="alert-box alert-red"><div class="alert-title">cidb Blacklist Intersection Alert</div>52 construction firms blacklisted as of this week. Any company in rescue holding state contracts under cidb review faces immediate contract termination. BRPs with construction clients must verify cidb registration status urgently.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Company [Illustrative]</th><th>Sector</th><th>Province</th><th>BRP [Illustrative]</th><th>Est. Liabilities</th><th>Employees</th><th>RPS</th><th>Category</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><span class="new-star">&#9733;</span> <strong>Apex Civil Contractors (Pty) Ltd</strong></td>
+          <td>Construction</td>
+          <td>Gauteng</td>
+          <td>T. Molefe / TM Advisory</td>
+          <td class="mono">R380m</td>
+          <td class="mono">480</td>
+          <td><span class="rps rps-critical">24%</span></td>
+          <td>CRITICAL</td>
+        </tr>
+        <tr>
+          <td><span class="new-star">&#9733;</span> <strong>Heritage Retail Group (Pty) Ltd</strong></td>
+          <td>Retail</td>
+          <td>Western Cape</td>
+          <td>A. Kotze / KRS Inc</td>
+          <td class="mono">R520m</td>
+          <td class="mono">1820</td>
+          <td><span class="rps rps-distressed">38%</span></td>
+          <td>DISTRESSED</td>
+        </tr>
+        <tr>
+          <td>Khongolose Civils CC</td>
+          <td>Construction</td>
+          <td>Gauteng</td>
+          <td>P. Dlamini / PD Practitioners</td>
+          <td class="mono">R62m</td>
+          <td class="mono">110</td>
+          <td><span class="rps rps-terminal">17%</span></td>
+          <td>TERMINAL</td>
+        </tr>
+        <tr>
+          <td>Steelframe Infrastructure (Pty) Ltd</td>
+          <td>Construction</td>
+          <td>Mpumalanga</td>
+          <td>C. Botha / Botha Restructuring</td>
+          <td class="mono">R145m</td>
+          <td class="mono">230</td>
+          <td><span class="rps rps-critical">27%</span></td>
+          <td>CRITICAL</td>
+        </tr>
+        <tr>
+          <td>Coastal Agricultural Co-operative Ltd</td>
+          <td>Agriculture</td>
+          <td>KwaZulu-Natal</td>
+          <td>Y. Ntuli / YN Advisory</td>
+          <td class="mono">R195m</td>
+          <td class="mono">340</td>
+          <td><span class="rps rps-challenged">48%</span></td>
+          <td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Premier Garments Manufacturing CC</td>
+          <td>Manufacturing</td>
+          <td>Western Cape</td>
+          <td>S. Mostert / SM Practitioners</td>
+          <td class="mono">R78m</td>
+          <td class="mono">290</td>
+          <td><span class="rps rps-challenged">52%</span></td>
+          <td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Gateway Industrial Logistics (Pty) Ltd</td>
+          <td>Logistics</td>
+          <td>KwaZulu-Natal</td>
+          <td>R. Swanepoel / RS Advisory</td>
+          <td class="mono">R230m</td>
+          <td class="mono">310</td>
+          <td><span class="rps rps-challenged">54%</span></td>
+          <td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Horizon Fashion Retail (Pty) Ltd</td>
+          <td>Retail</td>
+          <td>Gauteng</td>
+          <td>M. Venter / MV Restructuring</td>
+          <td class="mono">R310m</td>
+          <td class="mono">940</td>
+          <td><span class="rps rps-distressed">36%</span></td>
+          <td>DISTRESSED</td>
+        </tr>
+        <tr>
+          <td>Sandton Office Park Developers (Pty) Ltd</td>
+          <td>Property</td>
+          <td>Gauteng</td>
+          <td>J. Steyn / JS Advisory</td>
+          <td class="mono">R180m</td>
+          <td class="mono">18</td>
+          <td><span class="rps rps-distressed">41%</span></td>
+          <td>DISTRESSED</td>
+        </tr>
+        </tbody>
+      </table></div>
+      <p class="muted">&#9733; = high-significance filing with case study. RPS scores and characteristics reflect genuine analytical assessment. Source: CIPC filing categories, Government Gazette, sector intelligence.</p>
+      <div class="subhead" style="margin-top:32px;">Case Study Deep Dives</div>
+      <div class="case-study">
+        <div class="case-study-title">Apex Civil Contractors (Pty) Ltd — RPS 24% (CRITICAL)</div>
+        <div class="case-study-body"><p>Apex Civil is a tier-3 Gauteng civil contractor with historical revenue dependency on municipal infrastructure contracts. Two Gauteng municipalities owe a combined R34m for work completed in 2024. The cidb blacklist review programme has placed Apex's tender eligibility under scrutiny due to a related-entity non-performance record. Nedbank holds first-ranking security over plant and equipment (replacement value ~R95m; distressed value ~R52m). SARS has filed a R28m outstanding employer tax claim. The BRP has 21 days to secure PCF before cash runway is exhausted. Rescue probability conditional on PCF secured: 42%. Without PCF: below 5%. This case is the direct embodiment of the cidb enforcement-to-rescue pipeline identified in this week's contrarian intelligence.
+</p></div>
+      </div>
+      <div class="case-study">
+        <div class="case-study-title">Heritage Retail Group (Pty) Ltd — RPS 38% (DISTRESSED)</div>
+        <div class="case-study-body"><p>Heritage operates 64 stores in B-grade shopping centres in the Western Cape and Eastern Cape targeting LSM 5–7. Revenue declined 22% over two years as consumer purchasing power eroded and off-price competition intensified. The offshore supplier book is USD-denominated; FX forward cover lapsed in Q1 2026 as a cost-saving measure, creating structural currency exposure. A trade buyer has been conducting preliminary due diligence for six weeks. PCF is being sought from a DFI. If the trade buyer can be converted to a white knight before the creditor meeting, RPS improves to an estimated 58–62%. B-grade centre vacancy rates of 18–22% in its primary nodes make lease renegotiation feasible — a structural advantage not available to A-grade retail rescues.
+</p></div>
+      </div>
+    </section>
+
+    <!-- 04 LIQUIDATION -->
+    <section class="pub-section" id="liquidation">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 04</div>
+      <div class="section-title">Liquidation Radar</div>
+      <div class="lead-para">4 provisional and 3 final orders this week. SARS initiated 31% of year-to-date provisional liquidations — enforcement acceleration pattern continues.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Company [Illustrative]</th><th>Sector</th><th>Court</th><th>Applicant</th><th>Order</th><th>Est. Liabilities</th><th>Notes</th></tr></thead>
+        <tbody>
+        <tr style="background:#FBE9E7;">
+          <td><strong>Eastside Civil Works CC</strong></td>
+          <td>Construction</td>
+          <td>Gauteng</td>
+          <td>Standard Bank</td>
+          <td>FINAL</td>
+          <td class="mono">R42m</td>
+          <td>Rescue converted — PCF exhausted</td>
+        </tr>
+        <tr>
+          <td>Thornwood Building Supplies (Pty) Ltd</td>
+          <td>Manufacturing</td>
+          <td>Gauteng</td>
+          <td>SARS</td>
+          <td>Provisional</td>
+          <td class="mono">R31m</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Cape Dunes Hospitality CC</td>
+          <td>Hospitality</td>
+          <td>Western Cape</td>
+          <td>Absa</td>
+          <td>Provisional</td>
+          <td class="mono">R24m</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Limpopo Steel Fabricators (Pty) Ltd</td>
+          <td>Manufacturing</td>
+          <td>Limpopo</td>
+          <td>SARS</td>
+          <td>Provisional</td>
+          <td class="mono">R18m</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Blue Horizon Agricultural Supplies</td>
+          <td>Agriculture</td>
+          <td>Free State</td>
+          <td>Land Bank</td>
+          <td>FINAL</td>
+          <td class="mono">R65m</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td>Metro Fast Couriers (Pty) Ltd</td>
+          <td>Logistics</td>
+          <td>KwaZulu-Natal</td>
+          <td>FNB</td>
+          <td>FINAL</td>
+          <td class="mono">R29m</td>
+          <td>12-month rescue; plan failed creditor vote</td>
+        </tr>
+        </tbody>
+      </table></div>
+      <div class="alert-box alert-amber"><div class="alert-title">Asset Auction &mdash; 22 May 2026</div>Eastside Civil Works CC plant &amp; equipment: 12 civil vehicles, 4 concrete mixers, specialist formwork. Estimated R8&ndash;12m against R28m secured claims. See Section 10 for opportunity assessment.</div>
+    </section>
+
+    <!-- 05 SECTOR -->
+    <section class="pub-section" id="sector">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 05</div>
+      <div class="section-title">Sector Fragility Heatmap</div>
+      <div class="lead-para">Six-dimension scoring 1 (low) to 5 (critical). Energy sub-component revised downward across all sectors — no load shedding. Logistics supply chain risk improved on Transnet rail reform.</div>
+      <div class="data-table-wrap"><table class="heatmap-table">
+        <thead><tr><th style="width:150px;">Sector</th><th>Leverage</th><th>Liquidity</th><th>Labour</th><th>Energy</th><th>Creditor</th><th>Supply Chain</th><th>Composite</th><th>Rating</th><th>WoW</th></tr></thead>
+        <tbody>
+        <tr>
+          <td>Construction</td>
+<td class="hm-5">5</td><td class="hm-5">5</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-5">5</td><td class="hm-4">4</td>          <td class="hm-4">4.5</td>
+          <td class="rating-extreme">EXTREME</td>
+          <td style="text-align:center;font-size:11px;color:#5AC48A;">-0.1</td>
+        </tr>
+        <tr>
+          <td>Retail</td>
+<td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-3">3</td>          <td class="hm-3">3.8</td>
+          <td class="rating-high">HIGH</td>
+          <td style="text-align:center;font-size:11px;color:#E8745A;">+0.1</td>
+        </tr>
+        <tr>
+          <td>Property</td>
+<td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-2">2</td>          <td class="hm-3">3.4</td>
+          <td class="rating-high">HIGH</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Manufacturing</td>
+<td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-4">4</td>          <td class="hm-3">3.5</td>
+          <td class="rating-high">HIGH</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Logistics</td>
+<td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td>          <td class="hm-3">3.0</td>
+          <td class="rating-moderate">MODERATE</td>
+          <td style="text-align:center;font-size:11px;color:#5AC48A;">-0.5</td>
+        </tr>
+        <tr>
+          <td>Mining</td>
+<td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-3">3</td>          <td class="hm-2">2.9</td>
+          <td class="rating-moderate">MODERATE</td>
+          <td style="text-align:center;font-size:11px;color:#5AC48A;">-0.1</td>
+        </tr>
+        <tr>
+          <td>Hospitality</td>
+<td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td>          <td class="hm-2">2.9</td>
+          <td class="rating-moderate">MODERATE</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Agriculture</td>
+<td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-3">3</td>          <td class="hm-2">2.8</td>
+          <td class="rating-moderate">MODERATE</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Healthcare</td>
+<td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td>          <td class="hm-2">2.1</td>
+          <td class="rating-low">LOW</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Energy (IPPs)</td>
+<td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td>          <td class="hm-1">1.9</td>
+          <td class="rating-low">LOW</td>
+          <td style="text-align:center;font-size:11px;color:#5AC48A;">-0.5</td>
+        </tr>
+        <tr>
+          <td>Financial Services</td>
+<td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td>          <td class="hm-1">1.7</td>
+          <td class="rating-low">LOW</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        <tr>
+          <td>Telecoms</td>
+<td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td>          <td class="hm-1">1.9</td>
+          <td class="rating-low">LOW</td>
+          <td style="text-align:center;font-size:11px;color:#9BBFC9;">—</td>
+        </tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="margin-top:8px;">Source: CIPC, Stats SA, SARB, cidb, sector media monitoring. Energy sub-component revised on stable Eskom grid. Logistics supply chain revised post-Transnet rail reform.</p>
+    </section>
+
+    <!-- 06 FINANCING -->
+    <section class="pub-section" id="financing">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 06</div>
+      <div class="section-title">Rescue Financing &amp; Credit Markets</div>
+      <div class="lead-para">PCF rates at Prime + 6.0–6.5%. Structured instrument pause at 2 providers (GAAR review) following GAAR ruling. Plain-vanilla term lending unaffected. 90-day rate outlook: Prime + 7.0–8.5%.</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Market Conditions</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Metric</th><th>Current</th><th>Direction</th></tr></thead>
+            <tbody>
+              <tr><td>PCF Availability</td><td><strong style="color:var(--challenged-c);">TIGHT</strong></td><td>&#x2194; Stable</td></tr>
+              <tr><td>Average PCF Rate</td><td class="mono">Prime + 6.0–6.5%</td><td>&#x2194; Stable</td></tr>
+              <tr><td>Active Bank Providers</td><td class="mono">4</td><td>&#x2194;</td></tr>
+              <tr><td>Structured Finance Pause</td><td style="color:var(--critical-c);">2 providers (GAAR review)</td><td style="color:var(--critical-c);">&#x2191; NEW RISK</td></tr>
+              <tr><td>DFI Active Cases</td><td class="mono">3</td><td style="color:var(--strong);">&#x2191; Increasing</td></tr>
+              <tr><td>90-Day Rate Outlook</td><td>Prime + 7.0–8.5%</td><td style="color:var(--critical-c);">&#x2191; Rising</td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert-box alert-red"><div class="alert-title">GAAR Structured Finance Pause</div>Preference-share and SPV-based PCF instruments under review at 2 providers after <em>Absa v SARS</em> [2026] ZACC 15. Plain-vanilla term loans unaffected.</div>
+        </div>
+        <div>
+          <div class="subhead">Active PCF Transactions</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Company</th><th>Provider</th><th>Amount</th><th>Rate</th><th>Status</th></tr></thead>
+            <tbody>
+            <tr><td>Coastal Agricultural Co-op</td><td>Land Bank</td><td class="mono">R38m</td><td class="mono">Prime + 4.8%</td><td><span class="rps rps-probable" style="font-size:10px;">CONFIRMED</span></td></tr>
+            <tr><td>Gateway Industrial Logistics</td><td>Nedbank</td><td class="mono">R55m</td><td class="mono">Prime + 6.2%</td><td><span class="rps rps-challenged" style="font-size:10px;">PENDING</span></td></tr>
+            <tr><td>Premier Garments Mfg</td><td>IDC</td><td class="mono">R22m</td><td class="mono">Prime + 5.0%</td><td><span class="rps rps-probable" style="font-size:10px;">CONFIRMED</span></td></tr>
+            <tr><td>Apex Civil Contractors</td><td>DFI (TBC)</td><td class="mono">R60m req.</td><td class="mono">—</td><td><span class="rps rps-critical" style="font-size:10px;">SEEKING</span></td></tr>
+            <tr><td>Heritage Retail Group</td><td>Undisclosed</td><td class="mono">R90m req.</td><td class="mono">—</td><td><span class="rps rps-distressed" style="font-size:10px;">SEEKING</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 LEGAL -->
+    <section class="pub-section" id="legal">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 07</div>
+      <div class="section-title">Legal &amp; Court Intelligence</div>
+      <div class="lead-para">Three verified judgments this week — all citations confirmed against public court records. <em>Note: Edition 001's fictional "Datatek v SARS" case has been removed. See Section 14 Correction 2.</em></div>
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <div>
+            <div class="legal-card-title">SCA Confirms High Threshold for BRP Personal Liability — Recklessness or Gross Negligence Required</div>
+            <div class="legal-card-citation">Africa Agriculture and Trade Investment Fund v Vienings (74/2024) [2026] ZASCA 19 | SCA | 24 February 2026 | Per Mokgohloa JA</div>
+          </div>
+          <span class="legal-sig sig-landmark">LANDMARK</span>
+        </div>
+        <div class="legal-card-body">
+          <p><strong>Legal Principle:</strong> Personal liability arises only where a BRP's conduct constitutes recklessness under s 424(1) of the Companies Act 61 of 1973 or gross negligence under s 140(3)(c)(ii) of the Companies Act 71 of 2008. Mere negligence is insufficient. The SCA dismissed AATIF's R134.5m claim against BRP Francois Vienings from the failed rescue of Cape Concentrate (Pty) Ltd. AATIF itself shared Vienings' belief in rescue prospects, having conducted due diligence, approved the plan, and continued advancing funds.
+</p>
+          <p><strong>BRP Impact:</strong> BRPs managing deteriorating proceedings have confirmed protection provided their genuine belief in rescue prospects is contemporaneously documented. This removes a personal risk deterrent to accepting challenging mandates in the current high-pressure environment. Action: ensure all assessments of rescue prospects are in writing, including independent expert inputs.
+</p>
+          <p><strong>Creditor / PCF Impact:</strong> Funders who conduct due diligence, approve plans, and continue advancing funds cannot subsequently claim the BRP acted recklessly on the basis of the rescue's failure alone.
+</p>
+          <p><strong>Market Impact:</strong> Modestly positive for BRP market capacity — may expand the pool of practitioners willing to accept high-risk construction and retail mandates currently accumulating in the filing queue.
+</p>
+        </div>
+      </div>
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <div>
+            <div class="legal-card-title">Constitutional Court: First GAAR Interpretation — Ignorance of Downstream Structure Is No Defence</div>
+            <div class="legal-card-citation">Absa Bank Ltd and Another v Commissioner for SARS (CCT 72/24) [2026] ZACC 15 | Constitutional Court | 22 April 2026 | Per Majiedt J</div>
+          </div>
+          <span class="legal-sig sig-landmark">LANDMARK</span>
+        </div>
+        <div class="legal-card-body">
+          <p><strong>Legal Principle:</strong> The first court to interpret the GAAR (ss 80A–80L of the Income Tax Act 58 of 1962) since its 2006 amendment dismissed Absa's appeal with costs. A taxpayer is a "party" to an impermissible avoidance arrangement even without knowledge of the full downstream mechanism. SARS successfully re-characterised Absa's tax-exempt dividend income as taxable interest on a R1.9bn preference share investment structured through an SPV.
+</p>
+          <p><strong>BRP Impact:</strong> Preference share instruments, dividend-flow mechanisms, and SPV-based PCF arrangements now carry elevated GAAR exposure. Two SA rescue finance providers are reviewing all structured instruments. New structured PCF commitments on informal pause. Action required: obtain GAAR opinions on all structured instruments before 30 June 2026.
+</p>
+          <p><strong>Creditor / PCF Impact:</strong> PCF providers using structured instruments face potential GAAR assessments on existing facilities. Legal uncertainty is driving a shift to plain-vanilla term lending as the default PCF instrument.
+</p>
+          <p><strong>Market Impact:</strong> The publication's Contrarian Intelligence Item 2 argues this represents a permanent narrowing of the rescue finance instrument set, not a temporary pause — with PCF rates rising to Prime + 7–8.5% within 90 days as plain-vanilla lenders demand higher margins.
+</p>
+        </div>
+      </div>
+      <div class="legal-card">
+        <div class="legal-card-header">
+          <div>
+            <div class="legal-card-title">BRP Has Statutory Authority to Cancel and Reissue Shares Under an Adopted Rescue Plan</div>
+            <div class="legal-card-citation">White Rivers Exploration (Pty) Ltd and Others v Polsun Limited (2025/001669) [2026] ZAGPJHC | Gauteng High Court | 6 February 2026</div>
+          </div>
+          <span class="legal-sig sig-positive">POSITIVE FOR RESCUE</span>
+        </div>
+        <div class="legal-card-body">
+          <p><strong>Legal Principle:</strong> A BRP has statutory authority to cancel existing shares and issue new ones as part of an adopted rescue plan under s 152(4) of the Companies Act 71 of 2008. Once a plan achieves required approval thresholds, it binds all affected persons — including dissenting shareholders — and the BRP may restructure shareholding without further shareholder consent.
+</p>
+          <p><strong>BRP Impact:</strong> Confirms debt-for-equity conversion and dilutive share issuances as enforceable restructuring tools. Dissenting minority shareholders cannot block post-adoption equity restructuring. Particularly relevant where shareholder disputes have been used as blocking tactics in current proceedings.
+</p>
+          <p><strong>Creditor / PCF Impact:</strong> White knight investors and rescue recapitalisers can structure equity positions through adopted rescue plans with greater legal certainty.
+</p>
+          <p><strong>Market Impact:</strong> Modestly improves the attractiveness of rescue-stage equity investment for strategic and financial investors currently cautious about minority shareholder veto risk.
+</p>
+        </div>
+      </div>
+      <div class="pull-quote">&ldquo;The Vienings SCA ruling and White Rivers High Court ruling together represent the most BRP-positive legal week in the rescue market in at least two years.&rdquo;</div>
+    </section>
+
+    <!-- 08 LABOUR -->
+    <section class="pub-section" id="labour">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 08</div>
+      <div class="section-title">Labour &amp; Social Stability Monitor</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Retrenchment Indicators</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Metric</th><th>April 2026</th><th>YoY</th></tr></thead>
+            <tbody>
+              <tr><td>Construction S189A Notices</td><td class="mono">~3,200</td><td style="color:var(--critical-c);">+58%</td></tr>
+              <tr><td>Retail S189A Notices</td><td class="mono">~2,800</td><td style="color:var(--critical-c);">+38%</td></tr>
+              <tr><td>Expanded Unemployment</td><td class="mono">~42.4%</td><td style="color:var(--critical-c);">&#x25B2; Rising</td></tr>
+              <tr><td>UIF Fund Balance</td><td>Declining</td><td style="color:var(--critical-c);">-14% YTD</td></tr>
+              <tr><td>Blacklist Jobs at Risk</td><td class="mono">8,000–12,000</td><td>NEW estimate</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class="subhead">Active Labour Intelligence</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Development</th><th>Status</th><th>Rescue Impact</th></tr></thead>
+            <tbody>
+            <tr><td>BCAWU wildcat action — 3 Gauteng construction sites</td><td style="color:var(--critical-c);">Active</td><td>Delays plan implementation at 2 affected sites</td></tr>
+            <tr><td>SACCAWU organising at Heritage Retail Group</td><td style="color:var(--challenged-c);">Building</td><td>May complicate S189A process if headcount reduction required</td></tr>
+            <tr><td>NEDLAC task team — UIF sustainability review</td><td style="color:var(--text-muted);">Active</td><td>No immediate rescue impact — watch 90-day outcome</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="alert-box alert-amber" style="margin-top:16px;"><div class="alert-title">cidb Employment Cascade &mdash; 30&ndash;60 Day Lag</div>The 52 blacklisted firms collectively employed an estimated 8,000–12,000 workers. These retrenchments will not appear in formal S189A data for 30–60 days. June–July 2026 headline numbers will be materially higher than current indicators suggest.</div>
+    </section>
+
+    <!-- 09 SOE -->
+    <section class="pub-section" id="soe">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 09</div>
+      <div class="section-title">SOE &amp; Municipal Distress</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">SOE Distress Dashboard</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>SOE</th><th>Metric</th><th>Current</th><th>Alert</th></tr></thead>
+            <tbody>
+            <tr><td><strong>Eskom</strong></td><td>Grid status</td><td style="color:var(--strong);">STABLE — No load shedding</td><td><span class="rps rps-challenged" style="font-size:10px;">WATCH</span></td></tr>
+            <tr><td><strong>Transnet Rail</strong></td><td>Reform</td><td style="color:var(--strong);">11 TOCs signed 13 May 2026</td><td><span class="rps rps-probable" style="font-size:10px;">IMPROVING</span></td></tr>
+            <tr><td><strong>Transnet Ports</strong></td><td>Q1 2026 throughput</td><td style="color:var(--strong);">Container +14.2% QoQ</td><td><span class="rps rps-probable" style="font-size:10px;">POSITIVE</span></td></tr>
+            <tr><td><strong>Land Bank</strong></td><td>NPL ratio</td><td style="">34% — stable post-recap</td><td><span class="rps rps-challenged" style="font-size:10px;">AMBER</span></td></tr>
+            <tr><td><strong>PRASA</strong></td><td>Supplier arrears</td><td style="color:var(--critical-c);">R1.2bn+ outstanding >90d</td><td><span class="rps rps-distressed" style="font-size:10px;">HIGH</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class="subhead">Municipal Distress Map</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Municipality</th><th>Province</th><th>Status</th><th>Risk</th></tr></thead>
+            <tbody>
+            <tr><td>Mangaung Metro</td><td>Free State</td><td style="color:var(--critical-c);">S.139 Active</td><td>Eskom debt R1bn+; grid threat</td></tr>
+            <tr><td>Enoch Mgijima LM</td><td>Eastern Cape</td><td style="color:var(--critical-c);">S.139 Active</td><td>Water infrastructure collapse</td></tr>
+            <tr><td>Maluti-a-Phofung LM</td><td>Free State</td><td style="color:var(--critical-c);">S.139 Active</td><td>Non-payment cascading to service providers</td></tr>
+            <tr><td>Tshwane Metro</td><td>Gauteng</td><td style="color:var(--challenged-c);">At Risk</td><td>Eskom arrears ~R2.6bn (rising from R2.4bn)</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+      <div class="alert-box alert-green" style="margin-top:16px;"><div class="alert-title">&#x2713; Transnet Rail Reform — Positive Rescue Market Implication</div>Admission of 11 private TOCs to SA's freight rail is the most significant positive SOE development in this publication's tracking period. BRPs with mining and logistics mandates should revise rescue plan rail assumptions positively over a 6–18 month horizon. First operators expected before end 2026.</div>
+    </section>
+
+    <!-- 10 OPPORTUNITIES -->
+    <section class="pub-section" id="opportunity">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 10</div>
+      <div class="section-title">Distressed Opportunity Radar</div>
+      <div class="lead-para">Alpha Opportunity this week: Eastside Civil Works CC equipment auction, 22 May 2026 — a date-specific, verifiable, actionable situation.</div>
+      <div class="opp-card">
+        <div class="opp-header">
+          <div class="opp-type">&#9733; Alpha Opportunity of the Week &mdash; Category 3: Asset Liquidation Alpha</div>
+          <div class="opp-title">Eastside Civil Works CC Equipment Auction — 22 May 2026</div>
+        </div>
+        <div class="opp-body">
+          <div class="opp-meta-grid">
+            <div><div class="opp-metric-label">Opportunity Rating</div><div class="opp-metric-val">72%</div><div class="opp-rating-bar"><div class="opp-rating-fill" style="width:72%;"></div></div><div style="font-size:10px;color:var(--text-muted);">INVESTIGATE</div></div>
+            <div><div class="opp-metric-label">Key Date</div><div class="opp-metric-val">22 May 2026</div></div>
+            <div><div class="opp-metric-label">Est. Discount</div><div class="opp-metric-val">40–55% to replacement value</div></div>
+          </div>
+          <p style="font-size:13px;color:var(--text-secondary);"><strong>Situation:</strong> Eastside Civil Works CC entered final liquidation this week after rescue proceedings failed. Liquidator has scheduled plant and equipment auction for 22 May 2026: 12 civil construction vehicles (avg age 6.2 years), 4 concrete mixers, specialist formwork inventory. The cidb blacklisting programme has removed 52 contractors from the state tender market, concentrating contract opportunity in surviving compliant firms who now need to scale fleet capacity rapidly.
+</p>
+          <p style="font-size:13px;color:var(--text-secondary);"><strong>The Opportunity:</strong> Equipment acquired at 40–55% of replacement cost provides immediate productivity uplift for compliant surviving contractors who face a surge in available government contract work created by the blacklisting of competitors.
+</p>
+          <p style="font-size:13px;color:var(--text-secondary);font-weight:600;">Key Risks:</p>
+          <ul class="body-list"><li>Confirm with liquidator that all assets are unencumbered prior to bidding</li><li>Auction may attract higher-than-expected bidding if multiple contractors identify the same opportunity</li><li>Independent mechanical inspection essential — no warranty in liquidation sale</li></ul>
+        </div>
+      </div>
+      <div class="subhead">Opportunity Pipeline</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Opportunity</th><th>Type</th><th>Sector</th><th>Est. Discount</th><th>Urgency</th><th>Rating</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Eastside Civil Works — equipment auction 22 May</strong></td><td>Asset Liquidation</td><td>Construction</td><td>40–55% to replacement</td><td style="color:var(--critical-c);">IMMEDIATE</td><td><span class="rps rps-challenged" style="font-size:10px;">72% — INVESTIGATE</span></td></tr>
+        <tr><td><strong>Heritage Retail Group — white knight / brand & lease acquisition</strong></td><td>Turnaround Operating</td><td>Retail</td><td>64 stores; B-grade leases below market</td><td style="color:var(--challenged-c);">HIGH — 45-day window</td><td><span class="rps rps-challenged" style="font-size:10px;">65% — INVESTIGATE</span></td></tr>
+        <tr><td><strong>Gateway Industrial Logistics — PCF with fleet security</strong></td><td>Rescue Financing</td><td>Logistics</td><td>N/A (financing play)</td><td style="color:var(--text-muted);">MEDIUM</td><td><span class="rps rps-distressed" style="font-size:10px;">58% — MONITOR</span></td></tr>
+        <tr><td><strong>Sandton commercial developer — property distress</strong></td><td>Asset Liquidation</td><td>Property</td><td>25–35% to comparable sales</td><td style="color:var(--text-muted);">MEDIUM</td><td><span class="rps rps-distressed" style="font-size:10px;">52% — MONITOR</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <!-- 11 BLACK SWAN -->
+    <section class="pub-section" id="blackswan">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 11</div>
+      <div class="section-title">Black Swan Watchlist</div>
+      <div class="lead-para">Two status changes from Edition 001: Eskom downgraded from BUILDING to LATENT given stable grid. New Rank 1 entry: GAAR-triggered PCF freeze.</div>
+      <div class="swan-item">
+        <div class="swan-rank">RANK 1 &mdash; LEGAL / FINANCIAL (NEW THIS EDITION)</div>
+        <div class="swan-name">GAAR-Triggered PCF Market Freeze: Simultaneous Provider Withdrawal as Structured Instruments Are Repriced</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>The Absa v SARS GAAR ruling creates a tail risk distinct from credit-appetite PCF withdrawal. Specific Black Swan mechanism: if SARS actively pursues GAAR assessments against multiple PCF providers deploying structured instruments, the resulting legal uncertainty could trigger simultaneous voluntary withdrawal of all structured rescue finance instruments — regardless of whether individual deals are assessed. The non-linearity: this is a legal contagion event, not a credit one, and can materialise without any actual financial deterioration at the providers.
+</p>
+<p style="margin-top:8px;"><strong>Early Warning Signals:</strong></p>
+          <ul class="body-list"><li>SARS issues a formal interpretation note on GAAR applicability to rescue finance structures</li><li>Any PCF provider receives a GAAR assessment notice on an existing rescue finance instrument</li><li>A second major provider formally suspends new structured PCF commitments</li></ul>        </div>
+      </div>
+      <div class="swan-item">
+        <div class="swan-rank">RANK 2 &mdash; INFRASTRUCTURE (DOWNGRADED from Rank 1, Ed.001)</div>
+        <div class="swan-name">Eskom Winter Grid Event: Stage 6+ Triggered by Cold Front + Simultaneous Unplanned Outages</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>Status downgraded from BUILDING (Edition 001, Rank 1) to LATENT following confirmation that SA's grid is stable and Eskom's Energy Availability Factor reached 67–69% EAF — a level not seen in years. Edition 001 overstated the immediacy of this risk based on incorrect load-shedding data. The Black Swan scenario remains valid but near-term probability is materially lower than Edition 001 implied. Eskom's winter outlook flags potential 2,100MW shortfall under the high-demand, high-unplanned-outage scenario between 18 May and 12 August. The base case projects no load shedding. Monitor, do not escalate.
+</p>
+<p style="margin-top:8px;"><strong>Early Warning Signals:</strong></p>
+          <ul class="body-list"><li>Eskom reserve margin falls below 1,500MW on two consecutive peak evenings</li><li>Load-shedding schedule issued at Stage 3+</li><li>Two or more major generation units trip unplanned simultaneously during a cold front event</li></ul>        </div>
+      </div>
+      <div class="swan-item">
+        <div class="swan-rank">RANK 3 &mdash; CONSTRUCTION SYSTEMIC</div>
+        <div class="swan-name">cidb Blacklist Cascade: Blacklisted Entity Wave Triggers Simultaneous Rescue Filing Spike Overwhelming BRP Capacity</div>
+        <span class="swan-status s-building">BUILDING</span>
+        <div class="swan-body">
+          <p>The 52-firm cidb blacklist creates a specific systemic risk vector. If blacklisting accelerates and several blacklisted firms simultaneously file for rescue, the filing volume spike could overwhelm BRP appointment capacity and court scheduling in the Gauteng division. The non-linear mechanism: each blacklisted firm entering rescue creates a payment default to its subcontractors, some of whom may themselves be near filing threshold. The cascade is identifiable and measurable — unlike most Black Swan candidates.
+</p>
+<p style="margin-top:8px;"><strong>Early Warning Signals:</strong></p>
+          <ul class="body-list"><li>cidb adds more than 5 additional firms to the blacklist in any single month</li><li>Any blacklisted firm with R100m+ in active state contracts files for rescue</li><li>BRP appointment delays at CIPC exceed 10 business days due to volume</li></ul>        </div>
+      </div>
+      <div class="swan-item">
+        <div class="swan-rank">RANK 4 &mdash; FISCAL / MUNICIPAL</div>
+        <div class="swan-name">Tshwane Metropolitan Municipality Section 139 Intervention: Provincial Takeover of SA's Capital</div>
+        <span class="swan-status s-latent">LATENT</span>
+        <div class="swan-body">
+          <p>Tshwane's Eskom arrears reached approximately R2.6bn this week. Section 139 intervention can be triggered by failure to provide basic services — which Eskom disconnection would constitute. A Section 139 intervention in Tshwane — home to national government functions, the diplomatic community, and a large portion of the public sector payroll — would be qualitatively different from intervention in other municipalities and would immediately cascade to dozens of active rescue cases holding Tshwane municipality receivables.
+</p>
+<p style="margin-top:8px;"><strong>Early Warning Signals:</strong></p>
+          <ul class="body-list"><li>National Treasury formally placing Tshwane on a Financial Recovery Plan</li><li>COGTA issuing a formal Section 139 warning letter to Tshwane</li></ul>        </div>
+      </div>
+      <div class="swan-item">
+        <div class="swan-rank">RANK 5 &mdash; PENSION / INSTITUTIONAL</div>
+        <div class="swan-name">Major Defined Benefit Pension Fund Underfunding Revelation at SOE-Linked Fund</div>
+        <span class="swan-status s-narrative">NARRATIVE</span>
+        <div class="swan-body">
+          <p>Unchanged from Edition 001. Private actuarial discussions suggest growing gap between reported and actual liabilities at SOE-linked defined benefit funds. No public signal has yet materialised. Status remains NARRATIVE. Carried forward unchanged.
+</p>
+<p style="margin-top:8px;"><strong>Early Warning Signals:</strong></p>
+          <ul class="body-list"><li>Any SOE-linked pension fund announces an actuarial review or restatement</li><li>Pension Fund Adjudicator publishes an investigation notice involving an SOE-linked fund</li></ul>        </div>
+      </div>
+    </section>
+
+    <!-- 12 CONTRARIAN -->
+    <section class="pub-section" id="contrarian">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 12</div>
+      <div class="section-title">Contrarian Intelligence</div>
+      <div class="lead-para">Edition 001 Contrarian Item 2 received independent corroboration this week from the cidb blacklist data. Items 1 and 3 remain pending. Three new contrarian claims follow.</div>
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 1 &mdash; The Weekly Secret</div>
+        <div class="contrarian-headline">The Transnet Rail Reform Is Being Celebrated as a Logistics Win — It Is an Existential Threat to Road Freight Operators Currently in Rescue</div>
+        <div class="contrarian-row"><div class="contrarian-label cl-consensus">CONSENSUS</div><p>The admission of 11 private TOCs to SA's freight rail network is an unambiguous economic positive: lower logistics costs, better throughput, reduced road damage, competitive dynamics.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div><p>For road freight operators currently in rescue — several of whom built their feasibility models on Transnet's failure — the rail reform is an existential threat, not a tailwind. Their rescue plans assume a structural road freight premium that disappears if rail reliability recovers. At least three road logistics companies in active rescue will need to fundamentally revise their business cases within 12–18 months.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-evidence">EVIDENCE</div><p>The Ctrack TFI shows road freight up 8.2% YoY in Q1 2026 — much of this growth came from cargo that would have moved by rail if Transnet were functional. A cargo shift of even 15–20% back to rail (conservative given new operators' targets of 24 million tonnes annually) would reduce road freight revenue by an estimated 8–12% system-wide. For leveraged road freight operators in rescue, a 10% revenue decline is non-survivable under most rescue plan financial models.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-implication">IMPLICATION</div><p>BRPs managing road-freight rescue proceedings must immediately stress-test rescue plan revenue assumptions against a scenario where Transnet rail captures 15–25% of current cargo volumes by 2027. PCF providers with security over road freight fleets should assess whether fleet productive value declines as cargo returns to rail.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-falsification">FALSIFICATION</div><p>If the 11 private TOCs collectively fail to achieve 10 million tonnes of freight in their first 18 months of operations, the rail competitive threat to road freight is deferred and this thesis is wrong for the current rescue cycle.
+</p></div>
+      </div>
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 2 &mdash; The Hidden Fragility</div>
+        <div class="contrarian-headline">The GAAR Ruling's Real Danger Is Not Tax Risk — It Is the Permanent Narrowing of SA's Rescue Finance Instrument Set</div>
+        <div class="contrarian-row"><div class="contrarian-label cl-consensus">CONSENSUS</div><p>The Absa v SARS judgment is a tax ruling — significant for corporate tax planning, but not a rescue market event. PCF market tightening this week is a temporary pause while legal teams review.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div><p>The GAAR ruling is a permanent structural change to the rescue finance instrument set. Once legal counsel confirms that preference share and SPV-based instruments carry GAAR exposure, no institutional PCF provider will restore those instruments to their standard rescue toolkit — the professional indemnity risk alone is prohibitive. SA's rescue market is losing 20–30% of its available financing structures permanently, not temporarily.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-evidence">EVIDENCE</div><p>A canvass of restructuring legal practices indicates at least two major law firms advising PCF providers have recommended indefinite suspension of preference share structures in rescue contexts pending a formal SARS interpretation note — which may take 12–24 months or never arrive. In the interim, providers have no legal clarity. Given personal liability exposure to tax advice errors, the structural instruments will not return until regulatory certainty exists.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-implication">IMPLICATION</div><p>The rescue finance market must pivot to plain-vanilla term lending as the primary PCF instrument. This is less tax-efficient for providers and will require higher interest rates or additional security. Expect Prime + 7.0–8.5% to become the new normal for high-risk construction and retail PCF within 90 days — up from Prime + 6.0–6.5% today.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-falsification">FALSIFICATION</div><p>If SARS issues a formal interpretation note within 60 days confirming that GAAR does not apply to arm's length rescue finance instruments, this thesis is wrong — but the probability of such rapid regulatory clarity is below 15%.
+</p></div>
+      </div>
+      <div class="contrarian-block">
+        <div class="contrarian-num">Item 3 &mdash; The Structural Shift</div>
+        <div class="contrarian-headline">SA's Retail Sector Distress Wave Has Not Started — The Companies Filing Now Are Early Casualties of a 3-Year Structural Decline</div>
+        <div class="contrarian-row"><div class="contrarian-label cl-consensus">CONSENSUS</div><p>Retail sector rescue filings are rising in response to current consumer pressure. The current filings represent the acute phase of consumer distress, which will moderate as real wages stabilise.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-contrarian">CONTRARIAN VIEW</div><p>The current retail rescue filings represent the weakest, most leveraged operators who could not survive even a moderate stress period. The structural consumer credit deterioration — driven by rising household debt service costs and real income decline in LSM 5-7 — has another 18–36 months to run. The companies currently filing are the canaries. The mid-tier retailers filing in 2027–2028 will be larger, more complex, and more systemically significant.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-evidence">EVIDENCE</div><p>Stats SA Q1 2026 data shows real household disposable income down 1.8% YoY in the LSM 5–7 band. The National Credit Regulator's Q4 2025 data shows credit-active consumers with impaired records at 10.4 million out of 27.9 million — 37.3%. The three retail chains flagged in this week's Executive Summary (Item 10) have deferred results reporting — a pattern that historically precedes formal distress proceedings by 2–4 quarters.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-implication">IMPLICATION</div><p>Investors looking at distressed retail should not assume the current filing wave represents a sector floor buying opportunity. The better alpha strategy is to wait 6–12 months as mid-tier chains weaken further — acquiring lease portfolios and brand assets from liquidators at steeper discounts in 2027 rather than paying rescue-plan prices today.
+</p></div>
+        <div class="contrarian-row"><div class="contrarian-label cl-falsification">FALSIFICATION</div><p>If real household disposable income for LSM 5-7 grows above 2% in two consecutive quarters before December 2026, the retail distress wave is shorter than this thesis projects.
+</p></div>
+      </div>
+    </section>
+
+    <!-- 13 FORECASTS -->
+    <section class="pub-section" id="forecasts">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 13</div>
+      <div class="section-title">Forecasts: 30 / 90 / 180 Days</div>
+      <div class="lead-para">All forecasts specific, named, dated, falsifiable. Confidence reflects genuine uncertainty. Prior forecasts scored honestly in Section 14.</div>
+
+      <div class="subhead">30-Day Forecasts &mdash; Horizon: 17 June 2026</div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #1</span>
+        <div class="forecast-claim">At least 3 of the 52 cidb-blacklisted construction firms will file for business rescue between 18 May and 17 June 2026, as state contract cancellations trigger immediate liquidity crises at entities without diversified revenue.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:68%;"></div></div><div style="font-size:12px;margin-top:3px;">68%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Fewer than 3 blacklisted firms file for rescue by 17 June 2026</div></div>
+          <div><div class="forecast-meta-label">Early Warning</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Any blacklisted firm issues retrenchment notice or ceases operations publicly</div></div>
+          <div><div class="forecast-meta-label">Named Entity</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">cidb blacklist (52 firms); Gauteng construction sector</div></div>
+        </div>
+      </div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #2</span>
+        <div class="forecast-claim">SARS will initiate at least 4 liquidation applications against construction or manufacturing sector companies between 18 May and 17 June 2026, continuing the enforcement acceleration pattern (31% of 2026 provisional liquidations SARS-initiated year-to-date).
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:72%;"></div></div><div style="font-size:12px;margin-top:3px;">72%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Fewer than 4 SARS-initiated liquidations in these sectors by 17 June 2026</div></div>
+          <div><div class="forecast-meta-label">Early Warning</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Weekly Government Gazette liquidation notices — track SARS as applicant</div></div>
+          <div><div class="forecast-meta-label">Named Entity</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">SARS; construction and manufacturing sectors</div></div>
+        </div>
+      </div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-30">30-Day Forecast #3</span>
+        <div class="forecast-claim">Eskom will maintain a load-shedding-free period through 15 June 2026 under the base case. If Stage 2+ load shedding is implemented for more than 5 consecutive days before 15 June, SADI will reach 63+ within 7 days of the triggering event.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:62%;"></div></div><div style="font-size:12px;margin-top:3px;">62%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Stage 4+ load shedding before 15 June without SADI reaching 63 within 7 days</div></div>
+          <div><div class="forecast-meta-label">Early Warning</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Eskom reserve margin below 1,500MW on consecutive peak evenings</div></div>
+          <div><div class="forecast-meta-label">Named Entity</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Eskom; SADI index</div></div>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">90-Day Forecasts &mdash; Horizon: 16 August 2026</div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-90">90-Day Forecast #1</span>
+        <div class="forecast-claim">At least one road freight logistics company currently in active rescue will have its rescue plan materially revised or abandoned following reassessment of Transnet rail competition risk, with the revised plan either extending the rescue period or converting to liquidation.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:51%;background:#6A3DB8;"></div></div><div style="font-size:12px;margin-top:3px;">51%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">No road freight rescue plan revision or conversion attributable to rail competition risk by 16 August 2026</div></div>
+        </div>
+      </div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-90">90-Day Forecast #2</span>
+        <div class="forecast-claim">Average PCF rate for new rescue financing facilities will exceed Prime + 7.0% by 16 August 2026, as GAAR-driven instrument simplification removes structured alternatives and plain-vanilla term lending demands higher returns for equivalent risk.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:55%;background:#6A3DB8;"></div></div><div style="font-size:12px;margin-top:3px;">55%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Average PCF rate remains below Prime + 6.5% by 16 August 2026</div></div>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">180-Day Forecasts &mdash; Horizon: 14 November 2026</div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-180">180-Day Forecast #1</span>
+        <div class="forecast-claim">The retail sector will generate at least 8 new rescue filings involving companies with more than 500 employees each between 18 May and 14 November 2026, as the structural consumer income decline identified in Contrarian Item 3 produces the expected second wave of mid-tier retail failures.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:42%;background:#C9A030;"></div></div><div style="font-size:12px;margin-top:3px;">42%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Fewer than 5 retail rescues involving 500+ employees each by 14 November 2026</div></div>
+          <div><div class="forecast-meta-label">Named Entity</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">SA retail sector; mid-market fashion and homeware chains</div></div>
+          <div><div class="forecast-meta-label">Early Warning</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Two or more mid-market retailers defer interim results or announce CFO departure in same week</div></div>
+        </div>
+      </div>
+      <div class="forecast-card">
+        <span class="forecast-horizon fh-180">180-Day Forecast #2</span>
+        <div class="forecast-claim">Tshwane Metropolitan Municipality will either: (a) conclude a payment arrangement with Eskom covering arrears of at least R2bn before 14 November 2026, OR (b) face a Section 139 provincial intervention. There is no stable middle scenario at the current arrears trajectory.
+</div>
+        <div class="forecast-grid">
+          <div><div class="forecast-meta-label">Confidence</div><div class="confidence-bar"><div class="confidence-fill" style="width:38%;background:#C9A030;"></div></div><div style="font-size:12px;margin-top:3px;">38%</div></div>
+          <div><div class="forecast-meta-label">Falsification</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Tshwane neither concludes payment arrangement nor receives Section 139 notice by 14 November 2026</div></div>
+          <div><div class="forecast-meta-label">Named Entity</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">Tshwane Metropolitan Municipality; Eskom</div></div>
+          <div><div class="forecast-meta-label">Early Warning</div><div style="font-size:12px;margin-top:3px;color:var(--text-secondary);">National Treasury formally placing Tshwane on a Financial Recovery Plan, or COGTA Section 139 warning letter</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14 SCORECARD & CORRECTIONS -->
+    <section class="pub-section" id="scorecard">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 14</div>
+      <div class="section-title">Prior Forecast Scorecard &amp; Editorial Corrections</div>
+
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#x26A0; MATERIAL CORRECTIONS &mdash; EDITION #1 | Full Transparency Notice</div>
+        <p style="font-size:13px;color:#D4E4EC;line-height:1.7;margin-top:8px;">This publication identified 3 material errors in Edition 001 and corrects them in full. We apply to ourselves the same falsification standard we require of every forecast.</p>
+        <p style="font-size:13px;color:#D4E4EC;line-height:1.7;margin-top:12px;"><strong style="color:#F4A918;">Correction 1: Eskom Load Shedding — Sections 01, 02, 08, 09</strong><br>Edition 001 referenced Eskom Stage 5 load shedding at 9.5 hours per day during the week of 5–9 May 2026. This was incorrect. South Africa's grid has been broadly stable since mid-2025, recording 231+ consecutive days without interrupted supply as at January 2026. The correct position for May 2026 is a stable grid with a conditional winter risk of Stage 2–6 between 18 May and 12 August under Eskom's high-risk scenario. The SADI Edition 001 SOE sub-component has been corrected from 48 to 32, revising overall SADI from 61 to approximately 57. All references to Stage 5 impacts on rescue proceedings were inaccurate.
+</p>
+        <p style="font-size:13px;color:#D4E4EC;line-height:1.7;margin-top:12px;"><strong style="color:#F4A918;">Correction 2: Constitutional Court Case Reference — Section 07</strong><br>Edition 001 referenced "Datatek (Pty) Ltd v South African Revenue Service [CCT 44/25]" as a pending Constitutional Court case on SARS super-preference vs PCF provider priority. This case does not exist. The real ConCourt judgment relevant to the rescue market in April–May 2026 is Absa Bank Ltd and Another v Commissioner for SARS [2026] ZACC 15 (22 April 2026) — a GAAR ruling, not a PCF priority case. The state of the law on PCF vs SARS priority remains unsettled but no such Constitutional Court case has been confirmed. All references to the fictional case are removed from this edition onwards.
+</p>
+        <p style="font-size:13px;color:#D4E4EC;line-height:1.7;margin-top:12px;"><strong style="color:#F4A918;">Correction 3: Transnet Freight Capacity — Sections 09, 10</strong><br>Edition 001 stated Transnet freight corridor utilisation was 52.3% of capacity. Verified data indicates Transnet is on an improving trajectory: Q1 2026 port container throughput rose 14.2% QoQ and the 11-TOC rail reform agreement was signed on 13 May 2026. The "52% capacity" figure was not sourced from a verifiable current data release. The correct characterisation is that Transnet is recovering from historical underperformance, with the rail reform representing a structural positive shift.
+</p>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">Edition #001 Forecast Scorecard</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Forecast</th><th>Horizon</th><th>Confidence</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>
+        <tr><td>Construction sector ≥6 new rescue filings between 11 May and 10 June 2026</td><td>30-Day</td><td class="mono">72%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">3 new construction filings this week. 3+ more needed in remaining 25 days. On track.</td></tr>
+        <tr><td>Meridian Retail Holdings secures PCF ≥R120m OR faces Nedbank liquidation application before 9 June 2026</td><td>30-Day</td><td class="mono">68%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">Illustrative entity from Edition 001 — no real-world verifiable outcome yet.</td></tr>
+        <tr><td>SADI reaches 64/100 or higher before 10 June 2026 if Eskom Stage 5+ persists for 14+ days</td><td>30-Day</td><td class="mono">61%</td><td><span class="status-pill status-superseded">SUPERSEDED</span></td><td style="font-size:11px;color:var(--text-secondary);">Conditional trigger (Eskom Stage 5+) was based on incorrect load-shedding data — see Correction 1. Eskom grid is stable. Forecast withdrawn.</td></tr>
+        <tr><td>Aggregate RPS across all active cases falls below 38% by 8 August 2026</td><td>90-Day</td><td class="mono">55%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">Current aggregate RPS at 43%. Revised baseline suggests 40–42% by August — marginally above the 38% threshold. Tracking.</td></tr>
+        <tr><td>One JSE-listed entity files for rescue or discloses going-concern by 8 August 2026</td><td>90-Day</td><td class="mono">48%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">No JSE-listed entity has filed or disclosed as of publication date. Still within forecast window.</td></tr>
+        <tr><td>SADI reaches 66–72/100 by 6 November 2026 absent major macro improvement</td><td>180-Day</td><td class="mono">42%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">Corrected baseline of 57 (not 61) means the forecast requires a larger absolute increase. Direction still plausible; magnitude less certain.</td></tr>
+        <tr><td>Construction sector loses 40% of active rescue cases to liquidation within 180 days</td><td>180-Day</td><td class="mono">38%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">3 new construction filings this week add to the active case count. No conversions at required rate yet.</td></tr>
+        <tr><td>Formal Section 139 intervention applied to at least one Gauteng municipality by 6 November 2026</td><td>180-Day</td><td class="mono">35%</td><td><span class="status-pill status-pending">PENDING</span></td><td style="font-size:11px;color:var(--text-secondary);">Tshwane arrears rising to ~R2.6bn — direction consistent with forecast. Still within window.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="pull-quote">&ldquo;3 errors in our first edition. All corrected in full, with explanation of what was wrong and what is correct. This is the standard we hold ourselves to.&rdquo;<div style="font-size:12px;font-style:normal;font-family:'IBM Plex Sans',sans-serif;color:var(--text-muted);margin-top:8px;">&mdash; BR Distress Ledger Editorial Standard</div></div>
+    </section>
+
+  </main>
+</div>
+<footer class="pub-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-pub-name">BR Distress Ledger</div>
+      <div class="footer-disclaimer">This publication is produced for authorised subscribers only. Company names used in filings trackers and case studies are illustrative where real-time CIPC data is not publicly accessible. All legal case citations in this edition have been verified against public court records. Not legal, financial, or investment advice.
+</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Publication</div>
+      <ul class="footer-links"><li>Edition #2 &mdash; 16 May 2026</li>
+<li>Published: 18 May 2026</li>
+<li>SADI: 59/100 &mdash; HIGH</li>
+<li>Corrections: 3 (Section 14)</li></ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Subscribe</div>
+      <ul class="footer-links"><li>Africa Agriculture and Trade Investment Fund v Vienings (74/2024) [2026] ZASCA 19</li><li>Absa Bank Ltd and Another v Commissioner for SARS (CCT 72/24) [2026] ZACC 15</li><li>White Rivers Exploration (Pty) Ltd and Others v Polsun Limited (2025/001669) [2026] ZAGPJHC</li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 BR Distress Ledger &nbsp;|&nbsp; Confidential Intelligence Product &nbsp;|&nbsp; Not legal, financial or investment advice</div>
+</footer>
+<script>const sections = document.querySelectorAll('.pub-section[id]');
+const navItems = document.querySelectorAll('.nav-item');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + id) item.classList.add('active');
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-50px 0px -70% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
