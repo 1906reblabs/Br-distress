@@ -13,57 +13,8 @@
 html{scroll-behavior:smooth;}
 body{font-family:'IBM Plex Sans',sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
 a{text-decoration:none;color:inherit;}
-/* ── SHARED COMPONENTS ── */
-.top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
-.rps{display:inline-flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px;white-space:nowrap;}
-.rps-strong{background:var(--strong-bg);color:var(--strong);}
-.rps-probable{background:var(--probable-bg);color:var(--probable);}
-.rps-challenged{background:var(--challenged-bg);color:var(--challenged-c);}
-.rps-distressed{background:var(--distressed-bg);color:var(--distressed-c);}
-.rps-critical{background:var(--critical-bg);color:var(--critical-c);}
-.rps-terminal{background:var(--terminal-bg);color:white;font-size:10px;}
-.tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;letter-spacing:0.04em;text-transform:uppercase;}
-.tag-sector{background:var(--teal-light);color:var(--teal-dark);}
-.tag-risk{background:var(--distressed-bg);color:var(--distressed-c);}
-.tag-risk-crit{background:var(--critical-bg);color:var(--critical-c);}
-.tag-action{background:#E3F2FD;color:#0D47A1;}
-.tag-30d{background:#EDE7F6;color:#4527A0;}
-.tag-positive{background:var(--strong-bg);color:var(--strong);}
-.tag-correction{background:#1A1A1A;color:#F4A918;}
-.tag-landmark{background:var(--terminal-bg);color:white;}
-.alert-box{border-radius:6px;padding:16px 20px;margin:16px 0;border-left:4px solid;font-size:13px;}
-.alert-box .alert-title{font-size:11px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
-.alert-green{background:var(--strong-bg);border-color:#1A7A4A;color:var(--strong);}
-.alert-amber{background:#FFF8E1;border-color:#C77B00;color:#7A4A00;}
-.alert-red{background:var(--critical-bg);border-color:#C0392B;color:var(--critical-c);}
-.alert-teal{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);}
-.alert-correction{background:#0D1A2D;border-color:#F4A918;color:#E0E0E0;}
-.alert-correction .alert-title{color:#F4A918;}
-.data-table-wrap{overflow-x:auto;margin:20px 0;border-radius:6px;border:1px solid var(--border);}
-.data-table{width:100%;border-collapse:collapse;font-size:12px;}
-.data-table thead th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:10px 12px;text-align:left;white-space:nowrap;}
-.data-table tbody tr:nth-child(even){background:var(--grey-50);}
-.data-table tbody tr:hover{background:var(--teal-light);}
-.data-table tbody td{padding:9px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.4;}
-.data-table tbody tr:last-child td{border-bottom:none;}
-.mono{font-family:'IBM Plex Mono',monospace;}
-.muted{color:var(--text-muted);font-size:12px;}
-.subhead{font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 8px;text-transform:uppercase;letter-spacing:0.06em;}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
-ul.body-list{padding-left:20px;margin:10px 0;}
-ul.body-list li{margin-bottom:6px;font-size:13px;color:var(--text-secondary);}
-.pull-quote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gold-light);border-radius:0 6px 6px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
-/* ── SHARED FOOTER ── */
-.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:24px;border-bottom:1px solid #1E3D5A;margin-bottom:20px;}
-.footer-pub-name{font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:8px;}
-.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;}
-.footer-col-title{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
-.footer-links{list-style:none;}
-.footer-links li{margin-bottom:5px;font-size:12px;color:#8AAEBE;}
-.footer-bottom{max-width:1200px;margin:0 auto;font-size:11px;color:#4A6A7A;text-align:center;}
-@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}}
+.top-bar{background:var(--teal-xdark);color:#94C4BC;font-size:11px;letter-spacing:0.06em;text-align:center;padding:7px 20px;}
+.top-bar strong{color:#E0F2EE;}
 nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:200;border-bottom:3px solid var(--teal);}
 .nav-brand{display:flex;align-items:center;gap:12px;}
 .nav-brand-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;}
@@ -73,7 +24,6 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .nav-links a:hover{color:#fff;}
 .nav-cta{background:var(--teal);color:#fff!important;padding:7px 18px;border-radius:4px;font-weight:500!important;}
 .nav-cta:hover{background:var(--teal-dark)!important;}
-/* TICKER */
 .ticker-strip{background:var(--teal-dark);padding:10px 40px;overflow:hidden;white-space:nowrap;position:relative;}
 .ticker-strip::before,.ticker-strip::after{content:'';position:absolute;top:0;bottom:0;width:60px;z-index:2;}
 .ticker-strip::before{left:0;background:linear-gradient(to right,var(--teal-dark),transparent);}
@@ -84,7 +34,7 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .ti-label{color:#6A9890;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
 .ti-val{font-family:'IBM Plex Mono',monospace;font-weight:500;color:#E0F2EE;}
 .ti-delta{font-size:10px;color:#94C4BC;}
-/* HERO */
+.ti-pos{color:#5AC48A;}
 .hero{background:var(--navy);padding:72px 40px 80px;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 50%,rgba(0,107,91,0.18) 0%,transparent 60%);pointer-events:none;}
 .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;}
@@ -97,7 +47,6 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .btn-primary:hover{background:var(--teal-dark);}
 .btn-secondary{display:inline-block;border:1px solid rgba(255,255,255,0.25);color:#E0F2EE;padding:13px 28px;border-radius:4px;font-weight:400;font-size:14px;transition:all 0.15s;}
 .btn-secondary:hover{border-color:#E0F2EE;color:#fff;}
-/* SADI CARD */
 .sadi-card{background:rgba(0,107,91,0.12);border:1px solid rgba(0,107,91,0.35);border-radius:10px;padding:28px;color:#fff;}
 .sadi-card-eyebrow{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6A9890;margin-bottom:12px;}
 .sadi-card-score{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;}
@@ -110,29 +59,27 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .sadi-sub-row strong{color:#E0F2EE;font-family:'IBM Plex Mono',monospace;font-size:11px;}
 .sadi-bar-outer{background:rgba(255,255,255,0.08);border-radius:3px;height:4px;margin-bottom:6px;overflow:hidden;}
 .sadi-bar-inner{height:4px;border-radius:3px;}
+.bar-red{background:#EF4444;}.bar-amber{background:#F59E0B;}.bar-teal{background:var(--teal);}
 .sadi-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
 .sadi-stat{text-align:center;padding:10px;background:rgba(255,255,255,0.05);border-radius:6px;border:1px solid rgba(255,255,255,0.08);}
 .sadi-stat-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;display:block;line-height:1;}
 .sadi-stat-label{font-size:10px;color:#6A9890;letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;}
-/* SECTION WRAPPER */
 .site-section{padding:72px 40px;}
 .site-section-inner{max-width:1100px;margin:0 auto;}
 .section-label{font-size:11px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;}
 .section-heading{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:12px;}
 .section-sub{font-size:15px;color:var(--text-secondary);max-width:560px;line-height:1.75;margin-bottom:40px;}
-/* EDITION CARD */
 .edition-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 2px 20px rgba(0,0,0,0.05);}
 .edition-card-header{background:var(--navy);padding:20px 28px;display:flex;align-items:center;justify-content:space-between;}
 .edition-card-meta{font-size:11px;color:#6A9890;letter-spacing:0.06em;}
 .edition-card-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;line-height:1.3;margin-top:4px;}
 .edition-badge{background:var(--teal);color:#fff;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:3px;}
-.edition-badge-correction{background:#C9A030;color:var(--navy);}
 .edition-card-body{padding:24px 28px;}
 .edition-kpi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:24px;}
 .ek-item{padding:14px;background:var(--off-white);border-radius:6px;border:1px solid var(--border);}
 .ek-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:6px;}
 .ek-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1;}
-.ek-val.red{color:var(--critical-c);}.ek-val.amber{color:var(--challenged-c);}
+.ek-val.red{color:var(--critical-c);}.ek-val.amber{color:var(--challenged-c);}.ek-val.green{color:var(--strong);}
 .ek-sub{font-size:11px;color:var(--text-muted);margin-top:3px;}
 .stories-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
 .story-item{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:6px;background:var(--white);}
@@ -148,14 +95,12 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .edition-cta p{font-size:13px;color:var(--teal-dark);}
 .btn-edition{background:var(--teal);color:#fff;padding:10px 22px;border-radius:4px;font-weight:500;font-size:13px;display:inline-block;transition:background 0.15s;}
 .btn-edition:hover{background:var(--teal-dark);}
-/* FEATURES */
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .feature-card{padding:24px;border:1px solid var(--border);border-radius:8px;transition:border-color 0.2s,box-shadow 0.2s;}
 .feature-card:hover{border-color:var(--teal);box-shadow:0 4px 24px rgba(0,107,91,0.08);}
 .feature-icon{font-size:28px;margin-bottom:12px;display:block;}
 .feature-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px;}
 .feature-body{font-size:13px;color:var(--text-secondary);line-height:1.7;}
-/* INDEXES */
 .indexes-section{background:var(--navy);padding:72px 40px;}
 .indexes-heading{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:8px;}
 .indexes-sub{font-size:14px;color:#6A9890;max-width:540px;margin-bottom:48px;line-height:1.75;}
@@ -168,14 +113,12 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .index-example-label{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:#6A9890;margin-bottom:4px;}
 .index-example-val{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;}
 .index-example-sub{font-size:10px;color:#6A9890;margin-top:2px;}
-/* HOW */
 .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px;position:relative;}
 .how-grid::before{content:'';position:absolute;top:28px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:1px;background:var(--border);}
 .how-step{text-align:center;padding:24px 16px;}
 .how-num{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin:0 auto 16px;background:var(--teal);color:#fff;position:relative;z-index:1;}
 .how-title{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .how-body{font-size:12.5px;color:var(--text-secondary);line-height:1.65;}
-/* AUDIENCE */
 .audience-section{background:var(--teal-dark);color:#fff;padding:72px 40px;}
 .audience-heading{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:8px;}
 .audience-sub{font-size:14px;color:#94C4BC;max-width:540px;line-height:1.75;margin-bottom:48px;}
@@ -184,7 +127,6 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .audience-icon{font-size:24px;margin-bottom:10px;}
 .audience-title{font-size:14px;font-weight:600;color:#E0F2EE;margin-bottom:6px;}
 .audience-body{font-size:12.5px;color:#94C4BC;line-height:1.65;}
-/* SUBSCRIBE */
 .subscribe-section{padding:80px 40px;background:var(--white);}
 .tier-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px;}
 .tier-card{border:1px solid var(--border);border-radius:8px;padding:22px;transition:border-color 0.2s,box-shadow 0.2s;}
@@ -203,7 +145,6 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .btn-t-secondary{background:var(--off-white);color:var(--navy);border:1px solid var(--border);}
 .btn-t-secondary:hover{background:var(--grey-100);}
 .subscribe-note{font-size:12px;color:var(--text-muted);line-height:1.7;text-align:center;}
-/* ARCHIVE */
 .archive-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px;}
 .archive-card{border:1px solid var(--border);border-radius:8px;padding:20px;background:var(--white);display:flex;align-items:flex-start;gap:16px;}
 .archive-edition-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--teal-mid);line-height:1;min-width:60px;}
@@ -213,13 +154,24 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 .archive-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
 .archive-sadi{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-muted);}
 .archive-link{display:inline-block;background:var(--teal);color:#fff;font-size:11px;padding:4px 12px;border-radius:3px;font-weight:500;}
+.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:24px;border-bottom:1px solid #1E3D5A;margin-bottom:20px;}
+.footer-pub-name{font-family:'Playfair Display',serif;font-size:16px;color:white;margin-bottom:8px;}
+.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;}
+.footer-col-title{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);text-transform:uppercase;font-weight:600;margin-bottom:10px;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:5px;font-size:12px;color:#8AAEBE;}
+.footer-links li a{color:#8AAEBE;}
+.footer-bottom{max-width:1200px;margin:0 auto;font-size:11px;color:#4A6A7A;text-align:center;}
 @media(max-width:1024px){.hero-inner,.indexes-grid,.features-grid{grid-template-columns:1fr;}.audience-grid{grid-template-columns:1fr 1fr;}.tier-grid,.archive-grid{grid-template-columns:1fr;}.how-grid{grid-template-columns:1fr 1fr;}.how-grid::before{display:none;}}
 @media(max-width:700px){nav{padding:0 20px;}.nav-links{display:none;}.hero{padding:48px 20px 56px;}.hero-headline{font-size:36px;}.site-section,.audience-section,.indexes-section,.subscribe-section{padding:48px 20px;}.ticker-strip{padding:10px 20px;}}
 </style>
 </head>
 <body>
+
 <div class="top-bar">
-  <strong>EDITION #3 NOW LIVE</strong> &nbsp;·&nbsp; BR Distress Ledger · Week Ending 23 May 2026 · SADI: 61/100 (HIGH)
+  <strong>EDITION #4 NOW LIVE</strong> &nbsp;·&nbsp; BR Distress Ledger · Week Ending 30 May 2026 · SADI: 60/100 (HIGH · Stabilising) &nbsp;·&nbsp;
+  <strong>SARB HOLDS 6.75% · cidb CASCADE TRIGGERED · Highroad Transport PCF SECURED</strong>
 </div>
 
 <nav>
@@ -235,37 +187,40 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
     <a href="#inside">What's Inside</a>
     <a href="#audience">Who Reads It</a>
     <a href="#subscribe">Subscribe</a>
-    <a href="edition-003.html" class="nav-cta">Read Edition #003 →</a>
+    <a href="edition-004.html" class="nav-cta">Read Edition #004 →</a>
   </div>
 </nav>
 
 <!-- TICKER -->
 <div class="ticker-strip">
   <div class="ticker-inner">
-    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">61/100</span>&nbsp;<span class="ti-delta">↑2 · HIGH</span></span>
-    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">186</span>&nbsp;<span class="ti-delta">↑4 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">11</span>&nbsp;<span class="ti-delta">↑2 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">8</span>&nbsp;<span class="ti-delta">↑1 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">41%</span>&nbsp;<span class="ti-delta">↓2pts</span></span>
+    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">60/100</span>&nbsp;<span class="ti-delta ti-pos">↓1 · HIGH · Stabilising</span></span>
+    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">188</span>&nbsp;<span class="ti-delta">↑2 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">8</span>&nbsp;<span class="ti-delta ti-pos">↓3 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">6</span>&nbsp;<span class="ti-delta">↓2 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">42%</span>&nbsp;<span class="ti-delta ti-pos">↑1pt</span></span>
     <span class="ticker-item"><span class="ti-label">PCF Market</span>&nbsp;<span class="ti-val">TIGHT</span>&nbsp;<span class="ti-delta">P+6.5–7.0%</span></span>
-    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.69</span>&nbsp;<span class="ti-delta">↓ Pipeline building</span></span>
-    <span class="ticker-item"><span class="ti-label">Diesel Price</span>&nbsp;<span class="ti-val">R32.30/L</span>&nbsp;<span class="ti-delta">+R6.19 from 6 May</span></span>
-    <span class="ticker-item"><span class="ti-label">Eskom Grid</span>&nbsp;<span class="ti-val">365 DAYS</span>&nbsp;<span class="ti-delta">No load shedding milestone</span></span>
-    <span class="ticker-item"><span class="ti-label">SARB MPC</span>&nbsp;<span class="ti-val">28 May</span>&nbsp;<span class="ti-delta">25bp hike on table</span></span>
-    <span class="ticker-item"><span class="ti-label">Transnet Rail</span>&nbsp;<span class="ti-val">REFORMING</span>&nbsp;<span class="ti-delta">11 TOCs signed</span></span>
-    <span class="ticker-item"><span class="ti-label">ZAGPJHC 521</span>&nbsp;<span class="ti-val">Bombela v Cassim</span>&nbsp;<span class="ti-delta">BRP execution · 19 May</span></span>
-    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">61/100</span>&nbsp;<span class="ti-delta">↑2 · HIGH</span></span>
-    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">186</span>&nbsp;<span class="ti-delta">↑4 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">11</span>&nbsp;<span class="ti-delta">↑2 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">8</span>&nbsp;<span class="ti-delta">↑1 WoW</span></span>
-    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">41%</span>&nbsp;<span class="ti-delta">↓2pts</span></span>
+    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.68</span>&nbsp;<span class="ti-delta">Pipeline building</span></span>
+    <span class="ticker-item"><span class="ti-label">SARB Rate</span>&nbsp;<span class="ti-val">6.75%</span>&nbsp;<span class="ti-delta ti-pos">HOLDS · 28 May</span></span>
+    <span class="ticker-item"><span class="ti-label">Diesel Price</span>&nbsp;<span class="ti-val">R31.50/L</span>&nbsp;<span class="ti-delta ti-pos">↓R0.80 · Easing</span></span>
+    <span class="ticker-item"><span class="ti-label">Eskom Grid</span>&nbsp;<span class="ti-val">379 DAYS</span>&nbsp;<span class="ti-delta ti-pos">No load shedding</span></span>
+    <span class="ticker-item"><span class="ti-label">cidb Cascade</span>&nbsp;<span class="ti-val">TRIGGERED</span>&nbsp;<span class="ti-delta">2 blacklisted entities filed</span></span>
+    <span class="ticker-item"><span class="ti-label">Highroad Transport</span>&nbsp;<span class="ti-val">PCF SECURED</span>&nbsp;<span class="ti-delta ti-pos">IDC R28m · RPS +28pts</span></span>
+    <span class="ticker-item"><span class="ti-label">Tshwane</span>&nbsp;<span class="ti-val">S139 NOTICE</span>&nbsp;<span class="ti-delta">Arrears R2.8bn · 11 Jun deadline</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span class="ti-label">SADI</span>&nbsp;<span class="ti-val">60/100</span>&nbsp;<span class="ti-delta ti-pos">↓1 · HIGH · Stabilising</span></span>
+    <span class="ticker-item"><span class="ti-label">Active Rescues</span>&nbsp;<span class="ti-val">188</span>&nbsp;<span class="ti-delta">↑2 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">New Filings</span>&nbsp;<span class="ti-val">8</span>&nbsp;<span class="ti-delta ti-pos">↓3 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Liquidations</span>&nbsp;<span class="ti-val">6</span>&nbsp;<span class="ti-delta">↓2 WoW</span></span>
+    <span class="ticker-item"><span class="ti-label">Avg RPS</span>&nbsp;<span class="ti-val">42%</span>&nbsp;<span class="ti-delta ti-pos">↑1pt</span></span>
     <span class="ticker-item"><span class="ti-label">PCF Market</span>&nbsp;<span class="ti-val">TIGHT</span>&nbsp;<span class="ti-delta">P+6.5–7.0%</span></span>
-    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.69</span>&nbsp;<span class="ti-delta">↓ Pipeline building</span></span>
-    <span class="ticker-item"><span class="ti-label">Diesel Price</span>&nbsp;<span class="ti-val">R32.30/L</span>&nbsp;<span class="ti-delta">+R6.19 from 6 May</span></span>
-    <span class="ticker-item"><span class="ti-label">Eskom Grid</span>&nbsp;<span class="ti-val">365 DAYS</span>&nbsp;<span class="ti-delta">No load shedding milestone</span></span>
-    <span class="ticker-item"><span class="ti-label">SARB MPC</span>&nbsp;<span class="ti-val">28 May</span>&nbsp;<span class="ti-delta">25bp hike on table</span></span>
-    <span class="ticker-item"><span class="ti-label">Transnet Rail</span>&nbsp;<span class="ti-val">REFORMING</span>&nbsp;<span class="ti-delta">11 TOCs signed</span></span>
-    <span class="ticker-item"><span class="ti-label">ZAGPJHC 521</span>&nbsp;<span class="ti-val">Bombela v Cassim</span>&nbsp;<span class="ti-delta">BRP execution · 19 May</span></span>
+    <span class="ticker-item"><span class="ti-label">RVI</span>&nbsp;<span class="ti-val">0.68</span>&nbsp;<span class="ti-delta">Pipeline building</span></span>
+    <span class="ticker-item"><span class="ti-label">SARB Rate</span>&nbsp;<span class="ti-val">6.75%</span>&nbsp;<span class="ti-delta ti-pos">HOLDS · 28 May</span></span>
+    <span class="ticker-item"><span class="ti-label">Diesel Price</span>&nbsp;<span class="ti-val">R31.50/L</span>&nbsp;<span class="ti-delta ti-pos">↓R0.80 · Easing</span></span>
+    <span class="ticker-item"><span class="ti-label">Eskom Grid</span>&nbsp;<span class="ti-val">379 DAYS</span>&nbsp;<span class="ti-delta ti-pos">No load shedding</span></span>
+    <span class="ticker-item"><span class="ti-label">cidb Cascade</span>&nbsp;<span class="ti-val">TRIGGERED</span>&nbsp;<span class="ti-delta">2 blacklisted entities filed</span></span>
+    <span class="ticker-item"><span class="ti-label">Highroad Transport</span>&nbsp;<span class="ti-val">PCF SECURED</span>&nbsp;<span class="ti-delta ti-pos">IDC R28m · RPS +28pts</span></span>
+    <span class="ticker-item"><span class="ti-label">Tshwane</span>&nbsp;<span class="ti-val">S139 NOTICE</span>&nbsp;<span class="ti-delta">Arrears R2.8bn · 11 Jun deadline</span></span>
   </div>
 </div>
 
@@ -277,36 +232,36 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
       <h1 class="hero-headline">The Intelligence Layer<br><span>Behind South Africa's Distress Cycle</span></h1>
       <p class="hero-body">Institutional-grade weekly intelligence on South African business rescue, corporate insolvency, and distressed assets. Trusted by BRPs, creditors, restructuring lawyers, banks, and distressed investors.</p>
       <div class="hero-actions">
-        <a href="edition-003.html" class="btn-primary">Read Edition #003 (Free) →</a>
+        <a href="edition-004.html" class="btn-primary">Read Edition #004 (Free) →</a>
         <a href="#subscribe" class="btn-secondary">View Subscription Options</a>
       </div>
     </div>
     <div class="sadi-card">
-      <div class="sadi-card-eyebrow">South Africa Distress Index · Edition #003</div>
+      <div class="sadi-card-eyebrow">South Africa Distress Index · Edition #004</div>
       <div class="sadi-card-score">
-        <span class="sadi-card-num">61</span>
+        <span class="sadi-card-num">60</span>
         <span class="sadi-card-denom">/100</span>
       </div>
-      <div class="sadi-card-badge">HIGH</div>
-      <div class="sadi-card-delta">▲ +2 pts from Edition 002 — fuel shock primary driver</div>
+      <div class="sadi-card-badge">&#x25BC; HIGH &mdash; STABILISING</div>
+      <div class="sadi-card-delta">↓ 1 point from Edition 003 — SARB holds + Brent eases to $97</div>
       <hr class="sadi-divider">
-      <div class="sadi-sub-row"><span>Filing Volume</span><strong>69</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:69%;background:#C62828;"></div></div>
-      <div class="sadi-sub-row"><span>RPS Inverse</span><strong>61</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:61%;background:#E65100;"></div></div>
-      <div class="sadi-sub-row"><span>Retrenchment Volume</span><strong>64</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:64%;background:#C62828;"></div></div>
-      <div class="sadi-sub-row"><span>Liquidation Volume</span><strong>56</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:56%;background:#E65100;"></div></div>
-      <div class="sadi-sub-row"><span>NPL Ratio Trend</span><strong>53</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:53%;background:#E65100;"></div></div>
-      <div class="sadi-sub-row"><span>SOE Distress (corrected)</span><strong>32</strong></div>
-      <div class="sadi-bar-outer"><div class="sadi-bar-inner" style="width:32%;background:#2E7D32;"></div></div>
+      <div class="sadi-sub-row"><span>Filing Volume</span><strong>71</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:71%"></div></div>
+      <div class="sadi-sub-row"><span>RPS Inverse</span><strong>63</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:63%"></div></div>
+      <div class="sadi-sub-row"><span>Retrenchment Volume</span><strong>62</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-red" style="width:62%"></div></div>
+      <div class="sadi-sub-row"><span>Liquidation Volume</span><strong>60</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-amber" style="width:60%"></div></div>
+      <div class="sadi-sub-row"><span>NPL Ratio Trend</span><strong>54</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-amber" style="width:54%"></div></div>
+      <div class="sadi-sub-row"><span>SOE Distress</span><strong>29</strong></div>
+      <div class="sadi-bar-outer"><div class="sadi-bar-inner bar-teal" style="width:29%"></div></div>
       <div class="sadi-stat-row">
-        <div class="sadi-stat"><span class="sadi-stat-val">182</span><div class="sadi-stat-label">Active Rescues</div></div>
-        <div class="sadi-stat"><span class="sadi-stat-val">43%</span><div class="sadi-stat-label">Avg RPS</div></div>
-        <div class="sadi-stat"><span class="sadi-stat-val">9</span><div class="sadi-stat-label">New Filings</div></div>
-        <div class="sadi-stat"><span class="sadi-stat-val">0.71</span><div class="sadi-stat-label">RVI Index</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">188</span><div class="sadi-stat-label">Active Rescues</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">42%</span><div class="sadi-stat-label">Avg RPS</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">8</span><div class="sadi-stat-label">New Filings</div></div>
+        <div class="sadi-stat"><span class="sadi-stat-val">0.68</span><div class="sadi-stat-label">RVI Index</div></div>
       </div>
     </div>
   </div>
@@ -316,76 +271,77 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
 <section id="editions" class="site-section" style="background:var(--off-white);">
   <div class="site-section-inner">
     <div class="section-label">Latest Edition</div>
-    <h2 class="section-heading">Edition #003 · 23 May 2026</h2>
-    <p class="section-sub">Fuel Shock Crystallises in Rescue Proceedings as Diesel Hits R32/Litre</p>
+    <h2 class="section-heading">Edition #004 · 30 May 2026</h2>
+    <p class="section-sub">SARB holds at 6.75% as Iran-US back-channel emerges. cidb blacklist cascade arrives. Highroad Transport secures IDC PCF — the rescue market's first genuine positive in four weeks.</p>
+
     <div class="edition-card">
       <div class="edition-card-header">
         <div>
-          <div class="edition-card-meta">EDITION #003 · WEEK ENDING 23 MAY 2026</div>
-          <div class="edition-card-title">SARB MPC weighs 25bp hike on 28 May; Eskom marks 365 days without load shedding; distressed buyer's market emerging</div>
+          <div class="edition-card-meta">EDITION #004 · WEEK ENDING 30 MAY 2026 · PUBLISHED 1 JUNE 2026</div>
+          <div class="edition-card-title">SARB Holds; cidb Cascade Arrives; Highroad PCF Secured — SADI Stabilises at 60/100</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
-          <span class="edition-badge">LIVE NOW</span>
-        </div>
+        <span class="edition-badge">LIVE NOW</span>
       </div>
       <div class="edition-card-body">
         <div class="edition-kpi-grid">
           <div class="ek-item">
             <div class="ek-label">SADI Score</div>
-            <div class="ek-val amber">61/100</div>
-            <div class="ek-sub">↑ +2 pts · HIGH (Deteriorating)</div>
+            <div class="ek-val amber">60/100</div>
+            <div class="ek-sub">↓ 1 pt · HIGH · Stabilising</div>
           </div>
           <div class="ek-item">
-            <div class="ek-label">New Rescue Filings</div>
-            <div class="ek-val amber">11</div>
-            <div class="ek-sub">R2.7bn combined liabilities · 4 cite diesel costs</div>
+            <div class="ek-label">SARB Rate Decision</div>
+            <div class="ek-val green">HOLDS</div>
+            <div class="ek-sub">6.75% repo · prime 10.25% · unanimous</div>
           </div>
           <div class="ek-item">
-            <div class="ek-label">Diesel Price</div>
-            <div class="ek-val red">R32.30/L</div>
-            <div class="ek-sub">+R6.19 from 6 May · First-ever above R32</div>
+            <div class="ek-label">Highroad Transport RPS</div>
+            <div class="ek-val green">54%</div>
+            <div class="ek-sub">↑ 28pts · IDC PCF R28m confirmed</div>
           </div>
         </div>
+
         <div class="stories-list">
           <div class="story-item">
             <div class="story-num">01</div>
             <div>
-              <div class="story-headline">Diesel at R32.30/Litre Crystallises in Rescue Proceedings — First Plan Amendment Affidavits Filed<span class="story-tag t-critical">CRITICAL</span></div>
-              <div class="story-meta">Highroad Transport Solutions BRP files urgently; R18m diesel cost overrun vs plan assumptions; Nedbank calls creditor meeting</div>
+              <div class="story-headline">SARB Holds 6.75% — Unanimous as Iran-US Back-Channel Pushes Brent to $97<span class="story-tag t-positive">POSITIVE</span></div>
+              <div class="story-meta">PCF double-compression risk (Ed.003 Rank 1 Black Swan) neutralised · Diesel eases to R31.50/L · Next MPC 17 July</div>
             </div>
           </div>
           <div class="story-item">
             <div class="story-num">02</div>
             <div>
-              <div class="story-headline">SARB MPC 28 May — 25bp Hike on the Table; PCF Market in Wait-and-See Mode<span class="story-tag t-critical">CRITICAL</span></div>
-              <div class="story-meta">Repo currently 6.75% (prime 10.25%); Nedbank economist projects May CPI at 4.2%; hike would reprice all PCF facilities</div>
+              <div class="story-headline">cidb Blacklist Cascade Confirmed: Blackrock Civil and Northway Civils File for Rescue<span class="story-tag t-critical">TRIGGERED</span></div>
+              <div class="story-meta">2 of 3 filings needed to confirm Edition 002 forecast · Blackrock urgent moratorium application filed · Novel legal question pending</div>
             </div>
           </div>
           <div class="story-item">
             <div class="story-num">03</div>
             <div>
-              <div class="story-headline">Eskom Marks 365 Consecutive Days Without Load Shedding — EAF at 68%<span class="story-tag t-positive">POSITIVE</span></div>
-              <div class="story-meta">16 May 2026 milestone; chairman Mteto Nyati: 'structural shift from recovering to stable grid'; winter risk window 18 May–12 Aug</div>
+              <div class="story-headline">Highroad Transport Solutions: IDC PCF R28m Confirmed — 580 Jobs Preserved<span class="story-tag t-positive">ALPHA EXECUTED</span></div>
+              <div class="story-meta">Edition 003 Alpha Opportunity of the Week executed · Prime+5.5% · RPS upgraded from 26% to 54% · Creditor vote by 30 June</div>
             </div>
           </div>
           <div class="story-item">
             <div class="story-num">04</div>
             <div>
-              <div class="story-headline">Bombela v Cassim NO [2026] ZAGPJHC 521 — BRPs Must Evidence Irreversible Prejudice for Urgent Execution<span class="story-tag t-landmark">LANDMARK</span></div>
-              <div class="story-meta">19 May 2026 · Busmark business rescue · Gautrain concession transition · Supply agreement enforcement</div>
+              <div class="story-headline">COGTA Issues Formal Section 139 Notice to Tshwane — 11 June Response Deadline<span class="story-tag t-critical">CRITICAL</span></div>
+              <div class="story-meta">Arrears R2.8bn · Binary outcome: payment arrangement or provincial intervention · 4 active rescue cases affected</div>
             </div>
           </div>
           <div class="story-item">
             <div class="story-num">05</div>
             <div>
-              <div class="story-headline">Business Rescue Becoming a Buyer's Market — Sunday Times 23 May 2026<span class="story-tag t-positive">OPPORTUNITY</span></div>
-              <div class="story-meta">Park Village Auctions processing highest distressed asset volumes since 2021; GAAR pause + fuel shock = asset supply surge</div>
+              <div class="story-headline">Vanguard Fashion Retail Enters Rescue: R415m, 62 Stores, 1,840 Employees<span class="story-tag t-positive">OPPORTUNITY</span></div>
+              <div class="story-meta">Lease renegotiation clauses in 48 of 62 stores · Break-even drops from R280m to R190m · White knight window open</div>
             </div>
           </div>
         </div>
+
         <div class="edition-cta">
-          <p><strong>Free edition.</strong> All 14 sections — filings tracker, sector heatmap, legal intelligence, Black Swan Watchlist, contrarian claims, and 30/90/180-day forecasts.</p>
-          <a href="edition-003.html" class="btn-edition">Read Full Edition →</a>
+          <p><strong>Free edition.</strong> All 14 sections — filings tracker, heatmap, legal intelligence (Blackrock moratorium application), Black Swan Watchlist, contrarian claims, and 30/90/180-day forecasts.</p>
+          <a href="edition-004.html" class="btn-edition">Read Full Edition →</a>
         </div>
       </div>
     </div>
@@ -394,13 +350,28 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
     <div class="section-label" style="margin-top:48px;">Edition Archive</div>
     <div class="archive-grid">
       <div class="archive-card">
+        <div class="archive-edition-num">#004</div>
+        <div class="archive-info">
+          <div class="archive-date">Week Ending 30 May 2026 · Published 1 June 2026</div>
+          <div class="archive-headline">SARB Holds; cidb Cascade Arrives; Highroad Transport PCF Secured — SADI Stabilises at 60/100</div>
+          <div class="archive-meta">
+            <span class="archive-sadi">SADI: 60/100 · HIGH</span>
+            <span class="story-tag t-positive">FREE</span>
+            <span class="story-tag" style="background:var(--strong-bg);color:var(--strong);">0 corrections</span>
+            <a href="edition-004.html" class="archive-link">Read →</a>
+          </div>
+        </div>
+      </div>
+      <div class="archive-card">
         <div class="archive-edition-num">#003</div>
         <div class="archive-info">
           <div class="archive-date">Week Ending 23 May 2026</div>
           <div class="archive-headline">Fuel Shock Crystallises in Rescue Proceedings as Diesel Hits R32/Litre</div>
           <div class="archive-meta">
-            <span class="archive-sadi">SADI: 61/100</span>
-<span class="story-tag t-positive">FREE</span>            <a href="edition-003.html" class="archive-link">Read →</a>
+            <span class="archive-sadi">SADI: 61/100 · HIGH</span>
+            <span class="story-tag t-positive">FREE</span>
+            <span class="story-tag" style="background:var(--strong-bg);color:var(--strong);">0 corrections</span>
+            <a href="edition-003.html" class="archive-link">Read →</a>
           </div>
         </div>
       </div>
@@ -410,19 +381,22 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
           <div class="archive-date">Week Ending 16 May 2026</div>
           <div class="archive-headline">Transnet Rail Breakthrough and cidb Blacklist Cascade Reframe SA Distress Landscape</div>
           <div class="archive-meta">
-            <span class="archive-sadi">SADI: 59/100</span>
-<span class="story-tag t-correction">3 corrections</span><span class="story-tag t-positive">FREE</span>            <a href="edition-002.html" class="archive-link">Read →</a>
+            <span class="archive-sadi">SADI: 59/100 · HIGH</span>
+            <span class="story-tag t-positive">FREE</span>
+            <span class="story-tag t-correction">3 corrections</span>
+            <a href="edition-002.html" class="archive-link">Read →</a>
           </div>
         </div>
       </div>
       <div class="archive-card">
         <div class="archive-edition-num">#001</div>
         <div class="archive-info">
-          <div class="archive-date">Week Ending 9 May 2026</div>
-          <div class="archive-headline">SADI Crosses Into High Territory as Construction Cascade Accelerates</div>
+          <div class="archive-date">Week Ending 9 May 2026 · Pilot Edition</div>
+          <div class="archive-headline">SADI Crosses Into Severe Territory as Construction Cascade Accelerates</div>
           <div class="archive-meta">
             <span class="archive-sadi">SADI: 57/100 (corrected from 61)</span>
-<span class="story-tag t-positive">FREE</span>            <a href="edition-001.html" class="archive-link">Read →</a>
+            <span class="story-tag t-positive">FREE</span>
+            <a href="edition-001.html" class="archive-link">Read →</a>
           </div>
         </div>
       </div>
@@ -440,71 +414,68 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
       <div class="index-card">
         <div class="index-acronym">SADI</div>
         <div class="index-name">South Africa Distress Index</div>
-        <div class="index-body">A composite weekly score tracking six dimensions of systemic corporate distress: business rescue filing volume, liquidation volume, aggregate rescue probability inverse, banking NPL trend, retrenchment volume, and SOE distress. Scale: 0 (benign) to 100 (systemic crisis). Published every Monday with full methodology disclosed to Premium subscribers.
-</div>
+        <div class="index-body">A composite weekly score tracking six dimensions of systemic corporate distress: business rescue filing volume, liquidation volume, aggregate rescue probability inverse, banking NPL trend, retrenchment volume, and SOE distress. Scale: 0 (benign) to 100 (systemic crisis). Published every Monday. Fully methodology-disclosed to Premium subscribers.</div>
         <div class="index-example">
-          <div class="index-example-label">Current</div>
-          <div class="index-example-val">61/100</div>
-          <div class="index-example-sub">HIGH band · ↑2 pts from Edition 002 · Fuel shock primary driver · SOE sub-component stable on Eskom milestone</div>
+          <div class="index-example-label">Current Score</div>
+          <div class="index-example-val">60/100</div>
+          <div class="index-example-sub">HIGH · Stabilising · ↓1 pt · SARB hold + oil price easing offset cidb cascade</div>
         </div>
       </div>
       <div class="index-card">
         <div class="index-acronym">RPS</div>
         <div class="index-name">Rescue Probability Score</div>
-        <div class="index-body">A company-level rescue success probability for every active major rescue proceeding. Eight-factor weighted model: leverage, liquidity, sector fragility, labour risk, creditor alignment, management quality, legal risk, and macro environment. Scored 0–100% with categories from STRONG (80%+) to TERMINAL (below 10%). Updated weekly.
-</div>
+        <div class="index-body">A company-level rescue success probability score for every active major business rescue proceeding in South Africa. Eight-factor weighted model: leverage profile, liquidity and cash runway, sector fragility, labour risk, creditor alignment, management quality, legal risk, and macro environment. Scored 0–100%, with categories from STRONG (80%+) to TERMINAL (&lt;10%). Updated weekly.</div>
         <div class="index-example">
-          <div class="index-example-label">Current</div>
-          <div class="index-example-val">18% – 82%</div>
-          <div class="index-example-sub">Avg: 41% · Construction cohort avg: ~27% · Logistics cohort deteriorating on fuel shock</div>
+          <div class="index-example-label">This Week's Range</div>
+          <div class="index-example-val">19% – 82%</div>
+          <div class="index-example-sub">Avg: 42% (↑1pt) · Highroad upgraded 26→54% · 2 TERMINAL cidb entities</div>
         </div>
       </div>
       <div class="index-card">
         <div class="index-acronym">RVI</div>
         <div class="index-name">Rescue Velocity Index</div>
-        <div class="index-body">Pipeline health metric measuring the rate at which rescue cases are resolving against the rate at which new cases are entering the system. RVI above 1.0: system clearing. RVI below 1.0: pipeline building. RVI below 0.5: capacity risk. Proprietary leading indicator of systemic BRP and court capacity stress.
-</div>
+        <div class="index-body">A pipeline health metric measuring the rate at which rescue cases are resolving (through plan adoption, liquidation conversion, or successful conclusion) against the rate at which new cases are entering the system. RVI above 1.0: the system is clearing. RVI below 1.0: pipeline is building. RVI below 0.5: capacity risk.</div>
         <div class="index-example">
-          <div class="index-example-label">Current</div>
-          <div class="index-example-val">0.69</div>
-          <div class="index-example-sub">Pipeline building · ↓ from 0.71 in Edition 002 · System accumulating</div>
+          <div class="index-example-label">Current RVI</div>
+          <div class="index-example-val">0.68</div>
+          <div class="index-example-sub">Pipeline building · ↓ from 0.69 in Edition 003 · Rate of accumulation slowing</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- WHAT'S INSIDE -->
 <section id="inside" class="site-section" style="background:var(--white);">
   <div class="site-section-inner">
     <div class="section-label">What's Inside Every Edition</div>
     <h2 class="section-heading">14 Sections. Zero Filler.</h2>
-    <p class="section-sub">Every section meets a minimum signal density standard: specific named entities, specific data points, specific analytical claims. No generic market commentary.</p>
+    <p class="section-sub">Every section meets a minimum signal density standard: specific named entities, specific data points, specific analytical claims. No generic market commentary. No hedged non-positions.</p>
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon">📋</span>
         <div class="feature-title">Executive Intelligence Summary</div>
-        <div class="feature-body">Ten ranked items ordered by systemic importance. Every item names an entity, cites a figure, and states a forward-looking implication. Designed for a senior professional to brief from in under 5 minutes.</div>
+        <div class="feature-body">Ten ranked intelligence items, ordered by systemic importance. Every item names an entity, cites a figure, and states a forward-looking implication. Designed for a senior professional to brief from in under 5 minutes.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">📊</span>
         <div class="feature-title">Business Rescue Filings Tracker</div>
-        <div class="feature-body">Complete table of all new CIPC filings with RPS scores, BRP appointments, liability estimates, and employee counts. Includes 2–3 deep-dive case studies on the most significant new entrants.</div>
+        <div class="feature-body">Complete table of all new CIPC filings with RPS scores, BRP appointments, liability estimates, and employee counts. Includes 2-3 deep-dive case studies on the most significant new entrants.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🔥</span>
         <div class="feature-title">Sector Fragility Heatmap</div>
-        <div class="feature-body">Six-dimension fragility scores across twelve sectors. Composite scoring tracks leverage, liquidity, labour, energy, creditor pressure, and supply chain risk. Construction currently at EXTREME.</div>
+        <div class="feature-body">Six-dimension fragility scores across twelve sectors. Composite scoring model tracks leverage, liquidity, labour, energy, creditor pressure, and supply chain risk. Construction at EXTREME for a fourth consecutive edition.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">⚖️</span>
-        <div class="feature-title">Legal & Court Intelligence</div>
-        <div class="feature-body">All significant High Court, SCA, and Constitutional Court developments interpreted for practical impact. Only verified cases cited. Not legal summaries — legal intelligence with practice implications.</div>
+        <div class="feature-title">Legal &amp; Court Intelligence</div>
+        <div class="feature-body">All significant High Court, SCA, and Constitutional Court developments interpreted for practical impact on BRP conduct, creditor rights, and PCF market pricing. Only verified cases cited. Not legal summaries — legal intelligence.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🦢</span>
         <div class="feature-title">Black Swan Watchlist</div>
-        <div class="feature-body">Ranked tail-risk candidates applying Taleb's Black Swan framework. Each candidate includes current status (NARRATIVE → BUILDING → TRIGGERED), observable early warning signals, and cascade mechanisms.</div>
+        <div class="feature-body">Ranked tail-risk candidates applying Taleb's Black Swan framework. Each candidate includes its current status (NARRATIVE → BUILDING → TRIGGERED), observable early warning signals, and the specific cascade mechanism.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">💡</span>
@@ -514,16 +485,16 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
       <div class="feature-card">
         <span class="feature-icon">📅</span>
         <div class="feature-title">Forecasts: 30 / 90 / 180 Days</div>
-        <div class="feature-body">Specific, named, dated, and falsifiable predictions across three time horizons. Every forecast includes confidence level, early warning signal, and explicit falsification condition. Prior forecasts scored honestly each edition.</div>
+        <div class="feature-body">Specific, named, dated, and falsifiable predictions across three time horizons. Every forecast includes a confidence level, an early warning signal to track, and an explicit falsification condition. Prior forecasts scored honestly every edition.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">💰</span>
         <div class="feature-title">Distressed Opportunity Radar</div>
-        <div class="feature-body">Rated opportunities for PE firms, distressed debt investors, asset acquirers, and turnaround operators. Weekly Alpha Opportunity in institutional memo format — situation, mispricing, catalyst, execution path, key risks.</div>
+        <div class="feature-body">Rated opportunities for PE firms, distressed debt investors, asset acquirers, and turnaround operators. Includes a weekly Alpha Opportunity of the Week in institutional memo format — situation, mispricing, catalyst, execution path, key risks.</div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🏦</span>
-        <div class="feature-title">Rescue Financing & Credit Markets</div>
+        <div class="feature-title">Rescue Financing &amp; Credit Markets</div>
         <div class="feature-body">PCF market conditions, active provider intelligence, rate trends, DFI activity, and the Rescue Without Financing alert list — companies in rescue with no confirmed PCF and critical cash runways.</div>
       </div>
     </div>
@@ -549,12 +520,12 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
       </div>
       <div class="how-step">
         <div class="how-num">3</div>
-        <div class="how-title">Synthesis & Editorial</div>
+        <div class="how-title">Synthesis &amp; Editorial</div>
         <div class="how-body">7 Synthesis Layer agents produce publication sections with an Editorial Agent applying rigorous quality gates: signal density, attribution standards, legal safety review, and factual consistency checks.</div>
       </div>
       <div class="how-step">
         <div class="how-num">4</div>
-        <div class="how-title">Publication & Archive</div>
+        <div class="how-title">Publication &amp; Archive</div>
         <div class="how-body">6 Distribution Layer agents publish to web, email, social, PDF, and podcast formats. The Knowledge Base Agent archives every edition, building a proprietary historical intelligence dataset.</div>
       </div>
     </div>
@@ -575,27 +546,27 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
       </div>
       <div class="audience-card">
         <div class="audience-icon">🏦</div>
-        <div class="audience-title">Bank Credit Officers & Special Situations Teams</div>
+        <div class="audience-title">Bank Credit Officers &amp; Special Situations Teams</div>
         <div class="audience-body">PCF market rate benchmarks. Creditor power maps. NPL sector analysis. Systemic risk signals before they hit provisioning. Banking-sector exposure across the full rescue universe.</div>
       </div>
       <div class="audience-card">
         <div class="audience-icon">📈</div>
-        <div class="audience-title">Distressed Investors & PE Funds</div>
+        <div class="audience-title">Distressed Investors &amp; PE Funds</div>
         <div class="audience-body">Rated opportunity pipeline. Alpha opportunities of the week. Sector fragility positioning for entry and exit timing. Contrarian intelligence on market mislabellings.</div>
       </div>
       <div class="audience-card">
         <div class="audience-icon">🏛️</div>
-        <div class="audience-title">Insolvency & Restructuring Lawyers</div>
+        <div class="audience-title">Insolvency &amp; Restructuring Lawyers</div>
         <div class="audience-body">All significant court judgments interpreted for practice implications. Emerging legal risks. BRP removal patterns. Creditor coalition intelligence. Regulatory developments affecting proceedings.</div>
       </div>
       <div class="audience-card">
         <div class="audience-icon">🔬</div>
-        <div class="audience-title">Corporate Advisors & Turnaround Operators</div>
+        <div class="audience-title">Corporate Advisors &amp; Turnaround Operators</div>
         <div class="audience-body">Early-warning sector signals before formal filings. SADI trajectory for timing intervention decisions. SOE and municipal distress as client-risk inputs. Labour instability intelligence.</div>
       </div>
       <div class="audience-card">
         <div class="audience-icon">📡</div>
-        <div class="audience-title">Financial Journalists & Analysts</div>
+        <div class="audience-title">Financial Journalists &amp; Analysts</div>
         <div class="audience-body">Sector fragility heatmaps. Aggregate data on rescue system health. Contrarian perspectives with evidence. Named, attributed intelligence not available from public data sources alone.</div>
       </div>
     </div>
@@ -607,7 +578,7 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
   <div class="site-section-inner" style="max-width:960px;margin:0 auto;text-align:center;">
     <div class="section-label" style="text-align:center;">Subscription Options</div>
     <h2 class="section-heading">Choose Your Access Level</h2>
-    <p class="section-sub" style="margin:0 auto 40px;text-align:center;">The BR Distress Ledger publishes every Monday. Editions #001 and #002 are free. Future editions require a subscription.</p>
+    <p class="section-sub" style="margin:0 auto 40px;text-align:center;">The BR Distress Ledger publishes every Monday. Editions #001 through #004 are available free. Future editions require a subscription.</p>
   </div>
   <div class="site-section-inner" style="max-width:960px;margin:0 auto;">
     <div class="tier-grid">
@@ -615,55 +586,91 @@ nav{background:var(--navy);padding:0 40px;display:flex;align-items:center;justif
         <div class="tier-name">Free</div>
         <div class="tier-price">R0 <span>/ month</span></div>
         <div class="tier-desc">Public teaser access and monthly digest for researchers and students.</div>
-        <ul class="tier-features"><li>Weekly email: Executive Summary (3 items)</li><li>SADI score + direction</li><li>One free full edition per month</li><li>Public teaser page for each edition</li><li>Monthly intelligence digest</li></ul>
-        <a href="edition-003.html" class="tier-btn btn-t-secondary">Read Latest Edition Free</a>
+        <ul class="tier-features">
+          <li>Weekly email: Executive Summary (3 items)</li>
+          <li>SADI score + direction</li>
+          <li>One free full edition per month</li>
+          <li>Public teaser page for each edition</li>
+          <li>Monthly intelligence digest</li>
+        </ul>
+        <a href="edition-004.html" class="tier-btn btn-t-secondary">Read Latest Edition Free</a>
       </div>
       <div class="tier-card featured">
         <div class="tier-name">Standard Subscriber</div>
         <div class="tier-price">R2,900 <span>/ month</span></div>
         <div class="tier-desc">Full weekly edition access for restructuring professionals and credit officers.</div>
-        <ul class="tier-features"><li>Full weekly edition — all 14 sections</li><li>PDF download (print-quality)</li><li>Full email briefing each Monday</li><li>Rolling 6-month archive access</li><li>All SADI, RPS, RVI scores weekly</li><li>Sector heatmap & data tables</li></ul>
+        <ul class="tier-features">
+          <li>Full weekly edition — all 14 sections</li>
+          <li>PDF download (print-quality)</li>
+          <li>Full email briefing each Monday</li>
+          <li>Rolling 6-month archive access</li>
+          <li>All SADI, RPS, RVI scores weekly</li>
+          <li>Sector heatmap &amp; data tables</li>
+        </ul>
         <a href="#" class="tier-btn btn-t-primary">Subscribe — Standard</a>
       </div>
       <div class="tier-card">
         <div class="tier-name">Premium / Institutional</div>
         <div class="tier-price">R7,500 <span>/ month</span></div>
         <div class="tier-desc">Full intelligence suite for law firms, banks, PE funds, and advisory practices.</div>
-        <ul class="tier-features"><li>Everything in Standard</li><li>Mid-week intelligence alerts</li><li>Data tables in CSV / Excel</li><li>Full historical archive</li><li>Multi-seat access (up to 5 users)</li><li>Direct editorial contact</li><li>Forecast calibration reports monthly</li><li>Bespoke sector briefings on request</li></ul>
+        <ul class="tier-features">
+          <li>Everything in Standard</li>
+          <li>Mid-week intelligence alerts</li>
+          <li>Data tables in CSV/Excel</li>
+          <li>Full historical archive</li>
+          <li>Multi-seat access (up to 5 users)</li>
+          <li>Direct editorial contact</li>
+          <li>Forecast calibration reports monthly</li>
+          <li>Bespoke sector briefings on request</li>
+        </ul>
         <a href="#" class="tier-btn btn-t-primary">Subscribe — Premium</a>
       </div>
     </div>
-    <p class="subscribe-note">All prices exclude VAT. Annual subscriptions available at 10% discount. Institutional multi-seat pricing for teams above 5 users — contact editorial. 30-day free trial for Standard subscribers. Cancel anytime.</p>
+    <p class="subscribe-note">All prices exclude VAT. Annual subscriptions available at 10% discount. Institutional multi-seat pricing for teams above 5 users — contact editorial. Free trial period of 30 days available for Standard subscribers. All subscriptions cancel anytime.</p>
   </div>
 </section>
+
+<!-- FOOTER -->
 <footer class="pub-footer">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-pub-name">BR Distress Ledger</div>
-      <div class="footer-disclaimer">This publication is a confidential intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. All rights reserved.</div>
+  <div class="site-section-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-pub-name">BR Distress Ledger</div>
+        <div class="footer-disclaimer">South Africa Business Rescue Intelligence Weekly. Institutional-grade intelligence on corporate distress, business rescue, and insolvency. Published every Monday. This publication is a confidential intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. All rights reserved.</div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Publication</div>
+        <ul class="footer-links">
+          <li><a href="edition-004.html">Edition #004 (30 May 2026)</a></li>
+          <li><a href="edition-003.html">Edition #003 (23 May 2026)</a></li>
+          <li><a href="edition-002.html">Edition #002 (16 May 2026)</a></li>
+          <li><a href="edition-001.html">Edition #001 (9 May 2026)</a></li>
+          <li><a href="#indexes">SADI · RPS · RVI Indexes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Subscribe</div>
+        <ul class="footer-links">
+          <li><a href="#subscribe">Free Tier</a></li>
+          <li><a href="#subscribe">Standard — R2,900/mo</a></li>
+          <li><a href="#subscribe">Premium — R7,500/mo</a></li>
+          <li><a href="#">Institutional Enquiries</a></li>
+          <li><a href="#">Methodology Overview</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="footer-col-title">Publication</div>
-      <ul class="footer-links"><li><a href="edition-003.html">Edition #003 (23 May 2026)</a></li>
-<li><a href="edition-002.html">Edition #002 (16 May 2026)</a></li>
-<li><a href="edition-001.html">Edition #001 (9 May 2026)</a></li>
-<li><a href="#indexes">SADI · RPS · RVI Indexes</a></li>
-</ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Subscribe</div>
-      <ul class="footer-links"><li><a href="#subscribe">Free Tier</a></li>
-<li><a href="#subscribe">Standard — R2,900/mo</a></li>
-<li><a href="#subscribe">Premium — R7,500/mo</a></li>
-<li><a href="#">Institutional Enquiries</a></li>
-</ul>
+    <div class="footer-bottom">
+      © 2026 BR Distress Ledger · All rights reserved · Confidential Intelligence Product · Not legal, financial or investment advice
     </div>
   </div>
-  <div class="footer-bottom">© 2026 BR Distress Ledger &nbsp;|&nbsp; Confidential Intelligence Product &nbsp;|&nbsp; Not legal, financial or investment advice</div>
 </footer>
-<script>// Smooth ticker pause on hover
+
+<script>
 const ticker = document.querySelector('.ticker-inner');
-if(ticker){ticker.addEventListener('mouseenter',()=>ticker.style.animationPlayState='paused');ticker.addEventListener('mouseleave',()=>ticker.style.animationPlayState='running');}
+if(ticker){
+  ticker.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
+  ticker.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
+}
 </script>
 </body>
 </html>
