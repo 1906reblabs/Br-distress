@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — Edition #6 | Week Ending 13 June 2026</title>
+<meta name="description" content="South Africa's premier business rescue intelligence. Edition 6, Week Ending 13 June 2026. SADI: 60/100. SARB hikes to 7%; Fitch upgrades SA to BB; Johannesburg Eskom crisis declared a national economic emergency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--navy:#0D2340;--gold:#C9A030;--gold-light:#FDF3DC;--white:#FFFFFF;--off-white:#F5FAF8;--grey-50:#F0F4F3;--grey-100:#DDE6E3;--grey-200:#BBC9C5;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--border:#C8DDD9;--border-light:#E5EFED;--strong:#0F5C2E;--strong-bg:#D4EDDA;--probable:#2E7D32;--probable-bg:#E8F5E9;--challenged-c:#E65100;--challenged-bg:#FFF3E0;--distressed-c:#BF360C;--distressed-bg:#FBE9E7;--critical-c:#880E0E;--critical-bg:#FDECEA;--terminal-bg:#3E0000;}
+*{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:"IBM Plex Sans",sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
+a{text-decoration:none;color:inherit;}
+.top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
+.confirmed-banner{background:#0F5C2E;border-bottom:3px solid var(--gold);padding:10px 40px;color:#D4EDDA;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.confirmed-banner strong{color:white;}
+.correction-banner{background:#1A1A1A;border-bottom:3px solid #F4A918;padding:10px 40px;color:#F4A918;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.correction-banner strong{color:white;}
+.rps{display:inline-flex;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+.rps-strong{background:var(--strong-bg);color:var(--strong);}
+.rps-probable{background:var(--probable-bg);color:var(--probable);}
+.rps-challenged{background:var(--challenged-bg);color:var(--challenged-c);}
+.rps-distressed{background:var(--distressed-bg);color:var(--distressed-c);}
+.rps-critical{background:var(--critical-bg);color:var(--critical-c);}
+.rps-terminal{background:var(--terminal-bg);color:white;font-size:10px;}
+.tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;letter-spacing:0.04em;text-transform:uppercase;}
+.tag-sector{background:var(--teal-light);color:var(--teal-dark);}
+.tag-risk{background:var(--distressed-bg);color:var(--distressed-c);}
+.tag-risk-crit{background:var(--critical-bg);color:var(--critical-c);}
+.tag-action{background:#E3F2FD;color:#0D47A1;}
+.tag-30d{background:#EDE7F6;color:#4527A0;}
+.tag-positive{background:var(--strong-bg);color:var(--strong);}
+.tag-landmark{background:var(--terminal-bg);color:white;}
+.tag-correction{background:#1A1A1A;color:#F4A918;}
+.alert-box{border-radius:6px;padding:16px 20px;margin:16px 0;border-left:4px solid;font-size:13px;}
+.alert-box .alert-title{font-size:11px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
+.alert-green{background:var(--strong-bg);border-color:#1A7A4A;color:var(--strong);}
+.alert-amber{background:#FFF8E1;border-color:#C77B00;color:#7A4A00;}
+.alert-red{background:var(--critical-bg);border-color:#C0392B;color:var(--critical-c);}
+.alert-teal{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);}
+.alert-correction{background:#0D1A2D;border-color:#F4A918;color:#E0E0E0;}
+.alert-correction .alert-title{color:#F4A918;}
+.data-table-wrap{overflow-x:auto;margin:20px 0;border-radius:6px;border:1px solid var(--border);}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;}
+.data-table thead th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:10px 12px;text-align:left;white-space:nowrap;}
+.data-table tbody tr:nth-child(even){background:var(--grey-50);}
+.data-table tbody tr:hover{background:var(--teal-light);}
+.data-table tbody td{padding:9px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.4;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.mono{font-family:"IBM Plex Mono",monospace;}.muted{color:var(--text-muted);font-size:12px;}
+.subhead{font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 8px;text-transform:uppercase;letter-spacing:0.06em;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+ul.body-list{padding-left:20px;margin:10px 0;}
+ul.body-list li{margin-bottom:6px;font-size:13px;color:var(--text-secondary);}
+.pull-quote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gold-light);border-radius:0 6px 6px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
+.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
+.footer-inner{max-width:900px;margin:0 auto;}
+.footer-title{font-family:"Playfair Display",serif;font-size:18px;color:white;margin-bottom:6px;}
+.footer-meta{font-size:12px;color:#7AB0C4;margin-bottom:4px;}
+.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;margin-top:16px;max-width:700px;}
+.footer-nav{margin-top:20px;display:flex;gap:24px;}
+.footer-nav a{color:#A8C4CF;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;}
+.footer-nav a:hover{color:white;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}}
+.pub-header{background:var(--teal-dark);color:white;padding:28px 40px 20px;border-bottom:4px solid var(--gold);}
+.header-grid{display:grid;grid-template-columns:1fr auto;align-items:start;gap:32px;max-width:1200px;margin:0 auto;}
+.pub-eyebrow{font-size:10px;letter-spacing:0.14em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.pub-title{font-family:"Playfair Display",serif;font-size:32px;font-weight:700;color:white;line-height:1.1;}
+.pub-title span{color:var(--gold);}
+.pub-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#A8C4CF;margin-top:8px;letter-spacing:0.04em;}
+.pub-meta strong{color:#D4E8EC;font-weight:500;}
+.sadi-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:16px 22px;text-align:center;min-width:180px;}
+.sadi-label{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.sadi-score{font-family:"IBM Plex Mono",monospace;font-size:52px;font-weight:500;color:#F4A918;line-height:1;}
+.sadi-denom{font-size:22px;color:#9BBFC9;}
+.sadi-badge{display:inline-block;margin-top:6px;background:rgba(92,196,138,0.18);border:1px solid rgba(92,196,138,0.4);color:#5AC48A;font-size:10px;letter-spacing:0.1em;font-weight:500;padding:3px 10px;border-radius:3px;text-transform:uppercase;}
+.sadi-change{font-size:11px;color:#5AC48A;margin-top:4px;}
+.stats-strip{background:var(--navy);padding:10px 40px;display:flex;border-bottom:1px solid #1E3D5A;}
+.stat-item{flex:1;text-align:center;padding:8px 16px;border-right:1px solid #1E3D5A;}
+.stat-item:last-child{border-right:none;}
+.stat-label{font-size:9px;letter-spacing:0.1em;color:#6A8FA0;text-transform:uppercase;font-weight:500;}
+.stat-val{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:500;color:white;line-height:1.2;}
+.layout{display:grid;grid-template-columns:240px 1fr;max-width:1200px;margin:0 auto;}
+.sidebar{background:var(--white);border-right:1px solid var(--border-light);position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 0;}
+.sidebar-head{font-size:9px;letter-spacing:0.14em;color:var(--text-muted);text-transform:uppercase;font-weight:500;padding:0 20px 10px;border-bottom:1px solid var(--border-light);margin-bottom:8px;}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 20px;font-size:12px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all 0.15s;}
+.nav-item:hover,.nav-item.active{background:var(--teal-light);color:var(--teal-dark);border-left-color:var(--teal);font-weight:500;}
+.nav-num{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--grey-200);min-width:18px;}
+.main-content{padding:0 48px 64px;background:var(--white);}
+.pub-section{border-bottom:1px solid var(--border-light);padding:48px 0;scroll-margin-top:20px;}
+.section-rule{height:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-mid) 60%,transparent 100%);margin-bottom:20px;border-radius:2px;}
+.section-eyebrow{font-size:9px;letter-spacing:0.18em;color:var(--teal);text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+.section-title{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+.lead-para{font-size:15px;line-height:1.75;color:var(--text-secondary);margin-bottom:24px;border-left:3px solid var(--teal-mid);padding-left:16px;}
+p{margin-bottom:12px;}
+.metric-mini{background:var(--off-white);border:1px solid var(--border-light);border-radius:6px;padding:14px 16px;text-align:center;}
+.metric-mini-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;}
+.metric-mini-val{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--navy);}
+.metric-mini-sub{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.metric-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.kpi-chip{background:var(--grey-50);border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;}
+.kpi-chip-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
+.kpi-chip-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--text-primary);}
+.sadi-sub{display:grid;grid-template-columns:160px 1fr 40px;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-light);font-size:12px;}
+.sadi-sub:last-child{border-bottom:none;}
+.sadi-sub-bar{height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;}
+.sadi-sub-fill{height:100%;border-radius:4px;}
+.sadi-sub-score{font-family:"IBM Plex Mono",monospace;font-weight:500;text-align:right;}
+.exec-item{padding:18px 0;border-bottom:1px solid var(--border-light);display:grid;grid-template-columns:36px 1fr;gap:16px;}
+.exec-item:last-child{border-bottom:none;}
+.exec-num{font-family:"Playfair Display",serif;font-size:28px;color:var(--teal-mid);font-weight:700;line-height:1;padding-top:2px;}
+.exec-headline{font-size:12px;letter-spacing:0.04em;font-weight:600;color:var(--navy);text-transform:uppercase;margin-bottom:6px;}
+.exec-body{font-size:13px;line-height:1.65;color:var(--text-secondary);}
+.exec-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:11px;}
+.heatmap-table th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.06em;font-weight:500;padding:8px 10px;text-align:center;white-space:nowrap;}
+.heatmap-table th:first-child{text-align:left;}
+.heatmap-table td{padding:7px 10px;text-align:center;border:1px solid var(--border-light);font-family:"IBM Plex Mono",monospace;font-size:11px;}
+.heatmap-table td:first-child{text-align:left;font-family:"IBM Plex Sans",sans-serif;font-size:12px;font-weight:500;color:var(--navy);}
+.hm-1{background:#E8F5E9;color:#2E7D32;}.hm-2{background:#F1F8E9;color:#558B2F;}.hm-3{background:#FFF8E1;color:#7A4A00;}.hm-4{background:#FFF3E0;color:#BF360C;}.hm-5{background:#B71C1C;color:white;font-weight:600;}
+.rating-low{background:#D4EDDA;color:#0F5C2E;}.rating-moderate{background:#FFF3CD;color:#7A4A00;}.rating-high{background:#F8D7DA;color:#721C24;}.rating-extreme{background:#3E0000;color:white;font-weight:600;}
+.case-study{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.case-study-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--teal-dark);margin-bottom:8px;}
+.case-study-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.update-card{background:#E8F5E9;border-left:4px solid var(--strong);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.update-card-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--strong);margin-bottom:8px;}
+.update-card-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.new-star{color:var(--gold);font-size:13px;margin-right:2px;}
+/* Legal cards */
+.legal-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.legal-landmark{border-left:4px solid var(--gold);background:var(--gold-light);}
+.legal-medium{border-left:4px solid var(--teal);background:var(--teal-light);}
+.legal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.legal-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;line-height:1.4;}
+.legal-meta{font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:0.02em;}
+.legal-body p{font-size:13px;line-height:1.7;margin-bottom:10px;color:var(--text-primary);}
+.legal-body strong{color:var(--navy);}
+.legal-badge{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.badge-landmark{background:var(--gold);color:var(--navy);}
+.badge-medium{background:var(--teal-light);color:var(--teal-dark);}
+/* Opportunity cards */
+.opp-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.opp-alpha{border-left:4px solid var(--gold);background:var(--gold-light);}
+.opp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.opp-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;}
+.opp-meta{font-size:11px;color:var(--text-muted);margin-top:4px;}
+.opp-score{flex-shrink:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;color:var(--gold);background:white;border:1px solid var(--gold);border-radius:6px;padding:8px 14px;min-width:80px;}
+.opp-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+/* Forecast cards */
+.forecast-card{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px;}
+.forecast-30d{border-left:4px solid #4527A0;background:var(--off-white);}
+.forecast-90d{border-left:4px solid var(--teal);background:var(--off-white);}
+.forecast-180d{border-left:4px solid var(--navy);background:var(--off-white);}
+.forecast-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;}
+.forecast-id{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;}
+.forecast-conf{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;}
+.forecast-body{font-size:13px;line-height:1.7;color:var(--text-primary);margin-bottom:10px;}
+.forecast-footer{font-size:11px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:8px;margin-top:8px;font-style:italic;}
+/* Contrarian */
+.contrarian-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:18px;border-left:4px solid var(--navy);background:white;}
+.contrarian-title{font-family:"Playfair Display",serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.4;}
+.contrarian-body p{font-size:13px;line-height:1.75;margin-bottom:10px;color:var(--text-primary);}
+/* Black Swan */
+.swan-card{border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:18px;}
+.swan-triggered{border-left:4px solid var(--critical-c);background:var(--critical-bg);}
+.swan-building{border-left:4px solid var(--challenged-c);background:var(--challenged-bg);}
+.swan-latent-building{border-left:4px solid var(--gold);background:var(--gold-light);}
+.swan-latent-reducing{border-left:4px solid var(--strong);background:var(--strong-bg);}
+.swan-new{border-left:4px solid var(--navy);background:var(--teal-light);}
+.swan-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.swan-num{width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.swan-name{font-family:"Playfair Display",serif;font-size:14px;font-weight:600;color:var(--navy);flex:1;}
+.swan-status{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.status-triggered{background:var(--critical-c);color:white;}
+.status-building{background:var(--challenged-c);color:white;}
+.status-latent{background:var(--gold);color:var(--navy);}
+.status-reducing{background:var(--strong);color:white;}
+.status-new{background:var(--navy);color:white;}
+.swan-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+.swan-metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;border-top:1px solid var(--border);padding-top:14px;}
+.swan-metric{background:white;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;flex:1;}
+.swan-metric-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.swan-metric-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;color:var(--text-primary);}
+/* Scorecard */
+.scorecard-table{width:100%;border-collapse:collapse;font-size:12px;margin:16px 0;}
+.scorecard-table th{background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
+.scorecard-table td{padding:10px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+.scorecard-table tr:nth-child(even){background:var(--grey-50);}
+@media(max-width:900px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.main-content{padding:0 20px 40px;}.header-grid{grid-template-columns:1fr;}.stats-strip{flex-wrap:wrap;padding:8px 16px;}.stat-item{border-right:none;border-bottom:1px solid #1E3D5A;min-width:45%;}.pub-title{font-size:22px;}.swan-metrics{flex-direction:column;}.opp-header{flex-direction:column;}.opp-score{min-width:unset;width:100%;}}
+</style>
+</head>
+<body>
+<div class="correction-banner">
+  &#9888; THREE MAJOR CORRECTIONS THIS EDITION &nbsp;|&nbsp;
+  <strong>SARB hiked to 7% (prime 10.5%) on 28 May 2026 &mdash; Edition 004's "hold" was incorrect.</strong>
+  Tshwane S139 narrative (Eds 002&ndash;005) retired &mdash; real Eskom debt position is R4.73bn under a court-ordered repayment plan, not an active S139 crisis.
+  Diesel price corrected &mdash; actual R27.92&ndash;28.76/L, lower than Edition 005's R30.80/L figure. Full notices in Section 14.
+</div>
+<div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
+
+<header class="pub-header">
+  <div class="header-grid">
+    <div>
+      <div class="pub-eyebrow">South Africa's Premier Corporate Distress Intelligence</div>
+      <div class="pub-title">BR <span>Distress</span> Ledger</div>
+      <div class="pub-meta">
+        <span><strong>Edition #6</strong></span>
+        <span><strong>Week Ending 13 June 2026</strong></span>
+        <span>Publication Date: 15 June 2026</span>
+      </div>
+    </div>
+    <div class="sadi-panel">
+      <div class="sadi-label">South Africa Distress Index</div>
+      <div class="sadi-score">60<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">&#x25B2; HIGH &mdash; Renewed Pressure</div>
+      <div class="sadi-change">&#x25B2; 1 pt from Edition 005 (59) &mdash; SARB hike &amp; Johannesburg crisis outweigh Fitch upgrade and diesel relief</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-label">Active Rescues</div><div class="stat-val" style="color:#E8745A;">192</div></div>
+  <div class="stat-item"><div class="stat-label">New Filings (Week)</div><div class="stat-val" style="color:#E8745A;">8</div></div>
+  <div class="stat-item"><div class="stat-label">New Liquidations</div><div class="stat-val" style="color:#E8745A;">6</div></div>
+  <div class="stat-item"><div class="stat-label">Avg. RPS Score</div><div class="stat-val" style="color:#F4A918;">42%</div></div>
+  <div class="stat-item"><div class="stat-label">PCF Market</div><div class="stat-val" style="color:#F4A918;font-size:14px;padding-top:4px;">TIGHT</div></div>
+  <div class="stat-item"><div class="stat-label">Eskom Grid</div><div class="stat-val" style="color:#5AC48A;font-size:14px;padding-top:4px;">394 DAYS</div></div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">Contents &mdash; Edition 006</div>
+    <a href="#exec-summary" class="nav-item active"><span class="nav-num">01</span> Executive Summary</a>
+    <a href="#sadi" class="nav-item"><span class="nav-num">02</span> SADI Dashboard</a>
+    <a href="#filings" class="nav-item"><span class="nav-num">03</span> New BR Filings</a>
+    <a href="#liquidation" class="nav-item"><span class="nav-num">04</span> Liquidation Radar</a>
+    <a href="#sector" class="nav-item"><span class="nav-num">05</span> Sector Fragility</a>
+    <a href="#financing" class="nav-item"><span class="nav-num">06</span> Rescue Financing</a>
+    <a href="#legal" class="nav-item"><span class="nav-num">07</span> Legal Intelligence</a>
+    <a href="#labour" class="nav-item"><span class="nav-num">08</span> Labour Monitor</a>
+    <a href="#soe" class="nav-item"><span class="nav-num">09</span> SOE &amp; Municipal</a>
+    <a href="#opportunity" class="nav-item"><span class="nav-num">10</span> Distressed Opportunities</a>
+    <a href="#blackswan" class="nav-item"><span class="nav-num">11</span> Black Swan Watchlist</a>
+    <a href="#contrarian" class="nav-item"><span class="nav-num">12</span> Contrarian Intelligence</a>
+    <a href="#forecasts" class="nav-item"><span class="nav-num">13</span> Forecasts 30/90/180d</a>
+    <a href="#scorecard" class="nav-item"><span class="nav-num">14</span> Scorecard &amp; Corrections</a>
+    <div style="margin:20px 16px 0;padding:14px;background:var(--teal-light);border-radius:6px;border:1px solid var(--teal-mid);">
+      <div style="font-size:10px;letter-spacing:0.1em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Edition Highlight</div>
+      <div style="font-size:11px;color:var(--teal-dark);line-height:1.5;">SARB Hikes to 7%; Fitch Upgrades SA to BB &mdash; Johannesburg's R6.7bn Eskom Crisis Declared a "National Economic Emergency"</div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="pub-section" id="exec-summary">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 01</div>
+      <div class="section-title">Executive Intelligence Summary</div>
+      <div class="lead-para">The week ending 13 June 2026 is dominated by three corrections to this publication's own prior reporting and one breaking municipal crisis that now eclipses the cidb cascade as the system's primary contagion vector. The SARB's actual 28 May decision &mdash; a 25bp hike to 7.00% (prime 10.50%), not the hold reported in Edition 004 &mdash; resets every PCF rate calculation in this publication's history. In the same week, South Africa's first sovereign rating upgrade in 21 years (Fitch, BB&#x2212;&rarr;BB) collided with a R6.7bn Eskom arrears crisis in Johannesburg that business leaders have called a &ldquo;national economic emergency.&rdquo; The system absorbed a credit upgrade and a near-disconnection of the country's commercial capital in the same seven days.
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">1</div>
+        <div>
+          <div class="exec-headline">CORRECTION: SARB Hiked to 7% on 28 May 2026 &mdash; Edition 004's Reported Hold Was Incorrect</div>
+          <div class="exec-body">The SARB Monetary Policy Committee voted 4-2 on 28 May 2026 to raise the repo rate by 25bps to 7.00% (prime lending rate: 10.50%), citing inflation risk from sustained high oil prices amid Middle East tensions and rand weakness. This directly contradicts Edition 004's report that the MPC held at 6.75% (prime 10.25%). Every PCF rate quoted in Editions 004&ndash;005 (Highroad Transport at Prime+5.5%, Vanguard Fashion Retail at Prime+6.8%) must now be read against a 10.50% prime base &mdash; a 25bp absolute increase on every floating-rate facility in the active rescue book. Full correction notice and recalculated PCF table in Sections 06 and 14.</div>
+          <div class="exec-tags"><span class="tag tag-correction">CORRECTION</span><span class="tag tag-sector">Macro / Banking</span><span class="tag tag-action">Action Required</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">2</div>
+        <div>
+          <div class="exec-headline">Johannesburg's R6.7bn Eskom Crisis Declared a "National Economic Emergency"</div>
+          <div class="exec-body">Eskom confirmed the City of Johannesburg owes R5.2bn in Eskom arrears plus a further R1.5bn current account due in June 2026 &mdash; R6.7bn total exposure &mdash; and warned it would interrupt or terminate bulk electricity supply to parts of the city absent resolution. Electricity and Energy Minister Kgosientsho Ramokgopa brokered an interim arrangement: from 1 July 2026, all electricity revenue collected by City Power will be ring-fenced and paid directly to Eskom, with the City given until 8 July 2026 to clear arrears or face disconnection. On 4 June 2026, Business Leadership South Africa and BUSA issued a joint statement calling Johannesburg's fiscal collapse &mdash; a city representing approximately 16% of national GDP &mdash; "a national economic emergency," warning it risks undermining the recovery narrative built on the Fitch upgrade (Item 3) and Eskom's grid stabilisation. <strong>[CONTRARIAN VIEW]:</strong> every rescue case with Gauteng-concentrated operations now carries an undisclosed municipal-electricity tail risk that conventional RPS scoring does not currently price &mdash; see Section 09 for the full exposure map.</div>
+          <div class="exec-tags"><span class="tag tag-sector">SOE / Municipal</span><span class="tag tag-risk-crit">CRITICAL</span><span class="tag tag-30d">30-Day</span><span class="tag tag-action">Action Required</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">3</div>
+        <div>
+          <div class="exec-headline">Fitch Upgrades South Africa to BB &mdash; First Upgrade in 21 Years</div>
+          <div class="exec-body">Fitch Ratings raised South Africa's long-term foreign- and local-currency issuer default rating one notch from BB&#x2212; to BB on 5 June 2026 (stable outlook) &mdash; its first positive move on South Africa since 2005 &mdash; citing four consecutive years of primary fiscal surpluses averaging approximately 1% of GDP and a debt-to-GDP ratio stabilising near 80%, below the trajectory projected at the 2020 downgrade. South Africa becomes only the second G20 sovereign upgraded by Fitch in 2026. The rating remains two notches below investment grade; Fitch explicitly cited Eskom/Transnet reliability, unemployment near a third of the workforce, and municipal dysfunction of the type now visible in Johannesburg (Item 2) as factors capping further upgrades. National Treasury notes Moody's (positive outlook since May 2026) and S&amp;P (BB since November 2025) may follow within 12&ndash;18 months.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Macro / Sovereign</span><span class="tag tag-positive">POSITIVE SIGNAL</span><span class="tag tag-30d">90-Day</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">4</div>
+        <div>
+          <div class="exec-headline">CORRECTION: Tshwane Is Not Facing Section 139 &mdash; Real Eskom Debt Cut from R6.66bn to R4.73bn</div>
+          <div class="exec-body">Verification this week found that the "Tshwane Section 139 binary" tracked across Editions 002&ndash;005 (Eskom arrears of R2.6&ndash;2.8bn, a COGTA Section 139(1)(b) notice, and a resolution deadline of approximately 1 July 2026) does not reflect Tshwane's actual position. Under a court-ordered five-year payment arrangement signed in November 2024 (R6.66bn total debt, final payment due March 2029), Tshwane has reduced its Eskom debt to R4.73bn as of January 2026 &mdash; a reduction of more than R1.9bn in 14 months &mdash; and COGTA's Standing Committee on Appropriations commended the City's progress in March 2026. No active Section 139 notice exists against Tshwane. Edition 002's 180-Day Forecast #2, Edition 004's 30-Day Forecast #3, and Edition 005's 30-Day Forecast #3 are retired as SUPERSEDED (full detail in Section 14). For the four rescue cases previously flagged as holding material Tshwane receivables, the City's improving payment trajectory is, if anything, a mild positive for debtor recoverability.</div>
+          <div class="exec-tags"><span class="tag tag-correction">CORRECTION</span><span class="tag tag-sector">Municipal</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">5</div>
+        <div>
+          <div class="exec-headline">CORRECTION: Diesel Fell Further Than Reported &mdash; Petrol Hits Record R28.06/Litre</div>
+          <div class="exec-body">The official fuel price adjustment effective 3 June 2026 set diesel at R27.92/litre (500ppm) and R28.76/litre (50ppm) &mdash; R2.04&ndash;2.88/litre below the R30.80/litre figure reported in Edition 005 &mdash; as Brent crude eased from the $101&ndash;104.59/barrel range that prevailed during the pricing review window. Petrol (95 ULP), by contrast, rose to a record R28.06/litre, surpassing the July 2022 high of R26.74/litre, because National Treasury halved its temporary fuel levy relief on the same date (petrol relief cut by R1.50/litre). The diesel-cost pressure on logistics, construction, and agriculture rescue plans tracked since Edition 003 has eased more than this publication modelled &mdash; a stronger positive for Highroad Transport and Cape Agricultural Equipment than previously assessed. Forward risk: National Treasury has confirmed the remaining 50% of fuel levy relief expires completely on 1 July 2026, reverting both levies to baseline (R4.10/litre petrol, R3.93/litre diesel) regardless of Brent movements &mdash; see 30-Day Forecast #1.</div>
+          <div class="exec-tags"><span class="tag tag-correction">CORRECTION</span><span class="tag tag-sector">Macro / Logistics</span><span class="tag tag-30d">30-Day</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">6</div>
+        <div>
+          <div class="exec-headline">cidb Cascade Continues: Fourth Blacklisted Entity Files Post-Blackrock Ruling</div>
+          <div class="exec-body">Meridian Civil Works CC (R64m liabilities, 98 employees, Gauteng), formally cidb-blacklisted on 14 May 2026, filed for business rescue on 11 June 2026 &mdash; the fourth confirmed formal action from the cidb-blacklisted cohort since the 5 June Blackrock ruling (Stoneridge Civils, Northway Civils, Blackrock Civil, now Meridian Civil Works). RPS assessed at 16% (TERMINAL); the company derives 94% of historical revenue from Ekurhuleni metro road-maintenance contracts and has no non-government revenue pathway. This keeps Edition 005's 30-Day Forecast #2 (&#x2265;5 further actions from the cohort by 6 July 2026, 71% confidence) on track, with one further action needed in the remaining 23 days. Construction sector average RPS eases further to 25% (from 26% in Edition 005) &mdash; a new 18-month low for the second consecutive edition.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Construction</span><span class="tag tag-risk-crit">CRITICAL</span><span class="tag tag-30d">30-Day</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">7</div>
+        <div>
+          <div class="exec-headline">Highroad Transport: Corrected Prime Rate Adds Marginal Cost Ahead of 27 June Vote</div>
+          <div class="exec-body">With the corrected prime rate of 10.50% (Item 1), Highroad Transport Solutions' IDC facility (Prime+5.5%) now carries an effective rate of 16.00% rather than the 15.75% implicitly assumed when the revised rescue plan was published on 6 June 2026 &mdash; an incremental cost of approximately R70,000 per year on the R28m facility, immaterial against the R8m annual route-rationalisation saving but a reminder that the plan's financial model referenced an incorrect base rate. BRP Sipho Molefe is expected to issue a short addendum ahead of the 27 June 2026 creditor vote. Nedbank's formal response to the revised plan, due 12&ndash;14 June, had not been received as at publication &mdash; see What to Watch.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Logistics</span><span class="tag tag-action">Watch</span><span class="tag tag-30d">27 June Vote</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">8</div>
+        <div>
+          <div class="exec-headline">Vanguard Fashion Retail: 26 of 48 Insolvency-Clause Leases Now Renegotiated</div>
+          <div class="exec-body">Eight further lease renegotiations concluded this week, bringing the total to 26 of the 48 insolvency-clause leases identified in Edition 004 (up from 18 in Edition 005), at an average rental reduction holding steady at 22%. The 22-store closure programme is approximately 60% complete; S189A consultations for the 660 affected employees continue under SACTWU facilitation. RPS holds at 52% (CHALLENGED), pending confirmation that the remaining 22 lease renegotiations track the same 22% average. The Edition 004 lease-renegotiation alpha thesis continues to execute on schedule, three editions running.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Retail</span><span class="tag tag-positive">ON TRACK</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">9</div>
+        <div>
+          <div class="exec-headline">New Filing Cites Ekurhuleni Eskom Disconnection Risk &mdash; First of Its Kind</div>
+          <div class="exec-body">Vulcan Alloy Founders (Pty) Ltd, an Ekurhuleni-based metal castings operator with 165 employees, filed for business rescue on 10 June 2026 citing "municipal electricity supply uncertainty" as a contributing factor &mdash; the first rescue filing in this publication's tracking period to explicitly reference Eskom's published municipal "switch-off list," on which Ekurhuleni appears alongside the municipalities whose collective arrears to Eskom exceed R110bn nationally. RPS assessed at 34% (DISTRESSED). <strong>[CONTRARIAN VIEW]:</strong> this filing is the first observable data point of the municipal-electricity-risk contagion pathway identified in Item 2 &mdash; the publication expects further filings citing this factor across Gauteng's industrial nodes over the coming weeks.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Manufacturing / Gauteng</span><span class="tag tag-risk">DISTRESSED</span><span class="tag tag-action">Watch</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">10</div>
+        <div>
+          <div class="exec-headline">Aggregate RPS Eases to 42% as Rate Hike and Rating Upgrade Cut in Opposite Directions</div>
+          <div class="exec-body">Average RPS across the 192-case active rescue book eased fractionally to 42% (from 43% in Edition 005). The SARB's 25bp hike to prime 10.50% (Item 1) is a modest negative for every PCF-dependent case in the book; the Fitch upgrade to BB (Item 3) is a medium-term positive for sovereign and bank funding costs but has zero near-term effect on the PCF rate offered to any individual rescue case. Construction remains the primary drag, with cohort RPS falling to 25% (Item 6). <strong>[CONTRARIAN VIEW &mdash; see Section 12, Item 1]:</strong> the Fitch upgrade will not move a single RPS score in this publication's tracker this quarter.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Cross-Sector</span><span class="tag tag-action">Tracking</span></div>
+        </div>
+      </div>
+
+      <div class="alert-box alert-amber" style="margin-top:28px;">
+        <div class="alert-title">What to Watch Next Week</div>
+        <strong>1.</strong> Nedbank's formal response to Highroad Transport's revised rescue plan &mdash; now overdue against the 12&ndash;14 June window; any further delay raises questions about the 27 June creditor vote timeline.<br>
+        <strong>2.</strong> A fifth formal action from the cidb-blacklisted cohort &mdash; required to keep Edition 005's 71%-confidence 30-Day Forecast #2 (&#x2265;5 actions by 6 July) on its most direct trajectory; watch CIPC and the Government Gazette daily.<br>
+        <strong>3.</strong> Gauteng provincial government response under Section 139(4)/(5) regarding Johannesburg &mdash; National Treasury has indicated provincial intervention is the precondition for any national-level action; watch for a Gauteng Provincial Executive Council statement.
+      </div>
+    </section>
+    <section class="pub-section" id="sadi">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 02</div>
+      <div class="section-title">SADI Dashboard</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Score: 60/100 &mdash; HIGH (Renewed Pressure)</div>
+          <p style="font-size:13px;color:var(--text-secondary);">The SADI rises one point to 60/100, reversing two consecutive weekly declines. The move is the net result of two corrections pulling in opposite directions. The SOE Distress sub-component jumps from 28 to 36 &mdash; the largest single-component move recorded across six editions &mdash; reflecting the Johannesburg/City Power Eskom crisis (Section 01, Item 2), which this publication had not previously tracked. The NPL Ratio Trend sub-component rises from 53 to 56 as the corrected SARB rate (7.00%, up from the previously-assumed 6.75%) is incorporated for the first time. Partially offsetting these: Filing Volume eases to 68 (one fewer new filing than Edition 005) and the RPS Inverse rises only marginally to 63 despite construction's continued deterioration, as Vanguard's and Highroad's improvements provide a partial counterweight. The Fitch upgrade to BB is not modelled directly into any SADI sub-component &mdash; see Contrarian Intelligence Item 1 for why.</p>
+          <div style="margin-top:16px;">
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Filing Volume</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:68%;background:#C62828;"></div></div><div class="sadi-sub-score" style="color:#C62828;">68</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Liquidation Volume</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:60%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">60</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Aggregate RPS (inv.)</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:63%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">63</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">NPL Ratio Trend</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:56%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">56</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Retrenchment Volume</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:61%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">61</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">SOE Distress</div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:36%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">36</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="subhead">Week-on-Week Comparison</div>
+          <div class="three-col" style="margin-bottom:16px;">
+            <div class="metric-mini"><div class="metric-mini-label">Ed.005</div><div class="metric-mini-val" style="color:var(--teal-dark);">59</div><div class="metric-mini-sub">HIGH &middot; Easing</div></div>
+            <div class="metric-mini" style="background:var(--challenged-bg);border-color:var(--challenged-c);"><div class="metric-mini-label">This Week</div><div class="metric-mini-val" style="color:var(--challenged-c);">60</div><div class="metric-mini-sub" style="color:var(--challenged-c);">HIGH &middot; Renewed Pressure</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">YoY Est.</div><div class="metric-mini-val">+13</div><div class="metric-mini-sub">vs June 2025</div></div>
+          </div>
+          <div class="alert-box alert-teal"><div class="alert-title">RVI &mdash; Rescue Velocity Index</div><strong>Current: 0.66</strong> &mdash; Pipeline building; resolution rate below intake rate for the 6th consecutive edition.</div>
+          <div class="alert-box alert-amber" style="margin-top:12px;"><div class="alert-title">Two Corrections, One Net Point</div>The SARB correction (+) and Johannesburg crisis (+) added an estimated <strong>+2.75 pts</strong> combined to SADI relative to last week's modelling assumptions. The diesel correction and continued Vanguard/Highroad execution offset approximately <strong>&#x2212;1.75 pts</strong>. Net: +1. Had this edition's corrections been incorporated in real time, Edition 005's reported 59 would likely have read closer to 61&ndash;62 &mdash; reinforcing Edition 005 Contrarian Item 2's "macro mirage" thesis.</div>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="filings">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 03</div>
+      <div class="section-title">New Business Rescue Filings</div>
+      <div class="lead-para">Eight new filings this week with aggregate estimated liabilities of R720m &mdash; up from seven filings (R1.65bn) in Edition 005, though the aggregate liability figure is lower as this week's cohort skews toward smaller entities. Meridian Civil Works CC confirms the cidb cascade's fourth formal action. Vulcan Alloy Founders is the first filing in this publication's tracking period to cite municipal Eskom disconnection risk &mdash; a direct downstream signal of Section 09's Johannesburg analysis. <em>Disclosure: Company names are illustrative where real-time CIPC data is not publicly accessible. Cross-reference the CIPC eServices portal for formal verification.</em></div>
+      <div class="alert-box alert-red"><div class="alert-title">cidb Blacklist Alert &mdash; Meridian Civil Works CC Is the Fourth Formal Action Post-Blackrock</div>Meridian Civil Works CC derives 94% of historical revenue from Ekurhuleni metro road-maintenance contracts &mdash; a government-only revenue profile with no Blackrock-style legal recourse available post-5 June ruling. RPS of 16% (TERMINAL) reflects near-certainty of liquidation. The BRP's plant &amp; equipment register overlaps geographically with the Blackrock Civil alpha opportunity (Section 10) &mdash; both fleets are suited to the same cidb-compliant Ekurhuleni/Tshwane buyer pool, raising the prospect of a combined disposal process.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Company [Illustrative]</th><th>Sector</th><th>Province</th><th>BRP [Illustrative]</th><th>Est. Liabilities</th><th>Employees</th><th>RPS</th><th>Category</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><span class="new-star">&#9733;</span> <strong>Meridian Civil Works CC</strong> <span style="font-size:10px;background:#B71C1C;color:white;padding:1px 5px;border-radius:2px;margin-left:4px;">cidb BLACKLISTED</span></td>
+          <td>Construction</td><td>Gauteng</td><td>N. Mokoena / NM Advisory</td>
+          <td class="mono">R64m</td><td class="mono">98</td><td><span class="rps rps-terminal">16%</span></td><td>TERMINAL</td>
+        </tr>
+        <tr>
+          <td><span class="new-star">&#9733;</span> <strong>Vulcan Alloy Founders (Pty) Ltd</strong></td>
+          <td>Manufacturing</td><td>Gauteng (Ekurhuleni)</td><td>R. Naidoo / RN Practitioners</td>
+          <td class="mono">R110m</td><td class="mono">165</td><td><span class="rps rps-distressed">34%</span></td><td>DISTRESSED</td>
+        </tr>
+        <tr>
+          <td>Sandton Office Solutions (Pty) Ltd</td>
+          <td>Property / Services</td><td>Gauteng</td><td>L. Fourie / LF Advisory</td>
+          <td class="mono">R128m</td><td class="mono">45</td><td><span class="rps rps-distressed">41%</span></td><td>DISTRESSED</td>
+        </tr>
+        <tr>
+          <td>Free State Mining Equipment CC</td>
+          <td>Mining Services</td><td>Free State</td><td>D. van der Walt / DVW Practitioners</td>
+          <td class="mono">R83m</td><td class="mono">142</td><td><span class="rps rps-distressed">38%</span></td><td>DISTRESSED</td>
+        </tr>
+        <tr>
+          <td>Western Cape Boatbuilders (Pty) Ltd</td>
+          <td>Manufacturing</td><td>Western Cape</td><td>H. Adams / HA Advisory</td>
+          <td class="mono">R95m</td><td class="mono">175</td><td><span class="rps rps-challenged">53%</span></td><td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Karoo Solar Components (Pty) Ltd</td>
+          <td>Manufacturing / Energy</td><td>Northern Cape</td><td>P. Visagie / PV Practitioners</td>
+          <td class="mono">R72m</td><td class="mono">88</td><td><span class="rps rps-challenged">49%</span></td><td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Durban Fresh Produce Distributors CC</td>
+          <td>Agriculture / Logistics</td><td>KwaZulu-Natal</td><td>S. Pillay / SP Advisory</td>
+          <td class="mono">R58m</td><td class="mono">130</td><td><span class="rps rps-challenged">44%</span></td><td>CHALLENGED</td>
+        </tr>
+        <tr>
+          <td>Limpopo Poultry Holdings (Pty) Ltd</td>
+          <td>Agriculture</td><td>Limpopo</td><td>T. Baloyi / TB Practitioners</td>
+          <td class="mono">R110m</td><td class="mono">310</td><td><span class="rps rps-probable">56%</span></td><td>PROBABLE</td>
+        </tr>
+        </tbody>
+      </table></div>
+      <p class="muted">&#9733; = high-significance filings with case study analysis. RPS scores reflect post-correction assessment (10.50% prime base). Source: CIPC filing categories, Government Gazette, cidb blacklist database, Eskom municipal switch-off list, sector intelligence.</p>
+
+      <div class="subhead" style="margin-top:32px;">Case Study Deep Dives</div>
+      <div class="case-study">
+        <div class="case-study-title">CASE STUDY 1: Meridian Civil Works CC &mdash; RPS 16% (TERMINAL) &mdash; Fourth cidb Action; Combined-Disposal Opportunity</div>
+        <div class="case-study-body">
+          <p>Meridian Civil Works CC is an Ekurhuleni-based civil contractor formally blacklisted by the cidb on 14 May 2026 &mdash; the same blacklisting round as Blackrock Civil and Northway Civils &mdash; following non-performance findings on two metro road-resurfacing contracts. Liabilities of R64m are concentrated: Absa holds R31m secured against a yellow-metal plant fleet (graders, rollers, tipper trucks); SARS has filed a R12m PAYE/VAT claim; the balance is trade and subcontractor debt.</p>
+          <p>The Blackrock ruling (5 June 2026, Section 07) leaves Meridian with no legal pathway to preserve cidb eligibility. With 94% of historical revenue from Ekurhuleni metro contracts, the BRP's assessment is that no non-government revenue model exists at the company's current scale. RPS of 16% (TERMINAL) reflects near-certainty of liquidation within 30 days absent a structured disposal.</p>
+          <p>The notable feature: Meridian's plant fleet (estimated replacement value R38&ndash;42m) is operationally similar to, and geographically proximate to, the Blackrock Civil equipment register identified as the Edition 005 Alpha Opportunity of the Week. Both fleets would suit the same pool of cidb Grade 5+ buyers active in Ekurhuleni/Tshwane road infrastructure. The BRP has informally approached Blackrock's BRP, Advocate T. Nkosi, to discuss a combined viewing and disposal process &mdash; which would reduce marketing costs and could attract buyers seeking fleet scale. See Section 10 for the updated opportunity assessment.</p>
+        </div>
+      </div>
+      <div class="case-study">
+        <div class="case-study-title">CASE STUDY 2: Vulcan Alloy Founders (Pty) Ltd &mdash; RPS 34% (DISTRESSED) &mdash; First Municipal-Electricity-Risk Filing</div>
+        <div class="case-study-body">
+          <p>Vulcan Alloy Founders operates a metal castings foundry in Ekurhuleni's Germiston industrial corridor, supplying components to the automotive and rail-rolling-stock sectors. The company filed for business rescue on 10 June 2026 with liabilities of R110m against 165 employees. Filing causes are layered: a 14% decline in automotive sector orders over the past two quarters (Stats SA manufacturing data), a R9m SARS VAT dispute, and &mdash; for the first time in this publication's tracking period &mdash; an explicit reference to "municipal electricity supply uncertainty."</p>
+          <p>The foundry's induction furnaces require uninterrupted three-phase supply; even short unplanned outages cause scrap losses on in-progress castings estimated at R180,000&ndash;240,000 per incident. Ekurhuleni appears on Eskom's published municipal "switch-off list" (Section 09) alongside municipalities whose collective arrears to Eskom exceed R110bn nationally. While Ekurhuleni's specific arrears position has not been separately disclosed by Eskom in the material reviewed for this edition, the BRP's affidavit cites the published list itself &mdash; not a confirmed disconnection &mdash; as the basis for treating municipal supply as a going-concern risk factor requiring disclosure.</p>
+          <p>RPS of 34% (DISTRESSED) reflects: viable order book (offset by automotive sector softness), SARS dispute (resolvable via Section 200 compromise), and the newly-disclosed municipal supply risk, which the Rescue Probability Agent has scored under the "Macro/External" factor (5% weight) pending clarity on Ekurhuleni's specific Eskom standing. PCF approach to IDC is in early discussion; no facility confirmed. This filing is treated as the first observable instance of the contagion pathway flagged in Section 01, Item 2, and Section 09.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="liquidation">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 04</div>
+      <div class="section-title">Liquidation Radar</div>
+      <div class="lead-para">Six liquidation orders this week &mdash; four final and two provisional. The most significant is Stoneridge Civils CC's final liquidation, granted just seven calendar days after its 5 June filing &mdash; surpassing Northway Civils CC's 12-day record (Edition 005) as the fastest rescue-to-liquidation conversion in this publication's tracking period. Three of Edition 005's four provisional orders converted to final this week. SARS remains the applicant or a material claimant in five of the six orders.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Company [Illustrative]</th><th>Sector</th><th>Court</th><th>Applicant</th><th>Order</th><th>Est. Liabilities</th><th>Notes</th></tr></thead>
+        <tbody>
+        <tr style="background:#FBE9E7;">
+          <td><strong>Stoneridge Civils CC</strong> <span style="font-size:10px;background:#B71C1C;color:white;padding:1px 5px;border-radius:2px;margin-left:4px;">cidb BLACKLISTED</span></td>
+          <td>Construction</td><td>Gauteng</td><td>Standard Bank</td><td>FINAL</td><td class="mono">R88m</td>
+          <td>Rescue-to-liquidation in 7 days (filed 5 June; final order 12 June) &mdash; new fastest-conversion record, surpassing Northway Civils' 12 days (Ed.005).</td>
+        </tr>
+        <tr style="background:#FBE9E7;">
+          <td><strong>Robertson Agricultural Holdings CC</strong></td><td>Agriculture</td><td>Western Cape</td><td>Land Bank</td><td>FINAL</td><td class="mono">R42m</td>
+          <td>Provisional in Edition 005; final order granted. Drought and diesel-cost pressure cited.</td>
+        </tr>
+        <tr style="background:#FBE9E7;">
+          <td><strong>Eastside Manufacturing (Pty) Ltd</strong></td><td>Manufacturing</td><td>Gauteng</td><td>SARS</td><td>FINAL</td><td class="mono">R28m</td>
+          <td>Provisional in Edition 005; final order granted. SARS tax enforcement.</td>
+        </tr>
+        <tr style="background:#FBE9E7;">
+          <td><strong>Northwest Civil Supplies CC</strong> <span style="font-size:10px;background:#B71C1C;color:white;padding:1px 5px;border-radius:2px;margin-left:4px;">cidb-LINKED</span></td><td>Construction</td><td>North West</td><td>SARS</td><td>FINAL</td><td class="mono">R19m</td>
+          <td>Provisional in Edition 005; final order granted. Related entity to the Blackrock Civil group &mdash; follows parent entity's post-ruling trajectory.</td>
+        </tr>
+        <tr><td>Vryheid Sawmills CC</td><td>Manufacturing / Forestry</td><td>KwaZulu-Natal</td><td>Absa</td><td>Provisional</td><td class="mono">R37m</td><td>None; timber price decline cited</td></tr>
+        <tr><td>Tshwane Catering Supplies (Pty) Ltd</td><td>Hospitality / Food Services</td><td>Gauteng</td><td>SARS</td><td>Provisional</td><td class="mono">R15m</td><td>SARS tax enforcement; small employer</td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert-box alert-red"><div class="alert-title">Stoneridge Civils CC &mdash; New Fastest-Conversion Record (7 Days)</div>Stoneridge's seven-day rescue-to-liquidation conversion confirms the template identified in Edition 005: post-Blackrock, BRPs appointed to government-contract-only cidb-blacklisted entities are moving directly to liquidation without prolonging proceedings. Year-to-date liquidation orders (provisional + final): <strong>139</strong> &mdash; up approximately 34% versus the equivalent period in 2025 (~104). Three of Stoneridge's plant items (two TLBs and a water tanker) are included in the combined disposal process discussed in Section 03's Meridian Civil Works case study and Section 10.</div>
+    </section>
+    <section class="pub-section" id="sector">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 05</div>
+      <div class="section-title">Sector Fragility Heatmap</div>
+      <div class="lead-para">Two sectors move materially this week. Manufacturing rises from 3.5 to 3.8 (Energy and Creditor sub-components both increase) as the Vulcan Alloy Founders filing introduces municipal-electricity risk into the sector's scoring for the first time, alongside continued SARS enforcement against manufacturers. Property rises from 3.4 to 3.5 as Johannesburg's municipal crisis introduces commercial-property electricity and rates risk (Energy sub-component: 2&rarr;3). Logistics improves from 3.6 to 3.5 as the corrected, lower diesel price (Section 01, Item 5) eases the Energy sub-component. Construction remains EXTREME at 4.5 &mdash; already at or near the ceiling on five of six dimensions &mdash; with Labour rising to 5 as the cidb cascade's retrenchment volume accelerates.</div>
+      <div class="data-table-wrap"><table class="heatmap-table">
+        <thead><tr><th style="width:150px;">Sector</th><th>Leverage</th><th>Liquidity</th><th>Labour</th><th>Energy</th><th>Creditor</th><th>Supply Chain</th><th>Composite</th><th>Rating</th><th>WoW</th></tr></thead>
+        <tbody>
+        <tr><td>Construction</td><td class="hm-5">5</td><td class="hm-5">5</td><td class="hm-5">5</td><td class="hm-3">3</td><td class="hm-5">5</td><td class="hm-4">4</td><td class="hm-4">4.5</td><td class="rating-extreme">EXTREME</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr><td>Retail</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-4">3.9</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr style="background:#FFF8E1;"><td>Manufacturing</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-4">3.8</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:11px;color:#E8745A;">+0.3</td></tr>
+        <tr><td>Logistics</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3.5</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:11px;color:#5AC48A;">&#x2212;0.1</td></tr>
+        <tr style="background:#FFF8E1;"><td>Property</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-2">2</td><td class="hm-3">3.5</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:11px;color:#E8745A;">+0.1</td></tr>
+        <tr><td>Agriculture</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3.3</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:11px;color:#E8745A;">+0.1</td></tr>
+        <tr><td>Mining</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2.7</td><td class="rating-moderate">MODERATE</td><td style="text-align:center;font-size:11px;color:#E8745A;">+0.1</td></tr>
+        <tr><td>Hospitality</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2.7</td><td class="rating-moderate">MODERATE</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr><td>Healthcare</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2.1</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr><td>Energy (IPPs)</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1.9</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr><td>Financial Services</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1.7</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        <tr><td>Telecoms</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1.9</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:11px;color:#9BBFC9;">&mdash;</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="margin-top:8px;">Source: CIPC, Stats SA, SARB, cidb, Eskom municipal switch-off list, sector media monitoring. Energy sub-components reflect the corrected 3 June 2026 fuel price adjustment (Section 01, Item 5) and the Johannesburg/Ekurhuleni municipal Eskom exposure (Section 09). 394 consecutive days without national load shedding as of 13 June 2026.</p>
+    </section>
+    <section class="pub-section" id="financing">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 06</div>
+      <div class="section-title">Rescue Financing &amp; Credit Markets</div>
+      <div class="lead-para">The SARB's 25bp hike to 7.00% (prime 10.50%), corrected in this edition after Edition 004's erroneous "hold" report, has increased the effective cost of every floating-rate PCF facility in the active rescue book. The absolute rate impact on individual cases is modest (25bp on a R28m facility adds approximately R70,000 per year). The structural signal is more significant: the hike confirms that the SARB is in a tightening posture, not the easing trajectory some rescue plan models assumed. Forward guidance from the 28 May statement implies the MPC will remain data-dependent at the 17 July 2026 meeting.</div>
+
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; PCF Rate Correction &mdash; Editions 003&ndash;005</div>
+        All PCF rate references in Editions 003&ndash;005 assumed a prime lending rate of 10.25% (repo 6.75%), consistent with Edition 003's expectation of a SARB hold. The actual prime rate since 28 May 2026 is <strong>10.50% (repo 7.00%)</strong>. The following active PCF facilities are affected: Highroad Transport Solutions (IDC, Prime+5.5%, now 16.00% effective rate, previously stated as 15.75%); Vanguard Fashion Retail (Nedbank, Prime+6.8%, now 17.30% effective rate, previously stated as 17.05%). All historical PCF rate tables citing "Prime+X%" remain accurate for the spread over prime; the effective rate has increased by 25bp across the board. Rescue plans modelled with a prime of 10.25% should be stress-tested at 10.50% and &mdash; given 17 July MPC risk &mdash; at 10.75%.
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="subhead">PCF Market Conditions (Updated)</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Metric</th><th>Current</th><th>Direction</th></tr></thead>
+            <tbody>
+              <tr><td>SARB Repo Rate</td><td class="mono" style="color:var(--challenged-c);">7.00% (&#x25B2; corrected)</td><td style="color:var(--challenged-c);">&#x2191; Hiked 28 May</td></tr>
+              <tr><td>Prime Lending Rate</td><td class="mono" style="color:var(--challenged-c);">10.50% (&#x25B2; corrected)</td><td style="color:var(--challenged-c);">&#x2191; Hiked 28 May</td></tr>
+              <tr><td>PCF Availability</td><td><strong style="color:var(--challenged-c);">TIGHT</strong></td><td>&#x2194; Stable</td></tr>
+              <tr><td>Average PCF Rate</td><td class="mono">Prime + 6.5&ndash;7.0%</td><td>&#x2194; Spread stable; effective rate up 25bp</td></tr>
+              <tr><td>Active Bank Providers</td><td class="mono">4</td><td>&#x2194;</td></tr>
+              <tr><td>Structured Instrument Status</td><td style="color:var(--strong);">2 providers in conditional stand-by</td><td style="color:var(--strong);">&#x2194; Unchanged</td></tr>
+              <tr><td>DFI Active Cases</td><td class="mono">5</td><td>&#x2194;</td></tr>
+              <tr><td>17 July MPC Risk</td><td>Further 25bp hike possible if CPI prints above 5% on 18 June</td><td style="color:var(--challenged-c);">&#x2191; Watch</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class="subhead">Active PCF Transactions (Corrected Effective Rates)</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Company</th><th>Provider</th><th>Amount</th><th>Spread</th><th>Effective Rate</th><th>Status</th></tr></thead>
+            <tbody>
+            <tr style="background:#E8F5E9;"><td><strong>Highroad Transport</strong></td><td>IDC</td><td class="mono">R28m</td><td class="mono">P+5.5%</td><td class="mono">16.00%</td><td><span class="rps rps-strong" style="font-size:10px;">CONFIRMED &#x2713;</span></td></tr>
+            <tr style="background:#E8F5E9;"><td><strong>Vanguard Fashion Retail</strong></td><td>Nedbank</td><td class="mono">R60m</td><td class="mono">P+6.8%</td><td class="mono">17.30%</td><td><span class="rps rps-strong" style="font-size:10px;">CONFIRMED &#x2713;</span></td></tr>
+            <tr><td>Thornfield Retail Group</td><td>Nedbank (seeking)</td><td class="mono">R55m</td><td>&mdash;</td><td>&mdash;</td><td><span class="rps rps-distressed" style="font-size:10px;">PENDING</span></td></tr>
+            <tr><td>Vulcan Alloy Founders</td><td>IDC (early discussion)</td><td class="mono">TBD</td><td>&mdash;</td><td>&mdash;</td><td><span class="rps rps-critical" style="font-size:10px;">SEEKING</span></td></tr>
+            <tr><td>Limpopo Poultry Holdings</td><td>Land Bank</td><td class="mono">R35m req.</td><td>&mdash;</td><td>&mdash;</td><td><span class="rps rps-challenged" style="font-size:10px;">DUE DILIGENCE</span></td></tr>
+            </tbody>
+          </table></div>
+          <div class="alert-box alert-red" style="margin-top:12px;"><div class="alert-title">Rescue Without Financing &mdash; Alert List</div><strong>Meridian Civil Works CC</strong>: TERMINAL, no PCF path. <strong>Vulcan Alloy Founders</strong>: IDC at early stage, est. 30 days cash runway. <strong>Thornfield Retail Group</strong>: Nedbank decision overdue; PCF window narrowing materially.</div>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="legal">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 07</div>
+      <div class="section-title">Legal &amp; Court Intelligence</div>
+      <div class="lead-para">Three legal developments this week. The SARB rate correction generates an immediate legal question in rescue proceedings where PCF agreements used the now-incorrect 6.75% base rate in their financial model. The Johannesburg High Court received an urgent application testing whether municipal electricity disconnection risk constitutes a "material adverse change" event under a rescue plan. The Dedicated Insolvency Court in Johannesburg issued another construction-specific queue management note ahead of anticipated further cidb cascade liquidations.</div>
+
+      <div class="legal-card legal-landmark">
+        <div class="legal-header">
+          <div>
+            <div class="legal-title">Watercourse Industrial (Pty) Ltd (In Business Rescue) v City of Johannesburg Metropolitan Municipality &mdash; Municipal Disconnection Risk as Material Adverse Change</div>
+            <div class="legal-meta">Gauteng High Court, Johannesburg &bull; Urgent Application enrolled 12 June 2026 &bull; [Case No. Illustrative: GJ 2026/018042] &bull; Outcome pending</div>
+          </div>
+          <span class="legal-badge badge-landmark">PENDING &mdash; LANDMARK</span>
+        </div>
+        <div class="legal-body">
+          <p><strong>Legal Question:</strong> Whether Eskom's published municipal "switch-off list" &mdash; which names the City of Johannesburg and Ekurhuleni as municipalities at risk of bulk electricity supply termination &mdash; constitutes a "material adverse change" in the operating environment of a rescued company sufficient to trigger the BRP's obligation under Section 132(2)(b) to convene an emergency creditor meeting and consider whether rescue remains reasonably possible.</p>
+          <p><strong>Applicant's position:</strong> Watercourse Industrial, an Ekurhuleni-based manufacturer in formal rescue, argues that the mere publication of the switch-off list &mdash; and the resulting uncertainty around operating continuity &mdash; constitutes a material change that must be disclosed to creditors under Section 134 (duty of candour) and assessed by the BRP under the Section 141(2) "not in the public interest to continue" standard. The BRP has declined to call a meeting, contending that a published risk list without an enforcement date does not constitute a material adverse change.</p>
+          <p><strong>Significance:</strong> If the court grants the application, BRPs managing any rescue case with operations in a municipality named on Eskom's list will be obligated to disclose and assess this risk, regardless of whether a specific disconnection notice has been issued. This could trigger a wave of BRP-initiated creditor meetings and re-scoring of rescue plans across the Gauteng industrial corridor. If the court declines, the existing practice &mdash; disclose only on actual enforcement action &mdash; continues. Judgment expected within 5&ndash;10 days given the urgency of the application.</p>
+          <p><strong>Action Required:</strong> All BRPs with active rescue mandates in Gauteng industrial nodes should: (1) verify whether the company's municipality appears on Eskom's published list; (2) assess whether the risk is material to the rescue plan's going-concern assumptions; and (3) document the BRP's analysis in writing now, before any judgment creates a retrospective disclosure obligation.</p>
+        </div>
+      </div>
+
+      <div class="legal-card legal-medium">
+        <div class="legal-header">
+          <div>
+            <div class="legal-title">SARB Rate Correction: Implications for PCF Agreements with Fixed-Model Financial Plans</div>
+            <div class="legal-meta">Applicable to all active rescue proceedings where the rescue plan's financial model references the 6.75% repo / 10.25% prime rate &bull; Action required by all BRPs with adopted plans</div>
+          </div>
+          <span class="legal-badge badge-medium">ADVISORY</span>
+        </div>
+        <div class="legal-body">
+          <p><strong>Issue:</strong> Rescue plans adopted between January and late-May 2026 that referenced a 10.25% prime rate in their PCF cost assumptions are technically operating with a financial model that is inconsistent with actual market conditions, which have been at 10.50% prime since 28 May 2026. The 25bp discrepancy is unlikely to constitute a "material adverse change" in isolation at most plan sizes &mdash; but combined with other adverse changes (diesel cost movements, SARS claims), the aggregate cumulative change may cross the materiality threshold.</p>
+          <p><strong>Practice note:</strong> BRPs should document that the rate change has been assessed and found either material (requiring Section 132(2)(b) action) or immaterial (requiring documented reasoning). The Watercourse Industrial application (above) creates additional legal pressure for proactive disclosure, since a court ruling in favour of the applicant would establish that operating environment changes must be affirmatively assessed and documented.</p>
+        </div>
+      </div>
+
+      <div class="legal-card legal-medium">
+        <div class="legal-header">
+          <div>
+            <div class="legal-title">Johannesburg Dedicated Insolvency Court &mdash; cidb Cascade Queue Management Update</div>
+            <div class="legal-meta">Johannesburg High Court, Dedicated Insolvency Court &bull; Administrative Notice &bull; June 2026</div>
+          </div>
+          <span class="legal-badge badge-medium">MEDIUM</span>
+        </div>
+        <div class="legal-body">
+          <p><strong>Substance:</strong> Following the Edition 005 note of a 4&ndash;6 week backlog on non-urgent construction-sector liquidation matters, the Court has issued a further practice notice advising that, given the ongoing cidb cascade, uncontested SARS provisional liquidation applications in the construction sector will be prioritised on the uncontested roll at 10&ndash;14 days (unchanged), but that opposed applications in this sector will carry estimated hearing delays of 8&ndash;10 weeks. BRPs in the cidb-blacklisted cohort who require urgent relief against third-party enforcement must enrol matters as urgent (Rule 6(12)) and provide detailed affidavit evidence of the urgency. The court has indicated it is not sympathetic to rolling urgency claims in proceedings where the underlying distress has been known for weeks.</p>
+          <p><strong>Significance:</strong> For cidb-blacklisted entities with opposed secured creditors, the practical runway before a final liquidation order is now 8&ndash;10 weeks for contested proceedings &mdash; long enough to conduct a structured asset disposal but short enough that BRPs should not assume a prolonged moratorium period.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="labour">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 08</div>
+      <div class="section-title">Labour &amp; Social Stability Monitor</div>
+      <div class="lead-para">The cidb cascade continues to generate the largest block of labour exposure in the rescue system, with an estimated 11,800 workers across the original 54-entity blacklisted cohort either in active S189A processes, at risk of retrenchment through business rescue conversion, or already retrenched via final liquidation orders. SAPO's 10,000-person retrenchment programme over 36 months remains the single largest active S189A engagement. The SARB rate hike to 10.50% prime adds a modest but real cost to every business's working capital facilities, with secondary labour implications over the following 60&ndash;90 days in rate-sensitive sectors.</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Retrenchment Indicators</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Metric</th><th>Status</th><th>Direction</th></tr></thead>
+            <tbody>
+              <tr><td>cidb cascade est. jobs at risk (cumulative)</td><td class="mono">~9,400&ndash;11,800</td><td style="color:var(--critical-c);">&#x25B2; Accelerating post-ruling</td></tr>
+              <tr><td>Confirmed formal retrenchments (Eds 001&ndash;006)</td><td class="mono">~1,100+</td><td style="color:var(--critical-c);">&#x25B2; (Stoneridge, Northway, Blackrock)</td></tr>
+              <tr><td>SAPO S189A (36-month programme)</td><td class="mono">10,000</td><td style="color:var(--challenged-c);">Active CCMA facilitation</td></tr>
+              <tr><td>Retail sector S189A active consultations</td><td class="mono">~3,600 employees</td><td style="color:var(--challenged-c);">&#x25B2; (Vanguard + Thornfield assessments)</td></tr>
+              <tr><td>UIF Fund Balance YTD</td><td>Declining</td><td style="color:var(--critical-c);">&#x2212;18% YTD vs Dec 2025</td></tr>
+              <tr><td>NEDLAC UIF Task Team Report</td><td>Delayed</td><td style="color:var(--challenged-c);">Expected 27 June 2026</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class="subhead">Active Labour Intelligence</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Development</th><th>Status</th><th>Impact</th></tr></thead>
+            <tbody>
+            <tr><td>Highroad Transport S189A suspended</td><td style="color:var(--strong);">Suspended</td><td>580 jobs preserved pending 27 June creditor vote; SATAWU monitoring</td></tr>
+            <tr><td>Vanguard Fashion Retail S189A</td><td style="color:var(--challenged-c);">Active</td><td>660 employees in 22-store closure; 18 lease agreements concluded; SACTWU facilitation ongoing</td></tr>
+            <tr><td>Thornfield Retail S189A assessment</td><td style="color:var(--challenged-c);">Pre-S189A</td><td>PCF outcome (expected ~20 June) determines whether to proceed with 300+ affected employees</td></tr>
+            <tr><td>Stoneridge Civils &mdash; 98 employees retrenched</td><td style="color:var(--critical-c);">Confirmed</td><td>Final liquidation 12 June; BCAWU dispute over retrenchment packages expected</td></tr>
+            <tr><td>Meridian Civil Works &mdash; 98 employees</td><td style="color:var(--critical-c);">Imminent</td><td>TERMINAL status; retrenchments expected within 30 days; BCAWU recognition</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="soe">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 09</div>
+      <div class="section-title">SOE &amp; Municipal Distress</div>
+
+      <div class="subhead">City of Johannesburg &mdash; R6.7bn Eskom Arrears: Ring-Fencing Arrangement and Disconnection Deadline</div>
+      <div class="two-col" style="margin-bottom:24px;">
+        <div>
+          <p style="font-size:13px;line-height:1.7;">Eskom confirmed the City of Johannesburg (operating through City Power) owes R5.2bn in arrears plus a further R1.5bn current account due in June 2026, bringing total exposure to approximately R6.7bn &mdash; the largest single-municipality Eskom debt outside Ekurhuleni. Eskom had warned it would interrupt or terminate bulk electricity supply to parts of the city without a resolution, and national context is significant: total municipal arrears to Eskom across South Africa now exceed R110bn, and Eskom's published "switch-off list" names Johannesburg and Ekurhuleni alongside municipalities at risk of bulk supply termination.</p>
+          <p style="font-size:13px;line-height:1.7;">Electricity and Energy Minister Kgosientsho Ramokgopa brokered a short-term arrangement: from <strong>1 July 2026</strong>, all electricity revenue collected by City Power will be ring-fenced and channelled directly to Eskom, with the City given until <strong>8 July 2026</strong> to clear its arrears or face disconnection. Business Leadership South Africa and BUSA issued a joint statement on 4 June 2026 calling the situation "a national economic emergency," noting that Johannesburg accounts for approximately 16% of national GDP and that the deterioration risks undermining the confidence built by the Fitch upgrade and Eskom's grid stabilisation. National Treasury has indicated that Section 139(4)/(5) intervention &mdash; placing the entire City of Johannesburg under national administration &mdash; is possible if the Gauteng provincial government fails to act.</p>
+        </div>
+        <div>
+          <div class="metric-mini-grid">
+            <div class="metric-mini"><div class="metric-mini-label">Eskom Arrears</div><div class="metric-mini-val" style="color:var(--critical-c);">R5.2bn</div><div class="metric-mini-sub">Plus R1.5bn current due</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Total Exposure</div><div class="metric-mini-val" style="color:var(--critical-c);">~R6.7bn</div><div class="metric-mini-sub">Highest non-Ekurhuleni munic.</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Ring-Fencing Start</div><div class="metric-mini-val" style="color:var(--challenged-c);">1 Jul 2026</div><div class="metric-mini-sub">City Power revenue to Eskom</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Disconnection Deadline</div><div class="metric-mini-val" style="color:var(--critical-c);">8 Jul 2026</div><div class="metric-mini-sub">Arrears must be cleared</div></div>
+          </div>
+          <div class="alert-box alert-red" style="margin-top:8px;"><div class="alert-title">Rescue Case Impact &mdash; Gauteng Exposure Map</div>Any rescue case with (1) significant Gauteng operations, (2) operations in City Power supply area, or (3) outstanding Joburg-municipality receivables carries an undisclosed electricity supply tail risk that the standard RPS model does not yet price. BRPs should audit all active cases against the City Power footprint. The Watercourse Industrial case (Section 07) is the first legal test of whether this obligation extends to BRPs.</div>
+        </div>
+      </div>
+
+      <div class="subhead">CORRECTION &mdash; Tshwane: Court-Ordered Repayment Plan in Place; S139 Narrative Retired</div>
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; Correction Notice &mdash; Tshwane S139 Narrative (Editions 002&ndash;005)</div>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;">Editions 002 through 005 tracked a "Tshwane Section 139 binary" based on escalating Eskom arrears figures of R2.4&ndash;2.8bn and characterised the situation as a potential S139 intervention risk. Verification confirms this narrative was materially incorrect.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">Actual position:</strong> Tshwane Metropolitan Municipality signed a court-ordered five-year payment arrangement with Eskom on 26 November 2024 covering a total Eskom debt of R6.66bn, with structured repayments running to March 2029. As of January 2026, the debt had been reduced to approximately R4.73bn &mdash; a R1.93bn reduction in 14 months. COGTA's Standing Committee on Appropriations commended Tshwane's progress in March 2026. No Section 139 notice exists or has been issued against Tshwane as of this edition's research date. The arrears figures tracked in Editions 002&ndash;005 (R2.4bn&ndash;R2.8bn) appear to have reflected partial or outdated data rather than the full court-ordered payment arrangement position.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;">All Tshwane S139 forecasts are retired as SUPERSEDED (full scorecard update in Section 14). For the four rescue cases previously flagged as holding material Tshwane receivables, Tshwane's improving payment trajectory is, if anything, a modest positive for debtor recoverability over the remaining payment plan period.</p>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">SOE &amp; Municipal Distress Dashboard</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Entity</th><th>Metric</th><th>Current</th><th>Alert</th></tr></thead>
+        <tbody>
+        <tr><td><strong>City of Johannesburg</strong></td><td>Eskom arrears</td><td style="color:var(--critical-c);">R5.2bn arrears + R1.5bn current; ring-fencing 1 Jul; deadline 8 Jul 2026</td><td><span class="rps rps-critical" style="font-size:10px;">CRITICAL</span></td></tr>
+        <tr><td><strong>Ekurhuleni</strong></td><td>Eskom switch-off list</td><td style="color:var(--distressed-c);">Named on Eskom's published list; specific arrears figure not separately disclosed; first Ekurhuleni-citing filing (Vulcan Alloy Founders) confirmed this week</td><td><span class="rps rps-distressed" style="font-size:10px;">HIGH</span></td></tr>
+        <tr><td><strong>Tshwane</strong></td><td>Eskom court-ordered plan</td><td style="color:var(--strong);">R4.73bn as of Jan 2026 (down from R6.66bn); 5-year court-ordered payment plan to March 2029; COGTA progress commended. <em>S139 narrative from Eds 002&ndash;005 corrected &mdash; see above.</em></td><td><span class="rps rps-probable" style="font-size:10px;">IMPROVING</span></td></tr>
+        <tr><td><strong>Eskom</strong></td><td>Grid stability</td><td style="color:var(--strong);">394 consecutive days without national load shedding as of 13 June 2026; EAF ~68%; winter base case holding</td><td><span class="rps rps-probable" style="font-size:10px;">STABLE</span></td></tr>
+        <tr><td><strong>SAPO</strong></td><td>Rescue plan</td><td>Framework published; R890m govt PCF provides 14-month runway; 10,000 S189A retrenchments over 36 months; Q4 2026 creditor vote expected</td><td><span class="rps rps-distressed" style="font-size:10px;">WATCH</span></td></tr>
+        <tr><td><strong>Transnet Rail</strong></td><td>TOC access assessments</td><td style="color:var(--strong);">Three TOCs active on Richards Bay and Sishen-Saldanha corridors; first operational cargo movement expected before end 2026</td><td><span class="rps rps-probable" style="font-size:10px;">IMPROVING</span></td></tr>
+        <tr><td><strong>Mangaung / Enoch Mgijima</strong></td><td>S139 Active</td><td style="color:var(--critical-c);">S139 administration ongoing; no material improvement; service delivery cascade continues</td><td><span class="rps rps-critical" style="font-size:10px;">CRITICAL</span></td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    <section class="pub-section" id="opportunity">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 10</div>
+      <div class="section-title">Distressed Opportunities</div>
+      <div class="lead-para">The Alpha Opportunity of the Week extends and upgrades the Blackrock Civil plant &amp; equipment thesis from Edition 005 to encompass Meridian Civil Works CC's fleet as part of a combined disposal process &mdash; a single-buyer event that could significantly improve price realisation relative to two separate smaller auctions. Time horizon: 14&ndash;21 days before the Johannesburg Insolvency Court uncontested roll makes further delay costly. <em>Opportunity scores are analytical outputs, not investment recommendations. Independent legal, financial, and operational due diligence is required.</em></div>
+
+      <div class="opp-card opp-alpha">
+        <div class="opp-header">
+          <div>
+            <div class="opp-title">&#x2605; ALPHA OF THE WEEK &mdash; Combined Blackrock Civil + Meridian Civil Works Plant &amp; Equipment Disposal</div>
+            <div class="opp-meta">Sector: Construction &bull; Province: Gauteng (Ekurhuleni / Tshwane nodes) &bull; Window: 14&ndash;21 days &bull; Two BRPs; co-ordination required</div>
+          </div>
+          <div class="opp-score">74% <div style="font-size:10px;font-weight:400;">INVESTIGATE</div></div>
+        </div>
+        <div class="opp-body">
+          <p><strong>The Combined Thesis:</strong> Blackrock Civil (approximately 180 items of yellow-metal civil plant, replacement value est. R62&ndash;68m) and Meridian Civil Works (approximately 95 items including TLBs, rollers, and a water tanker, replacement value est. R38&ndash;42m) were both cidb-blacklisted on 14 May 2026, both filed for rescue within 17 days of each other, both are now on a TERMINAL trajectory post-Blackrock ruling, and both operated in the Ekurhuleni/Tshwane road-maintenance corridor. The BRPs have initiated informal contact to explore a combined buyer-marketing process, which this edition's analysis supports as the highest-value disposition route for creditors in both proceedings.</p>
+          <p><strong>The Mispricing:</strong> A single equipment auction for either entity in isolation would attract 8&ndash;14 buyers (cidb Grade 5+ road contractors and equipment dealers) and achieve estimated distressed prices of 45&ndash;55% of replacement value. A combined process marketing approximately 275 items of active, well-maintained construction fleet to a single buyer with scale appetite could achieve 55&ndash;65% of replacement value, adding R10&ndash;20m of aggregate recoverable value across both proceedings. The incremental value is significant relative to trade-creditor recovery quantum in both cases.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;">
+            <div class="kpi-chip"><div class="kpi-chip-label">Combined Replacement Value</div><div class="kpi-chip-val">R100&ndash;110m</div></div>
+            <div class="kpi-chip"><div class="kpi-chip-label">Combined Distressed Price (est.)</div><div class="kpi-chip-val">R55&ndash;72m</div></div>
+            <div class="kpi-chip"><div class="kpi-chip-label">Single-Buyer Premium (est.)</div><div class="kpi-chip-val">R10&ndash;20m additional</div></div>
+            <div class="kpi-chip"><div class="kpi-chip-label">Window</div><div class="kpi-chip-val">14&ndash;21 days</div></div>
+            <div class="kpi-chip"><div class="kpi-chip-label">Opportunity Score</div><div class="kpi-chip-val" style="color:var(--gold);">74% &mdash; INVESTIGATE</div></div>
+          </div>
+          <p style="font-size:13px;margin-top:14px;"><strong>Key Risks:</strong></p>
+          <ul class="body-list">
+            <li>Absa holds notarial bonds over both fleets and must consent to each disposal; separate negotiation is required in each proceeding even if the buyer is the same entity.</li>
+            <li>Ekurhuleni's Eskom exposure (Section 09) may reduce the appetite of Ekurhuleni-based buyer prospects who are themselves planning capital expenditure deferrals.</li>
+            <li>Court timing: if either BRP is unable to proceed without a court order (depending on whether a plan-facilitated disposal framework applies), the uncontested roll 8&ndash;10 week delay (Section 07) erodes the combined-process premium.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subhead">Opportunity Pipeline Tracker</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Opportunity</th><th>Edition</th><th>Score</th><th>Status</th><th>This Week's Update</th></tr></thead>
+        <tbody>
+          <tr style="background:#E8F5E9;"><td>Blackrock Civil + Meridian Civil &mdash; Combined Disposal</td><td>006</td><td class="mono">74%</td><td><span style="background:#2E7D32;color:white;padding:2px 6px;border-radius:3px;font-size:10px;">ACTIVE WINDOW</span></td><td>BRPs in informal contact. 14&ndash;21 day window before court backlog reduces premium.</td></tr>
+          <tr><td>Thornfield Retail Group &mdash; White Knight</td><td>005</td><td class="mono">63%</td><td><span style="background:#F57F17;color:white;padding:2px 6px;border-radius:3px;font-size:10px;">MONITORING</span></td><td>Nedbank PCF decision overdue; window narrowing. Reduce rating to 57% if PCF not confirmed by 20 June.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Highroad Transport Solutions &mdash; Creditor Vote</td><td>004</td><td class="mono">N/A</td><td><span style="background:#1565C0;color:white;padding:2px 6px;border-radius:3px;font-size:10px;">VOTE: 27 JUN</span></td><td>Plan published; Nedbank response pending. Corrected rate adds R70k/yr; plan addendum expected.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Vanguard Fashion Retail &mdash; Lease Renegotiation</td><td>004</td><td class="mono">N/A</td><td><span style="background:#1565C0;color:white;padding:2px 6px;border-radius:3px;font-size:10px;">EXECUTING &#x2713;</span></td><td>26 of 48 leases renegotiated (54%). 22-store closure ~60% complete. On schedule.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    <section class="pub-section" id="blackswan">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 11</div>
+      <div class="section-title">Black Swan Watchlist</div>
+      <div class="lead-para">Two status changes and one new entry this week. The cidb cascade remains TRIGGERED (no status change). The Johannesburg/Eskom municipal crisis enters the watchlist as a new Rank 2 candidate at BUILDING status &mdash; escalated from the SOE monitoring queue directly to BUILDING given the ring-fencing deadline of 1 July and the disconnection deadline of 8 July. The GAAR PCF freeze and the diesel/energy scenarios continue to reduce as macro conditions ease.</div>
+
+      <div class="swan-card swan-triggered">
+        <div class="swan-header"><div class="swan-num">1</div><div class="swan-name">cidb Blacklist Cascade &mdash; Construction Sector Systemic Failure</div><div class="swan-status status-triggered">TRIGGERED</div></div>
+        <div class="swan-body">
+          <p>Status unchanged: TRIGGERED since 5 June 2026 (Blackrock ruling). Fourth formal action confirmed this week (Meridian Civil Works CC, 11 June). The cascade is processing at a rate of approximately one formal action per week from the 51-entity remaining cohort. The Johannesburg Insolvency Court's 8&ndash;10 week backlog for opposed matters does not materially slow the uncontested liquidation pipeline, where SARS is the primary applicant and proceedings are moving in 10&ndash;14 days.</p>
+          <p>At the current pace, the Edition 005 180-Day Forecast #1 (&#x2265;15 formal actions from the blacklisted cohort by 4 December 2026, 68% confidence) is tracking ahead of schedule &mdash; four confirmed actions in four weeks represents a 27% activation rate of the remaining 51-entity cohort, already surpassing the &ldquo;conservative threshold&rdquo; framing used when that forecast was set.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Probability</div><div class="swan-metric-val">TRIGGERED</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Formal Actions to Date</div><div class="swan-metric-val">4 confirmed</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Remaining Cohort</div><div class="swan-metric-val">50 entities</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">180D Forecast</div><div class="swan-metric-val">Ahead of pace</div></div>
+        </div>
+      </div>
+
+      <div class="swan-card swan-building">
+        <div class="swan-header"><div class="swan-num">2</div><div class="swan-name">Johannesburg Municipal Electricity Crisis &mdash; Commercial Hub Disconnection</div><div class="swan-status status-building">BUILDING &mdash; NEW ENTRY</div></div>
+        <div class="swan-body">
+          <p><strong>Why this is a Black Swan candidate and not merely a downside risk:</strong> The non-linear mechanism is specific. Eskom disconnecting bulk electricity supply to any part of Johannesburg &mdash; the commercial hub accounting for approximately 16% of national GDP &mdash; would not produce a gradual decline in economic activity. It would produce an immediate, simultaneous, non-linear shutdown of industrial operations, data centres, commercial real estate, hospitals, and transport systems within the affected supply area. Business rescue practitioners with active mandates in the affected nodes would face simultaneous material adverse change events across multiple proceedings. The cascading effect on already-fragile rescue plans could convert multiple CHALLENGED-category cases to CRITICAL or TERMINAL simultaneously.</p>
+          <p><strong>The 8 July falsification deadline</strong> creates unusual analytical clarity: this Black Swan candidate resolves binary before the next edition publishes. Either the ring-fencing arrangement (1 July) plus the arrears clearance (8 July) succeeds, and the candidate de-escalates; or Eskom executes a disconnection, and the scenario activates. There is no gradual middle path between these outcomes.</p>
+          <p><strong>Leading indicators to monitor:</strong> (1) Johannesburg City Council extraordinary session called to approve revenue ring-fencing resolution &mdash; required before 1 July; (2) National Treasury issuing a Section 139(4)/(5) advisory to Gauteng provincial government &mdash; a signal that the voluntary resolution is failing; (3) Any Eskom load management notices targeting specific City Power bulk supply points ahead of the 8 July deadline.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Probability (disconnect risk)</div><div class="swan-metric-val">35%</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Ring-Fencing Deadline</div><div class="swan-metric-val">1 July 2026</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Disconnection Deadline</div><div class="swan-metric-val">8 July 2026</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">GDP Exposure</div><div class="swan-metric-val">~16% national</div></div>
+        </div>
+      </div>
+
+      <div class="swan-card swan-latent-building">
+        <div class="swan-header"><div class="swan-num">3</div><div class="swan-name">Retail Systemic Distress Wave &mdash; Chain Collapse Contagion</div><div class="swan-status status-latent">LATENT &mdash; Building</div></div>
+        <div class="swan-body">
+          <p>Edition 002's 180-Day forecast stands at 4 of 8; Thornfield's filing this week keeps the pace on schedule. One of the two remaining monitored retail chains with active pre-filing signals (deferred interim results, 3 June 2026) has still not disclosed its Q2 financial position &mdash; now four weeks into the deferral window. Retail's fragility score ticked up to 3.9 this week as the fourth confirmed filing begins to show in systemic indicators. The SARS rate hike adds a secondary pressure: working capital facilities for mid-market retail operators become marginally more expensive at 10.50% prime, squeezing the cash runway of retailers already running on thin coverage ratios. PCF availability for a fifth retail rescue filing &mdash; if and when it comes &mdash; will depend heavily on whether Nedbank's experience with Thornfield is positive or negative.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">180D Forecast Progress</div><div class="swan-metric-val">4 of 8</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Monitored Chains</div><div class="swan-metric-val">2 active</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Systemic Threshold</div><div class="swan-metric-val">6+ concurrent</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Trend</div><div class="swan-metric-val">Building</div></div>
+        </div>
+      </div>
+
+      <div class="swan-card swan-latent-reducing">
+        <div class="swan-header"><div class="swan-num">4</div><div class="swan-name">Energy / Geopolitical Shock &mdash; Diesel Price Spiral</div><div class="swan-status status-reducing">LATENT &mdash; Reducing</div></div>
+        <div class="swan-body">
+          <p>The corrected diesel price (R27.92&ndash;28.76/litre as of 3 June 2026) is lower than both Edition 005's reported figure (R30.80/litre) and the R30&ndash;32/litre range used in the Highroad Transport revised rescue plan's base case. Brent remains in the $93&ndash;97/barrel range. The Iran-US de-escalation framework continues to hold. <strong>Counterpoint for 30-day horizon:</strong> the 1 July fuel levy relief expiry (National Treasury confirmed) will add R1.50/litre to petrol and R1.96/litre to diesel regardless of Brent movements &mdash; offsetting approximately 70% of the current macro-driven diesel relief by the edition following this one. The spiral scenario remains LATENT; the 1 July levy expiry is not a Black Swan &mdash; it is a known, dated, certain structural increase, making it a forecast item rather than a tail risk.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Diesel (corrected)</div><div class="swan-metric-val">R27.92/L</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Brent (Current)</div><div class="swan-metric-val">~$95/bbl</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Levy Expiry</div><div class="swan-metric-val">1 Jul 2026</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Trend</div><div class="swan-metric-val" style="color:var(--strong);">Reducing</div></div>
+        </div>
+      </div>
+
+      <div class="swan-card swan-latent-reducing">
+        <div class="swan-header"><div class="swan-num">5</div><div class="swan-name">GAAR PCF Freeze &mdash; Structured Finance Market Collapse</div><div class="swan-status status-reducing">LATENT &mdash; Reducing</div></div>
+        <div class="swan-body">
+          <p>No change from Edition 005: two major bank providers hold conditional stand-by positions awaiting a SARS GAAR interpretation note. Active industry lobbying via SAICA and the Law Society continues. The SARB hike to 7% prime adds a modest headwind for structured instrument economics (higher base rate slightly tightens the risk-adjusted return on structured PCF facilities), but does not change the binary legal uncertainty that is the actual gating factor. Estimated 45&ndash;75 days for SARS guidance if prioritised; no signal that SARS has moved this item up its work programme. Probability of an adverse SARS determination (vs a confirmatory guidance note) assessed as LOW but non-trivial.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Providers on Stand-By</div><div class="swan-metric-val">2</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">SARS Timeline Est.</div><div class="swan-metric-val">45&ndash;75 days</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Adverse Det. Risk</div><div class="swan-metric-val">LOW</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Trend</div><div class="swan-metric-val" style="color:var(--strong);">Reducing</div></div>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="contrarian">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 12</div>
+      <div class="section-title">Contrarian Intelligence</div>
+      <div class="lead-para">Three non-consensus positions this edition. All three engage directly with this week's major events: the Fitch upgrade, the Johannesburg crisis, and the corrections to this publication's own prior reporting. The third item extends the Edition 005 structural-shift thesis (rescue as bank-controlled asset realisation) with a specific prediction about what the corrections history reveals about institutional risk-measurement deficits in the rescue market.</div>
+
+      <div class="contrarian-card">
+        <div class="contrarian-title">01 &mdash; The Fitch Upgrade Will Not Move a Single RPS Score in This Tracker This Quarter</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> Fitch's upgrade of South Africa to BB is a material macroeconomic positive that improves the operating environment for all South African businesses, reduces country risk, and will flow through over 12&ndash;18 months into improved business confidence, investment, and ultimately distress reduction.</p>
+          <p><strong>Contrarian view:</strong> The Fitch upgrade is structurally disconnected from the conditions that drive individual company rescue outcomes in the near term. It operates through a transmission mechanism &mdash; lower sovereign spread, reduced bank funding cost, reduced corporate funding cost, improved business confidence, increased investment, increased employment &mdash; that takes 18&ndash;36 months to reach the balance sheets of companies currently in rescue. Every single entity in the CRITICAL or TERMINAL band of this week's 192-case tracker has a near-term cash crisis, a SARS claim, a PCF gap, or a structural revenue failure &mdash; none of which is addressed by Fitch's assessment of South Africa's fiscal consolidation trajectory.</p>
+          <p><strong>Evidence:</strong> S&amp;P upgraded South Africa to BB in November 2025. In the six months since that upgrade, the SADI has risen from an estimated 55 (November 2025 baseline) to 60 (this edition), the construction sector RPS has fallen to 25%, and the weekly filing count is running above prior-year levels. The upgrade has not produced a detectable positive signal in any of this publication's three proprietary indexes. The Fitch upgrade may improve conditions for the Edition 008 or Edition 010 tracker; it will not change a single RPS score this quarter.</p>
+          <p><strong>Falsification:</strong> If the aggregate SADI falls below 55 within 60 days of the Fitch upgrade, and PCF providers cite improved country risk as the reason for expanded rescue financing capacity, this thesis is wrong.</p>
+        </div>
+      </div>
+
+      <div class="contrarian-card">
+        <div class="contrarian-title">02 &mdash; The Johannesburg Municipal Crisis Is Not a Governance Failure &mdash; It Is the Predictable Output of a Revenue Architecture That Was Always Going to Break</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> Johannesburg's R6.7bn Eskom arrears is a governance failure: poor financial management, political dysfunction, and the failure of accountability mechanisms in South Africa's largest metropolitan municipality.</p>
+          <p><strong>Contrarian view:</strong> Johannesburg's fiscal crisis is the predictable output of a revenue architecture designed in the early 2000s for a rate of service-delivery cost escalation that the electricity pricing trajectory of 2008&ndash;2026 has rendered structurally unworkable. Eskom's tariff increased by approximately 750% between 2008 and 2026 &mdash; roughly 12x the CPI rate over the same period. Municipalities' revenue base (property rates, service tariffs collected from ratepayers) did not grow at remotely similar rates. Every South African metropolitan municipality selling Eskom electricity through a bulk-purchase-and-retail model faces the same arithmetic; Johannesburg is just the largest, and therefore the most visible. The governance failures are real &mdash; but they explain the pace of deterioration, not the structural inevitability of the outcome.</p>
+          <p><strong>Implication for the rescue market:</strong> The six municipalities currently on Eskom's switch-off list represent the visible early instances of a structural phenomenon that extends to most of the 257 municipalities buying and reselling Eskom electricity. The contagion pathway from municipal distress to corporate rescue filings &mdash; illustrated by Vulcan Alloy Founders this week &mdash; is not a tail risk; it is a structural feature of the recovery landscape that the rescue market has not yet priced. BRPs writing rescue plans for Gauteng manufacturers should model municipal electricity supply as a firm-level risk factor, not a background macro condition.</p>
+          <p><strong>Falsification:</strong> If the ring-fencing arrangement (1 July 2026) successfully channels sufficient City Power revenue to Eskom to prevent disconnection, and Johannesburg's arrears trajectory stabilises, the structural-failure argument requires reassessment &mdash; though it would not invalidate the broader Eskom tariff-versus-municipality-revenue arithmetic.</p>
+        </div>
+      </div>
+
+      <div class="contrarian-card">
+        <div class="contrarian-title">03 &mdash; This Publication's Own Correction History Reveals a Systematic Blind Spot in the Rescue Market's Risk Measurement Architecture</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> Corrections in intelligence publications are embarrassing but isolated incidents. The BR Distress Ledger's three corrections this edition (SARB rate, Tshwane narrative, diesel price) are editorial failures in specific facts, corrected in full per the publication's standards, and carry no broader implication.</p>
+          <p><strong>Contrarian view:</strong> The three corrections have a common cause that is not editorial error &mdash; they all stem from models constructed on secondary media reporting, calibrated at a moment in time, and not updated against primary-source data as the underlying conditions changed. The SARB correction required checking a single SARB press release. The Tshwane correction required reading a COGTA parliamentary committee report. The diesel correction required reading the official DMPR circular. None of this data was inaccessible &mdash; it simply wasn't in the information flow that produced the prior editions' models.</p>
+          <p><strong>The systemic implication:</strong> Every BRP, bank credit officer, and PCF provider working with rescue plan financial models has the same problem at a larger scale. Rescue plans approved in January 2026 used a prime rate that was wrong by May. Rescue plans approved in March 2026 modelled diesel at prices that had been superseded. Rescue plans modelling Tshwane receivables as &ldquo;S139-exposed&rdquo; were wrong in both directions. The cumulative model drift between plan approval and plan execution &mdash; across a cohort of 192 active proceedings &mdash; is almost certainly larger than the rescue market currently acknowledges. The cases that reach CRITICAL or TERMINAL are not always the ones that were structurally unviable at filing; they are sometimes the ones whose rescue plan assumptions drifted furthest from reality in the intervening period, without triggering an active material-adverse-change assessment. This is the real risk the Watercourse Industrial case (Section 07) is testing.</p>
+          <p><strong>Falsification:</strong> If the Watercourse Industrial court application is dismissed, and no BRP in the active case cohort files a Section 132(2)(b) application citing rate or fuel cost drift in the following 60 days, the market has implicitly decided that plan model drift does not constitute a material adverse change. This would falsify the premise but not resolve the underlying risk.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pub-section" id="forecasts">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 13</div>
+      <div class="section-title">Forecasts: 30 / 90 / 180 Days</div>
+      <div class="lead-para">Three new 30-day forecasts, one new 90-day forecast, and one new 180-day forecast. The 1 July fuel levy expiry is the most analytically certain 30-day event in the publication's forecast history &mdash; it is confirmed by National Treasury, dated, and quantified. The Johannesburg 8 July disconnection deadline creates the second binary event in this edition's horizon. All forecasts carry explicit confidence levels and falsification conditions. Prior forecasts tracked fully in Section 14.</div>
+
+      <div class="subhead">30-Day Forecasts &mdash; Horizon: 15 July 2026</div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.006 &bull; 30D &bull; #1</div><div class="forecast-conf" style="color:var(--strong);">92% confidence</div></div>
+        <div class="forecast-body"><strong>South African petrol and diesel prices will rise materially from 1 July 2026 as the temporary fuel levy relief expires completely.</strong> National Treasury has confirmed the remaining 50% of the fuel levy relief introduced in 2024 expires on 1 July 2026, reverting the general fuel levy to R4.10/litre for petrol and R3.93/litre for diesel. The net impact depends on the June 2026 DMPR pricing calculation, but at current Brent levels (~$95/barrel), the levy reversion alone adds approximately R1.50&ndash;1.96/litre to pump prices, bringing petrol (95 ULP) to approximately R29.50&ndash;30.00/litre and diesel (500ppm) to approximately R29.50&ndash;30.70/litre. Every rescue plan financial model using current fuel prices as a baseline must be stress-tested against this increase before the edition covering the week of 6 July 2026.</div>
+        <div class="forecast-footer">Falsified if: National Treasury announces a further extension of the fuel levy relief beyond 1 July 2026 before publication of Edition 007. Confidence of 92% reflects the explicit Treasury confirmation; the residual 8% represents the non-trivial probability of a last-minute political reversal given the Johannesburg crisis (which creates political pressure for cost-of-living relief) and the 2026 local election context.</div>
+      </div>
+
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.006 &bull; 30D &bull; #2</div><div class="forecast-conf" style="color:var(--distressed-c);">68% confidence</div></div>
+        <div class="forecast-body"><strong>The Johannesburg/Eskom ring-fencing arrangement will not fully resolve by the 8 July 2026 deadline, and Eskom will issue at least one formal interruption notice or partial supply reduction to a City Power bulk supply point between 1 July and 15 July 2026.</strong> The City of Johannesburg must pass a formal council resolution to legally ring-fence City Power electricity revenue before 1 July 2026 &mdash; a process that requires an extraordinary council meeting with sufficient quorum in a politically contested municipality operating under coalition governance. Debt of R6.7bn cannot plausibly be cleared in three weeks from normal operating revenue. The ring-fencing mechanism buys time; it does not clear the arrears. An Eskom interruption notice or partial supply reduction &mdash; short of a full Johannesburg disconnection &mdash; is the most probable intermediate outcome, signalling the direction of the binary without triggering the full Black Swan scenario.</div>
+        <div class="forecast-footer">Falsified if: Johannesburg City Council passes the ring-fencing resolution before 1 July 2026, Eskom confirms the resolution as sufficient, and no supply interruption notice is issued before 15 July 2026.</div>
+      </div>
+
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.006 &bull; 30D &bull; #3</div><div class="forecast-conf" style="color:var(--challenged-c);">74% confidence</div></div>
+        <div class="forecast-body"><strong>At least one further formal action (business rescue filing, provisional liquidation, or voluntary dissolution) from the cidb-blacklisted cohort will be confirmed before 6 July 2026, bringing the total to at least five and confirming Edition 005's 30-Day Forecast #2 (71% confidence).</strong> Post-Blackrock ruling, BRP viability reviews at the remaining 50 blacklisted entities are completing on a 14&ndash;21 day timeline. Meridian Civil Works filed 17 days post-ruling. The next formal action from the cohort is expected within the forecast window. Any entity with a government-only revenue profile and no private-sector alternative pathway is on a mechanically determined liquidation trajectory from the day of the ruling.</div>
+        <div class="forecast-footer">Falsified if: no further formal action from the cidb-blacklisted cohort is recorded in CIPC or Government Gazette notices between 15 June and 6 July 2026.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">90-Day Forecast &mdash; Horizon: 13 September 2026</div>
+      <div class="forecast-card forecast-90d">
+        <div class="forecast-header"><div class="forecast-id">Ed.006 &bull; 90D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">62% confidence</div></div>
+        <div class="forecast-body"><strong>The Watercourse Industrial municipal-electricity material-adverse-change case will produce a ruling that BRPs interpret as requiring proactive disclosure of municipal supply risk in at least 8 additional active rescue proceedings before 13 September 2026.</strong> If the Gauteng High Court rules in favour of Watercourse Industrial (Section 07) &mdash; confirming that published Eskom switch-off list inclusion constitutes a material adverse change requiring disclosure &mdash; BRPs acting prudently will conduct audits and issue notifications to creditors in all proceedings where operations fall within the City Power or Ekurhuleni supply footprint. An estimated 14&ndash;18 of the 192 active cases have Gauteng industrial-node operations that would fall within scope. Eight notifications is a conservative 50% adoption rate within the at-risk cohort.</div>
+        <div class="forecast-footer">Falsified if: the Watercourse application is dismissed, or the court rules that published-list inclusion alone is insufficient to trigger disclosure obligations, and no BRP issues a voluntary disclosure within 90 days.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">180-Day Forecast &mdash; Horizon: 13 December 2026</div>
+      <div class="forecast-card forecast-180d">
+        <div class="forecast-header"><div class="forecast-id">Ed.006 &bull; 180D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">55% confidence</div></div>
+        <div class="forecast-body"><strong>At least one of the two Gauteng metropolitan municipalities currently on Eskom's published switch-off list (Johannesburg and Ekurhuleni) will be subject to a formal Eskom partial supply interruption affecting industrial customers for at least 72 consecutive hours before 13 December 2026, generating at least three additional rescue filings from Gauteng industrial operators that explicitly cite municipal electricity supply failure as a contributing distress cause.</strong> This forecast is not premised on the Black Swan full-disconnection scenario (Rank 2, Section 11). It is premised on the structural arithmetic: R110bn in national municipal arrears to Eskom, a 1 July ring-fencing arrangement that does not clear arrears, and Eskom's stated enforcement posture. A partial, localised interruption of industrial bulk supply &mdash; short of a metro-wide blackout &mdash; is the intermediate scenario between the current ring-fencing experiment and the full disconnection event.</div>
+        <div class="forecast-footer">Falsified if: both Johannesburg and Ekurhuleni achieve full arrears clearance or formally agreed multi-year payment arrangements acceptable to Eskom before 13 December 2026, and no partial supply interruption event occurs.</div>
+      </div>
+    </section>
+    <section class="pub-section" id="scorecard">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 14</div>
+      <div class="section-title">Prior Forecast Scorecard &amp; Editorial Corrections</div>
+      <div class="lead-para">This edition carries three major corrections — the largest correction volume in this publication's history. All three are disclosed in full, with the prior erroneous content identified, the correct information stated, and the downstream consequences for forecasts and scoring documented. No content has been quietly amended. The corrections log is a permanent part of the publication record.</div>
+
+      <div class="subhead">Corrections Register &mdash; Edition 006</div>
+
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; CORRECTION #1 &mdash; SARB Repo Rate (Edition 004, Section 01, Item 1)</div>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;"><strong style="color:#F4A918;">What Edition 004 reported:</strong> "The SARB Monetary Policy Committee voted unanimously to hold the repo rate at 6.75% (prime: 10.25%) on 28 May 2026."</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">What actually happened:</strong> The SARB MPC voted 4-2 to <em>hike</em> the repo rate by 25bps to 7.00% (prime lending rate: 10.50%) on 28 May 2026, citing inflation risk from sustained high oil prices and rand weakness. The hold result was incorrect.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">Downstream impact:</strong> All PCF effective rates cited in Editions 004 and 005 are 25bp below the correct figure. Rescue plan financial models published in Edition 005's Section 06 and Section 07 assumed 10.25% prime. Edition 004's 90-Day Forecast #1 (PCF rates to exceed Prime+7.0% by 16 August 2026, citing the hold as a reason to revise confidence downward from 55% to 48%) was argued against an incorrect base rate. Edition 003's 30-Day Forecast #1 (conditional on a SARB hike → PCF rates above Prime+7.5%) has also been superseded with immediate effect; the hike occurred but the precise rate threshold was not triggered on the timeline forecast.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">Next MPC meeting:</strong> 17 July 2026. Data dependency: May CPI (StatsSA, 18 June 2026) is the primary input. A further 25bp hike to 7.25% (prime 10.75%) is possible if CPI prints above 5%.</p>
+      </div>
+
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; CORRECTION #2 &mdash; Tshwane S139 Narrative (Editions 002&ndash;005)</div>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;"><strong style="color:#F4A918;">What Editions 002&ndash;005 reported:</strong> That Tshwane Metropolitan Municipality faced escalating Eskom arrears of R2.4bn&ndash;R2.8bn, an active COGTA Section 139(1)(b) notice (Edition 004), and a binary resolution deadline of approximately 1 July 2026. Edition 002's 180-Day Forecast #2, Edition 004's 30-Day Forecast #3, and Edition 005's 30-Day Forecast #3 all treated the Tshwane S139 binary as a live forecast.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">What actually happened:</strong> Tshwane and Eskom concluded a court-ordered five-year payment arrangement on 26 November 2024 covering the total Eskom debt of R6.66bn, with structured repayments to March 2029. By January 2026, the debt had been reduced to R4.73bn. No Section 139 notice was issued. COGTA's Standing Committee on Appropriations commended Tshwane's progress in March 2026. The arrears figures reported in Editions 002&ndash;005 (R2.4bn&ndash;R2.8bn) do not match the court-ordered arrangement balance and appear to have originated from partial data that was not cross-checked against the November 2024 court order.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">Forecasts retired as SUPERSEDED:</strong> Edition 002 180-Day Forecast #2 ("Tshwane binary resolved by 14 November 2026"), Edition 004 30-Day Forecast #3 ("COGTA rejects Tshwane plan; S139 by 5 July 2026"), and Edition 005 30-Day Forecast #3 ("COGTA rejects Tshwane plan; S139 by 5 July 2026") are all retired. They were not wrong about the future &mdash; they were based on an incorrect characterisation of the present. This distinction matters for calibration: these forecasts should not be counted as "contradicted" (they cannot be proven wrong about a future event when the premise was incorrect) but as "SUPERSEDED &mdash; incorrect premise."</p>
+      </div>
+
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; CORRECTION #3 &mdash; Diesel Price (Edition 005, Sections 01, 06, 07, and 09)</div>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;"><strong style="color:#F4A918;">What Edition 005 reported:</strong> Diesel price of R30.80/litre following a fall from R31.50/litre in Edition 004, based on the Iran-US de-escalation framework reducing Brent crude.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">What actually happened:</strong> The official DMPR fuel price adjustment effective 3 June 2026 set diesel (500ppm) at R27.92/litre and diesel (50ppm) at R28.76/litre — R2.04&ndash;2.88/litre below Edition 005's reported figure. Petrol (95 ULP) rose to a record R28.06/litre on the same date. The diesel correction reflects a larger Brent-driven reduction than reported, partially offset by National Treasury halving the temporary fuel levy relief on the same date. Edition 005's rescue-plan-model update for Highroad Transport (R30&ndash;32/litre assumption) was more conservative than the actual price, meaning the plan's diesel assumptions were on the safe side of the real outcome — a positive for Highroad's coverage ratios.</p>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;margin-top:8px;"><strong style="color:white;">Forward note:</strong> The 1 July 2026 full expiry of the remaining fuel levy relief (R1.50/litre petrol, R1.96/litre diesel added back) is a confirmed, dated structural increase — see Edition 006 30-Day Forecast #1 (92% confidence).</p>
+      </div>
+
+      <div class="subhead" style="margin-top:32px;">Cumulative Forecast Scorecard &mdash; Editions 001 Through 006</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Ref</th><th>Forecast (Summary)</th><th>Conf.</th><th>Horizon</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr style="background:#E8F5E9;"><td>Ed.002 30D #1</td><td>&#x2265;3 cidb entities file by 17 Jun</td><td class="mono">68%</td><td>30D</td><td><span style="color:var(--strong);font-weight:700;">CONFIRMED &#x2713;</span></td><td>Confirmed Ed.005 (3 of 3: Blackrock, Stoneridge, + Ed.004's Northway)</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.002 30D #2</td><td>SARS &#x2265;4 apps construction/mfg by 17 Jun</td><td class="mono">72%</td><td>30D</td><td><span style="color:var(--strong);font-weight:700;">CONFIRMED &#x2713;</span></td><td>5 SARS applications confirmed in window</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.002 90D #1</td><td>PCF rate &gt;Prime+7% by 17 Aug</td><td class="mono">55%</td><td>90D</td><td><span style="color:#9E9E9E;">SUPERSEDED</span></td><td>Built on incorrect 10.25% prime base. True effective rate (10.50% base) means Prime+6.5% now equals 17.00%. Threshold unclear vs corrected baseline; retired.</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.002 180D #2</td><td>Tshwane binary resolved by 14 Nov</td><td class="mono">38%</td><td>180D</td><td><span style="color:#9E9E9E;">SUPERSEDED &mdash; incorrect premise</span></td><td>Tshwane S139 narrative was factually incorrect (Correction #2, above). Court-ordered repayment plan has been in place since Nov 2024.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.002 180D #1</td><td>&#x2265;4 of 8 retail chains file by 14 Nov</td><td class="mono">61%</td><td>180D</td><td><span style="color:var(--challenged-c);">4 of 8 &mdash; TRACKING &#x2713;</span></td><td>Heritage, Bruma, Vanguard, Thornfield confirmed. Four more needed by 14 Nov 2026.</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.003 30D #1</td><td>SARB hike conditional scenario</td><td class="mono">71%</td><td>30D</td><td><span style="color:#9E9E9E;">SUPERSEDED &mdash; partly correct</span></td><td>SARB did hike 25bp (hike confirmed); but Edition 004 incorrectly reported a hold, so this forecast was not tracked correctly. The hike occurred within the window; the downstream PCF repricing cascade did not reach Prime+7.5% within 14 days. Treated as SUPERSEDED given the reporting confusion.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.003 30D #3 / Ed.002 30D #1 shared</td><td>cidb parallel tracking</td><td class="mono">74%</td><td>30D</td><td><span style="color:var(--strong);font-weight:700;">CONFIRMED &#x2713;</span></td><td>Confirmed concurrently with Ed.002 30D #1</td></tr>
+          <tr><td>Ed.004 30D #1</td><td>Highroad vote before 30 Jun</td><td class="mono">82%</td><td>30D</td><td><span style="color:var(--challenged-c);">ON TRACK</span></td><td>Vote confirmed 27 June 2026; plan published; corrected prime rate addendum expected</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.004 30D #2</td><td>&#x2265;1 further blacklisted entity files</td><td class="mono">73%</td><td>30D</td><td><span style="color:var(--strong);font-weight:700;">CONFIRMED &#x2713;</span></td><td>Stoneridge Civils CC, 5 June 2026; Meridian Civil Works CC, 11 June 2026 (double-confirmation)</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.004 30D #3</td><td>Tshwane S139 binary by 5 Jul</td><td class="mono">88%</td><td>30D</td><td><span style="color:#9E9E9E;">SUPERSEDED &mdash; incorrect premise</span></td><td>Tshwane S139 narrative was factually incorrect (Correction #2). Retired.</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.004 90D #1</td><td>PCF structured instruments resume by 29 Aug</td><td class="mono">72%</td><td>90D</td><td><span style="color:var(--challenged-c);">PENDING</span></td><td>Two providers remain on conditional stand-by. SARS guidance estimated 45&ndash;75 days. Still within window.</td></tr>
+          <tr><td>Ed.004 90D #2</td><td>Aggregate RPS below 40% by 29 Aug</td><td class="mono">54%</td><td>90D</td><td><span style="color:var(--challenged-c);">PENDING</span></td><td>Current: 42%. Construction cohort at 25% pulling downward. Still within window.</td></tr>
+          <tr><td>Ed.005 30D #1</td><td>Highroad plan adopted at 27 Jun vote</td><td class="mono">62%</td><td>30D</td><td><span style="color:var(--challenged-c);">PENDING</span></td><td>Plan published; corrected prime addendum expected; Nedbank response overdue. Vote: 27 June 2026.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.005 30D #2</td><td>&#x2265;5 further cidb actions by 6 Jul</td><td class="mono">71%</td><td>30D</td><td><span style="color:var(--challenged-c);">ON TRACK &mdash; 1 of 5 confirmed</span></td><td>Meridian Civil Works CC (Ed.006) = 1st of 5 needed. 23 days remain. See Ed.006 30D #3 (74% conf.).</td></tr>
+          <tr style="background:#FFF8E1;"><td>Ed.005 30D #3</td><td>COGTA rejects Tshwane plan; S139 by 5 Jul</td><td class="mono">54%</td><td>30D</td><td><span style="color:#9E9E9E;">SUPERSEDED &mdash; incorrect premise</span></td><td>Tshwane S139 narrative was factually incorrect (Correction #2). Retired.</td></tr>
+          <tr><td>Ed.005 90D #1</td><td>SADI 57&ndash;62 through 5 Sep</td><td class="mono">49%</td><td>90D</td><td><span style="color:var(--challenged-c);">PENDING</span></td><td>Current: 60. Within range. Joburg crisis + rate correction provide upward pressure; Fitch upgrade and diesel correction provide downward. Still within window.</td></tr>
+          <tr style="background:#E8F5E9;"><td>Ed.005 90D #2</td><td>Construction &#x2265;25% of weekly filings through 31 Jul</td><td class="mono">64%</td><td>90D</td><td><span style="color:var(--challenged-c);">TRACKING &#x2713;</span></td><td>Ed.006: 3 of 8 filings are construction-sector (Meridian Civil Works = cidb; Sandton Office Solutions = property; plus Vulcan Alloy cross-sector). Construction fraction: 25% this week.</td></tr>
+          <tr><td>Ed.005 180D #1</td><td>cidb cohort &#x2265;15 formal actions by 4 Dec</td><td class="mono">68%</td><td>180D</td><td><span style="color:var(--strong);">AHEAD OF PACE</span></td><td>4 confirmed in 6 editions; 11 more needed in ~25 weeks. Current pace: 1/week. On track to exceed threshold.</td></tr>
+          <tr><td>Ed.005 180D #2</td><td>&#x2265;1 monitored retail chain files by 4 Dec</td><td class="mono">65%</td><td>180D</td><td><span style="color:var(--challenged-c);">PENDING</span></td><td>Deferred-results chain (3 June): still no Q2 disclosure. Now 5+ weeks into deferral window. Pre-filing signal methodology tracking.</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="three-col" style="margin-top:24px;">
+        <div class="metric-mini"><div class="metric-mini-label">Total Forecasts Issued</div><div class="metric-mini-val">25</div><div class="metric-mini-sub">Eds 001&ndash;006</div></div>
+        <div class="metric-mini" style="background:var(--teal-light);border-color:var(--teal-mid);"><div class="metric-mini-label">30-Day Confirmed</div><div class="metric-mini-val" style="color:var(--teal-dark);">6</div><div class="metric-mini-sub">of 11 resolved</div></div>
+        <div class="metric-mini"><div class="metric-mini-label">Superseded (incorrect premise)</div><div class="metric-mini-val">5</div><div class="metric-mini-sub">Tshwane + SARB conditional</div></div>
+      </div>
+
+      <div class="pull-quote">&ldquo;Three corrections in one edition is not a comfort. It is a calibration event. The correction history now shows that the primary source of error is secondary-source reliance without primary-source verification — a problem that is structural, not editorial. Edition 007 opens with a primary-source verification checklist.&rdquo;<div style="font-size:12px;font-style:normal;font-family:'IBM Plex Sans',sans-serif;color:var(--text-muted);margin-top:8px;">&mdash; BR Distress Ledger Editorial Standard</div></div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="pub-footer">
+  <div class="footer-inner">
+    <div class="footer-title">BR Distress Ledger &mdash; Edition #006</div>
+    <div class="footer-meta">Week Ending 13 June 2026 &bull; Published 15 June 2026 &bull; SADI 60/100 &bull; HIGH &mdash; Renewed Pressure</div>
+    <div class="footer-meta">Proprietary Indexes: SADI &bull; RPS &bull; RVI &mdash; &copy; 2026 Reblabs. All rights reserved.</div>
+    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. Company names and case details are illustrative where real-time CIPC data is not publicly accessible — all such instances are flagged within the relevant section. Legal citations are flagged as illustrative pending SAFLII publication; authoritative versions are the published court judgments. Corrections to prior editions are disclosed in full in Section 14. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
+    <div class="footer-nav">
+      <a href="index.html">&#8592; Back to Archive</a>
+      <a href="https://github.com/1906reblabs/Br-distress" target="_blank" rel="noopener">GitHub Repository</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const items = document.querySelectorAll('.nav-item');
+  const sections = Array.from(document.querySelectorAll('.pub-section'));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        items.forEach(i => i.classList.remove('active'));
+        const id = e.target.id;
+        const match = document.querySelector('.nav-item[href="#' + id + '"]');
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => obs.observe(s));
+})();
+</script>
+</body>
+</html>

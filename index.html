@@ -4,29 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BR Distress Ledger &mdash; South African Corporate Distress Intelligence</title>
-<meta name="description" content="South Africa's premier weekly business rescue and corporate distress intelligence publication. SADI 59/100. Blackrock Civil moratorium ruling dismissed. Editions 001-005 published.">
+<meta name="description" content="South Africa's premier weekly business rescue and corporate distress intelligence publication. SADI 60/100. SARB hikes to 7%; Fitch upgrades SA to BB; Johannesburg Eskom crisis declared a national economic emergency. Three major corrections. Editions 001-006 published.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--navy:#0D2340;--gold:#C9A030;--gold-light:#FDF3DC;--off-white:#F5FAF8;--grey-50:#F0F4F3;--border:#C8DDD9;--border-light:#E5EFED;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--strong:#0F5C2E;--strong-bg:#D4EDDA;}
+:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--navy:#0D2340;--gold:#C9A030;--gold-light:#FDF3DC;--off-white:#F5FAF8;--grey-50:#F0F4F3;--border:#C8DDD9;--border-light:#E5EFED;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--strong:#0F5C2E;--strong-bg:#D4EDDA;--challenged-c:#E65100;--challenged-bg:#FFF3E0;--distressed-c:#BF360C;--critical-c:#880E0E;--critical-bg:#FDECEA;}
 *{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
 body{font-family:"IBM Plex Sans",sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
 a{text-decoration:none;color:inherit;}
 .top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
-.confirmed-banner{background:#0F5C2E;border-bottom:3px solid var(--gold);padding:10px 40px;color:#D4EDDA;font-size:12px;font-weight:500;letter-spacing:0.03em;}
-.confirmed-banner strong{color:white;}
-
-/* TICKER */
+.correction-banner{background:#1A1A1A;border-bottom:3px solid #F4A918;padding:10px 40px;color:#F4A918;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.correction-banner strong{color:white;}
 .ticker-wrap{background:var(--navy);overflow:hidden;padding:7px 0;border-bottom:2px solid var(--teal-dark);}
-.ticker-inner{display:flex;animation:ticker-scroll 40s linear infinite;width:max-content;white-space:nowrap;}
+.ticker-inner{display:flex;animation:ticker-scroll 44s linear infinite;width:max-content;white-space:nowrap;}
 .ticker-inner:hover{animation-play-state:paused;}
 .ticker-item{padding:0 32px;color:#A8C4CF;font-size:11px;letter-spacing:0.07em;}
 .ticker-item strong{color:var(--gold);}
 .ticker-sep{color:#3A5A70;}
 @keyframes ticker-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-/* HEADER */
-.pub-header{background:linear-gradient(135deg, var(--navy) 0%, #0F3050 70%, var(--teal-dark) 100%);padding:40px;border-bottom:4px solid var(--gold);}
+.pub-header{background:linear-gradient(135deg,var(--navy) 0%,#0F3050 70%,var(--teal-dark) 100%);padding:40px;border-bottom:4px solid var(--gold);}
 .header-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;}
 .pub-eyebrow{font-size:10px;color:#7AB0C4;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;}
 .pub-title{font-family:"Playfair Display",serif;font-size:42px;color:white;line-height:1.1;margin-bottom:12px;}
@@ -37,23 +33,18 @@ a{text-decoration:none;color:inherit;}
 .sadi-score{font-family:"IBM Plex Mono",monospace;font-size:52px;font-weight:500;color:white;line-height:1;}
 .sadi-denom{font-size:22px;color:#7AB0C4;}
 .sadi-badge{display:inline-block;margin-top:6px;padding:4px 12px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;border-radius:3px;letter-spacing:0.08em;}
-
-/* NAV */
 .pub-nav{background:white;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
 .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:50px;}
 .nav-brand{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;}
 .nav-cta{background:var(--teal);color:white;padding:8px 18px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:0.06em;transition:background 0.2s;}
 .nav-cta:hover{background:var(--teal-dark);}
-
-/* MAIN */
 .main-wrap{max-width:1100px;margin:0 auto;padding:40px;}
-
-/* LIVE EDITION */
-.live-section{margin-bottom:40px;}
 .section-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);font-weight:600;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border-light);}
+.live-section{margin-bottom:40px;}
 .live-card{display:grid;grid-template-columns:1fr 280px;gap:0;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(13,35,64,0.08);}
 .live-card-body{padding:32px;}
 .live-badge{display:inline-block;background:var(--teal);color:white;font-size:10px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:0.1em;margin-bottom:14px;}
+.correction-badge{display:inline-block;background:#1A1A1A;color:#F4A918;font-size:10px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:0.1em;margin-left:6px;}
 .live-edition-num{font-family:"Playfair Display",serif;font-size:26px;color:var(--navy);margin-bottom:4px;}
 .live-week{font-size:12px;color:var(--text-muted);margin-bottom:16px;}
 .live-headline{font-family:"Playfair Display",serif;font-size:17px;color:var(--text-primary);line-height:1.4;margin-bottom:14px;}
@@ -69,39 +60,33 @@ a{text-decoration:none;color:inherit;}
 .live-stat-label{font-size:10px;color:#7AB0C4;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:3px;}
 .live-stat-val{font-family:"IBM Plex Mono",monospace;font-size:18px;color:white;font-weight:500;}
 .live-stat-sub{font-size:10px;color:#5A90A4;margin-top:2px;}
-
-/* SADI MINI-CHART */
 .sadi-history{background:white;border:1px solid var(--border);border-radius:10px;padding:24px;margin-bottom:32px;}
 .sadi-chart-row{display:flex;align-items:flex-end;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-light);}
 .sadi-bar-wrap{flex:1;text-align:center;}
 .sadi-bar-inner{position:relative;height:80px;display:flex;align-items:flex-end;justify-content:center;}
 .sadi-bar{width:36px;border-radius:3px 3px 0 0;background:var(--teal);transition:height 0.3s;}
 .sadi-bar.current{background:var(--gold);}
+.sadi-bar.up{background:#E65100;}
 .sadi-bar-ed{font-size:10px;color:var(--text-muted);margin-top:5px;font-family:"IBM Plex Mono",monospace;}
 .sadi-bar-num{font-size:10px;font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text-secondary);margin-bottom:2px;}
-
-/* ARCHIVE GRID */
 .archive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:32px;}
 .archive-card{background:white;border:1px solid var(--border);border-radius:8px;padding:20px;transition:box-shadow 0.2s;position:relative;overflow:hidden;}
 .archive-card:hover{box-shadow:0 6px 24px rgba(13,35,64,0.1);transform:translateY(-1px);}
 .archive-card.live-edition-card{border:2px solid var(--teal);border-left:4px solid var(--gold);}
-.arch-edition-pill{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;}
+.arch-edition-pill{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;}
 .arch-live-tag{background:var(--teal);color:white;padding:2px 7px;border-radius:2px;font-size:9px;}
+.arch-correction-tag{background:#1A1A1A;color:#F4A918;padding:2px 7px;border-radius:2px;font-size:9px;}
 .arch-title{font-family:"Playfair Display",serif;font-size:14px;color:var(--navy);margin-bottom:6px;line-height:1.4;}
 .arch-week{font-size:11px;color:var(--text-muted);margin-bottom:10px;}
 .arch-sadi{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--text-secondary);margin-bottom:4px;}
 .arch-sadi-label{font-size:10px;color:var(--text-muted);margin-bottom:12px;}
 .arch-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--teal);letter-spacing:0.04em;text-transform:uppercase;}
 .arch-link:hover{color:var(--teal-dark);}
-
-/* KEY THEMES */
 .themes-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;}
 .theme-card{background:white;border:1px solid var(--border);border-radius:8px;padding:18px;}
 .theme-icon{font-size:20px;margin-bottom:8px;}
 .theme-title{font-size:12px;font-weight:600;color:var(--navy);margin-bottom:6px;}
 .theme-desc{font-size:12px;color:var(--text-secondary);line-height:1.6;}
-
-/* FOOTER */
 .pub-footer{background:var(--navy);padding:40px;border-top:3px solid var(--gold);}
 .footer-inner{max-width:1100px;margin:0 auto;}
 .footer-title{font-family:"Playfair Display",serif;font-size:20px;color:white;margin-bottom:6px;}
@@ -116,43 +101,32 @@ a{text-decoration:none;color:inherit;}
 </head>
 <body>
 
-<div class="confirmed-banner">
-  &#x2713; EDITIONS 002 &amp; 003 FORECASTS CONFIRMED &mdash; Blackrock Civil ruling dismissed 5 June 2026 &nbsp;|&nbsp;
-  <strong>Edition #005 published &mdash; SADI 59/100, HIGH Easing &mdash; cidb Cascade: TRIGGERED</strong>
+<div class="correction-banner">
+  &#9888; EDITION 006 &mdash; THREE MAJOR CORRECTIONS &nbsp;|&nbsp;
+  <strong>SARB hiked to 7%/prime 10.5% on 28 May (not a hold as reported in Ed.004). Tshwane S139 narrative (Eds 002&ndash;005) retired &mdash; court-ordered repayment plan in place since Nov 2024. Diesel corrected to R27.92&ndash;28.76/L. Full disclosure in Section 14.</strong>
 </div>
 <div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
 
 <div class="ticker-wrap">
   <div class="ticker-inner">
-    <span class="ticker-item"><strong>SADI</strong> 59/100 HIGH Easing</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Active Rescues</strong> 189</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>New Filings (Wk)</strong> 7</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>New Liquidations</strong> 5</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Avg RPS</strong> 43%</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>PCF Market</strong> TIGHT</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>RVI</strong> 0.67</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Blackrock Civil</strong> Moratorium ruling DISMISSED &mdash; 5 June 2026 LANDMARK</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Ed.002/003 30D Forecasts</strong> CONFIRMED &#x2713;</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>cidb Cascade</strong> TRIGGERED</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Tshwane S139</strong> Remediation plan submitted &mdash; COGTA assessing</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Highroad Transport</strong> Vote 27 June 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Diesel</strong> R30.80/L &#x2193; R0.70</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Eskom</strong> 386 consecutive days without load shedding</span><span class="ticker-sep"> | </span>
-    <!-- duplicate for seamless loop -->
-    <span class="ticker-item"><strong>SADI</strong> 59/100 HIGH Easing</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Active Rescues</strong> 189</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>New Filings (Wk)</strong> 7</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>New Liquidations</strong> 5</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Avg RPS</strong> 43%</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>PCF Market</strong> TIGHT</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>RVI</strong> 0.67</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Blackrock Civil</strong> Moratorium ruling DISMISSED &mdash; 5 June 2026 LANDMARK</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Ed.002/003 30D Forecasts</strong> CONFIRMED &#x2713;</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>cidb Cascade</strong> TRIGGERED</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Tshwane S139</strong> Remediation plan submitted &mdash; COGTA assessing</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Highroad Transport</strong> Vote 27 June 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Diesel</strong> R30.80/L &#x2193; R0.70</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Eskom</strong> 386 consecutive days without load shedding</span>
+    <span class="ticker-item"><strong>SADI</strong> 60/100 HIGH &uarr;1 Renewed Pressure</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SARB CORRECTION</strong> Repo 7.00% / Prime 10.50% since 28 May</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Fitch Upgrade</strong> SA to BB &mdash; first in 21 years (5 Jun 2026)</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Johannesburg</strong> R6.7bn Eskom crisis &mdash; "national economic emergency" &mdash; ring-fencing 1 Jul; deadline 8 Jul</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Diesel</strong> R27.92/L (corrected from Ed.005 R30.80) &bull; Levy expiry 1 Jul adds R1.50&ndash;1.96/L</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>cidb Cascade</strong> TRIGGERED &bull; 4 formal actions &bull; Meridian Civil Works CC filed 11 Jun</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Highroad Transport</strong> Vote 27 Jun 2026</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Vanguard Fashion Retail</strong> 26 of 48 leases renegotiated</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Eskom Grid</strong> 394 days without load shedding</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Active Rescues</strong> 192 &bull; Avg RPS 42%</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SADI</strong> 60/100 HIGH &uarr;1 Renewed Pressure</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SARB CORRECTION</strong> Repo 7.00% / Prime 10.50% since 28 May</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Fitch Upgrade</strong> SA to BB &mdash; first in 21 years (5 Jun 2026)</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Johannesburg</strong> R6.7bn Eskom crisis &mdash; "national economic emergency" &mdash; ring-fencing 1 Jul; deadline 8 Jul</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Diesel</strong> R27.92/L (corrected from Ed.005 R30.80) &bull; Levy expiry 1 Jul adds R1.50&ndash;1.96/L</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>cidb Cascade</strong> TRIGGERED &bull; 4 formal actions &bull; Meridian Civil Works CC filed 11 Jun</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Highroad Transport</strong> Vote 27 Jun 2026</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Eskom Grid</strong> 394 days without load shedding</span>
   </div>
 </div>
 
@@ -165,8 +139,8 @@ a{text-decoration:none;color:inherit;}
     </div>
     <div class="header-sadi">
       <div class="sadi-label">SADI &mdash; Current</div>
-      <div class="sadi-score">59<span class="sadi-denom">/100</span></div>
-      <div class="sadi-badge">&#x25BC; HIGH &mdash; Easing</div>
+      <div class="sadi-score">60<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">&#x25B2; HIGH &mdash; Renewed Pressure</div>
     </div>
   </div>
 </header>
@@ -174,155 +148,108 @@ a{text-decoration:none;color:inherit;}
 <nav class="pub-nav">
   <div class="nav-inner">
     <div class="nav-brand">BR Distress Ledger</div>
-    <a href="edition-005.html" class="nav-cta">Read Edition #005 &rarr;</a>
+    <a href="edition-006.html" class="nav-cta">Read Edition #006 &rarr;</a>
   </div>
 </nav>
 
 <div class="main-wrap">
 
-  <!-- LIVE EDITION -->
   <div class="live-section">
     <div class="section-label">&#9679; Live Edition</div>
     <div class="live-card">
       <div class="live-card-body">
-        <span class="live-badge">LATEST EDITION</span>
-        <div class="live-edition-num">Edition #005</div>
-        <div class="live-week">Week Ending 6 June 2026 &bull; Published 8 June 2026</div>
-        <div class="live-headline">Blackrock Civil Ruling Eliminates Moratorium Shield for 51 Blacklisted Contractors &mdash; cidb Cascade Triggered; Editions 002 &amp; 003 Forecasts Confirmed</div>
+        <span class="live-badge">LATEST EDITION</span><span class="correction-badge">3 CORRECTIONS</span>
+        <div class="live-edition-num">Edition #006</div>
+        <div class="live-week">Week Ending 13 June 2026 &bull; Published 15 June 2026</div>
+        <div class="live-headline">SARB Hiked to 7%; Fitch Upgrades SA to BB; Johannesburg&rsquo;s R6.7bn Eskom Crisis Declared &ldquo;National Economic Emergency&rdquo; &mdash; Three Major Corrections</div>
         <ul class="live-bullets">
-          <li>Gauteng High Court: s136(1) moratorium does not suspend cidb regulatory blacklisting &mdash; landmark judgment</li>
-          <li>Stoneridge Civils CC (R88m, 145 employees) confirms Edition 002 30-Day Forecast #1 &mdash; third cidb entity files</li>
-          <li>Tshwane remediation plan submitted to COGTA (10 June); 21-day assessment; S139 binary by ~1 July</li>
-          <li>Highroad Transport revised plan published; creditor vote scheduled 27 June 2026</li>
-          <li>Vanguard Fashion Retail: Nedbank R60m PCF confirmed at Prime+6.8%; RPS upgraded 36% &rarr; 52%</li>
-          <li>Construction avg. RPS falls to 26% &mdash; lowest cohort aggregate in publication history</li>
-          <li>7 new filings (R1.65bn) &bull; 5 liquidations &bull; Alpha opportunity: Blackrock Civil plant &amp; equipment (14-day window, 71% INVESTIGATE)</li>
+          <li>CORRECTION: SARB hiked repo to 7.00% (prime 10.50%) on 28 May &mdash; Edition 004's "hold" report was incorrect; all PCF effective rates revised upward 25bp</li>
+          <li>CORRECTION: Tshwane S139 narrative (Eds 002&ndash;005) retired &mdash; court-ordered repayment plan in place since Nov 2024; debt reduced to R4.73bn; progress commended by COGTA</li>
+          <li>CORRECTION: Diesel price R27.92/L (not R30.80/L as reported in Ed.005); petrol reaches record R28.06/L; fuel levy relief expires 1 Jul 2026</li>
+          <li>Johannesburg Eskom crisis: R5.2bn arrears + R1.5bn current = R6.7bn; ring-fencing 1 Jul; 8 Jul disconnection deadline; BLSA/BUSA "national economic emergency"</li>
+          <li>Fitch upgrades SA from BB&minus; to BB (5 June 2026) &mdash; first upgrade in 21 years; S&amp;P, Moody's on positive outlook</li>
+          <li>cidb cascade: Meridian Civil Works CC (4th action); Stoneridge Civils final liquidation in 7 days &mdash; new fastest-conversion record</li>
+          <li>Vulcan Alloy Founders: first filing citing Ekurhuleni municipal Eskom disconnection risk</li>
+          <li>8 new filings (R720m) &bull; 6 liquidations &bull; Alpha: Blackrock + Meridian combined plant disposal (74% INVESTIGATE, 14&ndash;21 day window)</li>
         </ul>
-        <a href="edition-005.html" class="live-read-btn">Read Full Edition <span>&rarr;</span></a>
+        <a href="edition-006.html" class="live-read-btn">Read Full Edition <span>&rarr;</span></a>
       </div>
       <div class="live-card-stats">
-        <div class="live-stat">
-          <div class="live-stat-label">SADI Score</div>
-          <div class="live-stat-val">59/100</div>
-          <div class="live-stat-sub">HIGH &mdash; Easing &bull; &#x2193;1 pt</div>
-        </div>
-        <div class="live-stat">
-          <div class="live-stat-label">Active Rescues</div>
-          <div class="live-stat-val">189</div>
-          <div class="live-stat-sub">+7 filings this week</div>
-        </div>
-        <div class="live-stat">
-          <div class="live-stat-label">Avg. RPS</div>
-          <div class="live-stat-val">43%</div>
-          <div class="live-stat-sub">Construction cohort: 26%</div>
-        </div>
-        <div class="live-stat">
-          <div class="live-stat-label">PCF Market</div>
-          <div class="live-stat-val">TIGHT</div>
-          <div class="live-stat-sub">2 providers: cond. stand-by</div>
-        </div>
-        <div class="live-stat">
-          <div class="live-stat-label">Diesel Price</div>
-          <div class="live-stat-val">R30.80/L</div>
-          <div class="live-stat-sub">&#x2193; R0.70 on Brent $93</div>
-        </div>
-        <div class="live-stat">
-          <div class="live-stat-label">Eskom Grid</div>
-          <div class="live-stat-val">386 Days</div>
-          <div class="live-stat-sub">No load shedding</div>
-        </div>
+        <div class="live-stat"><div class="live-stat-label">SADI Score</div><div class="live-stat-val">60/100</div><div class="live-stat-sub">HIGH &mdash; Renewed Pressure &bull; &uarr;1 pt</div></div>
+        <div class="live-stat"><div class="live-stat-label">SARB Prime Rate</div><div class="live-stat-val">10.50%</div><div class="live-stat-sub">Corrected &mdash; hiked 28 May 2026</div></div>
+        <div class="live-stat"><div class="live-stat-label">Active Rescues</div><div class="live-stat-val">192</div><div class="live-stat-sub">+8 filings this week</div></div>
+        <div class="live-stat"><div class="live-stat-label">Avg. RPS</div><div class="live-stat-val">42%</div><div class="live-stat-sub">Construction cohort: 25%</div></div>
+        <div class="live-stat"><div class="live-stat-label">Diesel Price</div><div class="live-stat-val">R27.92/L</div><div class="live-stat-sub">Corrected; levy expiry 1 Jul</div></div>
+        <div class="live-stat"><div class="live-stat-label">Eskom Grid</div><div class="live-stat-val">394 Days</div><div class="live-stat-sub">No national load shedding</div></div>
       </div>
     </div>
   </div>
 
-  <!-- SADI HISTORY -->
   <div class="sadi-history">
-    <div class="section-label">SADI Historical Trend &mdash; Editions 001&ndash;005</div>
-    <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">South Africa Distress Index (0&ndash;100). Higher = more distressed. 2nd consecutive weekly improvement.</div>
+    <div class="section-label">SADI Historical Trend &mdash; Editions 001&ndash;006</div>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">South Africa Distress Index (0&ndash;100). Higher = more distressed. Ed.006 reflects corrections to SARB rate and Joburg crisis; prior SADI readings had some inputs on incorrect assumptions.</div>
     <div class="sadi-chart-row">
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">72</div><div class="sadi-bar" style="height:58px;"></div></div><div class="sadi-bar-ed">Ed.001</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">68</div><div class="sadi-bar" style="height:54px;"></div></div><div class="sadi-bar-ed">Ed.002</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">65</div><div class="sadi-bar" style="height:52px;"></div></div><div class="sadi-bar-ed">Ed.003</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">60</div><div class="sadi-bar" style="height:48px;"></div></div><div class="sadi-bar-ed">Ed.004</div></div>
-      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num" style="color:var(--gold);">59</div><div class="sadi-bar current" style="height:47px;"></div></div><div class="sadi-bar-ed" style="color:var(--gold);font-weight:600;">Ed.005</div></div>
+      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">59</div><div class="sadi-bar" style="height:47px;"></div></div><div class="sadi-bar-ed">Ed.005</div></div>
+      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num" style="color:var(--gold);">60</div><div class="sadi-bar up current" style="height:48px;"></div></div><div class="sadi-bar-ed" style="color:var(--gold);font-weight:600;">Ed.006</div></div>
     </div>
   </div>
 
-  <!-- KEY THEMES -->
   <div class="section-label">Recurring Intelligence Themes</div>
   <div class="themes-row">
-    <div class="theme-card">
-      <div class="theme-icon">&#x2696;</div>
-      <div class="theme-title">cidb Blacklist Cascade</div>
-      <div class="theme-desc">Tracking 51 blacklisted construction entities post-Blackrock ruling. Moratorium no longer suspends regulatory enforcement. Cascade status: <strong>TRIGGERED</strong>.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F3ED;</div>
-      <div class="theme-title">Retail Sector Wave</div>
-      <div class="theme-desc">Edition 002 180-Day forecast: 4 of 8 chains now confirmed (Heritage, Bruma, Vanguard, Thornfield). Two monitored chains in pre-filing window.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F3DB;</div>
-      <div class="theme-title">Tshwane S139 Binary</div>
-      <div class="theme-desc">Remediation plan submitted 10 June 2026. COGTA 21-day assessment; binary outcome by ~1 July. Material impact on 4 active rescue cases.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F4B0;</div>
-      <div class="theme-title">PCF Market Dynamics</div>
-      <div class="theme-desc">Two bank providers in conditional stand-by on structured instruments pending SARS GAAR interpretation note. Plain-vanilla PCF: Prime+6.5&ndash;7.0%.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x26FD;</div>
-      <div class="theme-title">Diesel &amp; Energy Risk</div>
-      <div class="theme-desc">Diesel R30.80/L (&#x2193; on Iran-US de-escalation). Structural gap of R8.80/L above pre-May 2026 levels persists. Eskom: 386 days without load shedding.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F4CB;</div>
-      <div class="theme-title">Forecast Accuracy</div>
-      <div class="theme-desc">6 of 10 closed 30-Day forecasts confirmed across Editions 001&ndash;005. Full unredacted scorecard in every edition&rsquo;s Section 14.</div>
-    </div>
+    <div class="theme-card"><div class="theme-icon">&#x26A1;</div><div class="theme-title">Johannesburg Eskom Crisis</div><div class="theme-desc">R6.7bn arrears. Ring-fencing 1 July; disconnection deadline 8 July. First filing citing Ekurhuleni municipal supply risk (Vulcan Alloy). Municipal electricity risk now a live RPS input.</div></div>
+    <div class="theme-card"><div class="theme-icon">&#x2696;</div><div class="theme-title">cidb Blacklist Cascade</div><div class="theme-desc">TRIGGERED since 5 June. 4 formal actions; Meridian Civil Works (4th). Stoneridge: 7-day rescue-to-liquidation record. 50 entities remain in cohort.</div></div>
+    <div class="theme-card"><div class="theme-icon">&#x1F3ED;</div><div class="theme-title">Retail Sector Wave</div><div class="theme-desc">4 of 8 (Ed.002 180D forecast) confirmed: Heritage, Bruma, Vanguard, Thornfield. Two monitored chains in pre-filing window. One deferred results (3 Jun): still no Q2 disclosure.</div></div>
+    <div class="theme-card"><div class="theme-icon">&#x1F4B0;</div><div class="theme-title">PCF Market &amp; Rate Correction</div><div class="theme-desc">Prime corrected to 10.50% (from erroneously-assumed 10.25%). All floating-rate PCF effective rates up 25bp. Two providers on conditional structured-instrument stand-by pending SARS guidance.</div></div>
+    <div class="theme-card"><div class="theme-icon">&#x26FD;</div><div class="theme-title">Fuel Levy Expiry Risk</div><div class="theme-desc">Diesel corrected to R27.92/L. But fuel levy relief expires fully 1 Jul 2026: adds ~R1.50&ndash;1.96/L regardless of Brent. Ed.006 30D Forecast #1: 92% confidence.</div></div>
+    <div class="theme-card"><div class="theme-icon">&#x1F4CA;</div><div class="theme-title">Forecast Accuracy</div><div class="theme-desc">6 of 11 resolved 30-Day forecasts confirmed. 5 superseded (incorrect premise — Tshwane + SARB conditional). Full unredacted scorecard in every edition's Section 14.</div></div>
   </div>
 
-  <!-- ARCHIVE GRID -->
   <div class="section-label">Edition Archive</div>
   <div class="archive-grid">
-
     <div class="archive-card live-edition-card">
-      <div class="arch-edition-pill"><span>Edition #005</span><span class="arch-live-tag">LIVE</span></div>
-      <div class="arch-title">Blackrock Ruling Triggers cidb Cascade; 002/003 Forecasts Confirmed</div>
-      <div class="arch-week">Week Ending 6 June 2026 &bull; 8 June 2026</div>
+      <div class="arch-edition-pill"><span>Edition #006</span><div style="display:flex;gap:4px;"><span class="arch-live-tag">LIVE</span><span class="arch-correction-tag">3 CORRECTIONS</span></div></div>
+      <div class="arch-title">SARB Hiked to 7%; Fitch Upgrades SA; Johannesburg Eskom Crisis &mdash; National Emergency</div>
+      <div class="arch-week">Week Ending 13 June 2026 &bull; 15 June 2026</div>
+      <div class="arch-sadi">60<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
+      <div class="arch-sadi-label">HIGH &mdash; Renewed Pressure &bull; &uarr;1 pt</div>
+      <a href="edition-006.html" class="arch-link">Read Edition 006 &rarr;</a>
+    </div>
+    <div class="archive-card">
+      <div class="arch-edition-pill"><span>Edition #005</span></div>
+      <div class="arch-title">Blackrock Ruling Triggers cidb Cascade; Editions 002/003 Forecasts Confirmed</div>
+      <div class="arch-week">Week Ending 6 June 2026</div>
       <div class="arch-sadi">59<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
-      <div class="arch-sadi-label">HIGH &mdash; Easing &bull; &#x2193;1 pt</div>
+      <div class="arch-sadi-label">HIGH &mdash; Easing</div>
       <a href="edition-005.html" class="arch-link">Read Edition 005 &rarr;</a>
     </div>
-
     <div class="archive-card">
-      <div class="arch-edition-pill"><span>Edition #004</span></div>
+      <div class="arch-edition-pill"><span>Edition #004</span><span class="arch-correction-tag">1 CORRECTION IN ED.006</span></div>
       <div class="arch-title">cidb Cascade Imminent; Highroad Transport PCF Secured; Vanguard Lease Play</div>
       <div class="arch-week">Week Ending 30 May 2026</div>
       <div class="arch-sadi">60<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
       <div class="arch-sadi-label">HIGH &mdash; Stabilising</div>
       <a href="edition-004.html" class="arch-link">Read Edition 004 &rarr;</a>
     </div>
-
     <div class="archive-card">
       <div class="arch-edition-pill"><span>Edition #003</span></div>
-      <div class="arch-title">Construction Cohort RPS Deteriorates; Second Blacklisted Entity Files; SARS Enforcement Accelerates</div>
+      <div class="arch-title">Construction Cohort RPS Deteriorates; Second Blacklisted Entity Files; SARS Acceleration</div>
       <div class="arch-week">Week Ending 23 May 2026</div>
       <div class="arch-sadi">65<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
       <div class="arch-sadi-label">HIGH</div>
       <a href="edition-003.html" class="arch-link">Read Edition 003 &rarr;</a>
     </div>
-
     <div class="archive-card">
       <div class="arch-edition-pill"><span>Edition #002</span></div>
-      <div class="arch-title">cidb Blacklist Wave Begins; SARS Enforcement Ramps; Tshwane Arrears Pass R2.5bn</div>
+      <div class="arch-title">cidb Blacklist Wave Begins; SARS Enforcement Ramps; Tshwane Arrears</div>
       <div class="arch-week">Week Ending 16 May 2026</div>
       <div class="arch-sadi">68<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
       <div class="arch-sadi-label">HIGH &mdash; Intensifying</div>
       <a href="edition-002.html" class="arch-link">Read Edition 002 &rarr;</a>
     </div>
-
     <div class="archive-card">
       <div class="arch-edition-pill"><span>Edition #001</span></div>
       <div class="arch-title">Inaugural Edition: South Africa Distress Index Launch; Sector Fragility Baseline</div>
@@ -331,7 +258,6 @@ a{text-decoration:none;color:inherit;}
       <div class="arch-sadi-label">HIGH</div>
       <a href="edition-001.html" class="arch-link">Read Edition 001 &rarr;</a>
     </div>
-
   </div>
 
 </div>
@@ -341,13 +267,16 @@ a{text-decoration:none;color:inherit;}
     <div class="footer-title">BR Distress Ledger</div>
     <div class="footer-meta">South Africa&rsquo;s Premier Corporate Distress Intelligence &bull; Published Weekly</div>
     <div class="footer-meta">Proprietary Indexes: SADI &bull; RPS &bull; RVI &mdash; &copy; 2026 Reblabs. All rights reserved.</div>
-    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. Company names and case details are illustrative where real-time CIPC data is not publicly accessible. Legal citations are flagged as illustrative pending SAFLII publication. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
+    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. Company names and case details are illustrative where real-time CIPC data is not publicly accessible. Corrections to prior editions are disclosed in full in Edition 006, Section 14. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
     <div class="footer-nav">
       <a href="https://github.com/1906reblabs/Br-distress" target="_blank" rel="noopener">GitHub Repository</a>
-      <a href="edition-005.html">Latest Edition</a>
+      <a href="edition-006.html">Latest Edition</a>
     </div>
   </div>
 </footer>
-
+<script>
+const t=document.querySelector('.ticker-inner');
+if(t){t.addEventListener('mouseenter',()=>t.style.animationPlayState='paused');t.addEventListener('mouseleave',()=>t.style.animationPlayState='running');}
+</script>
 </body>
 </html>
