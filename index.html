@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BR Distress Ledger &mdash; South African Corporate Distress Intelligence</title>
-<meta name="description" content="South Africa's premier weekly business rescue and corporate distress intelligence publication. SADI 55/100. Edition 010: Eskom-Johannesburg PAJA process enters its final fortnight; SARB market splits ahead of 23 July decision. Editions 001-010 published.">
+<meta name="description" content="South Africa's premier weekly business rescue and corporate distress intelligence publication. SADI 54/100. Edition 011: Eskom-Johannesburg process extended a third time after R4.3bn paydown; SARB holds at 7.00%; Iran-US ceasefire collapse re-opens fuel price risk. Editions 001-011 published.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -18,7 +18,7 @@ a{text-decoration:none;color:inherit;}
 
 /* TICKER */
 .ticker-wrap{background:var(--navy);overflow:hidden;padding:7px 0;border-bottom:2px solid var(--teal-dark);}
-.ticker-inner{display:flex;animation:ticker-scroll 40s linear infinite;width:max-content;white-space:nowrap;}
+.ticker-inner{display:flex;animation:ticker-scroll 42s linear infinite;width:max-content;white-space:nowrap;}
 .ticker-inner:hover{animation-play-state:paused;}
 .ticker-item{padding:0 32px;color:#A8C4CF;font-size:11px;letter-spacing:0.07em;}
 .ticker-item strong{color:var(--gold);}
@@ -73,9 +73,9 @@ a{text-decoration:none;color:inherit;}
 /* SADI MINI-CHART */
 .sadi-history{background:white;border:1px solid var(--border);border-radius:10px;padding:24px;margin-bottom:32px;}
 .sadi-chart-row{display:flex;align-items:flex-end;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-light);overflow-x:auto;}
-.sadi-bar-wrap{flex:1;min-width:44px;text-align:center;}
+.sadi-bar-wrap{flex:1;min-width:42px;text-align:center;}
 .sadi-bar-inner{position:relative;height:80px;display:flex;align-items:flex-end;justify-content:center;}
-.sadi-bar{width:30px;border-radius:3px 3px 0 0;background:var(--teal);transition:height 0.3s;}
+.sadi-bar{width:28px;border-radius:3px 3px 0 0;background:var(--teal);transition:height 0.3s;}
 .sadi-bar.current{background:var(--gold);}
 .sadi-bar-ed{font-size:10px;color:var(--text-muted);margin-top:5px;font-family:"IBM Plex Mono",monospace;}
 .sadi-bar-num{font-size:10px;font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text-secondary);margin-bottom:2px;}
@@ -117,30 +117,28 @@ a{text-decoration:none;color:inherit;}
 <body>
 
 <div class="audit-banner">
-  &#x1F50E; <strong>EDITION #010 PUBLISHED</strong> &nbsp;|&nbsp;
-  SADI 55/100, HIGH Watchful &nbsp;|&nbsp; Eskom&ndash;Johannesburg decision due 24 July 2026 &nbsp;|&nbsp; SARB 23 July MPC decision now split among economists
+  &#x1F50E; <strong>EDITION #011 PUBLISHED</strong> &nbsp;|&nbsp;
+  SADI 54/100, HIGH Easing &nbsp;|&nbsp; Eskom&ndash;Johannesburg extended a third time after R4.3bn paydown &nbsp;|&nbsp; Self-audit correction on the Iran-US fuel risk candidate disclosed in full
 </div>
 <div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
 
 <div class="ticker-wrap">
   <div class="ticker-inner">
-    <span class="ticker-item"><strong>SADI</strong> 55/100 HIGH Watchful</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>SARB Repo / Prime</strong> 7.00% / 10.50%</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Next MPC</strong> 23 Jul 2026 &mdash; market split</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Eskom&ndash;Joburg</strong> ~R5.28bn overdue (11 Jun) &mdash; decision due 24 Jul</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SADI</strong> 54/100 HIGH Easing</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SARB Repo / Prime</strong> 7.00% / 10.50% &mdash; held 23 Jul, 4-2 vote</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Eskom&ndash;Joburg</strong> ~R3.8bn overdue (24 Jul) &mdash; 3rd extension to ~22 Aug</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Iran-US</strong> Ceasefire collapsed 7&ndash;8 Jul &mdash; diesel rise signalled for 5 Aug</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Rentoza</strong> Creditor meeting held 17 Jul 2026</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Self-Audit</strong> Black Swan fuel-risk candidate corrected &mdash; Section 14</span><span class="ticker-sep"> | </span>
     <span class="ticker-item"><strong>H1 2026 Liquidations</strong> 1,361 (&minus;0.9% YoY)</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Rentoza</strong> Creditor meeting 17 Jul 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Louis Group (SA)</strong> Liquidation rule nisi returnable 20 Jul 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Fuel Prices</strong> Petrol R26.10/L &bull; Diesel R24.78/L (unchanged since 1 Jul)</span><span class="ticker-sep"> | </span>
     <!-- duplicate for seamless loop -->
-    <span class="ticker-item"><strong>SADI</strong> 55/100 HIGH Watchful</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>SARB Repo / Prime</strong> 7.00% / 10.50%</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Next MPC</strong> 23 Jul 2026 &mdash; market split</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Eskom&ndash;Joburg</strong> ~R5.28bn overdue (11 Jun) &mdash; decision due 24 Jul</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>H1 2026 Liquidations</strong> 1,361 (&minus;0.9% YoY)</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Rentoza</strong> Creditor meeting 17 Jul 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Louis Group (SA)</strong> Liquidation rule nisi returnable 20 Jul 2026</span><span class="ticker-sep"> | </span>
-    <span class="ticker-item"><strong>Fuel Prices</strong> Petrol R26.10/L &bull; Diesel R24.78/L (unchanged since 1 Jul)</span>
+    <span class="ticker-item"><strong>SADI</strong> 54/100 HIGH Easing</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>SARB Repo / Prime</strong> 7.00% / 10.50% &mdash; held 23 Jul, 4-2 vote</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Eskom&ndash;Joburg</strong> ~R3.8bn overdue (24 Jul) &mdash; 3rd extension to ~22 Aug</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Iran-US</strong> Ceasefire collapsed 7&ndash;8 Jul &mdash; diesel rise signalled for 5 Aug</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Rentoza</strong> Creditor meeting held 17 Jul 2026</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>Self-Audit</strong> Black Swan fuel-risk candidate corrected &mdash; Section 14</span><span class="ticker-sep"> | </span>
+    <span class="ticker-item"><strong>H1 2026 Liquidations</strong> 1,361 (&minus;0.9% YoY)</span>
   </div>
 </div>
 
@@ -153,8 +151,8 @@ a{text-decoration:none;color:inherit;}
     </div>
     <div class="header-sadi">
       <div class="sadi-label">SADI &mdash; Current</div>
-      <div class="sadi-score">55<span class="sadi-denom">/100</span></div>
-      <div class="sadi-badge">&#x25B2; HIGH &mdash; Watchful</div>
+      <div class="sadi-score">54<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">&#x25BC; HIGH &mdash; Easing</div>
     </div>
   </div>
 </header>
@@ -162,7 +160,7 @@ a{text-decoration:none;color:inherit;}
 <nav class="pub-nav">
   <div class="nav-inner">
     <div class="nav-brand">BR Distress Ledger</div>
-    <a href="edition-010.html" class="nav-cta">Read Edition #010 &rarr;</a>
+    <a href="edition-011.html" class="nav-cta">Read Edition #011 &rarr;</a>
   </div>
 </nav>
 
@@ -174,34 +172,34 @@ a{text-decoration:none;color:inherit;}
     <div class="live-card">
       <div class="live-card-body">
         <span class="live-badge" style="background:#1A5276;">VERIFIED EDITION</span>
-        <div class="live-edition-num">Edition #010</div>
-        <div class="live-week">Week Ending 13 July 2026 &bull; Published 15 July 2026</div>
-        <div class="live-headline">Market Splits Ahead of 23 July SARB Decision as Eskom&ndash;Johannesburg PAJA Process Enters Its Final Fortnight</div>
+        <div class="live-edition-num">Edition #011</div>
+        <div class="live-week">Week Ending 20 July 2026 &bull; Published 22 July 2026</div>
+        <div class="live-headline">SARB Holds at 7.00%; Eskom&ndash;Johannesburg Process Extended a Third Time After R4.3bn Paydown; Iran-US Ceasefire Collapse Re-Opens the Fuel Price Black Swan</div>
         <ul class="live-bullets">
-          <li>Nedbank forecasts a further 25bp SARB hike against a broader hold consensus &mdash; the first genuine economist split since the 28 May hike; June CPI at a two-year high of 5.0%</li>
-          <li>Eskom&ndash;City of Johannesburg dispute: no new communiqu&eacute; this window; PAJA submissions close 17 July, decision due 24 July; ~R5.28bn overdue as at 11 June</li>
-          <li>Newly located: <em>Neethling v Louis Group (SA) (Pty) Ltd</em> [2026] ZAWCHC 245 &mdash; rescue-to-liquidation conversion, rule nisi returnable 20 July 2026</li>
-          <li>Rentoza: no new disclosure this window; initial creditor meeting scheduled 17 July, rescue plan due 4 September 2026</li>
-          <li>No CIPC/Gazette batch supplied this cycle &mdash; New Filings and Liquidation Radar (company-level) carry Data Gap Notices</li>
-          <li>SADI ticks up 1 point to 55/100 on rate-hike risk alone; no new negative development in the rescue system itself</li>
+          <li>SARB held the repo rate at 7.00% (prime 10.50%) on 23 July 2026 in a 4-2 split vote &mdash; confirms Edition 010's forecast</li>
+          <li>Eskom did not interrupt Johannesburg's bulk electricity supply; City of Johannesburg/City Power has paid ~R4.3bn since May, reducing the overdue balance from ~R5.28bn to ~R3.8bn; process extended a third time to ~22 August 2026</li>
+          <li><strong>Self-audit finding:</strong> US-Iran hostilities resumed 7&ndash;8 July 2026, inside Edition 010's own window, but were missed at the time &mdash; corrected in full this edition, with a standing methodology amendment adopted</li>
+          <li>A diesel price increase (~R1.38&ndash;1.60/L) is now signalled for the 5 August 2026 DMPR adjustment</li>
+          <li>Rentoza's initial creditor and staff meeting proceeded as scheduled on 17 July 2026</li>
+          <li>No CIPC/Gazette batch supplied this cycle &mdash; New Filings and Liquidation Radar (company-level) carry Data Gap Notices; outcome of the Louis Group (SA) 20 July rule nisi return date not yet located</li>
         </ul>
-        <a href="edition-010.html" class="live-read-btn">Read Full Edition <span>&rarr;</span></a>
+        <a href="edition-011.html" class="live-read-btn">Read Full Edition <span>&rarr;</span></a>
       </div>
       <div class="live-card-stats">
         <div class="live-stat">
           <div class="live-stat-label">SADI Score</div>
-          <div class="live-stat-val">55/100</div>
-          <div class="live-stat-sub">HIGH &mdash; Watchful &bull; &#x25B2;1 pt</div>
+          <div class="live-stat-val">54/100</div>
+          <div class="live-stat-sub">HIGH &mdash; Easing &bull; &#x25BC;1 pt</div>
         </div>
         <div class="live-stat">
           <div class="live-stat-label">SARB Repo / Prime</div>
           <div class="live-stat-val">7.00% / 10.50%</div>
-          <div class="live-stat-sub">Next decision 23 Jul 2026</div>
+          <div class="live-stat-sub">Held 23 Jul 2026, 4-2 vote</div>
         </div>
         <div class="live-stat">
           <div class="live-stat-label">Eskom&ndash;Joburg Balance</div>
-          <div class="live-stat-val">~R5.28bn</div>
-          <div class="live-stat-sub">As at 11 Jun 2026</div>
+          <div class="live-stat-val">~R3.8bn</div>
+          <div class="live-stat-sub">Down from ~R5.28bn (11 Jun)</div>
         </div>
         <div class="live-stat">
           <div class="live-stat-label">H1 2026 Liquidations</div>
@@ -214,9 +212,9 @@ a{text-decoration:none;color:inherit;}
           <div class="live-stat-sub">No CIPC/Gazette batch this cycle</div>
         </div>
         <div class="live-stat">
-          <div class="live-stat-label">Fuel Prices</div>
-          <div class="live-stat-val">R26.10 / R24.78</div>
-          <div class="live-stat-sub">Unchanged since 1 Jul 2026</div>
+          <div class="live-stat-label">Diesel Outlook</div>
+          <div class="live-stat-val">&#x25B2; ~R1.4&ndash;1.6/L</div>
+          <div class="live-stat-sub">Signalled for 5 Aug adjustment</div>
         </div>
       </div>
     </div>
@@ -224,8 +222,8 @@ a{text-decoration:none;color:inherit;}
 
   <!-- SADI HISTORY -->
   <div class="sadi-history">
-    <div class="section-label">SADI Historical Trend &mdash; Editions 001&ndash;010</div>
-    <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">South Africa Distress Index (0&ndash;100). Higher = more distressed. Editions 008&ndash;010 operate under the Verified-Only policy; the composite is increasingly built from verified inputs rather than the illustrative continuity used pre-Edition 008.</div>
+    <div class="section-label">SADI Historical Trend &mdash; Editions 001&ndash;011</div>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">South Africa Distress Index (0&ndash;100). Higher = more distressed. Editions 008&ndash;011 operate under the Verified-Only policy; the composite is increasingly built from verified inputs rather than the illustrative continuity used pre-Edition 008.</div>
     <div class="sadi-chart-row">
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">72</div><div class="sadi-bar" style="height:58px;"></div></div><div class="sadi-bar-ed">Ed.001</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">68</div><div class="sadi-bar" style="height:54px;"></div></div><div class="sadi-bar-ed">Ed.002</div></div>
@@ -236,7 +234,8 @@ a{text-decoration:none;color:inherit;}
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">58</div><div class="sadi-bar" style="height:46px;"></div></div><div class="sadi-bar-ed">Ed.007</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">55</div><div class="sadi-bar" style="height:44px;"></div></div><div class="sadi-bar-ed">Ed.008</div></div>
       <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">54</div><div class="sadi-bar" style="height:43px;"></div></div><div class="sadi-bar-ed">Ed.009</div></div>
-      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num" style="color:var(--gold);">55</div><div class="sadi-bar current" style="height:44px;"></div></div><div class="sadi-bar-ed" style="color:var(--gold);font-weight:600;">Ed.010</div></div>
+      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num">55</div><div class="sadi-bar" style="height:44px;"></div></div><div class="sadi-bar-ed">Ed.010</div></div>
+      <div class="sadi-bar-wrap"><div class="sadi-bar-inner"><div class="sadi-bar-num" style="color:var(--gold);">54</div><div class="sadi-bar current" style="height:43px;"></div></div><div class="sadi-bar-ed" style="color:var(--gold);font-weight:600;">Ed.011</div></div>
     </div>
   </div>
 
@@ -246,30 +245,30 @@ a{text-decoration:none;color:inherit;}
     <div class="theme-card">
       <div class="theme-icon">&#x26A1;</div>
       <div class="theme-title">Eskom &mdash; Johannesburg Power Dispute</div>
-      <div class="theme-desc"><strong>VERIFIED.</strong> PAJA submissions close 17 July 2026; Eskom's decision due 24 July. ~R5.28bn overdue as at 11 June, against which ~R1.2&ndash;1.6bn had been paid since the 19 May notice.</div>
+      <div class="theme-desc"><strong>VERIFIED.</strong> Extended a third time to ~22 August 2026 after the City paid ~R4.3bn since May, cutting the overdue balance from ~R5.28bn to ~R3.8bn. Not resolved, but materially de-escalated.</div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon">&#x1F50E;</div>
+      <div class="theme-title">Self-Improvement Audit</div>
+      <div class="theme-desc">Edition 011 found and corrected a genuine gap in Edition 010: the 7&ndash;8 July Iran-US ceasefire collapse was missed at the time. A standing methodology amendment now requires upstream trigger checks every cycle, not only downstream pricing dates.</div>
+    </div>
+    <div class="theme-card">
+      <div class="theme-icon">&#x26FD;</div>
+      <div class="theme-title">Fuel Price / Geopolitical Risk</div>
+      <div class="theme-desc">Ceasefire collapsed 7&ndash;8 July 2026. A diesel increase of ~R1.38&ndash;1.60/litre is signalled for the 5 August adjustment &mdash; the first upward fuel signal since the 1 July relief.</div>
     </div>
     <div class="theme-card">
       <div class="theme-icon">&#x1F4B0;</div>
       <div class="theme-title">SARB &amp; Rate Risk</div>
-      <div class="theme-desc">Repo held at 7.00% (prime 10.50%) since 28 May. Ahead of the 23 July MPC meeting, Nedbank is the first bank to break from consensus and forecast a further 25bp hike, against a broader hold expectation.</div>
+      <div class="theme-desc">Repo held at 7.00% (prime 10.50%) for a second consecutive decision, 23 July 2026, in a 4-2 vote. Next MPC meeting in September 2026.</div>
     </div>
     <div class="theme-card">
       <div class="theme-icon">&#x1F4BB;</div>
       <div class="theme-title">Rentoza Business Rescue</div>
-      <div class="theme-desc">Sandton subscription-tech platform entered voluntary business rescue 1 July 2026. Initial creditor meeting 17 July; formal rescue plan due 4 September 2026.</div>
+      <div class="theme-desc">Initial creditor and staff meeting proceeded 17 July 2026 as scheduled. Formal rescue plan due 4 September 2026.</div>
     </div>
     <div class="theme-card">
       <div class="theme-icon">&#x2696;&#xFE0F;</div>
-      <div class="theme-title">Verified Case Law</div>
-      <div class="theme-desc"><em>Neethling v Louis Group (SA)</em> [2026] ZAWCHC 245 converts a rejected 2023 rescue plan to liquidation; rule nisi returnable 20 July 2026. Full brief in Edition 010.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F4CA;</div>
-      <div class="theme-title">Stats SA Liquidations</div>
-      <div class="theme-desc">H1 2026: 1,361 company liquidations (1,299 voluntary, 132 compulsory), down 0.9% YoY. Compulsory liquidations are rising faster than the flat headline total &mdash; the more direct stress signal.</div>
-    </div>
-    <div class="theme-card">
-      <div class="theme-icon">&#x1F50E;</div>
       <div class="theme-title">Verified-Only Policy</div>
       <div class="theme-desc">Effective Edition 008: no illustrative or simulated company content. Where CIPC/Gazette data isn't supplied, sections carry a Data Gap Notice rather than invented detail.</div>
     </div>
@@ -280,11 +279,20 @@ a{text-decoration:none;color:inherit;}
   <div class="archive-grid">
 
     <div class="archive-card live-edition-card">
-      <div class="arch-edition-pill"><span>Edition #010</span><span class="arch-live-tag">LIVE</span></div>
+      <div class="arch-edition-pill"><span>Edition #011</span><span class="arch-live-tag">LIVE</span></div>
+      <div class="arch-title">SARB Holds at 7.00%; Eskom&ndash;Johannesburg Extended a Third Time After R4.3bn Paydown; Self-Audit Correction Disclosed</div>
+      <div class="arch-week">Week Ending 20 July 2026 &bull; 22 July 2026</div>
+      <div class="arch-sadi">54<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
+      <div class="arch-sadi-label">HIGH &mdash; Easing &bull; &#x25BC;1 pt</div>
+      <a href="edition-011.html" class="arch-link">Read Edition 011 &rarr;</a>
+    </div>
+
+    <div class="archive-card">
+      <div class="arch-edition-pill"><span>Edition #010</span></div>
       <div class="arch-title">Market Splits Ahead of 23 July SARB Decision as Eskom&ndash;Johannesburg PAJA Process Enters Its Final Fortnight</div>
-      <div class="arch-week">Week Ending 13 July 2026 &bull; 15 July 2026</div>
+      <div class="arch-week">Week Ending 13 July 2026</div>
       <div class="arch-sadi">55<span style="font-size:14px;color:var(--text-muted);">/100</span></div>
-      <div class="arch-sadi-label">HIGH &mdash; Watchful &bull; &#x25B2;1 pt</div>
+      <div class="arch-sadi-label">HIGH &mdash; Watchful</div>
       <a href="edition-010.html" class="arch-link">Read Edition 010 &rarr;</a>
     </div>
 
@@ -378,10 +386,10 @@ a{text-decoration:none;color:inherit;}
     <div class="footer-title">BR Distress Ledger</div>
     <div class="footer-meta">South Africa&rsquo;s Premier Corporate Distress Intelligence &bull; Published Weekly</div>
     <div class="footer-meta">Proprietary Indexes: SADI &bull; RPS &bull; RVI &mdash; &copy; 2026 Reblabs. All rights reserved.</div>
-    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. From Edition 008 onward this publication operates a Verified-Only editorial policy: every company-specific claim is sourced to a named primary or reputable secondary source, checked each production cycle. Where CIPC or Government Gazette data is not supplied for a given cycle, the relevant section carries a Data Gap Notice rather than illustrative or estimated content. Editions 001&ndash;007 contain illustrative/simulated company case studies published under this publication's earlier editorial policy and are retained in the archive for transparency; they are flagged accordingly and excluded from live forecast calibration. Corrections to prior editions are disclosed in full in each edition's Section 14. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
+    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. From Edition 008 onward this publication operates a Verified-Only editorial policy: every company-specific claim is sourced to a named primary or reputable secondary source, checked each production cycle. Where CIPC or Government Gazette data is not supplied for a given cycle, the relevant section carries a Data Gap Notice rather than illustrative or estimated content. Editions 001&ndash;007 contain illustrative/simulated company case studies published under this publication's earlier editorial policy and are retained in the archive for transparency; they are flagged accordingly and excluded from live forecast calibration. This publication also runs a standing self-improvement audit each cycle against its own prior edition; corrections arising from that audit are disclosed in full in the relevant edition's Section 14. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
     <div class="footer-nav">
       <a href="https://github.com/1906reblabs/Br-distress" target="_blank" rel="noopener">GitHub Repository</a>
-      <a href="edition-010.html">Latest Edition</a>
+      <a href="edition-011.html">Latest Edition</a>
     </div>
   </div>
 </footer>

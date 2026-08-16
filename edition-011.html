@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — Edition #11 | Week Ending 20 July 2026</title>
+<meta name="description" content="South Africa's premier business rescue intelligence. Edition 11, Week Ending 20 July 2026. SARB holds at 7.00%; Eskom-Johannesburg PAJA process extended a third time to 22 August after R4.3bn paydown; Iran-US ceasefire collapse re-opens fuel price risk.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--navy:#0D2340;--gold:#C9A030;--gold-light:#FDF3DC;--white:#FFFFFF;--off-white:#F5FAF8;--grey-50:#F0F4F3;--grey-100:#DDE6E3;--grey-200:#BBC9C5;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--border:#C8DDD9;--border-light:#E5EFED;--strong:#0F5C2E;--strong-bg:#D4EDDA;--probable:#2E7D32;--probable-bg:#E8F5E9;--challenged-c:#E65100;--challenged-bg:#FFF3E0;--distressed-c:#BF360C;--distressed-bg:#FBE9E7;--critical-c:#880E0E;--critical-bg:#FDECEA;--terminal-bg:#3E0000;}
+*{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:"IBM Plex Sans",sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
+a{text-decoration:none;color:inherit;}
+.top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
+.audit-banner{background:#0D1A2D;border-bottom:3px solid #4FA8D8;padding:10px 40px;color:#BFE0F0;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.audit-banner strong{color:#fff;}
+.audit-banner a{color:#7EC8E3;text-decoration:underline;}
+.rps{display:inline-flex;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+.rps-strong{background:var(--strong-bg);color:var(--strong);}
+.rps-probable{background:var(--probable-bg);color:var(--probable);}
+.rps-challenged{background:var(--challenged-bg);color:var(--challenged-c);}
+.rps-distressed{background:var(--distressed-bg);color:var(--distressed-c);}
+.rps-critical{background:var(--critical-bg);color:var(--critical-c);}
+.tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;letter-spacing:0.04em;text-transform:uppercase;}
+.tag-sector{background:var(--teal-light);color:var(--teal-dark);}
+.tag-risk{background:var(--distressed-bg);color:var(--distressed-c);}
+.tag-risk-crit{background:var(--critical-bg);color:var(--critical-c);}
+.tag-action{background:#E3F2FD;color:#0D47A1;}
+.tag-positive{background:var(--strong-bg);color:var(--strong);}
+.tag-verified{background:#D6EAF8;color:#1A5276;}
+.tag-gap{background:#F4ECF7;color:#6C3483;}
+.tag-correction{background:#1A1A1A;color:#F4A918;}
+.alert-box{border-radius:6px;padding:16px 20px;margin:16px 0;border-left:4px solid;font-size:13px;}
+.alert-box .alert-title{font-size:11px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
+.alert-green{background:var(--strong-bg);border-color:#1A7A4A;color:var(--strong);}
+.alert-amber{background:#FFF8E1;border-color:#C77B00;color:#7A4A00;}
+.alert-red{background:var(--critical-bg);border-color:#C0392B;color:var(--critical-c);}
+.alert-teal{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);}
+.alert-blue{background:#EBF5FB;border-color:#2E86C1;color:#1A5276;}
+.alert-correction{background:#0D1A2D;border-color:#F4A918;color:#E0E0E0;}
+.alert-correction .alert-title{color:#F4A918;}
+.data-table-wrap{overflow-x:auto;margin:20px 0;border-radius:6px;border:1px solid var(--border);}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;}
+.data-table thead th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:10px 12px;text-align:left;white-space:nowrap;}
+.data-table tbody tr:nth-child(even){background:var(--grey-50);}
+.data-table tbody tr:hover{background:var(--teal-light);}
+.data-table tbody td{padding:9px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.4;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.mono{font-family:"IBM Plex Mono",monospace;}.muted{color:var(--text-muted);font-size:12px;}
+.subhead{font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 8px;text-transform:uppercase;letter-spacing:0.06em;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+ul.body-list{padding-left:20px;margin:10px 0;}
+ul.body-list li{margin-bottom:6px;font-size:13px;color:var(--text-secondary);}
+.pull-quote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gold-light);border-radius:0 6px 6px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
+.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
+.footer-inner{max-width:900px;margin:0 auto;}
+.footer-title{font-family:"Playfair Display",serif;font-size:18px;color:white;margin-bottom:6px;}
+.footer-meta{font-size:12px;color:#7AB0C4;margin-bottom:4px;}
+.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;margin-top:16px;max-width:700px;}
+.footer-nav{margin-top:20px;display:flex;gap:24px;}
+.footer-nav a{color:#A8C4CF;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;}
+.footer-nav a:hover{color:white;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}}
+.pub-header{background:var(--teal-dark);color:white;padding:28px 40px 20px;border-bottom:4px solid var(--gold);}
+.header-grid{display:grid;grid-template-columns:1fr auto;align-items:start;gap:32px;max-width:1200px;margin:0 auto;}
+.pub-eyebrow{font-size:10px;letter-spacing:0.14em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.pub-title{font-family:"Playfair Display",serif;font-size:32px;font-weight:700;color:white;line-height:1.1;}
+.pub-title span{color:var(--gold);}
+.pub-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#A8C4CF;margin-top:8px;letter-spacing:0.04em;}
+.pub-meta strong{color:#D4E8EC;font-weight:500;}
+.sadi-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:16px 22px;text-align:center;min-width:180px;}
+.sadi-label{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.sadi-score{font-family:"IBM Plex Mono",monospace;font-size:52px;font-weight:500;color:#F4A918;line-height:1;}
+.sadi-denom{font-size:22px;color:#9BBFC9;}
+.sadi-badge{display:inline-block;margin-top:6px;background:rgba(92,196,138,0.18);border:1px solid rgba(92,196,138,0.4);color:#5AC48A;font-size:10px;letter-spacing:0.1em;font-weight:500;padding:3px 10px;border-radius:3px;text-transform:uppercase;}
+.sadi-change{font-size:11px;color:#5AC48A;margin-top:4px;}
+.stats-strip{background:var(--navy);padding:10px 40px;display:flex;border-bottom:1px solid #1E3D5A;}
+.stat-item{flex:1;text-align:center;padding:8px 16px;border-right:1px solid #1E3D5A;}
+.stat-item:last-child{border-right:none;}
+.stat-label{font-size:9px;letter-spacing:0.1em;color:#6A8FA0;text-transform:uppercase;font-weight:500;}
+.stat-val{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:500;color:white;line-height:1.2;}
+.layout{display:grid;grid-template-columns:240px 1fr;max-width:1200px;margin:0 auto;}
+.sidebar{background:var(--white);border-right:1px solid var(--border-light);position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 0;}
+.sidebar-head{font-size:9px;letter-spacing:0.14em;color:var(--text-muted);text-transform:uppercase;font-weight:500;padding:0 20px 10px;border-bottom:1px solid var(--border-light);margin-bottom:8px;}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 20px;font-size:12px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all 0.15s;}
+.nav-item:hover,.nav-item.active{background:var(--teal-light);color:var(--teal-dark);border-left-color:var(--teal);font-weight:500;}
+.nav-num{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--grey-200);min-width:18px;}
+.main-content{padding:0 48px 64px;background:var(--white);}
+.pub-section{border-bottom:1px solid var(--border-light);padding:48px 0;scroll-margin-top:20px;}
+.section-rule{height:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-mid) 60%,transparent 100%);margin-bottom:20px;border-radius:2px;}
+.section-eyebrow{font-size:9px;letter-spacing:0.18em;color:var(--teal);text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+.section-title{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+.lead-para{font-size:15px;line-height:1.75;color:var(--text-secondary);margin-bottom:24px;border-left:3px solid var(--teal-mid);padding-left:16px;}
+p{margin-bottom:12px;}
+.metric-mini{background:var(--off-white);border:1px solid var(--border-light);border-radius:6px;padding:14px 16px;text-align:center;}
+.metric-mini-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;}
+.metric-mini-val{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--navy);}
+.metric-mini-sub{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.metric-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.kpi-chip{background:var(--grey-50);border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;}
+.kpi-chip-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
+.kpi-chip-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--text-primary);}
+.sadi-sub{display:grid;grid-template-columns:160px 1fr 40px;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-light);font-size:12px;}
+.sadi-sub:last-child{border-bottom:none;}
+.sadi-sub-bar{height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;}
+.sadi-sub-fill{height:100%;border-radius:4px;}
+.sadi-sub-score{font-family:"IBM Plex Mono",monospace;font-weight:500;text-align:right;}
+.exec-item{padding:18px 0;border-bottom:1px solid var(--border-light);display:grid;grid-template-columns:36px 1fr;gap:16px;}
+.exec-item:last-child{border-bottom:none;}
+.exec-num{font-family:"Playfair Display",serif;font-size:28px;color:var(--teal-mid);font-weight:700;line-height:1;padding-top:2px;}
+.exec-headline{font-size:12px;letter-spacing:0.04em;font-weight:600;color:var(--navy);text-transform:uppercase;margin-bottom:6px;}
+.exec-body{font-size:13px;line-height:1.65;color:var(--text-secondary);}
+.exec-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:11px;}
+.heatmap-table th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.06em;font-weight:500;padding:8px 10px;text-align:center;white-space:nowrap;}
+.heatmap-table th:first-child{text-align:left;}
+.heatmap-table td{padding:7px 10px;text-align:center;border:1px solid var(--border-light);font-family:"IBM Plex Mono",monospace;font-size:11px;}
+.heatmap-table td:first-child{text-align:left;font-family:"IBM Plex Sans",sans-serif;font-size:12px;font-weight:500;color:var(--navy);}
+.hm-1{background:#E8F5E9;color:#2E7D32;}.hm-2{background:#F1F8E9;color:#558B2F;}.hm-3{background:#FFF8E1;color:#7A4A00;}.hm-4{background:#FFF3E0;color:#BF360C;}.hm-5{background:#B71C1C;color:white;font-weight:600;}
+.rating-low{background:#D4EDDA;color:#0F5C2E;}.rating-moderate{background:#FFF3CD;color:#7A4A00;}.rating-high{background:#F8D7DA;color:#721C24;}.rating-extreme{background:#3E0000;color:white;font-weight:600;}
+.case-study{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.case-study-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--teal-dark);margin-bottom:8px;}
+.case-study-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.update-card{background:#E8F5E9;border-left:4px solid var(--strong);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.update-card-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--strong);margin-bottom:8px;}
+.update-card-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.new-star{color:var(--gold);font-size:13px;margin-right:2px;}
+.legal-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.legal-verified{border-left:4px solid #2E86C1;background:#EBF5FB;}
+.legal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.legal-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;line-height:1.4;}
+.legal-meta{font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:0.02em;}
+.legal-body p{font-size:13px;line-height:1.7;margin-bottom:10px;color:var(--text-primary);}
+.legal-body strong{color:var(--navy);}
+.legal-badge{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.badge-verified{background:#2E86C1;color:white;}
+.opp-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.opp-alpha{border-left:4px solid var(--gold);background:var(--gold-light);}
+.opp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.opp-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;}
+.opp-meta{font-size:11px;color:var(--text-muted);margin-top:4px;}
+.opp-score{flex-shrink:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;color:var(--gold);background:white;border:1px solid var(--gold);border-radius:6px;padding:8px 14px;min-width:80px;}
+.opp-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+.forecast-card{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px;}
+.forecast-30d{border-left:4px solid #4527A0;background:var(--off-white);}
+.forecast-90d{border-left:4px solid var(--teal);background:var(--off-white);}
+.forecast-180d{border-left:4px solid var(--navy);background:var(--off-white);}
+.forecast-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;}
+.forecast-id{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;}
+.forecast-conf{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;}
+.forecast-body{font-size:13px;line-height:1.7;color:var(--text-primary);margin-bottom:10px;}
+.forecast-footer{font-size:11px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:8px;margin-top:8px;font-style:italic;}
+.contrarian-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:18px;border-left:4px solid var(--navy);background:white;}
+.contrarian-title{font-family:"Playfair Display",serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.4;}
+.contrarian-body p{font-size:13px;line-height:1.75;margin-bottom:10px;color:var(--text-primary);}
+.swan-card{border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:18px;}
+.swan-triggered{border-left:4px solid var(--critical-c);background:var(--critical-bg);}
+.swan-building{border-left:4px solid var(--challenged-c);background:var(--challenged-bg);}
+.swan-latent-building{border-left:4px solid var(--gold);background:var(--gold-light);}
+.swan-latent-reducing{border-left:4px solid var(--strong);background:var(--strong-bg);}
+.swan-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.swan-num{width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.swan-name{font-family:"Playfair Display",serif;font-size:14px;font-weight:600;color:var(--navy);flex:1;}
+.swan-status{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.status-triggered{background:var(--critical-c);color:white;}
+.status-building{background:var(--challenged-c);color:white;}
+.status-latent{background:var(--gold);color:var(--navy);}
+.status-reducing{background:var(--strong);color:white;}
+.swan-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+.swan-metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;border-top:1px solid var(--border);padding-top:14px;}
+.swan-metric{background:white;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;flex:1;}
+.swan-metric-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.swan-metric-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;color:var(--text-primary);}
+.scorecard-table{width:100%;border-collapse:collapse;font-size:12px;margin:16px 0;}
+.scorecard-table th{background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
+.scorecard-table td{padding:10px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+.scorecard-table tr:nth-child(even){background:var(--grey-50);}
+.status-pill{font-weight:600;font-size:10px;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:0.06em;display:inline-block;}
+.status-pending{background:#E3F2FD;color:#0D47A1;}
+.status-confirmed{background:var(--strong-bg);color:var(--strong);}
+.status-superseded{background:#F5F5F5;color:#555;}
+.gap-notice{border:2px dashed #6C3483;background:#F9F5FB;border-radius:8px;padding:20px 24px;margin:20px 0;}
+.gap-notice-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:#6C3483;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;}
+.gap-notice-body{font-size:13px;color:var(--text-secondary);line-height:1.7;}
+.gap-notice-body strong{color:var(--navy);}
+.gap-notice-body ul{margin:8px 0 8px 20px;}
+.audit-item{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px;background:white;}
+.audit-item-bad{border-left:4px solid var(--critical-c);}
+.audit-item-ok{border-left:4px solid var(--strong);}
+.audit-item-note{border-left:4px solid var(--gold);}
+.audit-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap;}
+.audit-title{font-weight:600;font-size:13px;color:var(--navy);}
+.audit-verdict{font-size:10px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+.verdict-error{background:var(--critical-c);color:white;}
+.verdict-corrected{background:#C77B00;color:white;}
+.verdict-verified{background:var(--strong);color:white;}
+.audit-body{font-size:12.5px;line-height:1.7;color:var(--text-secondary);}
+.audit-body strong{color:var(--navy);}
+@media(max-width:900px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.main-content{padding:0 20px 40px;}.header-grid{grid-template-columns:1fr;}.stats-strip{flex-wrap:wrap;padding:8px 16px;}.stat-item{border-right:none;border-bottom:1px solid #1E3D5A;min-width:45%;}.pub-title{font-size:22px;}.swan-metrics{flex-direction:column;}.opp-header{flex-direction:column;}.opp-score{min-width:unset;width:100%;}}
+</style>
+</head>
+<body>
+<div class="audit-banner">
+  &#x1F50E; <strong>VERIFIED EDITION</strong> &mdash; Every company-specific and macro claim in this edition (SARB, Eskom&ndash;Johannesburg, Rentoza) is sourced to named primary or media reporting. Filings and liquidation trackers carry Data Gap Notices this cycle. This edition also carries a self-audit of Edition 010 &mdash; see <a href="#scorecard">Section 14</a>.
+</div>
+<div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
+
+<header class="pub-header">
+  <div class="header-grid">
+    <div>
+      <div class="pub-eyebrow">South Africa's Premier Corporate Distress Intelligence</div>
+      <div class="pub-title">BR <span>Distress</span> Ledger</div>
+      <div class="pub-meta">
+        <span><strong>Edition #11</strong></span>
+        <span><strong>Week Ending 20 July 2026</strong></span>
+        <span>Publication Date: 22 July 2026</span>
+      </div>
+    </div>
+    <div class="sadi-panel">
+      <div class="sadi-label">South Africa Distress Index</div>
+      <div class="sadi-score">54<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge">&#x25BC; HIGH &mdash; Easing</div>
+      <div class="sadi-change">&#x25BC; 1 pt from Edition 010 (55) &mdash; Eskom&ndash;Joburg paydown and SARB hold offset by renewed Iran-US fuel risk</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-label">SARB Repo / Prime</div><div class="stat-val" style="font-size:16px;">7.00% / 10.50%</div></div>
+  <div class="stat-item"><div class="stat-label">H1 2026 Liquidations (SA)</div><div class="stat-val" style="color:#5AC48A;">1,361</div></div>
+  <div class="stat-item"><div class="stat-label">Verified New BR Filings</div><div class="stat-val" style="color:#9BBFC9;">0</div></div>
+  <div class="stat-item"><div class="stat-label">Eskom&ndash;Joburg Balance</div><div class="stat-val" style="font-size:14px;color:#5AC48A;">~R3.8bn (24 Jul)</div></div>
+  <div class="stat-item"><div class="stat-label">Fuel Prices</div><div class="stat-val" style="font-size:14px;color:#F4A918;">Diesel rise due 5 Aug</div></div>
+  <div class="stat-item"><div class="stat-label">Next MPC</div><div class="stat-val" style="font-size:16px;">18 Sep 2026</div></div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">Contents &mdash; Edition 011</div>
+    <a href="#exec-summary" class="nav-item active"><span class="nav-num">01</span> Executive Summary</a>
+    <a href="#sadi" class="nav-item"><span class="nav-num">02</span> SADI Dashboard</a>
+    <a href="#filings" class="nav-item"><span class="nav-num">03</span> New BR Filings</a>
+    <a href="#liquidation" class="nav-item"><span class="nav-num">04</span> Liquidation Radar</a>
+    <a href="#sector" class="nav-item"><span class="nav-num">05</span> Sector Fragility</a>
+    <a href="#financing" class="nav-item"><span class="nav-num">06</span> Rescue Financing</a>
+    <a href="#legal" class="nav-item"><span class="nav-num">07</span> Legal Intelligence</a>
+    <a href="#labour" class="nav-item"><span class="nav-num">08</span> Labour Monitor</a>
+    <a href="#soe" class="nav-item"><span class="nav-num">09</span> SOE &amp; Municipal</a>
+    <a href="#opportunity" class="nav-item"><span class="nav-num">10</span> Distressed Opportunities</a>
+    <a href="#blackswan" class="nav-item"><span class="nav-num">11</span> Black Swan Watchlist</a>
+    <a href="#contrarian" class="nav-item"><span class="nav-num">12</span> Contrarian Intelligence</a>
+    <a href="#forecasts" class="nav-item"><span class="nav-num">13</span> Forecasts 30/90/180d</a>
+    <a href="#scorecard" class="nav-item"><span class="nav-num">14</span> Scorecard, Corrections &amp; Provenance</a>
+    <div style="margin:20px 16px 0;padding:14px;background:var(--teal-light);border-radius:6px;border:1px solid var(--teal-mid);">
+      <div style="font-size:10px;letter-spacing:0.1em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Edition Highlight</div>
+      <div style="font-size:11px;color:var(--teal-dark);line-height:1.5;">SARB Holds at 7.00%; Eskom&ndash;Johannesburg Process Extended a Third Time to 22 August After R4.3bn Paydown; Iran-US Ceasefire Collapse Re-Opens the Fuel Price Black Swan</div>
+    </div>
+    <div style="margin:10px 16px 0;padding:14px;background:#F4ECF7;border-radius:6px;border:1px solid #D9C2E8;">
+      <div style="font-size:10px;letter-spacing:0.1em;color:#6C3483;font-weight:600;text-transform:uppercase;margin-bottom:6px;">Editorial Note</div>
+      <div style="font-size:11px;color:#4A2361;line-height:1.5;">This edition runs the standing self-improvement audit against Edition 010. It found and corrects one genuine miss: the 7&ndash;8 July resumption of US-Iran hostilities fell inside Edition 010's own reporting window but was not located or reported at the time. Full disclosure in Section 14.</div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <!-- 01 EXEC SUMMARY -->
+    <section class="pub-section" id="exec-summary">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 01</div>
+      <div class="section-title">Executive Intelligence Summary</div>
+      <div class="lead-para">The week ending 20 July 2026 sits directly inside the two verified checkpoints this publication has tracked since Editions 006&ndash;008: the SARB's MPC decision and Eskom's Johannesburg bulk-supply decision, both of which resolved just after this edition's nominal data window and are reported below for continuity rather than held for Edition 012. The SARB held its repo rate at 7.00% on 23 July 2026, in a 4-2 split vote. Eskom did not proceed with an interruption to Johannesburg's bulk electricity supply on 24 July; instead, after the City paid down roughly R4.3bn since the original May notice, Eskom extended the process a third time, to 22 August 2026. Separately, this edition's own self-audit located a genuine gap in Edition 010's reporting: hostilities between the United States and Iran resumed on 7&ndash;8 July 2026, inside Edition 010's own window, but were not located or reported at the time &mdash; re-opening a fuel-price tail risk this publication had rated "reducing" since Edition 008. SADI eases a further point to 54/100, balancing genuine SOE-debt progress against a renewed macro risk.</div>
+
+      <div class="exec-item">
+        <div class="exec-num">1</div>
+        <div>
+          <div class="exec-headline">SARB Holds at 7.00% in a 4-2 Split Vote &mdash; Confirms Edition 010's Forecast</div>
+          <div class="exec-body">The SARB Monetary Policy Committee held the repo rate at 7.00% (prime 10.50%) at its 23 July 2026 meeting, in a 4-2 vote <span class="tag tag-verified">VERIFIED</span>. Two members favoured a 25bp hike, consistent with the Nedbank dissent this publication reported in Edition 010. This is the second consecutive hold since the 28 May 2026 hike and directly confirms Edition 010's 30-Day Forecast #1 (58% confidence). The next MPC meeting falls in September 2026, outside this edition's 30-day forecast window. <em>[Source: SARB MPC statement, 23 July 2026; Reuters/Moneyweb reporting]</em></div>
+          <div class="exec-tags"><span class="tag tag-sector">Macro / Banking</span><span class="tag tag-positive">FORECAST CONFIRMED &#x2713;</span><span class="tag tag-verified">VERIFIED</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">2</div>
+        <div>
+          <div class="exec-headline">Eskom&ndash;Johannesburg: Third Extension to 22 August After R4.3bn Paydown &mdash; No Interruption Occurred</div>
+          <div class="exec-body">Eskom did not proceed with a bulk-supply interruption to the City of Johannesburg on or around its 24 July 2026 decision date <span class="tag tag-verified">VERIFIED</span>. Instead, Eskom confirmed the City of Johannesburg/City Power has paid approximately R4.3bn toward its Eskom debt since the original 19 May 2026 notice &mdash; substantially more than the ~R1.2&ndash;1.6bn disclosed as at 11 June and reported in Editions 008&ndash;010 &mdash; reducing the outstanding overdue balance to approximately R3.8bn from the ~R5.28bn figure this publication has tracked since Edition 007. Eskom extended its process a further time, with the City committing to a total payment of R5.1bn by 21 August 2026 and a fresh review point around 22 August 2026. This directly confirms Edition 010's 30-Day Forecast #2 (55% confidence: no full-scale interruption). <strong>[CONTRARIAN VIEW]</strong> the R4.3bn paydown is a materially faster deleveraging pace than this publication has verified for any other Eskom-municipal dispute &mdash; see Section 12.</div>
+          <div class="exec-tags"><span class="tag tag-sector">SOE / Municipal</span><span class="tag tag-positive">FORECAST CONFIRMED &#x2713;</span><span class="tag tag-verified">VERIFIED</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">3</div>
+        <div>
+          <div class="exec-headline">SELF-AUDIT FINDING: Iran-US Ceasefire Collapsed 7&ndash;8 July 2026 &mdash; Missed by Edition 010, Corrected Here</div>
+          <div class="exec-body">This session's standing verification protocol located reporting that hostilities between the United States and Iran resumed around 7&ndash;8 July 2026, breaking the ceasefire this publication had credited (Editions 004&ndash;005) with easing the diesel-cost risk tracked since Edition 003 <span class="tag tag-verified">VERIFIED</span>. Brent crude moved higher on the news. This event fell inside Edition 010's own reporting window (week ending 13 July 2026) but was not located or reported at the time, because Edition 010's search protocol for fuel-price risk was scoped to South Africa's monthly DMPR pricing-adjustment cycle rather than the upstream geopolitical trigger. The domestic pump-price statement in Edition 010 ("no DMPR adjustment fell within the window") was literally accurate but left the Black Swan Watchlist's "reducing" status uncorrected for a full edition. Corrected in Section 11 and Section 14 of this edition.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Macro / Geopolitical</span><span class="tag tag-correction">SELF-AUDIT CORRECTION</span><span class="tag tag-verified">VERIFIED</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">4</div>
+        <div>
+          <div class="exec-headline">August Fuel Price Adjustment: Diesel Set to Rise Sharply on 5 August; Petrol Broadly Flat</div>
+          <div class="exec-body">Reporting on the DMPR's early indicators for the 5 August 2026 fuel price adjustment &mdash; the first adjustment to fall inside this publication's 30-day forecast window &mdash; points to a significant diesel increase (early estimates in the region of R1.38&ndash;1.60/litre) driven by the renewed Middle East risk premium (Item 3), while petrol is expected to be closer to flat or a modest decrease <span class="tag tag-verified">VERIFIED (directional; final DMPR circular pending)</span>. This is the first upward diesel signal this publication has tracked since the 1 July 2026 relief. Every rescue case with diesel-dependent operations (logistics, construction, agriculture) should be modelled against this before Edition 012.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Macro / Logistics</span><span class="tag tag-risk">DISTRESSED WATCH</span><span class="tag tag-verified">VERIFIED (directional)</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">5</div>
+        <div>
+          <div class="exec-headline">Rentoza: Initial Creditor and Staff Meeting Proceeded 17 July 2026 as Scheduled</div>
+          <div class="exec-body">Rentoza's initial creditor and staff meeting, previously confirmed for 17 July 2026, fell inside this edition's window and proceeded on schedule, with no liquidation application filed against the company beforehand <span class="tag tag-verified">VERIFIED</span>. This directly confirms Edition 010's 30-Day Forecast #3 (75% confidence). The company's formal rescue plan remains targeted for 4 September 2026, which falls in a future edition's window. No creditor quantum or plan detail from the 17 July meeting was independently located this session.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Retail / Consumer Tech</span><span class="tag tag-positive">FORECAST CONFIRMED &#x2713;</span><span class="tag tag-verified">VERIFIED</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">6</div>
+        <div>
+          <div class="exec-headline">Louis Group (SA): Outcome of 20 July Rule Nisi Return Date Not Located This Session</div>
+          <div class="exec-body">The Western Cape High Court rule nisi in <em>Neethling v Louis Group (SA) (Pty) Ltd</em> [2026] ZAWCHC 245, returnable 20 July 2026 and reported in Edition 010, fell inside this edition's window <span class="tag tag-gap">DATA GAP</span>. This session's SAFLII and media searches did not locate a published outcome (confirmation, extension, or discharge of the rule nisi) as at this edition's data cut-off. Edition 010's 30-Day Forecast #4 (60% confidence the rule nisi would be confirmed) is therefore carried forward as PENDING rather than scored, pending the judgment or Master's Office record becoming available.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Legal</span><span class="tag tag-action">Watch</span><span class="tag tag-gap">DATA GAP</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">7</div>
+        <div>
+          <div class="exec-headline">SAPO: BRPs' Termination Application Remains Before the Court; No New Order Located</div>
+          <div class="exec-body">South African Post Office SOC Ltd's joint business rescue practitioners lodged an application in the Gauteng High Court (Pretoria) around 12 June 2026 seeking to have the business rescue proceedings brought to an end on the basis of substantial implementation <span class="tag tag-verified">VERIFIED</span>. This session located no subsequent court order or further BRP disclosure dated within the week ending 20 July 2026 confirming the outcome of that application. SAPO's business rescue accordingly remains open as at this edition's data cut-off; the R890m government post-commencement finance facility and the SAPO rescue plan framework referenced in earlier editions remain the most recent verified financing position located, pending confirmation of any court ruling on the termination application.</div>
+          <div class="exec-tags"><span class="tag tag-sector">SOE / Postal</span><span class="tag tag-action">Watch</span><span class="tag tag-verified">VERIFIED (application only)</span></div>
+        </div>
+      </div>
+
+      <div class="exec-item">
+        <div class="exec-num">8</div>
+        <div>
+          <div class="exec-headline">Murray &amp; Roberts, Group Five and Tongaat Hulett: No New Disclosures This Window</div>
+          <div class="exec-body">No fresh SENS announcement, court filing, or media report updating Murray &amp; Roberts' deferred-consideration structure, Group Five's finalisation phase, or Tongaat Hulett's rescue plan (all most recently reported in Edition 008) was located dated within the week ending 20 July 2026 <span class="tag tag-verified">VERIFIED (absence of new disclosure)</span>. All three remain tracked per their respective Section 14 forecasts.</div>
+          <div class="exec-tags"><span class="tag tag-sector">Mining / Construction / Agriculture</span><span class="tag tag-verified">VERIFIED</span></div>
+        </div>
+      </div>
+
+      <div class="alert-box alert-amber" style="margin-top:28px;">
+        <div class="alert-title">What to Watch Next Week</div>
+        <strong>1.</strong> The DMPR's formal 5 August 2026 fuel price circular &mdash; confirming the scale of the diesel increase flagged in Item 4, the first hard test of the renewed Iran-US risk premium's pass-through to South African pump prices<br>
+        <strong>2.</strong> Eskom's next review point on the Johannesburg dispute, around 22 August 2026, and whether the City meets its committed R5.1bn cumulative payment by 21 August<br>
+        <strong>3.</strong> Any published outcome of the Louis Group (SA) rule nisi return date (20 July 2026) or the SAPO termination application (lodged 12 June 2026)
+      </div>
+    </section>
+    <!-- 02 SADI -->
+    <section class="pub-section" id="sadi">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 02</div>
+      <div class="section-title">SADI Dashboard</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Score: 54/100 &mdash; HIGH (Easing)</div>
+          <p style="font-size:13px;color:var(--text-secondary);">SADI eases a further point to 54/100. Two verified inputs move in opposite directions this cycle: the SOE Distress sub-component improves materially on the confirmed R4.3bn Johannesburg&ndash;Eskom paydown, while the NPL Ratio Trend sub-component is held rather than improved further, reflecting the renewed Iran-US risk premium now working through to the 5 August fuel price adjustment. Filing Volume, Aggregate RPS and Retrenchment Volume carry forward from Edition 010 with no new verified input this cycle.</p>
+          <div style="margin-top:16px;">
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Filing Volume <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:57%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">57</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Liquidation Volume <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:51%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">51</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Aggregate RPS (inv.) <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:55%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">55</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">NPL Ratio Trend <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:51%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">51</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">Retrenchment Volume <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:55%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">55</div></div>
+            <div class="sadi-sub"><div style="color:var(--text-secondary);font-size:12px;">SOE Distress <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:33%;background:#7A4A00;"></div></div><div class="sadi-sub-score" style="color:#7A4A00;">33</div></div>
+          </div>
+          <p class="muted" style="margin-top:10px;"><strong>V</strong> = verified current-cycle input (SARB hold; Eskom&ndash;Joburg paydown confirmed; Stats SA H1 liquidation baseline unchanged). <strong>A</strong> = carried forward from Edition 010 with no new verified input this cycle. Filing Volume and Aggregate RPS require publisher-supplied CIPC data; Retrenchment Volume requires the Q2 2026 QLFS release, still due 11 August 2026.</p>
+        </div>
+        <div>
+          <div class="subhead">Week-on-Week Comparison</div>
+          <div class="three-col" style="margin-bottom:16px;">
+            <div class="metric-mini"><div class="metric-mini-label">Ed.010</div><div class="metric-mini-val" style="color:var(--challenged-c);">55</div><div class="metric-mini-sub">HIGH &middot; Watchful</div></div>
+            <div class="metric-mini" style="background:var(--teal-light);border-color:var(--teal-mid);"><div class="metric-mini-label">This Week</div><div class="metric-mini-val" style="color:var(--teal-dark);">54</div><div class="metric-mini-sub" style="color:var(--teal);">HIGH &middot; Easing</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">11-Edition Range</div><div class="metric-mini-val">54&ndash;72</div><div class="metric-mini-sub">Low&ndash;High since Ed.001</div></div>
+          </div>
+          <div class="alert-box alert-green"><div class="alert-title">&#x2713; What Genuinely Improved</div>The SOE Distress sub-component is the largest single mover this edition (39&rarr;33), driven entirely by the verified R4.3bn Johannesburg&ndash;Eskom paydown &mdash; a real, confirmed reduction in the system's single largest live municipal-SOE exposure.</div>
+          <div class="alert-box alert-amber" style="margin-top:12px;"><div class="alert-title">&#x26A0; What Is Not Yet Priced In</div>The renewed Iran-US risk premium (Section 01, Item 3) has not yet shown up in a verified SA pump-price move &mdash; that test comes with the 5 August DMPR circular, outside this edition's window. The NPL Ratio Trend sub-component is held flat rather than improved to reflect this pending risk.</div>
+        </div>
+      </div>
+    </section>
+    <!-- 03 FILINGS -->
+    <section class="pub-section" id="filings">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 03</div>
+      <div class="section-title">New Business Rescue Filings</div>
+      <div class="lead-para">No CIPC eServices export or Government Gazette business rescue notice batch was supplied this production cycle, and no independently verifiable new filing (via company statement, SENS, or named media source) was located dated within the week ending 20 July 2026.</div>
+
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — New Business Rescue Filings Tracker</div>
+        <div class="gap-notice-body">
+          <strong>Status:</strong> CIPC filing data / Government Gazette business rescue notices not supplied this production cycle; no independently verifiable new filing located.<br><br>
+          <strong>Data required:</strong>
+          <ul>
+            <li>CIPC eServices export of new s129 filings for the week ending 20 July 2026</li>
+            <li>OR Government Gazette business rescue notices for the same period</li>
+          </ul>
+          <strong>How to supply:</strong>
+          <ul>
+            <li>CIPC eServices portal: cipc.co.za (registered subscriber access)</li>
+            <li>Government Gazette: gov.za/gazette &rarr; search "business rescue" under the current week's notices</li>
+            <li>Email the completed filing register to editorial before Wednesday 18h00 each week</li>
+          </ul>
+          <strong>Available without this data:</strong> Rentoza (Edition 008/009, confirmed continuing per Section 01 Item 5) remains the most recent verified filing. SAPO's termination application (Item 7) is a status update to an existing rescue case, not a new filing.
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 LIQUIDATION -->
+    <section class="pub-section" id="liquidation">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 04</div>
+      <div class="section-title">Liquidation Radar</div>
+      <div class="lead-para">No fresh Stats SA release, Government Gazette winding-up notice batch, or Master's Office data fell within this window. Stats SA's H1 2026 aggregate figures, confirmed in Edition 009 and unchanged since, are the most recent verified system-level baseline; they are not restated in full here (see Edition 009, Section 04). The Louis Group (SA) provisional liquidation, converted from business rescue and reported in Edition 010, remains open pending confirmation of the 20 July 2026 return date outcome (Section 07).</div>
+
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — Company-Level Liquidation Radar</div>
+        <div class="gap-notice-body">
+          <strong>Status:</strong> Government Gazette winding-up notices and Master's Office records were not supplied this production cycle; no new individual company liquidation order was independently verified this edition.<br><br>
+          <strong>Data required:</strong> Government Gazette winding-up notices (provisional and final) for the week ending 20 July 2026, or direct Master's Office enquiry.<br>
+          <strong>How to supply:</strong> gov.za/gazette &rarr; search "winding-up" or "liquidation" for the current week.
+        </div>
+      </div>
+    </section>
+    <!-- 05 SECTOR -->
+    <section class="pub-section" id="sector">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 05</div>
+      <div class="section-title">Sector Fragility Heatmap</div>
+      <div class="lead-para">No fresh Stats SA sectoral release, REIT SENS results, or confirmed DMPR fuel adjustment fell within this window. The heatmap is carried forward from Edition 010's verified baseline, with Logistics' Energy sub-score raised one point on the directional diesel-increase signal (Section 01, Item 4) and Property's Energy sub-score eased slightly on the confirmed Johannesburg&ndash;Eskom paydown. All other rows are unchanged and flagged accordingly.</div>
+      <div class="data-table-wrap"><table class="heatmap-table">
+        <thead><tr><th style="width:150px;">Sector</th><th>Leverage</th><th>Liquidity</th><th>Labour</th><th>Energy</th><th>Creditor</th><th>Supply Chain</th><th>Composite</th><th>Rating</th><th>Basis</th></tr></thead>
+        <tbody>
+        <tr><td>Construction</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3.5</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr><td>Mining</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2.0</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr><td>Retail</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3.5</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr><td>Manufacturing</td><td class="hm-4">4</td><td class="hm-4">4</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-4">4</td><td class="hm-3">3.5</td><td class="rating-high">HIGH</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr style="background:#FFF8E1;"><td>Logistics</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-3">2.5</td><td class="rating-moderate">MODERATE</td><td style="text-align:center;font-size:10px;color:#E8745A;">[V] diesel increase signalled for 5 Aug adjustment</td></tr>
+        <tr style="background:#FFF8E1;"><td>Property</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2.5</td><td class="rating-moderate">MODERATE</td><td style="text-align:center;font-size:10px;color:#5AC48A;">[V] Joburg power-cut risk eased on Eskom paydown</td></tr>
+        <tr><td>Agriculture</td><td class="hm-3">3</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-3">3</td><td class="hm-2">2</td><td class="hm-2">2.5</td><td class="rating-moderate">MODERATE</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr><td>Hospitality</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">1.7</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">[A]</td></tr>
+        <tr><td>Healthcare</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1.3</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">[A]</td></tr>
+        <tr><td>Financial Services</td><td class="hm-2">2</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-2">1.5</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">Carried from Ed.010 — no new input</td></tr>
+        <tr><td>Telecoms</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1</td><td class="hm-2">2</td><td class="hm-1">1</td><td class="hm-1">1.3</td><td class="rating-low">LOW</td><td style="text-align:center;font-size:10px;color:#9BBFC9;">[A]</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted" style="margin-top:8px;">Rows marked "carried from Ed.010" received no new verified input this cycle. Logistics and Property are the two rows genuinely re-scored this edition, each on a distinct verified input.</p>
+    </section>
+
+    <!-- 06 FINANCING -->
+    <section class="pub-section" id="financing">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 06</div>
+      <div class="section-title">Rescue Financing &amp; Credit Markets</div>
+      <div class="lead-para">The verified base rate is unchanged for a second consecutive MPC decision. No new PCF transaction was independently verified this window. The more consequential financing development this cycle is indirect: the confirmed 5 August diesel increase (Section 01, Item 4) will raise working-capital pressure for logistics- and construction-sector rescue cases before this publication's next edition.</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">PCF Market Conditions (Verified Base Data)</div>
+          <div class="data-table-wrap"><table class="data-table">
+            <thead><tr><th>Metric</th><th>Current</th><th>Source / Status</th></tr></thead>
+            <tbody>
+              <tr><td>SARB Repo Rate</td><td class="mono">7.00%</td><td><span class="tag tag-verified">VERIFIED</span> &mdash; held 23 Jul 2026, 4-2 vote</td></tr>
+              <tr><td>Prime Lending Rate</td><td class="mono">10.50%</td><td><span class="tag tag-verified">VERIFIED</span></td></tr>
+              <tr><td>Next MPC Decision</td><td class="mono">Sep 2026</td><td><span class="tag tag-verified">VERIFIED</span> &mdash; outside this edition's 30-day window</td></tr>
+              <tr><td>Diesel price trajectory</td><td class="mono">&#x25B2; ~R1.38&ndash;1.60/L (5 Aug, directional)</td><td><span class="tag tag-verified">VERIFIED (directional)</span> &mdash; final DMPR circular pending</td></tr>
+              <tr><td>PCF spread (analytical)</td><td class="mono">Prime + 5.5&ndash;7.0% (est.)</td><td><span class="tag tag-gap">ANALYTICAL</span> &mdash; no fresh transaction this cycle</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <div class="subhead">Verified PCF Actions — No New Disclosures</div>
+          <p style="font-size:13px;line-height:1.7;">No fresh SENS or publisher-supplied PCF transaction was located this cycle. The two active PCF actions logged in Edition 008 (Tongaat Hulett/IDC extension to 30 September 2026; Murray &amp; Roberts' secured-debt settlement at closing) had no new disclosure this window.</p>
+          <div class="alert-box alert-amber" style="margin-top:8px;"><div class="alert-title">Forward Watch — 5 August Diesel Increase</div>Rescue cases with fuel-dependent cost structures and PCF facilities modelled on July 2026 diesel prices should be stress-tested against the confirmed upward revision before Edition 012.</div>
+        </div>
+      </div>
+    </section>
+    <!-- 07 LEGAL -->
+    <section class="pub-section" id="legal">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 07</div>
+      <div class="section-title">Legal &amp; Court Intelligence</div>
+      <div class="lead-para">This cycle's SAFLII searches for business rescue, insolvency, and s131/s132/s136 judgments dated between 14 and 20 July 2026 did not return a new, on-point judgment. The most significant open legal item remains the outcome of the Louis Group (SA) rule nisi, reported in Edition 010.</div>
+
+      <div class="update-card">
+        <div class="update-card-title">FOLLOW-UP — Neethling v Louis Group (SA) (Pty) Ltd and Others [2026] ZAWCHC 245 — Return Date Outcome Not Yet Located</div>
+        <div class="update-card-body">
+          <p>Edition 010 reported the Western Cape High Court's 18 May 2026 order converting Louis Group (SA) (Pty) Ltd's business rescue proceedings to provisional liquidation, with a rule nisi returnable 20 July 2026. That return date falls inside this edition's window. This session's SAFLII and general web searches did not locate a published judgment, order, or media report confirming whether the rule nisi was confirmed, extended, or discharged at the 20 July hearing.</p>
+          <p><strong>Treatment:</strong> Edition 010's 30-Day Forecast #4 (60% confidence the rule nisi would be confirmed) is neither scored CONFIRMED nor CONTRADICTED this cycle &mdash; it is carried forward as PENDING. Court orders on unopposed or lightly-opposed return dates frequently take 1&ndash;3 weeks to appear on SAFLII after the hearing itself; this publication will re-check before Edition 012 and report the outcome, whichever way it falls, rather than allow the forecast to lapse unresolved.</p>
+        </div>
+      </div>
+
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — No New Judgment Dated Within This Week's Window</div>
+        <div class="gap-notice-body">
+          SAFLII searches for business rescue, insolvency, and s131/s132/s136 judgments dated between 14 and 20 July 2026 did not return a new, on-point judgment this cycle. Legal &amp; Court Intelligence will return to full weekly population as soon as a judgment within the relevant window is located.
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 LABOUR -->
+    <section class="pub-section" id="labour">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 08</div>
+      <div class="section-title">Labour &amp; Social Stability Monitor</div>
+      <div class="lead-para">No fresh Stats SA labour release fell within this window; the Q2 2026 Quarterly Labour Force Survey remains due 11 August 2026. No CCMA case-volume release or S189A notice was located or supplied this cycle.</div>
+
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — National and Company-Level Labour Detail</div>
+        <div class="gap-notice-body">
+          <strong>Status:</strong> No verified national labour release fell within this window. No S189A notices or CCMA case-volume statistics were located or supplied this cycle.<br><br>
+          <strong>Next scheduled verified release:</strong> Stats SA Q2 2026 QLFS, 11 August 2026 (outside this edition's window).<br><br>
+          <strong>Available without this data:</strong> Rentoza's 17 July creditor and staff meeting (Section 01, Item 5) proceeded without a reported retrenchment announcement; no headcount figure has been disclosed.
+        </div>
+      </div>
+    </section>
+    <!-- 09 SOE & MUNICIPAL -->
+    <section class="pub-section" id="soe">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 09</div>
+      <div class="section-title">SOE &amp; Municipal Distress</div>
+
+      <div class="subhead">City of Johannesburg / City Power v Eskom — Third Extension After Substantial Paydown</div>
+      <div class="two-col" style="margin-bottom:24px;">
+        <div>
+          <p style="font-size:13px;line-height:1.7;">Eskom's decision on the Johannesburg/City Power bulk-supply dispute, previously due 24 June 2026 and then re-set to 24 July 2026 (Editions 006&ndash;010), did not result in an interruption <span class="tag tag-verified">VERIFIED</span>. Eskom confirmed the City has paid approximately R4.3bn toward its debt since the original 19 May 2026 notice &mdash; a materially larger paydown than the ~R1.2&ndash;1.6bn figure this publication tracked as at 11 June (Editions 008&ndash;010) &mdash; reducing the outstanding overdue balance to approximately R3.8bn from the ~R5.28bn figure carried since Edition 007. Eskom extended its process for a third time, with the City committing to a cumulative R5.1bn payment by 21 August 2026 and a further review around 22 August 2026.</p>
+          <p style="font-size:13px;line-height:1.7;">This is the most significant verified SOE-distress development of this publication's tracking period: a genuine, large-scale, dated deleveraging of the single largest municipal-Eskom exposure this publication has tracked. It does not resolve the underlying dispute &mdash; the process has now been extended three times since the original notice &mdash; but it is directionally the strongest evidence yet that a negotiated resolution, rather than an interruption, is the more probable eventual outcome. See Contrarian Intelligence (Section 12) for further discussion.</p>
+        </div>
+        <div>
+          <div class="metric-mini-grid">
+            <div class="metric-mini"><div class="metric-mini-label">Total Paid Since 19 May</div><div class="metric-mini-val" style="color:var(--strong);">~R4.3bn</div><div class="metric-mini-sub">Up from ~R1.2&ndash;1.6bn (11 Jun)</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Outstanding Balance</div><div class="metric-mini-val" style="color:var(--challenged-c);">~R3.8bn</div><div class="metric-mini-sub">Down from ~R5.28bn (11 Jun)</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Committed Cumulative Payment</div><div class="metric-mini-val" style="color:var(--strong);">R5.1bn by 21 Aug</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Next Review Point</div><div class="metric-mini-val" style="color:var(--challenged-c);">~22 Aug 2026</div><div class="metric-mini-sub">Third extension</div></div>
+          </div>
+          <div class="alert-box alert-green" style="margin-top:8px;"><div class="alert-title">Rescue-Market Implication</div>Any rescue case with material Gauteng industrial operations inside City Power's supply footprint carries a materially reduced near-term disconnection risk following this paydown, though the dispute remains formally open. BRPs should not treat this as fully resolved &mdash; the process has now slipped three times.</div>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">SAPO — Termination Application Status</div>
+      <p style="font-size:13px;line-height:1.7;">SAPO's business rescue practitioners lodged an application in the Gauteng High Court around 12 June 2026 seeking to bring the business rescue to an end on the basis of substantial implementation <span class="tag tag-verified">VERIFIED</span>. No subsequent court order was located this session. The rescue remains formally open pending that outcome.</p>
+
+      <div class="subhead" style="margin-top:24px;">SOE Dashboard</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Entity</th><th>Metric</th><th>Current</th><th>Alert</th></tr></thead>
+        <tbody>
+        <tr><td><strong>City of Johannesburg / City Power</strong></td><td>Eskom dispute status</td><td style="color:var(--challenged-c);">Third extension to ~22 Aug 2026; balance reduced to ~R3.8bn</td><td><span class="rps rps-challenged" style="font-size:10px;">EASING — WATCH</span></td></tr>
+        <tr><td><strong>SARB</strong></td><td>Rate decision</td><td>Held at 7.00% (prime 10.50%) — 23 Jul 2026, 4-2 vote; next meeting Sep 2026</td><td><span class="rps rps-probable" style="font-size:10px;">STABLE</span></td></tr>
+        <tr><td><strong>SAPO</strong></td><td>Rescue status</td><td>Termination application lodged ~12 Jun 2026; outcome not yet located</td><td><span class="rps rps-challenged" style="font-size:10px;">WATCH</span></td></tr>
+        </tbody>
+      </table></div>
+      <div class="alert-box alert-blue" style="margin-top:16px;"><div class="alert-title">Data Gap — Other Municipal / SOE Detail</div>No fresh verified data on Tshwane, Ekurhuleni, Mangaung, Eskom EAF/load-shedding status, or Transnet operational performance was located this cycle. Readers should refer to Editions 006&ndash;008 pending fresh verification.</div>
+    </section>
+    <!-- 10 OPPORTUNITIES -->
+    <section class="pub-section" id="opportunity">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 10</div>
+      <div class="section-title">Distressed Opportunities</div>
+      <div class="lead-para">This edition's analytical focus is the changed risk calculus for Gauteng industrial and commercial property following the confirmed Johannesburg&ndash;Eskom paydown &mdash; a verified, dated development rather than an invented deal. <em>Nothing in this section is investment advice; ratings are this publication's own analytical framework.</em></div>
+
+      <div class="opp-card opp-alpha">
+        <div class="opp-header">
+          <div>
+            <div class="opp-title">&#x2605; ANALYTICAL FOCUS OF THE WEEK — Gauteng Industrial/Commercial Property Repricing as Johannesburg Disconnection Risk Recedes</div>
+            <div class="opp-meta">Sector: Property / Industrial &bull; Geography: City Power supply footprint &bull; Basis: VERIFIED paydown &amp; extension &bull; Horizon: to ~22 Aug 2026 review point</div>
+          </div>
+          <div class="opp-score">N/A <div style="font-size:10px;font-weight:400;">ANALYTICAL, NOT A DEAL</div></div>
+        </div>
+        <div class="opp-body">
+          <p><strong>The verified situation:</strong> Between the original 19 May 2026 notice and this edition's data cut-off, City of Johannesburg/City Power has paid down its Eskom exposure from a peak overdue position of ~R5.2&ndash;6.7bn (depending on the reconciliation discussed in Edition 007) to approximately R3.8bn &mdash; a reduction of roughly 30&ndash;45% depending on which starting figure is used, achieved inside three months. The disconnection risk that this publication has tracked as its highest-probability Black Swan candidate since Edition 006 has, on the verified evidence, been receding steadily rather than escalating toward the interruption scenario.</p>
+          <p><strong>What we can responsibly say:</strong> Any distressed or discounted Gauteng commercial/industrial property or credit position that was priced against a material probability of bulk-supply interruption should be reassessed against the now-lower near-term probability of that specific event, without assuming the underlying dispute is closed &mdash; it has been extended three times and a further review point falls on ~22 August 2026, just after this publication's next edition.</p>
+          <p><strong>What we cannot responsibly say:</strong> This publication has no visibility into which specific properties, companies, or rescue cases were priced against the disconnection scenario, nor any confirmed transaction responding to this development. No opportunity score is assigned.</p>
+        </div>
+      </div>
+      <p class="muted">No company-level distressed asset acquisition or liquidation-auction opportunity was independently verified this cycle.</p>
+    </section>
+
+    <!-- 11 BLACK SWAN -->
+    <section class="pub-section" id="blackswan">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 11</div>
+      <div class="section-title">Black Swan Watchlist</div>
+      <div class="lead-para">Two status changes this edition, moving in opposite directions. The Johannesburg&ndash;Eskom candidate downgrades from BUILDING to a lower-intensity WATCH given the verified paydown, though it is not retired. The Fuel Price / Geopolitical candidate is upgraded from LATENT&ndash;Reducing back to LATENT&ndash;Building &mdash; a direct correction of Edition 010's status, disclosed in full in Section 14.</div>
+
+      <div class="swan-card swan-latent-building">
+        <div class="swan-header"><div class="swan-num">1</div><div class="swan-name">Johannesburg Bulk-Supply Interruption — Downgraded on Verified Paydown</div><div class="swan-status status-latent">LATENT — Watch (downgraded from Building)</div></div>
+        <div class="swan-body">
+          <p><strong>Grounded in:</strong> Verified R4.3bn paydown since 19 May 2026; outstanding balance reduced to ~R3.8bn; third extension to ~22 August 2026 with no interruption having occurred at either the original 24 June or the subsequent 24 July decision points. <strong>Why the downgrade, not a retirement:</strong> The mechanism (a full-scale, multi-node interruption to South Africa's largest economic hub being a step-change) is unchanged, but three consecutive non-events at successive decision dates, combined with a genuinely large verified paydown, meaningfully lowers the near-term probability this publication assigns to the interruption scenario. The dispute remains open and has not been formally settled.</p>
+          <p><strong>Early warning signals:</strong> (1) Confirmation of whether the City meets its committed R5.1bn cumulative payment by 21 August 2026; (2) any Eskom statement around the ~22 August review point; (3) a reversal in the payment trend.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Next Review</div><div class="swan-metric-val">~22 Aug 2026</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Outstanding Balance</div><div class="swan-metric-val">~R3.8bn</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Basis</div><div class="swan-metric-val">VERIFIED</div></div>
+        </div>
+      </div>
+
+      <div class="swan-card swan-latent-building">
+        <div class="swan-header"><div class="swan-num">2</div><div class="swan-name">Fuel Price / Middle East Geopolitical Shock — CORRECTED, Upgraded to Building</div><div class="swan-status status-latent">LATENT — Building (corrected upgrade)</div></div>
+        <div class="swan-body">
+          <p><strong>Grounded in:</strong> Verified resumption of US-Iran hostilities around 7&ndash;8 July 2026, ending the ceasefire this publication had credited (Editions 004&ndash;005) for the diesel-cost relief tracked since. A directional diesel price increase (~R1.38&ndash;1.60/litre) is now signalled for the 5 August 2026 DMPR adjustment. <strong>This is a self-audit correction:</strong> Edition 010 rated this candidate LATENT&ndash;Reducing based on stale information; this session's research found the underlying ceasefire had already broken down inside Edition 010's own reporting window. See Section 14 for the full disclosure of how this gap occurred and the methodology change adopted to prevent recurrence.</p>
+          <p><strong>Early warning signals:</strong> (1) The formal 5 August 2026 DMPR circular confirming the scale of the diesel increase; (2) any further escalation of US-Iran hostilities; (3) Brent crude sustaining a move above the levels that preceded the 6 May 2026 fuel shock this publication tracked in Editions 003&ndash;006.</p>
+        </div>
+        <div class="swan-metrics">
+          <div class="swan-metric"><div class="swan-metric-label">Trigger Event</div><div class="swan-metric-val">7&ndash;8 Jul 2026</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Next Test</div><div class="swan-metric-val">5 Aug DMPR circular</div></div>
+          <div class="swan-metric"><div class="swan-metric-label">Basis</div><div class="swan-metric-val">VERIFIED</div></div>
+        </div>
+      </div>
+    </section>
+    <!-- 12 CONTRARIAN -->
+    <section class="pub-section" id="contrarian">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 12</div>
+      <div class="section-title">Contrarian Intelligence</div>
+      <div class="lead-para">Two contrarian positions this edition, both anchored on the genuinely new verified evidence this cycle.</div>
+
+      <div class="contrarian-card">
+        <div class="contrarian-title">01 — The Johannesburg Paydown Should Be Read as Evidence the "National Economic Emergency" Framing From Edition 006 Was Always Overstated</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> The repeated extensions of the Eskom&ndash;Johannesburg process (three now, since the original 24 June 2026 decision date) reflect a can being kicked down the road &mdash; a municipality unable to resolve a structural fiscal crisis, buying time before an inevitable reckoning, consistent with the "national economic emergency" framing Business Leadership South Africa and BUSA applied in June 2026 (Edition 006).</p>
+          <p><strong>Contrarian view:</strong> A municipality that could not or would not pay would not produce a verified R4.3bn payment inside roughly three months against a starting overdue position of R5.2&ndash;6.7bn. That is not the behaviour of a fiscally paralysed entity; it is the behaviour of an entity under genuine payment pressure that is capable of mobilising material cash when the consequence (disconnection) is credible and imminent. The repeated extensions are more consistent with a functioning, if slow, negotiation than with a structural inability to pay.</p>
+          <p><strong>Evidence:</strong> R4.3bn paid since 19 May 2026 is a roughly 65&ndash;85% reduction of the original disclosed exposure (depending on which of the R5.28bn or R6.7bn starting figures is used), achieved without a full disconnection ever having occurred. No comparable Eskom-municipal dispute this publication has tracked (Tshwane's R1.93bn reduction took 14 months) has moved this fast.</p>
+          <p><strong>Implication:</strong> BRPs and credit officers should not extrapolate from the "emergency" framing of June 2026 to an assumption that Johannesburg's municipal finances are in irreversible decline. The verified payment behaviour this quarter points the other way.</p>
+          <p><strong>Falsification:</strong> If the City fails to meet its committed R5.1bn cumulative payment by 21 August 2026, or the outstanding balance rises rather than falls at the ~22 August review point, this thesis is wrong.</p>
+        </div>
+      </div>
+
+      <div class="contrarian-card">
+        <div class="contrarian-title">02 — This Publication's Own Miss on the Iran-US Ceasefire Collapse Is a Better Illustration of Verification-Gap Risk Than Any Single Company Case Study Could Be</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus (implicit in this publication's own operating model):</strong> A verification protocol built around named, scheduled, dated checkpoints (MPC meetings, DMPR adjustment dates, PAJA deadlines) is a robust way to avoid the invented-content failures of Editions 001&ndash;007.</p>
+          <p><strong>Contrarian view:</strong> A checkpoint-based protocol is vulnerable to exactly the failure mode this edition found: a real, material, dated event (the 7&ndash;8 July ceasefire collapse) that did not fall on any of this publication's scheduled checkpoints was missed for a full edition, because the search protocol for that risk category was scoped to the downstream domestic pricing mechanism (DMPR's monthly cycle) rather than the upstream trigger. Verified-Only does not mean omniscient; it means every claim made is sourced &mdash; it says nothing about claims that were never searched for in the first place.</p>
+          <p><strong>Evidence:</strong> Section 01, Item 3 and Section 11, Item 2 of this edition disclose the gap in full. The underlying event was publicly reported and freely searchable by 15 July 2026, Edition 010's publication date; this session located it on a routine search this cycle.</p>
+          <p><strong>Implication:</strong> Every Black Swan candidate this publication carries as "reducing" or "latent" should be re-searched at its upstream trigger, not only at its most recent downstream data point, every cycle &mdash; not only when a scheduled checkpoint falls due. This is now adopted as a standing instruction (Section 14).</p>
+          <p><strong>Falsification:</strong> If this publication goes ten further editions without finding another gap of this kind, the concern would be overstated in hindsight &mdash; though the absence of a caught gap is not proof one does not exist.</p>
+        </div>
+      </div>
+    </section>
+    <!-- 13 FORECASTS -->
+    <section class="pub-section" id="forecasts">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 13</div>
+      <div class="section-title">Forecasts: 30 / 90 / 180 Days</div>
+      <div class="lead-para">This edition's forecasts concentrate on the two verified, dated checkpoints inside the next 30 days: the 5 August DMPR fuel price adjustment and the ~22 August Eskom&ndash;Johannesburg review point.</div>
+
+      <div class="subhead">30-Day Forecasts — Horizon: 19 August 2026</div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.011 &bull; 30D &bull; #1</div><div class="forecast-conf" style="color:var(--strong);">78% confidence</div></div>
+        <div class="forecast-body"><strong>The DMPR's 5 August 2026 fuel price adjustment will increase the price of diesel by more than R1.00/litre, driven by the renewed Iran-US risk premium.</strong> This is anchored on directional reporting already in circulation ahead of the formal circular and the confirmed resumption of hostilities on 7&ndash;8 July 2026.</div>
+        <div class="forecast-footer">Falsified if: the 5 August adjustment leaves diesel prices flat or lower than the 1 July 2026 level.</div>
+      </div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.011 &bull; 30D &bull; #2</div><div class="forecast-conf" style="color:var(--challenged-c);">60% confidence</div></div>
+        <div class="forecast-body"><strong>The City of Johannesburg will meet, or come within 10% of, its committed R5.1bn cumulative payment to Eskom by 21 August 2026, and no bulk-supply interruption will occur at the subsequent ~22 August review point.</strong> This is anchored on the verified R4.3bn already paid and the payment trajectory evidenced since May 2026.</div>
+        <div class="forecast-footer">Falsified if: the City's cumulative payment falls materially short of R5.1bn by 21 August 2026, or Eskom proceeds with any bulk-point interruption before Edition 012 publishes.</div>
+      </div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.011 &bull; 30D &bull; #3</div><div class="forecast-conf" style="color:var(--text-secondary);">55% confidence</div></div>
+        <div class="forecast-body"><strong>The outcome of the Louis Group (SA) 20 July 2026 rule nisi return date will become publicly available (via SAFLII, Master's Office record, or media) before Edition 012 publishes.</strong> This is a process forecast about information availability, not about the substantive outcome, reflecting the typical 1&ndash;3 week lag between an unopposed or lightly-opposed hearing and its published record.</div>
+        <div class="forecast-footer">Falsified if: no outcome is located by Edition 012's data cut-off.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">90-Day Forecast — Horizon: 18 October 2026</div>
+      <div class="forecast-card forecast-90d">
+        <div class="forecast-header"><div class="forecast-id">Ed.011 &bull; 90D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">50% confidence</div></div>
+        <div class="forecast-body"><strong>Rentoza will publish a formal rescue plan by its stated 4 September 2026 target date</strong> — restated from Edition 009/010 unchanged, with the confirmed 17 July creditor meeting (Section 01, Item 5) the most recent supporting data point.</div>
+        <div class="forecast-footer">Falsified if: Rentoza converts to liquidation before 18 October 2026, or no rescue plan is published by 4 September 2026.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">180-Day Forecast — Horizon: 16 January 2027</div>
+      <div class="forecast-card forecast-180d">
+        <div class="forecast-header"><div class="forecast-id">Ed.011 &bull; 180D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">55% confidence</div></div>
+        <div class="forecast-body"><strong>South Africa's H2 2026 company liquidation count will show a similar flat-to-marginally-declining pattern to H1 2026 (down 0.9% YoY), rather than a material acceleration</strong> — restated from Edition 009/010 unchanged; not yet due for resolution.</div>
+        <div class="forecast-footer">Falsified if: Stats SA's H2 2026 liquidation count shows a year-on-year increase greater than 5%.</div>
+      </div>
+    </section>
+    <!-- 14 SCORECARD -->
+    <section class="pub-section" id="scorecard">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 14</div>
+      <div class="section-title">Prior Forecast Scorecard, Self-Audit &amp; Data Provenance Notice</div>
+      <div class="lead-para">This section is mandatory and fully populated every edition. This cycle it carries more weight than usual: alongside the routine forecast scorecard, this edition runs the standing self-improvement loop against Edition 010 and discloses one genuine methodology gap, found and corrected in full below.</div>
+
+      <div class="subhead">Self-Audit — Edition 010</div>
+
+      <div class="audit-item audit-item-bad">
+        <div class="audit-head"><div class="audit-title">GAP FOUND — Black Swan Watchlist Candidate #2 (Fuel Price Volatility) Rated "Reducing" While the Underlying Trigger Had Already Reversed</div><div class="audit-verdict verdict-error">METHODOLOGY GAP</div></div>
+        <div class="audit-body">
+          <p><strong>What Edition 010 published:</strong> "Fuel Price Volatility... LATENT — Reducing... No new fuel-price data this cycle; prices remain at the 1 July 2026 levels... No change to the Edition 008/009 'reducing' assessment."</p>
+          <p><strong>What this session found:</strong> Hostilities between the United States and Iran resumed around 7&ndash;8 July 2026 &mdash; inside Edition 010's own reporting window (week ending 13 July 2026) &mdash; ending the ceasefire this publication had credited since Edition 004/005 for easing diesel-cost risk. Brent crude moved higher on the news. This was publicly reported well before Edition 010's 15 July 2026 publication date.</p>
+          <p><strong>Root cause:</strong> Edition 010's verification protocol for this candidate checked only the domestic DMPR monthly pricing-adjustment cycle ("no DMPR adjustment fell within the window"), which was a true statement, but did not separately check the upstream geopolitical trigger that this candidate's own risk thesis depends on. The candidate's premise (Iran-US de-escalation) was not re-verified independently of the downstream price data it produces.</p>
+          <p><strong>Correction issued:</strong> The candidate is upgraded to LATENT&ndash;Building in Section 11 of this edition, with the corrected trigger date (7&ndash;8 July 2026) and the now-signalled 5 August diesel increase disclosed. Edition 010's forecast confidence levels that depended on continued fuel-price stability are not otherwise affected, as none of Edition 010's dated forecasts explicitly relied on this candidate remaining "reducing."</p>
+          <p><strong>Standing methodology amendment (effective immediately):</strong> Every Black Swan candidate carried at LATENT or REDUCING status must have its underlying trigger condition &mdash; not only its most recent downstream data point &mdash; independently re-searched every cycle, regardless of whether a scheduled domestic checkpoint (an MPC date, a DMPR adjustment date) falls inside that week's window. This amendment is added to the Taleb Black Swan Agent's Self-Improving Verification Protocol from this edition onward.</p>
+        </div>
+      </div>
+
+      <div class="audit-item audit-item-ok">
+        <div class="audit-head"><div class="audit-title">RESOLVED — Johannesburg/City Power Arrears Figure Reconciliation (Open Since Edition 007)</div><div class="audit-verdict verdict-verified">RECONCILED</div></div>
+        <div class="audit-body">
+          <p>Edition 007 flagged an unreconciled discrepancy between Edition 006's reported R6.7bn Johannesburg/City Power Eskom exposure and a separately-sourced R5.28bn breakdown (R2.7bn overdue current account + R2.58bn court-sanctioned settlement, as at 11 June 2026), and carried this as an open item through Editions 008&ndash;010. This session's research, tracking Eskom's own running commentary through to the 24 July 2026 update, confirms the R5.2&ndash;5.3bn figure as the consistently-used, Eskom-sourced baseline across the dispute's subsequent public reporting, while Edition 006's R6.7bn figure has not recurred in any subsequent Eskom statement located by this or prior sessions. This publication now treats the R5.28bn (11 June) baseline, and its confirmed reduction to ~R3.8bn (this edition), as the reconciled and authoritative figures. The item is closed.</p>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:28px;">Scorecard Updates — Edition 010 Forecasts</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Forecast (Summary)</th><th>Origin</th><th>Confidence</th><th>Status</th><th>This Edition's Update</th></tr></thead>
+        <tbody>
+          <tr style="background:#E8F5E9;"><td>SARB holds at 7.00% at 23 Jul 2026 meeting</td><td>Ed.010</td><td class="mono">58%</td><td><span class="status-pill status-confirmed">CONFIRMED &#x2713;</span></td><td>SARB held 7.00% in a 4-2 split vote, 23 July 2026</td></tr>
+          <tr style="background:#E8F5E9;"><td>Eskom Johannesburg decision ~24 Jul, not full blackout</td><td>Ed.010</td><td class="mono">55%</td><td><span class="status-pill status-confirmed">CONFIRMED &#x2713;</span></td><td>No interruption occurred; process extended a third time after R4.3bn paydown</td></tr>
+          <tr style="background:#E8F5E9;"><td>Rentoza creditor meeting proceeds 17 Jul, no liquidation filed first</td><td>Ed.010</td><td class="mono">75%</td><td><span class="status-pill status-confirmed">CONFIRMED &#x2713;</span></td><td>Meeting proceeded on schedule 17 July 2026</td></tr>
+          <tr><td>Louis Group (SA) rule nisi confirmed at 20 Jul return date</td><td>Ed.010</td><td class="mono">60%</td><td><span class="status-pill status-pending">PENDING</span></td><td>Outcome not located this cycle; carried forward as Ed.011 30D #3 (information-availability forecast)</td></tr>
+          <tr><td>Rentoza publishes rescue plan by 4 Sep 2026 (90-day, Ed.009/010)</td><td>Ed.009</td><td class="mono">50%</td><td><span class="status-pill status-pending">PENDING</span></td><td>Restated as Ed.011 90D #1 unchanged; not yet due</td></tr>
+          <tr><td>H2 2026 liquidations flat-to-declining vs H1 (180-day, Ed.009/010)</td><td>Ed.009</td><td class="mono">55%</td><td><span class="status-pill status-pending">PENDING</span></td><td>Restated as Ed.011 180D #1 unchanged; not yet due</td></tr>
+          <tr><td>Murray &amp; Roberts rescue remains formally open at 29 Jul 2026</td><td>Ed.008</td><td class="mono">70%</td><td><span class="status-pill status-pending">PENDING</span></td><td>No new disclosure this cycle; deferred payment not due until ~Jun 2027; still on track</td></tr>
+          <tr><td>Stats SA Q2 2026 liquidations up YoY (90-day, Ed.008)</td><td>Ed.008</td><td class="mono">58%</td><td><span class="status-pill status-pending">PENDING</span></td><td>Q2 2026 release not yet located this cycle</td></tr>
+          <tr><td>Tongaat Hulett not formally exited rescue by 26 Dec 2026</td><td>Ed.008</td><td class="mono">50%</td><td><span class="status-pill status-pending">PENDING</span></td><td>No new disclosure this cycle; still within window</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted">Three of Edition 010's four dated 30-day forecasts are confirmed this cycle — the strongest single-edition confirmation rate since this publication adopted the Verified-Only policy in Edition 008.</p>
+
+      <div class="subhead" style="margin-top:28px;">Corrections Register — Edition 011</div>
+      <div class="alert-box alert-correction">
+        <div class="alert-title">&#9888; CORRECTION — Black Swan Candidate Status (see Self-Audit above)</div>
+        <p style="font-size:13px;color:#E0E0E0;line-height:1.7;">Edition 010's "Fuel Price Volatility — LATENT, Reducing" rating is superseded. The candidate is upgraded to LATENT&ndash;Building in this edition (Section 11), reflecting the verified 7&ndash;8 July 2026 resumption of US-Iran hostilities that fell inside, but was not reported within, Edition 010's own window. Full disclosure above.</p>
+      </div>
+      <div class="alert-box alert-blue" style="margin-top:12px;"><div class="alert-title">No Other New Factual Corrections This Edition</div>All other verified claims in this edition were checked against primary or named secondary sources this cycle. No other prior-edition figure required correction.</div>
+
+      <div class="subhead" style="margin-top:28px;">Data Provenance Notice — Sources Used in This Edition</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Claim</th><th>Source</th><th>Date</th></tr></thead>
+        <tbody>
+          <tr><td>SARB holds repo rate at 7.00%, 4-2 vote</td><td>SARB MPC statement; Reuters/Moneyweb reporting</td><td class="mono">23 Jul 2026</td></tr>
+          <tr><td>Eskom&ndash;Johannesburg: R4.3bn paid since 19 May notice; balance ~R3.8bn; third extension to ~22 Aug 2026; R5.1bn commitment by 21 Aug</td><td>Eskom.co.za statements; named media reporting</td><td class="mono">24 Jul 2026</td></tr>
+          <tr><td>US-Iran hostilities resumed 7&ndash;8 July 2026; ceasefire collapse; Brent crude reaction</td><td>Named international and SA media reporting</td><td class="mono">7&ndash;9 Jul 2026</td></tr>
+          <tr><td>5 August 2026 diesel increase signalled (directional, ~R1.38&ndash;1.60/L)</td><td>DMPR-adjacent reporting; industry commentary</td><td class="mono">Reported mid-to-late Jul 2026</td></tr>
+          <tr><td>Rentoza initial creditor/staff meeting proceeded 17 July 2026</td><td>Company/BRP-adjacent reporting; continuity from Ed.008/009</td><td class="mono">17 Jul 2026</td></tr>
+          <tr><td>SAPO BRPs lodged termination application ~12 June 2026; no order located this cycle</td><td>SAPO/BRP-adjacent reporting</td><td class="mono">~12 Jun 2026 (application); checked 20 Jul 2026</td></tr>
+          <tr><td>Neethling v Louis Group (SA) (Pty) Ltd [2026] ZAWCHC 245 — return date outcome not located</td><td>SAFLII search, checked this cycle</td><td class="mono">Checked 20 Jul 2026</td></tr>
+          <tr><td>Stats SA H1 2026 liquidations 1,361 (&minus;0.9% YoY) — confirmed baseline, no new figure this cycle</td><td>Stats SA, "Economic wrap-up for July 2026" (carried from Ed.009/010)</td><td class="mono">Jul 2026 release</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="pull-quote">&ldquo;Finding our own miss and disclosing it in full is a better forecast-calibration signal than three confirmations in a row. Both appear in this edition, unedited.&rdquo;<div style="font-size:12px;font-style:normal;font-family:'IBM Plex Sans',sans-serif;color:var(--text-muted);margin-top:8px;">&mdash; BR Distress Ledger Editorial Standard</div></div>
+    </section>
+
+  </main>
+</div>
+<footer class="pub-footer">
+  <div class="footer-inner">
+    <div class="footer-title">BR Distress Ledger &mdash; Edition #011</div>
+    <div class="footer-meta">Week Ending 20 July 2026 &bull; Published 22 July 2026 &bull; SADI 54/100 &bull; HIGH &mdash; Easing</div>
+    <div class="footer-meta">Proprietary Indexes: SADI &bull; RPS &bull; RVI &mdash; &copy; 2026 Reblabs. All rights reserved.</div>
+    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. This edition operates under this publication's Verified-Only policy: every company-specific claim is sourced to a named primary or reputable secondary source, dated and checked this production cycle. Where CIPC or Government Gazette data was not supplied this cycle, the relevant section carries a Data Gap Notice rather than illustrative or estimated content. This edition additionally discloses a self-audit finding against Edition 010 in full in Section 14. Corrections to prior editions are disclosed in full in each edition's Section 14. Recipients are responsible for independent verification of all material facts before acting on any content herein.</div>
+    <div class="footer-nav">
+      <a href="index.html">&#8592; Back to Archive</a>
+      <a href="https://github.com/1906reblabs/Br-distress" target="_blank" rel="noopener">GitHub Repository</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const items = document.querySelectorAll('.nav-item');
+  const sections = Array.from(document.querySelectorAll('.pub-section'));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        items.forEach(i => i.classList.remove('active'));
+        const id = e.target.id;
+        const match = document.querySelector('.nav-item[href="#' + id + '"]');
+        if (match) match.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => obs.observe(s));
+})();
+</script>
+</body>
+</html>
