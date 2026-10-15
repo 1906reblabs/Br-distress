@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BR Distress Ledger — Edition #15 | Week Ending 11 October 2026</title>
+<meta name="description" content="South Africa's premier business rescue intelligence. Edition 15, week ending 11 October 2026. SARB hikes to 7.25%; Q2 GDP contracts 0.2%; unemployment 33.6%; SCA rules on retrenchment severance (NUMSA v SCAW). Verified-Only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#006B5B;--teal-dark:#004D42;--teal-light:#E0F2EE;--teal-mid:#B2D8D2;--navy:#0D2340;--gold:#C9A030;--gold-light:#FDF3DC;--white:#FFFFFF;--off-white:#F5FAF8;--grey-50:#F0F4F3;--grey-100:#DDE6E3;--grey-200:#BBC9C5;--text-primary:#0F2620;--text-secondary:#3A5A52;--text-muted:#6B8480;--border:#C8DDD9;--border-light:#E5EFED;--strong:#0F5C2E;--strong-bg:#D4EDDA;--probable:#2E7D32;--probable-bg:#E8F5E9;--challenged-c:#E65100;--challenged-bg:#FFF3E0;--distressed-c:#BF360C;--distressed-bg:#FBE9E7;--critical-c:#880E0E;--critical-bg:#FDECEA;--terminal-bg:#3E0000;}
+*{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:"IBM Plex Sans",sans-serif;font-size:14px;line-height:1.7;color:var(--text-primary);background:var(--off-white);}
+a{text-decoration:none;color:inherit;}
+.top-bar{background:var(--navy);color:#A8C4CF;font-size:11px;letter-spacing:0.06em;text-align:center;padding:6px 24px;}
+.audit-banner{background:#0D1A2D;border-bottom:3px solid #4FA8D8;padding:10px 40px;color:#BFE0F0;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.audit-banner strong{color:#fff;}
+.audit-banner a{color:#7EC8E3;text-decoration:underline;}
+.confirmed-banner{background:#0F5C2E;border-bottom:3px solid var(--gold);padding:10px 40px;color:#D4EDDA;font-size:12px;font-weight:500;letter-spacing:0.03em;}
+.confirmed-banner strong{color:white;}
+.rps{display:inline-flex;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px;white-space:nowrap;}
+.rps-strong{background:var(--strong-bg);color:var(--strong);}
+.rps-probable{background:var(--probable-bg);color:var(--probable);}
+.rps-challenged{background:var(--challenged-bg);color:var(--challenged-c);}
+.rps-distressed{background:var(--distressed-bg);color:var(--distressed-c);}
+.rps-critical{background:var(--critical-bg);color:var(--critical-c);}
+.tag{font-size:10px;font-weight:500;padding:2px 8px;border-radius:3px;letter-spacing:0.04em;text-transform:uppercase;}
+.tag-sector{background:var(--teal-light);color:var(--teal-dark);}
+.tag-risk{background:var(--distressed-bg);color:var(--distressed-c);}
+.tag-risk-crit{background:var(--critical-bg);color:var(--critical-c);}
+.tag-action{background:#E3F2FD;color:#0D47A1;}
+.tag-positive{background:var(--strong-bg);color:var(--strong);}
+.tag-verified{background:#D6EAF8;color:#1A5276;}
+.tag-gap{background:#F4ECF7;color:#6C3483;}
+.tag-correction{background:#1A1A1A;color:#F4A918;}
+.alert-box{border-radius:6px;padding:16px 20px;margin:16px 0;border-left:4px solid;font-size:13px;}
+.alert-box .alert-title{font-size:11px;letter-spacing:0.1em;font-weight:600;text-transform:uppercase;margin-bottom:6px;}
+.alert-green{background:var(--strong-bg);border-color:#1A7A4A;color:var(--strong);}
+.alert-amber{background:#FFF8E1;border-color:#C77B00;color:#7A4A00;}
+.alert-red{background:var(--critical-bg);border-color:#C0392B;color:var(--critical-c);}
+.alert-teal{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);}
+.alert-blue{background:#EBF5FB;border-color:#2E86C1;color:#1A5276;}
+.alert-correction{background:#0D1A2D;border-color:#F4A918;color:#E0E0E0;}
+.alert-correction .alert-title{color:#F4A918;}
+.data-table-wrap{overflow-x:auto;margin:20px 0;border-radius:6px;border:1px solid var(--border);}
+.data-table{width:100%;border-collapse:collapse;font-size:12px;}
+.data-table thead th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;padding:10px 12px;text-align:left;white-space:nowrap;}
+.data-table tbody tr:nth-child(even){background:var(--grey-50);}
+.data-table tbody tr:hover{background:var(--teal-light);}
+.data-table tbody td{padding:9px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.4;}
+.data-table tbody tr:last-child td{border-bottom:none;}
+.mono{font-family:"IBM Plex Mono",monospace;}.muted{color:var(--text-muted);font-size:12px;}
+.subhead{font-size:13px;font-weight:600;color:var(--navy);margin:20px 0 8px;text-transform:uppercase;letter-spacing:0.06em;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+ul.body-list{padding-left:20px;margin:10px 0;}
+ul.body-list li{margin-bottom:6px;font-size:13px;color:var(--text-secondary);}
+.pull-quote{border-left:4px solid var(--gold);padding:16px 24px;margin:24px 0;background:var(--gold-light);border-radius:0 6px 6px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:16px;color:var(--navy);line-height:1.6;}
+.pub-footer{background:var(--navy);color:#9BBFC9;padding:32px 40px;}
+.footer-inner{max-width:900px;margin:0 auto;}
+.footer-title{font-family:"Playfair Display",serif;font-size:18px;color:white;margin-bottom:6px;}
+.footer-meta{font-size:12px;color:#7AB0C4;margin-bottom:4px;}
+.footer-disclaimer{font-size:11px;line-height:1.6;color:#6A8FA0;margin-top:16px;max-width:700px;}
+.footer-nav{margin-top:20px;display:flex;gap:24px;}
+.footer-nav a{color:#A8C4CF;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;}
+.footer-nav a:hover{color:white;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}}
+.pub-header{background:var(--teal-dark);color:white;padding:28px 40px 20px;border-bottom:4px solid var(--gold);}
+.header-grid{display:grid;grid-template-columns:1fr auto;align-items:start;gap:32px;max-width:1200px;margin:0 auto;}
+.pub-eyebrow{font-size:10px;letter-spacing:0.14em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.pub-title{font-family:"Playfair Display",serif;font-size:32px;font-weight:700;color:white;line-height:1.1;}
+.pub-title span{color:var(--gold);}
+.pub-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#A8C4CF;margin-top:8px;letter-spacing:0.04em;}
+.pub-meta strong{color:#D4E8EC;font-weight:500;}
+.sadi-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:16px 22px;text-align:center;min-width:180px;}
+.sadi-label{font-size:10px;letter-spacing:0.12em;color:var(--teal-mid);font-weight:500;text-transform:uppercase;margin-bottom:4px;}
+.sadi-score{font-family:"IBM Plex Mono",monospace;font-size:52px;font-weight:500;color:#F4A918;line-height:1;}
+.sadi-denom{font-size:22px;color:#9BBFC9;}
+.sadi-badge{display:inline-block;margin-top:6px;background:rgba(92,196,138,0.18);border:1px solid rgba(92,196,138,0.4);color:#5AC48A;font-size:10px;letter-spacing:0.1em;font-weight:500;padding:3px 10px;border-radius:3px;text-transform:uppercase;}
+.sadi-change{font-size:11px;color:#5AC48A;margin-top:4px;}
+.stats-strip{background:var(--navy);padding:10px 40px;display:flex;border-bottom:1px solid #1E3D5A;}
+.stat-item{flex:1;text-align:center;padding:8px 16px;border-right:1px solid #1E3D5A;}
+.stat-item:last-child{border-right:none;}
+.stat-label{font-size:9px;letter-spacing:0.1em;color:#6A8FA0;text-transform:uppercase;font-weight:500;}
+.stat-val{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:500;color:white;line-height:1.2;}
+.layout{display:grid;grid-template-columns:240px 1fr;max-width:1200px;margin:0 auto;}
+.sidebar{background:var(--white);border-right:1px solid var(--border-light);position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 0;}
+.sidebar-head{font-size:9px;letter-spacing:0.14em;color:var(--text-muted);text-transform:uppercase;font-weight:500;padding:0 20px 10px;border-bottom:1px solid var(--border-light);margin-bottom:8px;}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 20px;font-size:12px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all 0.15s;}
+.nav-item:hover,.nav-item.active{background:var(--teal-light);color:var(--teal-dark);border-left-color:var(--teal);font-weight:500;}
+.nav-num{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--grey-200);min-width:18px;}
+.main-content{padding:0 48px 64px;background:var(--white);}
+.pub-section{border-bottom:1px solid var(--border-light);padding:48px 0;scroll-margin-top:20px;}
+.section-rule{height:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--teal-mid) 60%,transparent 100%);margin-bottom:20px;border-radius:2px;}
+.section-eyebrow{font-size:9px;letter-spacing:0.18em;color:var(--teal);text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+.section-title{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:20px;}
+.lead-para{font-size:15px;line-height:1.75;color:var(--text-secondary);margin-bottom:24px;border-left:3px solid var(--teal-mid);padding-left:16px;}
+p{margin-bottom:12px;}
+.metric-mini{background:var(--off-white);border:1px solid var(--border-light);border-radius:6px;padding:14px 16px;text-align:center;}
+.metric-mini-label{font-size:10px;letter-spacing:0.08em;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;}
+.metric-mini-val{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:500;color:var(--navy);}
+.metric-mini-sub{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.metric-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.kpi-chip{background:var(--grey-50);border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;}
+.kpi-chip-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;}
+.kpi-chip-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:500;color:var(--text-primary);}
+.sadi-sub{display:grid;grid-template-columns:160px 1fr 40px;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-light);font-size:12px;}
+.sadi-sub:last-child{border-bottom:none;}
+.sadi-sub-bar{height:8px;background:var(--grey-100);border-radius:4px;overflow:hidden;}
+.sadi-sub-fill{height:100%;border-radius:4px;}
+.sadi-sub-score{font-family:"IBM Plex Mono",monospace;font-weight:500;text-align:right;}
+.exec-item{padding:18px 0;border-bottom:1px solid var(--border-light);display:grid;grid-template-columns:36px 1fr;gap:16px;}
+.exec-item:last-child{border-bottom:none;}
+.exec-num{font-family:"Playfair Display",serif;font-size:28px;color:var(--teal-mid);font-weight:700;line-height:1;padding-top:2px;}
+.exec-headline{font-size:12px;letter-spacing:0.04em;font-weight:600;color:var(--navy);text-transform:uppercase;margin-bottom:6px;}
+.exec-body{font-size:13px;line-height:1.65;color:var(--text-secondary);}
+.exec-tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;}
+.heatmap-table{border-collapse:collapse;width:100%;font-size:11px;}
+.heatmap-table th{background:var(--navy);color:white;font-size:10px;letter-spacing:0.06em;font-weight:500;padding:8px 10px;text-align:center;white-space:nowrap;}
+.heatmap-table th:first-child{text-align:left;}
+.heatmap-table td{padding:7px 10px;text-align:center;border:1px solid var(--border-light);font-family:"IBM Plex Mono",monospace;font-size:11px;}
+.heatmap-table td:first-child{text-align:left;font-family:"IBM Plex Sans",sans-serif;font-size:12px;font-weight:500;color:var(--navy);}
+.hm-1{background:#E8F5E9;color:#2E7D32;}.hm-2{background:#F1F8E9;color:#558B2F;}.hm-3{background:#FFF8E1;color:#7A4A00;}.hm-4{background:#FFF3E0;color:#BF360C;}.hm-5{background:#B71C1C;color:white;font-weight:600;}
+.rating-low{background:#D4EDDA;color:#0F5C2E;}.rating-moderate{background:#FFF3CD;color:#7A4A00;}.rating-high{background:#F8D7DA;color:#721C24;}.rating-extreme{background:#3E0000;color:white;font-weight:600;}
+.case-study{background:var(--teal-light);border-left:4px solid var(--teal);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.case-study-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--teal-dark);margin-bottom:8px;}
+.case-study-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.update-card{background:#E8F5E9;border-left:4px solid var(--strong);border-radius:0 6px 6px 0;padding:20px 24px;margin:20px 0;}
+.update-card-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--strong);margin-bottom:8px;}
+.update-card-body{font-size:13px;color:var(--text-secondary);line-height:1.65;}
+.new-star{color:var(--gold);font-size:13px;margin-right:2px;}
+.legal-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.legal-landmark{border-left:4px solid var(--gold);background:var(--gold-light);}
+.legal-verified{border-left:4px solid #2E86C1;background:#EBF5FB;}
+.legal-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.legal-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;line-height:1.4;}
+.legal-meta{font-size:11px;color:var(--text-muted);margin-top:4px;letter-spacing:0.02em;}
+.legal-body p{font-size:13px;line-height:1.7;margin-bottom:10px;color:var(--text-primary);}
+.legal-body strong{color:var(--navy);}
+.legal-badge{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.badge-verified{background:#2E86C1;color:white;}
+.badge-landmark{background:var(--gold);color:var(--navy);}
+.opp-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:20px;}
+.opp-alpha{border-left:4px solid var(--gold);background:var(--gold-light);}
+.opp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px;flex-wrap:wrap;}
+.opp-title{font-family:"Playfair Display",serif;font-size:15px;color:var(--navy);font-weight:600;}
+.opp-meta{font-size:11px;color:var(--text-muted);margin-top:4px;}
+.opp-score{flex-shrink:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;color:var(--gold);background:white;border:1px solid var(--gold);border-radius:6px;padding:8px 14px;min-width:80px;}
+.opp-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+.forecast-card{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px;}
+.forecast-30d{border-left:4px solid #4527A0;background:var(--off-white);}
+.forecast-90d{border-left:4px solid var(--teal);background:var(--off-white);}
+.forecast-180d{border-left:4px solid var(--navy);background:var(--off-white);}
+.forecast-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;}
+.forecast-id{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;}
+.forecast-conf{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;}
+.forecast-body{font-size:13px;line-height:1.7;color:var(--text-primary);margin-bottom:10px;}
+.forecast-footer{font-size:11px;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:8px;margin-top:8px;font-style:italic;}
+.contrarian-card{border:1px solid var(--border);border-radius:8px;padding:22px 24px;margin-bottom:18px;border-left:4px solid var(--navy);background:white;}
+.contrarian-title{font-family:"Playfair Display",serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.4;}
+.contrarian-body p{font-size:13px;line-height:1.75;margin-bottom:10px;color:var(--text-primary);}
+.swan-card{border:1px solid var(--border);border-radius:8px;padding:20px 22px;margin-bottom:18px;}
+.swan-triggered{border-left:4px solid var(--critical-c);background:var(--critical-bg);}
+.swan-building{border-left:4px solid var(--challenged-c);background:var(--challenged-bg);}
+.swan-latent-building{border-left:4px solid var(--gold);background:var(--gold-light);}
+.swan-latent-reducing{border-left:4px solid var(--strong);background:var(--strong-bg);}
+.swan-retired{border-left:4px solid #6B8480;background:#F0F4F3;}
+.swan-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.swan-num{width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.swan-name{font-family:"Playfair Display",serif;font-size:14px;font-weight:600;color:var(--navy);flex:1;}
+.swan-status{flex-shrink:0;font-size:10px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:0.08em;text-transform:uppercase;}
+.status-triggered{background:var(--critical-c);color:white;}
+.status-building{background:var(--challenged-c);color:white;}
+.status-latent{background:var(--gold);color:var(--navy);}
+.status-reducing{background:var(--strong);color:white;}
+.status-retired{background:#6B8480;color:white;}
+.swan-body p{font-size:13px;line-height:1.7;margin-bottom:10px;}
+.swan-metrics{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;border-top:1px solid var(--border);padding-top:14px;}
+.swan-metric{background:white;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:120px;flex:1;}
+.swan-metric-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+.swan-metric-val{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;color:var(--text-primary);}
+.scorecard-table{width:100%;border-collapse:collapse;font-size:12px;margin:16px 0;}
+.scorecard-table th{background:var(--navy);color:white;padding:10px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:0.08em;}
+.scorecard-table td{padding:10px 12px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+.scorecard-table tr:nth-child(even){background:var(--grey-50);}
+.status-pill{font-weight:600;font-size:10px;padding:2px 8px;border-radius:3px;text-transform:uppercase;letter-spacing:0.06em;display:inline-block;}
+.status-pending{background:#E3F2FD;color:#0D47A1;}
+.status-confirmed{background:var(--strong-bg);color:var(--strong);}
+.status-contradicted{background:var(--critical-bg);color:var(--critical-c);}
+.status-superseded{background:#F5F5F5;color:#555;}
+.gap-notice{border:2px dashed #6C3483;background:#F9F5FB;border-radius:8px;padding:20px 24px;margin:20px 0;}
+.gap-notice-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:#6C3483;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;}
+.gap-notice-body{font-size:13px;color:var(--text-secondary);line-height:1.7;}
+.gap-notice-body strong{color:var(--navy);}
+.gap-notice-body ul{margin:8px 0 8px 20px;}
+.audit-item{border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px;background:white;}
+.audit-item-bad{border-left:4px solid var(--critical-c);}
+.audit-item-ok{border-left:4px solid var(--strong);}
+.audit-item-note{border-left:4px solid var(--gold);}
+.audit-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap;}
+.audit-title{font-weight:600;font-size:13px;color:var(--navy);}
+.audit-verdict{font-size:10px;font-weight:700;padding:3px 10px;border-radius:3px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+.verdict-error{background:var(--critical-c);color:white;}
+.verdict-corrected{background:#C77B00;color:white;}
+.verdict-verified{background:var(--strong);color:white;}
+.audit-body{font-size:12.5px;line-height:1.7;color:var(--text-secondary);}
+.audit-body strong{color:var(--navy);}
+@media(max-width:900px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.main-content{padding:0 20px 40px;}.header-grid{grid-template-columns:1fr;}.stats-strip{flex-wrap:wrap;padding:8px 16px;}.stat-item{border-right:none;border-bottom:1px solid #1E3D5A;min-width:45%;}.pub-title{font-size:22px;}.swan-metrics{flex-direction:column;}.opp-header{flex-direction:column;}.opp-score{min-width:unset;width:100%;}}
+</style>
+</head>
+<body>
+<div class="audit-banner">
+  &#x1F50E; <strong>VERIFIED EDITION &mdash; EXTENDED INTERVAL.</strong> This edition covers 22 August&ndash;11 October 2026 (seven weeks since Edition 013's 21 August cut-off), weighted to the week of 5&ndash;11 October. Every factual claim is sourced and dated; where data could not be verified, a Data Gap Notice is shown. Two source discrepancies in Edition 013 and two new data conflicts are disclosed in <a href="#scorecard">Section 14</a>.
+</div>
+<div class="top-bar">INTELLIGENCE PRODUCT &mdash; FOR AUTHORISED SUBSCRIBERS ONLY &nbsp;|&nbsp; BR DISTRESS LEDGER &nbsp;|&nbsp; NOT LEGAL OR FINANCIAL ADVICE</div>
+
+<header class="pub-header">
+  <div class="header-grid">
+    <div>
+      <div class="pub-eyebrow">South Africa's Premier Corporate Distress Intelligence</div>
+      <div class="pub-title">BR <span>Distress</span> Ledger</div>
+      <div class="pub-meta">
+        <span><strong>Edition #15</strong></span>
+        <span><strong>Week Ending 11 October 2026</strong></span>
+        <span>Publication Date: 12 October 2026</span>
+      </div>
+    </div>
+    <div class="sadi-panel">
+      <div class="sadi-label">South Africa Distress Index</div>
+      <div class="sadi-score">52<span class="sadi-denom">/100</span></div>
+      <div class="sadi-badge" style="background:rgba(244,169,24,0.18);border-color:rgba(244,169,24,0.4);color:#F4A918;">&#x25B2; HIGH &mdash; Renewed Pressure</div>
+      <div class="sadi-change" style="color:#F4A918;">&#x25B2; 1 pt from Edition 013 (51) &mdash; rate hike, GDP contraction and rising unemployment outweigh falling liquidation counts</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-label">SARB Repo / Prime</div><div class="stat-val" style="font-size:16px;color:#F4A918;">7.25% / 10.75%</div></div>
+  <div class="stat-item"><div class="stat-label">Q2 GDP (q/q)</div><div class="stat-val" style="color:#E8745A;">&minus;0.2%</div></div>
+  <div class="stat-item"><div class="stat-label">Unemployment (Q2)</div><div class="stat-val" style="color:#E8745A;">33.6%</div></div>
+  <div class="stat-item"><div class="stat-label">CPI (Aug)</div><div class="stat-val" style="color:#F4A918;">4.4%</div></div>
+  <div class="stat-item"><div class="stat-label">Liquidations (Aug)</div><div class="stat-val" style="color:#5AC48A;">227</div></div>
+  <div class="stat-item"><div class="stat-label">Diesel 0.05% (7 Oct)</div><div class="stat-val" style="color:#E8745A;font-size:16px;">R31.95</div></div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-head">Contents &mdash; Edition 015</div>
+    <a href="#exec-summary" class="nav-item active"><span class="nav-num">01</span> Executive Summary</a>
+    <a href="#sadi" class="nav-item"><span class="nav-num">02</span> SADI Dashboard</a>
+    <a href="#filings" class="nav-item"><span class="nav-num">03</span> New BR Filings</a>
+    <a href="#liquidation" class="nav-item"><span class="nav-num">04</span> Liquidation Radar</a>
+    <a href="#sector" class="nav-item"><span class="nav-num">05</span> Sector Fragility</a>
+    <a href="#financing" class="nav-item"><span class="nav-num">06</span> Rescue Financing</a>
+    <a href="#legal" class="nav-item"><span class="nav-num">07</span> Legal Intelligence</a>
+    <a href="#labour" class="nav-item"><span class="nav-num">08</span> Labour Monitor</a>
+    <a href="#soe" class="nav-item"><span class="nav-num">09</span> SOE &amp; Municipal</a>
+    <a href="#opportunity" class="nav-item"><span class="nav-num">10</span> Distressed Opportunities</a>
+    <a href="#blackswan" class="nav-item"><span class="nav-num">11</span> Black Swan Watchlist</a>
+    <a href="#contrarian" class="nav-item"><span class="nav-num">12</span> Contrarian Intelligence</a>
+    <a href="#forecasts" class="nav-item"><span class="nav-num">13</span> Forecasts 30/90/180d</a>
+    <a href="#scorecard" class="nav-item"><span class="nav-num">14</span> Scorecard, Corrections &amp; Provenance</a>
+    <div style="margin:20px 16px 0;padding:14px;background:var(--teal-light);border-radius:6px;border:1px solid var(--teal-mid);">
+      <div style="font-size:10px;letter-spacing:0.1em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;margin-bottom:6px;">Edition Highlight</div>
+      <div style="font-size:11px;color:var(--teal-dark);line-height:1.5;">SARB Hikes to 7.25% Unanimously; Q2 GDP Contracts 0.2%; Diesel Up R2.84&ndash;3.24/L on 7 October; SCA Rules on Retrenchment Severance in NUMSA v SCAW</div>
+    </div>
+    <div style="margin:10px 16px 0;padding:14px;background:#F4ECF7;border-radius:6px;border:1px solid #D9C2E8;">
+      <div style="font-size:10px;letter-spacing:0.1em;color:#6C3483;font-weight:600;text-transform:uppercase;margin-bottom:6px;">Editorial Note</div>
+      <div style="font-size:11px;color:#4A2361;line-height:1.5;">Extended interval (22 Aug&ndash;11 Oct 2026). No CIPC or Gazette batch was supplied; company-level filing and liquidation sections carry Data Gap Notices. Retrenchment law was checked on SAFLII and in named law-firm alerts.</div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="pub-section" id="exec-summary">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 01</div>
+      <div class="section-title">Executive Intelligence Summary</div>
+      <div class="lead-para">The verified record for 22 August&ndash;11 October 2026 shows a macro squeeze arriving in sequence: the SARB hiked the repo rate 25bp to 7.25% (prime 10.75%) in September; Stats SA reported Q2 GDP contracting 0.2% q/q and official unemployment rising to 33.6%; and the 7 October DMPR adjustment added R2.84&ndash;3.33/litre across fuels. Against this, company liquidation counts kept falling (July 239, August 227), and the City of Johannesburg's R5.25bn Eskom settlement of 21 August is now corroborated by six outlets. On the legal side, the Supreme Court of Appeal handed down <em>NUMSA v SCAW South Africa</em> on 29 September, a retrenchment-severance ruling listed on SAFLII. No CIPC or Gazette data was supplied, so company-level sections are Data Gap Notices.</div>
+
+      <div class="exec-item"><div class="exec-num">1</div><div>
+        <div class="exec-headline">SARB Raises Repo Rate 25bp to 7.25% (Prime 10.75%) in a Unanimous Decision</div>
+        <div class="exec-body">The Monetary Policy Committee raised the repo rate to 7.25% at its September 2026 meeting, taking prime to 10.75% (repo + 3.5%) <span class="tag tag-verified">VERIFIED</span>. Coverage reports the decision was unanimous and cites the fuel-price shock; the Bank's projections were reported as broadly steady for the remainder of the year, with the final MPC meeting of 2026 in November <em>[Source: Briefly, eNCA | Sept 2026]</em>. The prior hike to 7.00% was on 28 May 2026 (Ed.006/007). Every floating-rate facility in the rescue universe is now 25bp dearer than Edition 013 stated. <span class="tag tag-gap">DATE FLAG</span> The exact announcement date was not confirmed against the SARB statement this cycle; coverage dated 23&ndash;24 September.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Macro / Banking</span><span class="tag tag-risk-crit">HIGH</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">2</div><div>
+        <div class="exec-headline">Fuel Prices 7 October: Diesel +R2.84 (0.05%) / +R3.24 (0.005%); Petrol 95 +R3.33, 93 +R3.12</div>
+        <div class="exec-body">The DMPR adjustment effective Wednesday 7 October 2026 lifted inland diesel (0.05% sulphur) by R2.84 to R31.95/litre and diesel (0.005%) by R3.24 to R33.29/litre; petrol 95 rose R3.33 and 93 rose R3.12 <span class="tag tag-verified">VERIFIED</span> <em>[Source: DMPR statement as reported by BusinessTech and Cape Town Etc | 6&ndash;7 Oct 2026]</em>. FNB, cited by BusinessDay on 7 September, cited cumulative fuel-price increases of R7.76/litre (petrol) and R9.39/litre (diesel). Diesel-dependent rescue models built on Edition 013's R26.16&ndash;26.40 wholesale diesel figures are now materially understated. <span class="tag tag-gap">DISCREPANCY</span> One outlet reported the 0.005% increase as R3.58; the DMPR figure (324.38c) is used here &mdash; see Section 14.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Macro / Logistics</span><span class="tag tag-risk-crit">CRITICAL INPUT</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">3</div><div>
+        <div class="exec-headline">Q2 2026 GDP Contracts 0.2% q/q After Six Quarters of Growth</div>
+        <div class="exec-body">Stats SA reported on 8 September that real GDP fell 0.2% q/q in Q2 2026, ending six consecutive quarters of growth <span class="tag tag-verified">VERIFIED</span>. Manufacturing and mining weighed on output (reported at &minus;1.8% and &minus;3.0%); trade, catering and accommodation fell 1.9%; construction grew for a second quarter and agriculture for a seventh; fixed investment fell for a second quarter and net exports subtracted about 1.1 percentage points, while household consumption rose 0.4% <em>[Source: Stats SA GDP release; Engineering News, EWN, SAnews | 8 Sept 2026]</em>.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Macro</span><span class="tag tag-risk">HIGH</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">4</div><div>
+        <div class="exec-headline">Official Unemployment Rises 0.9pp to 33.6% in Q2; Expanded Rate 43.8%</div>
+        <div class="exec-body">Stats SA's Q2 2026 QLFS (released 11 August) put the official rate at 33.6%, up 0.9 percentage points; unemployed persons rose by about 345,000 to 8.5 million while employment fell by about 16,000 to 16.7 million; the expanded rate was 43.8% and youth unemployment 47.4% <span class="tag tag-verified">VERIFIED</span> <em>[Source: Stats SA QLFS Q2 2026 via Polity/Engineering News, BusinessTech | 11 Aug 2026]</em>. This supersedes the April-quarter figures last carried in Edition 003 (~42.4% expanded, stale).</div>
+        <div class="exec-tags"><span class="tag tag-sector">Labour</span><span class="tag tag-risk">HIGH</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">5</div><div>
+        <div class="exec-headline">SCA Hands Down NUMSA v SCAW South Africa on Retrenchment Severance (29 September)</div>
+        <div class="exec-body"><em>National Union of Metalworkers of South Africa v SCAW South Africa (Pty) Ltd</em> (1416/2024) [2026] ZASCA 126, dated 29 September 2026, is listed on SAFLII's recent-cases page <span class="tag tag-verified">VERIFIED (SAFLII listing)</span>. Bowmans' 9 October alert summarises it as confirming that employers who contractually agree to pay enhanced severance can still withhold it where employees unreasonably refuse alternative employment; CDH's 5 October alert frames the issue as whether a contractual provision overrides statutory forfeiture of severance. Full judgment text was not reviewed this cycle &mdash; see Section 07.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Legal / Labour</span><span class="tag tag-action">Action Required</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">6</div><div>
+        <div class="exec-headline">Company Liquidations Fall: July 239, August 227; January&ndash;August 1,828 vs 1,952 in 2025</div>
+        <div class="exec-body">Stats SA recorded 239 company liquidations in July 2026 and 227 in August (196 voluntary, 31 compulsory; 181 companies and 46 close corporations), a 15.3% fall year-on-year for August; the January&ndash;August total of 1,828 compares with 1,952 a year earlier, and the three months to August (712) compare with 825 <span class="tag tag-verified">VERIFIED</span> <em>[Source: Stats SA via BusinessTech, IOL | Aug&ndash;Sept 2026]</em>. Insolvencies (individuals/partnerships) were 114 in August. Edition 013's 30-day liquidation forecast is scored CONFIRMED (Section 14).</div>
+        <div class="exec-tags"><span class="tag tag-sector">Macro</span><span class="tag tag-positive">EASING</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">7</div><div>
+        <div class="exec-headline">Municipal Debt to Eskom: R120.26bn Overdue at 31 July; Emalahleni R13.6bn; R15.8bn Not Recognised as Revenue</div>
+        <div class="exec-body">Ministerial replies to Parliament report total overdue municipal debt to Eskom of R120.26bn at 31 July 2026, projected to reach R358bn by FY2031 absent intervention; Emalahleni was the highest debtor at R13.6bn (31 August); 83 municipalities are under formal debt-recovery processes; and Eskom's FY2026 results (31 August) show a net R15.8bn (about 4.5% of revenue) not recognised as revenue because of collectability risk, against R11.9bn in FY2025 <span class="tag tag-verified">VERIFIED</span> <em>[Source: PMG, replies NW4902 (18 Sept) and NW5129 (7 Oct 2026)]</em>. Johannesburg's R5.25bn settlement (21 Aug) is corroborated by the City, SAnews, IOL, EWN, SABC and Engineering News.</div>
+        <div class="exec-tags"><span class="tag tag-sector">SOE / Municipal</span><span class="tag tag-risk-crit">CRITICAL</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">8</div><div>
+        <div class="exec-headline">Petra Diamonds: Strategic Review Includes Possible Asset Sale (1 October); Finsch Rescue Ongoing</div>
+        <div class="exec-body">Engineering News reported on 1 October 2026 that Petra will assess a possible asset sale as part of a strategic review; earlier, NUM warned of a 1,700-job risk as Petra's mines entered business rescue (15 June), Petra secured a R300m loan amid the Finsch rescue (Miningmx, 28 July), and Miningmx separately ran a headline that Petra will sell Finsch <span class="tag tag-verified">VERIFIED (headline level)</span>. Article bodies were not fully reviewed this cycle: sale terms, buyer, and current employee numbers are <span class="tag tag-gap">DATA GAP</span>.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Mining</span><span class="tag tag-action">Watch</span><span class="tag tag-gap">PARTIAL</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">9</div><div>
+        <div class="exec-headline">Eskom v City of Tshwane: Leave to Appeal Refused on 8 October [2026] ZAGPPHC 1111</div>
+        <div class="exec-body">The Gauteng Division, Pretoria, refused leave to appeal in <em>Eskom SOC Ltd v City of Tshwane</em> [2026] ZAGPPHC 1111 (8 October 2026), confirmed on the SAFLII page <span class="tag tag-verified">VERIFIED</span>. The substance of the underlying 8 June 2026 order was not located this cycle (<span class="tag tag-gap">DATA GAP</span>); no inference on its effect on Tshwane's Eskom payment arrangement is made.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Legal / Municipal</span><span class="tag tag-verified">VERIFIED</span></div></div></div>
+
+      <div class="exec-item"><div class="exec-num">10</div><div>
+        <div class="exec-headline">Edition 013 Citation Discrepancy: Game/Dion Wired Judgment Cited as ZALCJHB 168; CDH Cites ZALCJHB 178</div>
+        <div class="exec-body">Edition 013 cited <em>SACCAWU obo Tshokodo and 210 Others v Mass Discounters</em> as [2026] ZALCJHB 168. CDH's 15 June 2026 alert cites it as [2026] ZALCJHB 178 and describes the claims actually pursued at trial more narrowly than the 211-employee headline. SAFLII text could not be re-fetched this cycle; the citation is flagged unresolved in Section 14 pending direct SAFLII confirmation.</div>
+        <div class="exec-tags"><span class="tag tag-sector">Legal</span><span class="tag tag-correction">DISCREPANCY</span></div></div></div>
+
+      <div class="alert-box alert-amber" style="margin-top:28px;">
+        <div class="alert-title">What to Watch Next Edition</div>
+        <strong>1.</strong> Stats SA's September CPI release on 21 October 2026 (scheduled date per Stats SA's August CPI publication)<br>
+        <strong>2.</strong> Stats SA's September liquidation and insolvency releases (late October; exact date not confirmed)<br>
+        <strong>3.</strong> The final 2026 MPC meeting in November, and any Petra Diamonds disclosure on a Finsch sale
+      </div>
+    </section>
+
+    <section class="pub-section" id="sadi">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 02</div>
+      <div class="section-title">SADI Dashboard</div>
+      <div class="two-col">
+        <div>
+          <div class="subhead">Score: 52/100 &mdash; HIGH (Renewed Pressure)</div>
+          <p style="font-size:13px;color:var(--text-secondary);">SADI rises one point to 52/100 from Edition 013's 51. Liquidation Volume improves on verified Stats SA data; Retrenchment Volume, NPL Trend and SOE Distress deteriorate on the QLFS, the rate hike and the widening municipal-debt data. Filing Volume and Aggregate RPS remain analytical estimates because no CIPC data was supplied.</p>
+          <div style="margin-top:16px;">
+            <div class="sadi-sub"><div style="font-size:12px;">Filing Volume <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:57%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">57</div></div>
+            <div class="sadi-sub"><div style="font-size:12px;">Liquidation Volume <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:50%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">50</div></div>
+            <div class="sadi-sub"><div style="font-size:12px;">Aggregate RPS (inv.) <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:55%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">55</div></div>
+            <div class="sadi-sub"><div style="font-size:12px;">NPL Ratio Trend <span class="tag tag-gap" style="font-size:8px;">A</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:54%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">54</div></div>
+            <div class="sadi-sub"><div style="font-size:12px;">Retrenchment Volume <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:58%;background:#E65100;"></div></div><div class="sadi-sub-score" style="color:#E65100;">58</div></div>
+            <div class="sadi-sub"><div style="font-size:12px;">SOE Distress <span class="tag tag-verified" style="font-size:8px;">V</span></div><div class="sadi-sub-bar"><div class="sadi-sub-fill" style="width:24%;background:#2E7D32;"></div></div><div class="sadi-sub-score" style="color:#2E7D32;">24</div></div>
+          </div>
+          <p class="muted" style="margin-top:10px;"><strong>V</strong> = driven by a verified current-cycle input (Stats SA liquidations; Stats SA QLFS Q2; PMG-reported Eskom municipal debt). <strong>A</strong> = analytical estimate or carried forward. Sub-scores are this publication's analytical translation of the inputs. NPL is [A]: no bank or SARB NPL release was verified; it is raised on the rate hike only. Composite at stated weights (25/20/20/15/10/10): 14.25 + 10.0 + 11.0 + 8.1 + 5.8 + 2.4 = 51.55, rounded to 52. Treat as an analytical index, not a measured statistic.</p>
+        </div>
+        <div>
+          <div class="subhead">Comparison to Prior Edition</div>
+          <div class="three-col" style="margin-bottom:16px;">
+            <div class="metric-mini"><div class="metric-mini-label">Ed.013</div><div class="metric-mini-val">51</div><div class="metric-mini-sub">HIGH &middot; Easing</div></div>
+            <div class="metric-mini" style="background:var(--challenged-bg);border-color:var(--challenged-c);"><div class="metric-mini-label">This Edition</div><div class="metric-mini-val" style="color:var(--challenged-c);">52</div><div class="metric-mini-sub" style="color:var(--challenged-c);">HIGH &middot; Renewed Pressure</div></div>
+            <div class="metric-mini"><div class="metric-mini-label">Verified Sub-comps</div><div class="metric-mini-val">3 of 6</div><div class="metric-mini-sub">Filing, RPS, NPL are [A]</div></div>
+          </div>
+          <div class="alert-box alert-green"><div class="alert-title">&#x2713; What Improved</div>Company liquidations: 239 (July) and 227 (August), against 311 and 268 a year earlier [Stats SA via BusinessTech/IOL].</div>
+          <div class="alert-box alert-amber" style="margin-top:12px;"><div class="alert-title">&#x26A0; What Worsened</div>Repo 7.25%; Q2 GDP &minus;0.2% q/q; official unemployment 33.6%; municipal overdue debt to Eskom R120.26bn (31 July). <strong>RVI:</strong> <span class="tag tag-gap">DATA GAP</span> &mdash; requires publisher-supplied CIPC resolution and intake data.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="filings">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 03</div>
+      <div class="section-title">New Business Rescue Filings</div>
+      <div class="lead-para">No CIPC eServices export or Government Gazette business-rescue notice batch was supplied for the interval, and this session located no independently verifiable new filing dated within it.</div>
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — New Business Rescue Filings Tracker</div>
+        <div class="gap-notice-body">
+          <strong>Status:</strong> CIPC filing data / Gazette notices not supplied for 22 August&ndash;11 October 2026.<br><br>
+          <strong>Data required:</strong>
+          <ul><li>CIPC eServices export of new s129 filings for the interval</li><li>OR Government Gazette business rescue notices for the same weeks</li></ul>
+          <strong>How to supply:</strong>
+          <ul><li>CIPC eServices: cipc.co.za (registered subscriber access)</li><li>Government Gazette: gov.za/gazette &rarr; search "business rescue"</li><li>Email to editorial by Wednesday 18h00</li></ul>
+          <strong>Available without this data:</strong> Petra Diamonds' mines entered business rescue in June 2026 (NUM statement, Engineering News, 15 June) and Petra announced a strategic review including a possible asset sale (Engineering News, 1 October). Rentoza (filed June&ndash;July 2026) had a plan targeted for 4 September; no disclosure on it was located this cycle. Macro conditions bearing on filings are in Sections 01 and 06.
+        </div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="liquidation">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 04</div>
+      <div class="section-title">Liquidation Radar</div>
+      <div class="lead-para">Stats SA's July and August releases are verified and show falling company liquidations. No Gazette or Master's Office batch was supplied, so no company-level order is reported.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Metric</th><th>Value</th><th>Comparator</th><th>Source</th></tr></thead>
+        <tbody>
+        <tr><td>Company liquidations, July 2026</td><td class="mono">239</td><td>311 in July 2025 (&minus;23.2%)</td><td>Stats SA via BusinessTech</td></tr>
+        <tr><td>Company liquidations, August 2026</td><td class="mono">227</td><td>268 in Aug 2025 (&minus;15.3%)</td><td>Stats SA via IOL / BusinessTech</td></tr>
+        <tr><td>August split</td><td class="mono">196 voluntary / 31 compulsory</td><td>181 companies, 46 CCs</td><td>Stats SA via BusinessTech</td></tr>
+        <tr><td>Jan&ndash;Aug 2026 cumulative</td><td class="mono">1,828</td><td>1,952 in Jan&ndash;Aug 2025</td><td>Stats SA via BusinessTech</td></tr>
+        <tr><td>Three months to August</td><td class="mono">712</td><td>825 (&minus;13.7%)</td><td>Stats SA via IOL</td></tr>
+        <tr><td>Insolvencies (individuals/partnerships), Aug 2026</td><td class="mono">114</td><td>Jan&ndash;Aug cumulative 1,010 (Ed.013's 896 to July + 114)</td><td>Stats SA via BusinessTech</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted">The corrected Q1 2026 series (658) and H1 total (1,361) from Edition 012 underpin these comparisons. Stats SA's own revisions have moved these series before (Ed.012 Correction #2); treat counts as lagging indicators.</p>
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — Company-Level Liquidation Radar</div>
+        <div class="gap-notice-body"><strong>Status:</strong> Government Gazette winding-up notices and Master's Office records not supplied. <strong>How to supply:</strong> gov.za/gazette &rarr; "winding-up"/"liquidation" for each week. <strong>Also open:</strong> the <em>Neethling v Louis Group (SA)</em> [2026] ZAWCHC 245 rule nisi (returnable 20 July) &mdash; no outcome located in a fourth consecutive edition.</div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="sector">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 05</div>
+      <div class="section-title">Sector Fragility Heatmap</div>
+      <div class="lead-para">Numeric composites are not re-scored this cycle: only some sectors have fresh verified inputs, and a precise composite would overstate certainty. The table shows the verified input and the direction versus Edition 013 (<strong>[V]</strong> verified input; <strong>[A]</strong> analytical). Edition 013's scores stand as the last numeric baseline.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Sector</th><th>Verified input this cycle</th><th>Direction vs Ed.013</th><th>Basis</th></tr></thead>
+        <tbody>
+        <tr><td>Logistics / Transport</td><td>Diesel 0.05% R31.95/L and 0.005% R33.29/L from 7 Oct (DMPR)</td><td style="color:var(--critical-c);">&#x25B2; Worse</td><td>[V]</td></tr>
+        <tr><td>Mining</td><td>Q2 mining output reported &minus;3.0% (Stats SA); Petra mines in rescue, asset-sale review</td><td style="color:var(--critical-c);">&#x25B2; Worse</td><td>[V]</td></tr>
+        <tr><td>Manufacturing</td><td>Q2 manufacturing output reported &minus;1.8% (Stats SA)</td><td style="color:var(--critical-c);">&#x25B2; Worse</td><td>[V]</td></tr>
+        <tr><td>Retail / Hospitality</td><td>Trade, catering and accommodation &minus;1.9% in Q2; household consumption +0.4%</td><td style="color:var(--challenged-c);">&#x25B2; Mixed</td><td>[V]</td></tr>
+        <tr><td>Construction</td><td>Construction output grew for a second consecutive quarter (Stats SA)</td><td style="color:var(--strong);">&#x25BC; Eased</td><td>[V] growth; leverage/creditor [A]</td></tr>
+        <tr><td>Agriculture</td><td>Output grew for a seventh quarter (Stats SA); diesel cost rise from 7 Oct</td><td style="color:var(--challenged-c);">&#x25B2; Mixed</td><td>[V]</td></tr>
+        <tr><td>Property</td><td>Prime up to 10.75%; Johannesburg Eskom exposure resolved 21 Aug</td><td>&#x2194; Mixed</td><td>[V] rates / [A] sector score</td></tr>
+        <tr><td>Financial Services; Telecoms; Healthcare</td><td>No verified sector input this cycle</td><td>&#x2194; Carried</td><td>[A] &mdash; STALE</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted">Sources: Stats SA GDP Q2 2026 (8 Sept) via Engineering News/EWN/SAnews; DMPR 7 Oct adjustment via BusinessTech.</p>
+    </section>
+
+    <section class="pub-section" id="financing">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 06</div>
+      <div class="section-title">Rescue Financing &amp; Credit Markets</div>
+      <div class="lead-para">The verified base rate has moved: prime is 10.75%, so Edition 013's "prime 10.50%" PCF reference is superseded. No PCF transaction was independently verified except a headline-level report on Petra.</div>
+      <div class="two-col"><div>
+        <div class="subhead">PCF Market Conditions (Verified Base Data)</div>
+        <div class="data-table-wrap"><table class="data-table">
+          <thead><tr><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+          <tbody>
+          <tr><td>SARB Repo Rate</td><td class="mono">7.25%</td><td><span class="tag tag-verified">VERIFIED</span> Sept 2026 hike</td></tr>
+          <tr><td>Prime Lending Rate</td><td class="mono">10.75%</td><td><span class="tag tag-verified">VERIFIED</span> repo + 3.5%</td></tr>
+          <tr><td>Next MPC</td><td class="mono">Nov 2026</td><td><span class="tag tag-gap">DATE UNCONFIRMED</span></td></tr>
+          <tr><td>Headline CPI (Aug)</td><td class="mono">4.4%</td><td><span class="tag tag-verified">VERIFIED</span> (Jul 4.3%)</td></tr>
+          <tr><td>Sovereign ratings (Fitch BB; S&amp;P BB; Moody's positive outlook)</td><td class="mono">&mdash;</td><td><span class="tag tag-gap">STALE</span> last verified Ed.007</td></tr>
+          <tr><td>PCF spreads over prime</td><td class="mono">Not verified</td><td><span class="tag tag-gap">DATA GAP</span></td></tr>
+          </tbody></table></div>
+      </div><div>
+        <div class="subhead">Verified PCF / Funding Reports</div>
+        <p style="font-size:13px;line-height:1.7;">Miningmx reported on 28 July 2026 that Petra Diamonds secured a R300m loan amid the Finsch rescue <span class="tag tag-verified">VERIFIED (headline)</span>. Provider, pricing and security were not reviewed this cycle. Murray &amp; Roberts and Tongaat Hulett: no new disclosure located; Tongaat's IDC PCF runway was stated as running to 30 September 2026 (Ed.008/012) and <span class="tag tag-gap">STALE</span> &mdash; no post-30 September disclosure located.</p>
+        <div class="alert-box alert-amber"><div class="alert-title">Forward Watch</div>Floating-rate rescue facilities should be re-stressed at 10.75% prime and the 7 October diesel prices.</div>
+      </div></div>
+    </section>
+
+    <section class="pub-section" id="legal">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 07</div>
+      <div class="section-title">Legal &amp; Court Intelligence</div>
+      <div class="lead-para">Retrenchment law was checked on SAFLII and in named law-firm alerts. One SCA judgment dated inside the interval is confirmed on SAFLII's recent-cases listing; one High Court order is confirmed on its SAFLII page. Where only alerts or headlines were reviewed, the brief says so and does not extend the holding. All judgment dates fall before this edition's 12 October publication date (standing citation-date check applied).</div>
+
+      <div class="legal-card legal-landmark">
+        <div class="legal-header"><div>
+          <div class="legal-title">National Union of Metalworkers of South Africa v SCAW South Africa (Pty) Ltd</div>
+          <div class="legal-meta">(1416/2024) [2026] ZASCA 126 &bull; Supreme Court of Appeal &bull; 29 September 2026</div></div>
+          <span class="legal-badge badge-landmark">HIGH</span></div>
+        <div class="legal-body">
+          <p><strong>Verification:</strong> Case name, number, citation and date confirmed on SAFLII's recent-cases listing. Holding as summarised by Bowmans (alert dated 9 October 2026): employers who contractually agree to pay enhanced severance can still withhold it where employees unreasonably refuse alternative employment. CDH (5 October 2026) frames the question as whether a contractual provision overrides the statutory forfeiture of severance pay.</p>
+          <p><strong>Limit of this brief:</strong> The full judgment text was not reviewed this cycle. The ratio is stated only at the level the two law-firm alerts report; reasoning, orders and costs are not stated.</p>
+          <p><strong>BRP impact [ANALYTICAL &mdash; inferred from the alert summaries]:</strong> Practitioners negotiating enhanced severance packages in rescue-plan restructurings should check how the offer treats refusal of reasonable alternative employment, as the SCA is reported to have upheld withholding in that situation.</p>
+        </div>
+      </div>
+
+      <div class="legal-card legal-verified">
+        <div class="legal-header"><div>
+          <div class="legal-title">Eskom SOC Ltd v City of Tshwane &mdash; Leave to Appeal Refused</div>
+          <div class="legal-meta">[2026] ZAGPPHC 1111 &bull; Gauteng Division, Pretoria &bull; 8 October 2026</div></div>
+          <span class="legal-badge badge-verified">VERIFIED</span></div>
+        <div class="legal-body">
+          <p><strong>Verification:</strong> The SAFLII page for the judgment was retrieved; it records refusal of leave to appeal against an order of 8 June 2026 (cited by SAFLII as [2026] ZAGPPHC 530).</p>
+          <p><strong>Limit of this brief:</strong> The substance of the 8 June order was not located despite targeted searches. No holding, financial effect or implication for Tshwane's Eskom payment arrangement is stated. <span class="tag tag-gap">DATA GAP</span></p>
+        </div>
+      </div>
+
+      <div class="legal-card legal-verified">
+        <div class="legal-header"><div>
+          <div class="legal-title">SACCAWU obo Tshokodo and Others v Mass Discounters (Pty) Ltd t/a Game and Dion Wired &mdash; Citation Discrepancy</div>
+          <div class="legal-meta">Labour Court, Johannesburg &bull; (JS949/2021) &bull; judgment 29 May 2026 (per Ed.013) &bull; CDH alert 15 June 2026</div></div>
+          <span class="legal-badge" style="background:var(--critical-c);color:white;">DISCREPANCY</span></div>
+        <div class="legal-body">
+          <p>Edition 013 cited this retrenchment judgment as [2026] ZALCJHB 168. CDH's 15 June 2026 alert cites it as [2026] ZALCJHB 178, and describes the claims pursued at trial (a narrower set of unfair-dismissal and severance claims) differently from Edition 013's "211 employees" framing. This session could not fetch the SAFLII text, so neither citation is confirmed here. Edition 013's separate reference to leave to appeal ([2026] ZALCJHB 233, 7 August) is likewise not re-verified. Practitioners should cite from SAFLII directly. Resolution is carried to Edition 016.</p>
+        </div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">Carried from Edition 013 (not re-verified this cycle)</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Case</th><th>Court / Citation</th><th>Status this cycle</th></tr></thead>
+        <tbody>
+        <tr><td>NUMSA v Industrial Oleo Chemical Products (s189A jurisdiction)</td><td>[2026] ZACC 22, 29 May 2026</td><td><span class="tag tag-gap">STALE</span> verified Ed.013; no new development located</td></tr>
+        <tr><td>SASBO/Kau v Access Bank (competitive interviews)</td><td>Labour Court; SAFLII citation pending</td><td><span class="tag tag-gap">STALE</span> citation still not located</td></tr>
+        </tbody></table></div>
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — Further Retrenchment Judgments</div>
+        <div class="gap-notice-body">SAFLII's Labour Court listings for September&ndash;October 2026 could not be searched exhaustively (search tooling indexes SAFLII poorly and direct fetches of unseen URLs were refused). Other SAFLII entries on the 7&ndash;9 October recent-cases page (e.g. <em>Adowa Infrastructure Managers v Badenhorst NO</em> [2026] ZAWCHC 591; <em>Brain Gear Investments v Buhle Waste</em> [2026] ZACC 41) were not confirmed as rescue or insolvency matters and are not briefed. Practitioners should filter SAFLII's ZALCJHB, ZALCCT, ZALCD and ZALAC listings directly.</div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="labour">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 08</div>
+      <div class="section-title">Labour &amp; Social Stability Monitor</div>
+      <div class="lead-para">National labour data is verified from Stats SA's Q2 QLFS. Retrenchment law is covered in Section 07. Company-level S189 notices were not supplied.</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Indicator (Q2 2026)</th><th>Value</th><th>Change</th><th>Source</th></tr></thead>
+        <tbody>
+        <tr><td>Official unemployment rate</td><td class="mono">33.6%</td><td>+0.9 pp</td><td>Stats SA QLFS, 11 Aug 2026</td></tr>
+        <tr><td>Unemployed persons</td><td class="mono">8.5 million</td><td>about +345,000</td><td>Stats SA via Polity / Engineering News</td></tr>
+        <tr><td>Employed persons</td><td class="mono">16.7 million</td><td>about &minus;16,000</td><td>Stats SA via Polity / Engineering News</td></tr>
+        <tr><td>Expanded unemployment rate</td><td class="mono">43.8%</td><td>&mdash;</td><td>Stats SA via BusinessTech</td></tr>
+        <tr><td>Youth (15&ndash;34) unemployment</td><td class="mono">47.4%</td><td>&mdash;</td><td>Stats SA via BusinessTech</td></tr>
+        </tbody></table></div>
+      <p class="muted">Note: the text extracted from Stats SA's media-release PDF reads as an "increase" in employed persons; the Polity/Engineering News report of the same release states employment fell. The decline is used here; direct PDF confirmation is recommended.</p>
+      <div class="subhead">Active Company-Level Items (headline level)</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Entity</th><th>Verified item</th><th>Source / Date</th></tr></thead>
+        <tbody>
+        <tr><td>Petra Diamonds (Finsch / Cullinan mines)</td><td>NUM warned of a 1,700-job risk as the mines entered business rescue; workers reported downing tools over salary concerns (20 June); strategic review incl. possible asset sale (1 Oct)</td><td>Engineering News 15 Jun &amp; 1 Oct; TimesLive/BusinessDay 20 Jun 2026</td></tr>
+        </tbody></table></div>
+      <div class="gap-notice">
+        <div class="gap-notice-title">Data Gap Notice — Company-Level Retrenchment Detail</div>
+        <div class="gap-notice-body">No publisher-supplied S189/S189A notices, CCMA case statistics or UIF data for the interval. Petra's current headcount and any S189A process status were not confirmed. Next Stats SA QLFS (Q3) release date not confirmed this cycle.</div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="soe">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 09</div>
+      <div class="section-title">SOE &amp; Municipal Distress</div>
+      <div class="subhead">City of Johannesburg / Eskom &mdash; R5.25bn Settled 21 August (Re-verified)</div>
+      <p style="font-size:13px;line-height:1.7;">The City of Johannesburg's media statement, SAnews, IOL, EWN, Engineering News, Energize and SABC News all report that the City settled R5.25bn of overdue electricity debt to Eskom in full on 21 August 2026 <span class="tag tag-verified">VERIFIED (re-confirmed this cycle)</span>. Edition 013 cited the amount as R5,255,421,994.16. Whether the City met its next current-account payment (31 August) was not confirmed. <span class="tag tag-gap">DATA GAP</span></p>
+
+      <div class="subhead" style="margin-top:20px;">Municipal Debt to Eskom &mdash; Verified Figures</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Metric</th><th>Figure</th><th>Date</th><th>Source</th></tr></thead>
+        <tbody>
+        <tr><td>Total overdue municipal debt to Eskom</td><td class="mono">R120.26bn</td><td>31 Jul 2026</td><td>PMG, reply NW4902 (18 Sep 2026)</td></tr>
+        <tr><td>Eskom's projection if no intervention</td><td class="mono">R358bn by FY2031</td><td>&mdash;</td><td>PMG NW4902</td></tr>
+        <tr><td>Highest single debtor: Emalahleni LM</td><td class="mono">R13.6bn overdue</td><td>31 Aug 2026</td><td>PMG, reply NW5129 (7 Oct 2026)</td></tr>
+        <tr><td>Municipalities in formal debt-recovery</td><td class="mono">83</td><td>Oct 2026</td><td>PMG NW4902 / NW5129</td></tr>
+        <tr><td>Net amount not recognised as revenue (FY2026)</td><td class="mono">R15.8bn (about 4.5% of revenue)</td><td>FY to Mar 2026; results 31 Aug</td><td>PMG NW5129 citing Eskom results (FY2025: R11.9bn)</td></tr>
+        <tr><td>Debt Relief participants failing the current-account condition</td><td class="mono">50 of 71 (78%)</td><td>7 Aug 2026</td><td>PMG, Finance reply NW4638 (11 Sep 2026)</td></tr>
+        <tr><td>New arrears of 71 relief participants since 1 Apr 2023</td><td class="mono">R47.173bn</td><td>31 May 2026</td><td>PMG, Finance reply NW3980 (13 Jul 2026)</td></tr>
+        </tbody></table></div>
+      <div class="alert-box alert-blue"><div class="alert-title">DISCREPANCY &mdash; Total Municipal Debt</div>Reported totals differ: R110.5bn (Eskom, Dec 2025, Engineering News 17 July), R111.6bn (Briefly, Eskom results coverage) and R120.26bn (31 Jul 2026, ministerial reply). The difference reflects measurement dates and basis; the dated ministerial figure is used. Ranged R110.5&ndash;120.26bn. See Section 14.</div>
+
+      <div class="subhead" style="margin-top:20px;">Other SOE / Municipal Items</div>
+      <div class="data-table-wrap"><table class="data-table">
+        <thead><tr><th>Entity</th><th>Status</th><th>Alert</th></tr></thead>
+        <tbody>
+        <tr><td>Tshwane</td><td>Leave to appeal refused in Eskom v City of Tshwane, 8 Oct (Section 07); underlying order not located</td><td><span class="rps rps-challenged" style="font-size:10px;">WATCH</span></td></tr>
+        <tr><td>SAPO</td><td>No court order on the 12 June termination application located in this or prior cycles; new board seated 22 June (Ed.013). Treated as formally open</td><td><span class="rps rps-challenged" style="font-size:10px;">WATCH</span></td></tr>
+        <tr><td>National Treasury funding withholding</td><td>Treasury declared it would temporarily withhold funding to 69 municipalities (Engineering News, 17 July 2026)</td><td><span class="rps rps-distressed" style="font-size:10px;">HIGH</span></td></tr>
+        <tr><td>Eskom load-shedding / EAF; Transnet</td><td>Not verified this cycle</td><td><span class="tag tag-gap">DATA GAP</span></td></tr>
+        </tbody></table></div>
+    </section>
+
+    <section class="pub-section" id="opportunity">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 10</div>
+      <div class="section-title">Distressed Opportunities</div>
+      <div class="lead-para">No company-level opportunity has a verified data basis this cycle. One analytical focus follows. <em>Nothing here is investment advice.</em></div>
+      <div class="opp-card opp-alpha">
+        <div class="opp-header"><div>
+          <div class="opp-title">&#x2605; ANALYTICAL FOCUS — Petra Diamonds Asset-Sale Process</div>
+          <div class="opp-meta">Sector: Mining &bull; Verified anchor: Engineering News 1 Oct 2026 (strategic review incl. possible asset sale); Miningmx R300m loan, 28 Jul 2026</div></div>
+          <div class="opp-score">N/A <div style="font-size:10px;font-weight:400;">NOT A DEAL</div></div></div>
+        <div class="opp-body">
+          <p><strong>What is verified:</strong> Petra's mines are in business rescue and the company has said it will assess a possible asset sale. <strong>What is not:</strong> asset perimeter, price expectations, timetable, creditor claims, or buyer interest. No score is assigned. <strong>[ANALYTICAL]</strong> Any party assessing exposure should wait for the formal sale-process terms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="blackswan">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 11</div>
+      <div class="section-title">Black Swan Watchlist</div>
+      <div class="lead-para">The Johannesburg candidate stays retired (Ed.013). Two candidates are carried, each with a verified anchor.</div>
+      <div class="swan-card swan-building">
+        <div class="swan-header"><div class="swan-num">1</div><div class="swan-name">Municipal Eskom-Debt Cascade</div><div class="swan-status status-building">BUILDING</div></div>
+        <div class="swan-body"><p><strong>Verified anchor:</strong> R120.26bn overdue (31 Jul 2026); R358bn projected by FY2031; 50 of 71 relief participants failing the current-account condition (7 Aug); R15.8bn not recognised as revenue [PMG replies]. <strong>[ANALYTICAL] mechanism:</strong> rising uncollectable municipal receivables erode Eskom's finances while Treasury withholds funds from 69 municipalities, raising the odds of supply enforcement across several municipalities at once rather than one at a time. <strong>Early warning:</strong> (1) new Eskom disconnection notices to a metro or large municipality; (2) Eskom's next disclosure of overdue total above R130bn; (3) further Treasury funding withholding.</p></div>
+      </div>
+      <div class="swan-card swan-latent-building">
+        <div class="swan-header"><div class="swan-num">2</div><div class="swan-name">Fuel-Price and Rate Squeeze on a Contracting Economy</div><div class="swan-status status-latent">LATENT — Building</div></div>
+        <div class="swan-body"><p><strong>Verified anchor:</strong> diesel +R2.84/+R3.24 and petrol +R3.12/+R3.33 on 7 Oct; repo 7.25%; Q2 GDP &minus;0.2% q/q. <strong>[ANALYTICAL] mechanism:</strong> a third consecutive negative quarter plus higher borrowing costs would stress rescue plans modelled on earlier fuel and prime assumptions simultaneously. <strong>Early warning:</strong> September CPI (21 Oct); November DMPR adjustment; Q3 GDP.</p></div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="contrarian">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 12</div>
+      <div class="section-title">Contrarian Intelligence</div>
+      <div class="contrarian-card">
+        <div class="contrarian-title">01 — Falling Liquidation Counts Are a Lagging Signal, Not Evidence of Easing Distress</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> Liquidations of 239 (July) and 227 (August), down 23% and 15% year-on-year, show corporate distress easing.</p>
+          <p><strong>Contrarian view:</strong> The count lags the real economy. In the same window GDP contracted 0.2%, unemployment rose 0.9 points to 33.6%, the repo rate rose to 7.25% and diesel rose over R2.80/litre. Stats SA's own series was also restated upward by 75% for Q1 (Ed.012), showing the counts are unstable.</p>
+          <p><strong>Evidence:</strong> Stats SA liquidations, GDP and QLFS releases cited in Sections 01, 04 and 08. <strong>Implication [ANALYTICAL]:</strong> do not read the counts as a turn; look at Q4 data.</p>
+          <p><strong>Falsification:</strong> If September and October liquidations stay below 230 per month while the October fuel and September rate increases feed through, this view is wrong.</p>
+        </div>
+      </div>
+      <div class="contrarian-card">
+        <div class="contrarian-title">02 — The SARB Hiked Into a Contraction Because the Shock Is Supply-Side, Not Because Demand Is Strong</div>
+        <div class="contrarian-body">
+          <p><strong>Consensus:</strong> Raising rates after a GDP contraction is a policy error.</p>
+          <p><strong>Contrarian view:</strong> Q2 weakness was concentrated in manufacturing, mining and trade and in net exports (about &minus;1.1 pp), while household consumption rose 0.4% and construction and agriculture grew. Coverage reports a unanimous MPC citing the fuel shock. The rate hike therefore targets inflation expectations from imported fuel costs, not a demand boom, and will bite hardest on leveraged firms in the sectors already contracting.</p>
+          <p><strong>Evidence:</strong> Stats SA Q2 GDP breakdown (8 Sept); SARB decision coverage (Sept). <strong>Implication [ANALYTICAL]:</strong> expect rate-hike stress to appear first in mining, manufacturing and trade rescue plans.</p>
+          <p><strong>Falsification:</strong> If Q3 household consumption contracts, the demand-resilience premise is wrong.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="forecasts">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 13</div>
+      <div class="section-title">Forecasts: 30 / 90 / 180 Days</div>
+      <div class="lead-para">Forecasts are anchored on verified current data or scheduled Stats SA/SARB events. Release dates not confirmed are stated as such.</div>
+
+      <div class="subhead">30-Day Forecasts — Horizon: 11 November 2026</div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.015 &bull; 30D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">65% confidence</div></div>
+        <div class="forecast-body"><strong>Stats SA's September 2026 CPI (scheduled 21 October) will show headline inflation above August's 4.4%.</strong> Anchor: August CPI 4.4% (July 4.3%) [Stats SA, 23 Sept 2026] and the fuel-price increases reported in the period; the September fuel adjustment itself was not verified against the DMPR circular this cycle.</div>
+        <div class="forecast-footer"><strong>Early warning:</strong> economist previews in the week of 14 October. <strong>Falsified if:</strong> the September headline rate is 4.4% or lower.</div>
+      </div>
+      <div class="forecast-card forecast-30d">
+        <div class="forecast-header"><div class="forecast-id">Ed.015 &bull; 30D &bull; #2</div><div class="forecast-conf" style="color:var(--challenged-c);">60% confidence</div></div>
+        <div class="forecast-body"><strong>Stats SA's September 2026 company liquidation count (release expected late October; date unconfirmed) will be between 200 and 270.</strong> Anchor: 239 (July) and 227 (August) [Stats SA].</div>
+        <div class="forecast-footer"><strong>Early warning:</strong> Stats SA release calendar. <strong>Falsified if:</strong> the count is below 200 or above 270.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">90-Day Forecast — Horizon: 9 January 2027</div>
+      <div class="forecast-card forecast-90d">
+        <div class="forecast-header"><div class="forecast-id">Ed.015 &bull; 90D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">80% confidence</div></div>
+        <div class="forecast-body"><strong>The SARB will not cut the repo rate at its November 2026 MPC meeting (date unconfirmed).</strong> Anchor: a unanimous 25bp hike to 7.25% in September and a reported fuel-driven inflation outlook.</div>
+        <div class="forecast-footer"><strong>Early warning:</strong> September CPI; October fuel pass-through. <strong>Falsified if:</strong> the repo rate is cut at the November meeting.</div>
+      </div>
+      <div class="forecast-card forecast-90d">
+        <div class="forecast-header"><div class="forecast-id">Ed.015 &bull; 90D &bull; #2</div><div class="forecast-conf" style="color:var(--text-secondary);">45% confidence</div></div>
+        <div class="forecast-body"><strong>Stats SA's Q3 2026 GDP release (expected early December; date unconfirmed) will show a quarter-on-quarter contraction, implying two consecutive negative quarters.</strong> Anchor: Q2 &minus;0.2% q/q; repo 7.25%; fuel increases of 7 October.</div>
+        <div class="forecast-footer"><strong>Early warning:</strong> Stats SA monthly mining, manufacturing and retail releases. <strong>Falsified if:</strong> Q3 GDP growth is zero or positive.</div>
+      </div>
+
+      <div class="subhead" style="margin-top:24px;">180-Day Forecast — Horizon: 9 April 2027</div>
+      <div class="forecast-card forecast-180d">
+        <div class="forecast-header"><div class="forecast-id">Ed.015 &bull; 180D &bull; #1</div><div class="forecast-conf" style="color:var(--challenged-c);">55% confidence</div></div>
+        <div class="forecast-body"><strong>An official Eskom or ministerial disclosure of total overdue municipal debt will exceed R130bn by 9 April 2027.</strong> Anchor: R110.5bn (Dec 2025) and R120.26bn (31 Jul 2026), on differing bases (Section 09).</div>
+        <div class="forecast-footer"><strong>Early warning:</strong> parliamentary replies; Eskom half-year results. <strong>Falsified if:</strong> the latest official figure disclosed by that date is R130bn or lower on a like-for-like basis.</div>
+      </div>
+    </section>
+
+    <section class="pub-section" id="scorecard">
+      <div class="section-rule"></div>
+      <div class="section-eyebrow">Section 14</div>
+      <div class="section-title">Scorecard, Corrections &amp; Data Provenance</div>
+      <div class="lead-para">Mandatory and fully populated. This cycle's audit found no fabricated content in Edition 013 but recorded one unresolved citation discrepancy and three source conflicts. Superseded figures (repo rate, prime) are changes in the world, not errors.</div>
+
+      <div class="subhead">Scorecard — Edition 013 and 012 Forecasts</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Forecast</th><th>Origin</th><th>Conf.</th><th>Status</th><th>Update</th></tr></thead>
+        <tbody>
+        <tr style="background:#E8F5E9;"><td>July 2026 liquidations broadly in line with June's 245 (falsified if &gt;290 or &lt;200)</td><td>Ed.013</td><td class="mono">55%</td><td><span class="status-pill status-confirmed">CONFIRMED &#x2713;</span></td><td>239 reported by Stats SA</td></tr>
+        <tr><td>Johannesburg pays 31 Aug current account on time; no new arrears dispute before next edition</td><td>Ed.013</td><td class="mono">75%</td><td><span class="status-pill status-pending">PENDING</span></td><td>No missed payment or new dispute located, but payment itself not confirmed</td></tr>
+        <tr style="background:var(--critical-bg);"><td>Louis Group (SA) rule nisi outcome located before next edition</td><td>Ed.013</td><td class="mono">50%</td><td><span class="status-pill status-contradicted">CONTRADICTED (3rd)</span></td><td>No outcome located; searches this cycle returned only unrelated Isle of Man material</td></tr>
+        <tr><td>Rentoza publishes rescue plan by 4 Sep 2026</td><td>Ed.013</td><td class="mono">50%</td><td><span class="status-pill status-pending">UNVERIFIED</span></td><td>Date passed; no disclosure located. Not scored: absence of a search result is not evidence</td></tr>
+        <tr><td>No other metro settles an Eskom dispute of R1bn+ by 18 Feb 2027</td><td>Ed.013</td><td class="mono">55%</td><td><span class="status-pill status-pending">PENDING</span></td><td>None located; window open</td></tr>
+        <tr style="background:#E8F5E9;"><td>Gauteng High Court will not rule on SAPO termination by 26 Aug 2026</td><td>Ed.012</td><td class="mono">45%</td><td><span class="status-pill status-confirmed">CONFIRMED &#x2713;</span></td><td>On available evidence only: no order located as at 11 Oct</td></tr>
+        <tr><td>Tongaat Hulett not formally exited rescue by 26 Dec 2026</td><td>Ed.008</td><td class="mono">50%</td><td><span class="status-pill status-pending">PENDING</span></td><td>No post-June development located</td></tr>
+        </tbody></table></div>
+
+      <div class="subhead" style="margin-top:24px;">Corrections &amp; Discrepancy Register — Edition 015</div>
+      <div class="alert-box alert-correction"><div class="alert-title">&#9888; DISCREPANCY #1 — Game/Dion Wired Citation (Edition 013, Sections 01 and 07)</div><p style="font-size:13px;color:#E0E0E0;line-height:1.7;">Edition 013: [2026] ZALCJHB 168 (leave to appeal [2026] ZALCJHB 233). CDH alert 15 June 2026: [2026] ZALCJHB 178; claims at trial described more narrowly than "211 employees". Not resolvable without SAFLII text. Edition 013's citation is flagged unconfirmed; resolution carried to Edition 016. Downstream forecasts affected: none.</p></div>
+      <div class="alert-box alert-correction" style="margin-top:12px;"><div class="alert-title">&#9888; DISCREPANCY #2 — Total Municipal Debt to Eskom</div><p style="font-size:13px;color:#E0E0E0;line-height:1.7;">R110.5bn (Dec 2025, Engineering News), R111.6bn (Briefly) and R120.26bn (31 Jul 2026, PMG reply NW4902). Ranged; the dated ministerial figure is used.</p></div>
+      <div class="alert-box alert-correction" style="margin-top:12px;"><div class="alert-title">&#9888; DISCREPANCY #3 — 7 October Diesel 0.005% Increase</div><p style="font-size:13px;color:#E0E0E0;line-height:1.7;">DMPR statement (324.38c, via BusinessTech and Cape Town Etc): R3.24. One outlet (TopAuto) reported R3.58. DMPR figure used.</p></div>
+      <div class="alert-box alert-correction" style="margin-top:12px;"><div class="alert-title">&#9888; DISCREPANCY #4 — Edition 013 Diesel Wholesale Table</div><p style="font-size:13px;color:#E0E0E0;line-height:1.7;">Edition 013 gave the 5 August 0.005% diesel price as R26.40/L; a secondary price table seen this cycle showed R26.90. Not reconciled; superseded by the 7 October prices.</p></div>
+      <div class="alert-box alert-blue" style="margin-top:12px;"><div class="alert-title">Stale flags raised this edition</div>Sovereign ratings (last verified Ed.007); Eskom load-shedding and EAF status; Transnet; Tongaat Hulett PCF runway (to 30 Sep); SASBO/Kau v Access Bank citation; NPL trend input. The exact SARB announcement date (coverage dated 23&ndash;24 Sept) and the November MPC date were not confirmed against sarb.co.za.</div>
+      <div class="alert-box alert-teal" style="margin-top:12px;"><div class="alert-title">Standing checks applied</div>Citation-date check (all dates precede 12 Oct 2026); three-edition carry-forward check (SARB rate, prime and fuel prices re-verified; ratings not).</div>
+
+      <div class="subhead" style="margin-top:24px;">Data Provenance Notice</div>
+      <div class="data-table-wrap"><table class="scorecard-table">
+        <thead><tr><th>Claim</th><th>Source</th><th>Date</th></tr></thead>
+        <tbody>
+        <tr><td>Repo 7.25%, prime 10.75%; unanimous; November final MPC</td><td>Briefly; eNCA coverage (SARB statement not re-fetched)</td><td class="mono">Sept 2026</td></tr>
+        <tr><td>7 Oct fuel adjustment (diesel +R2.84/+R3.24; petrol +R3.33/+R3.12; diesel R31.95/R33.29)</td><td>DMPR statement via BusinessTech, Cape Town Etc</td><td class="mono">6&ndash;7 Oct 2026</td></tr>
+        <tr><td>Q2 GDP &minus;0.2% q/q and sector detail</td><td>Stats SA; Engineering News; EWN; SAnews</td><td class="mono">8 Sep 2026</td></tr>
+        <tr><td>QLFS Q2: 33.6%, 8.5m unemployed, 16.7m employed, 43.8%, 47.4%</td><td>Stats SA via Polity, Engineering News, BusinessTech</td><td class="mono">11 Aug 2026</td></tr>
+        <tr><td>CPI Aug 4.4% (Jul 4.3%); next release 21 Oct</td><td>Stats SA; BusinessDay; EWN</td><td class="mono">23 Sep 2026</td></tr>
+        <tr><td>Liquidations Jul 239, Aug 227; Jan&ndash;Aug 1,828; insolvencies Aug 114</td><td>Stats SA via BusinessTech, IOL</td><td class="mono">Aug&ndash;Sep 2026</td></tr>
+        <tr><td>NUMSA v SCAW [2026] ZASCA 126</td><td>SAFLII recent-cases listing; Bowmans; CDH</td><td class="mono">29 Sep; alerts 5 &amp; 9 Oct 2026</td></tr>
+        <tr><td>Eskom v City of Tshwane [2026] ZAGPPHC 1111</td><td>SAFLII</td><td class="mono">8 Oct 2026</td></tr>
+        <tr><td>Municipal debt R120.26bn; Emalahleni R13.6bn; R15.8bn; 83 municipalities</td><td>PMG replies NW4902, NW5129</td><td class="mono">18 Sep; 7 Oct 2026</td></tr>
+        <tr><td>MDR: 50 of 71 non-compliant; R47.173bn new arrears</td><td>PMG Finance replies NW4638, NW3980</td><td class="mono">11 Sep; 13 Jul 2026</td></tr>
+        <tr><td>Johannesburg R5.25bn settled</td><td>City of Johannesburg statement; SAnews; IOL; EWN; Engineering News</td><td class="mono">21 Aug 2026</td></tr>
+        <tr><td>Petra Diamonds rescue, R300m loan, strategic review (headline level)</td><td>Engineering News; Miningmx; TimesLive</td><td class="mono">15 Jun&ndash;1 Oct 2026</td></tr>
+        <tr><td>Game/Dion Wired citation ZALCJHB 178</td><td>CDH alert</td><td class="mono">15 Jun 2026</td></tr>
+        </tbody></table></div>
+      <div class="pull-quote">&ldquo;When the search tools cannot reach the primary text, the honest output is the headline, the source and the gap &mdash; not a reconstructed holding.&rdquo;<div style="font-size:12px;font-style:normal;font-family:'IBM Plex Sans',sans-serif;color:var(--text-muted);margin-top:8px;">&mdash; BR Distress Ledger Editorial Standard</div></div>
+    </section>
+  </main>
+</div>
+
+<footer class="pub-footer">
+  <div class="footer-inner">
+    <div class="footer-title">BR Distress Ledger &mdash; Edition #015</div>
+    <div class="footer-meta">Week Ending 11 October 2026 &bull; Published 12 October 2026 &bull; SADI 52/100 &bull; HIGH &mdash; Renewed Pressure</div>
+    <div class="footer-meta">Proprietary Indexes: SADI &bull; RPS &bull; RVI &mdash; &copy; 2026 Reblabs. All rights reserved.</div>
+    <div class="footer-disclaimer">This publication is an intelligence product for authorised subscribers. It does not constitute legal, financial, or investment advice. Verified-Only policy: every company-specific claim is sourced to a named primary or reputable secondary source. Where CIPC or Gazette data was not supplied, sections carry Data Gap Notices. Judgments reviewed at headline or alert level are identified as such. Recipients are responsible for independent verification before acting.</div>
+    <div class="footer-nav"><a href="index.html">&#8592; Back to Archive</a><a href="https://github.com/1906reblabs/Br-distress" target="_blank" rel="noopener">GitHub Repository</a></div>
+  </div>
+</footer>
+<script>
+(function(){
+  const items=document.querySelectorAll('.nav-item');
+  const sections=Array.from(document.querySelectorAll('.pub-section'));
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){items.forEach(i=>i.classList.remove('active'));const m=document.querySelector('.nav-item[href="#'+e.target.id+'"]');if(m)m.classList.add('active');}});},{rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>obs.observe(s));
+})();
+</script>
+</body>
+</html>
